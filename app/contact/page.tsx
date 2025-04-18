@@ -60,20 +60,20 @@ export default function Contact() {
             <div className="grid-2-cols">
               <div>
                 <h3>Contact Information</h3>
-                <p><strong>Email:</strong> info@pasifikaweb3.io</p>
-                <p><strong>Phone:</strong> +679 555 0123</p>
-                <p><strong>Location:</strong> Suva, Fiji (Headquarters)</p>
-                <p><strong>Hours:</strong> Monday - Friday, 9am - 5pm (Fiji Time)</p>
+                <p><strong>Email:</strong> info@pasifika.xyz</p>
+                <p><strong>Phone:</strong> +1 808-987-6543</p>
+                <p><strong>Location:</strong> Honolulu, Hawaii (Headquarters)</p>
+                <p><strong>Hours:</strong> Monday - Friday, 9am - 5pm (Hawaii Time)</p>
                 
                 <h3>Regional Representatives</h3>
-                <p>We have regional representatives in Samoa, Tonga, Vanuatu, Solomon Islands, and Papua New Guinea. Please contact our main office for details.</p>
+                <p>We have regional representatives in Tonga, Tuvalu, Samoa, Niue, Cook Islands,Fiji, Vanuatu, Solomon Islands, Papua New Guinea, New Zealand and Australia. Please contact our main office for details.</p>
                 
                 <h3>Social Media</h3>
                 <p>Follow us on social media for the latest updates:</p>
                 <ul>
-                  <li>Twitter: @PasifikaWeb3</li>
-                  <li>Telegram: PasifikaWeb3Community</li>
-                  <li>Discord: Pasifika Web3 Hub</li>
+                  <li>Twitter: @PasifikaXYZ</li>
+                  <li>Telegram: PasifikaXYZCommunity</li>
+                  <li>Discord: Pasifika XYZ Hub</li>
                 </ul>
               </div>
               

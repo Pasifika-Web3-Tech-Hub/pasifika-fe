@@ -304,8 +304,39 @@ ul {
 
 .feature-text {
   font-size: 0.9rem;
-  color: var(--dark-text);
-  margin-bottom: 20px;
+  color: #000000;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  min-height: 40px;
+}
+
+.feature-location {
+  font-size: 0.85rem;
+  color: var(--accent-color);
+  text-align: center;
+  margin-top: 0;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.linkedin-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--light-text);
+  background: linear-gradient(to right, var(--orange), var(--orange-light));
+  padding: 5px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+.linkedin-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
 }
 
 .feature-component {

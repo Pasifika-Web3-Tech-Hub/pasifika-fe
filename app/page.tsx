@@ -58,7 +58,7 @@ export default function Main() {
       <div className="hero">
         <div className="hero-container">
           <div className="hero-content">
-            <h1 className="hero-title">Building The Future of Pacific Web3 Marketplace</h1>
+            <h1 className="hero-title">Building The Future of The Pasifika Web3 Marketplace</h1>
             <p className="hero-subtitle">
               Join us in creating a decentralized ecosystem that empowers Pacific communities
               through blockchain technology and digital innovation.
@@ -95,62 +95,86 @@ export default function Main() {
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon team-member-photo">
-                <Image src="/icons/team1.png" alt="Team Member" width={70} height={70} />
+                <Image src="/tenanoia.png" alt="Tenanoia Veronica Simona" width={70} height={70} />
               </div>
-              <h3 className="feature-title">Leilani Tonga</h3>
+              <h3 className="feature-title">Tenanoia Veronica Simona</h3>
               <p className="feature-text">
-                Co-Founder & Blockchain Specialist
+                CEO at Tuvalu Telecommunications Corporation
               </p>
+              <p className="feature-location">Tuvalu</p>
+              <a href="https://www.linkedin.com/in/ACoAAARD0xAB9-x51CLKG-LC1dP5afg_3Kwqjjg" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                LinkedIn Profile
+              </a>
             </div>
             
             <div className="feature-card">
               <div className="feature-icon team-member-photo">
-                <Image src="/icons/team2.png" alt="Team Member" width={70} height={70} />
+                <Image src="/suzanne.png" alt="Suzanne Moli Orudiana" width={70} height={70} />
               </div>
-              <h3 className="feature-title">Sione Mataele</h3>
+              <h3 className="feature-title">Suzanne Moli Orudiana</h3>
               <p className="feature-text">
-                Co-Founder & Technology Lead
+                Managing Director of Intellectual Solutions
               </p>
+              <p className="feature-location">Solomon Islands</p>
+              <a href="https://www.linkedin.com/in/ACoAAAzXV9ABswa8sUOrI0bjhdxKk2VdF7ZB1-M" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                LinkedIn Profile
+              </a>
             </div>
             
             <div className="feature-card">
               <div className="feature-icon team-member-photo">
-                <Image src="/icons/team3.png" alt="Team Member" width={70} height={70} />
+                <Image src="/seluvaia.png" alt="Seluvaia Kauvaka" width={70} height={70} />
               </div>
-              <h3 className="feature-title">Ana Vanuatu</h3>
+              <h3 className="feature-title">Seluvaia Kauvaka</h3>
               <p className="feature-text">
-                Co-Founder & Community Manager
+                Project Coordinator (PMU - SCA & MET)
               </p>
+              <p className="feature-location">Tonga</p>
+              <a href="https://www.linkedin.com/in/ACoAABPDT9wB1j9f2wn7lUZ9YJiP8vR6hgvgMco" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                LinkedIn Profile
+              </a>
             </div>
             
             <div className="feature-card">
               <div className="feature-icon team-member-photo">
-                <Image src="/icons/team4.png" alt="Team Member" width={70} height={70} />
+                <Image src="/lusia.png" alt="Lusia Jones" width={70} height={70} />
               </div>
-              <h3 className="feature-title">Tevita Samoa</h3>
+              <h3 className="feature-title">Lusia Jones</h3>
               <p className="feature-text">
-                Co-Founder & Marketing Director
+                Visionary Leader & Heart-led Changemaker
               </p>
+              <p className="feature-location">New Zealand</p>
+              <a href="https://www.linkedin.com/in/ACoAAALsKcoBcTnEqFKPjl5y6Br5i9fgfRUEVLw" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                LinkedIn Profile
+              </a>
             </div>
             
             <div className="feature-card">
               <div className="feature-icon team-member-photo">
-                <Image src="/icons/team5.png" alt="Team Member" width={70} height={70} />
+                <Image src="/dean.png" alt="Dean Parker" width={70} height={70} />
               </div>
-              <h3 className="feature-title">Marama Fiji</h3>
+              <h3 className="feature-title">Dean Parker</h3>
               <p className="feature-text">
-                Co-Founder & Financial Strategist
+                Renewable Energy & Data Center Project Leader
               </p>
+              <p className="feature-location">Samoa</p>
+              <a href="https://www.linkedin.com/in/dean-parker-7389a6213" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                LinkedIn Profile
+              </a>
             </div>
             
             <div className="feature-card">
               <div className="feature-icon team-member-photo">
-                <Image src="/icons/team6.png" alt="Team Member" width={70} height={70} />
+                <Image src="/edwin.png" alt="Edwin Liava'a" width={70} height={70} />
               </div>
-              <h3 className="feature-title">Koa Hawaii</h3>
+              <h3 className="feature-title">Edwin Liava'a</h3>
               <p className="feature-text">
-                Co-Founder & Operations Lead
+                Blockchain & Digital Transformation Engineer
               </p>
+              <p className="feature-location">Fiji</p>
+              <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                LinkedIn Profile
+              </a>
             </div>
           </div>
         </div>
