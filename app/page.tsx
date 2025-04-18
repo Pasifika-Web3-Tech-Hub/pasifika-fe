@@ -66,24 +66,10 @@ export default function Main() {
             <div className="hero-buttons">
               <button 
                 className="btn btn-primary"
-                onClick={() => {
-                  const tokenBanner = document.querySelector('.token-banner');
-                  if (tokenBanner) {
-                    // Use scrollIntoView with an offset to ensure the banner is visible
-                    const headerHeight = 80; // Height of the fixed header
-                    const yOffset = -headerHeight; // Offset to account for the fixed header
-                    const y = tokenBanner.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                    
-                    window.scrollTo({
-                      top: y,
-                      behavior: 'smooth'
-                    });
-                  }
-                }}
+                onClick={() => window.location.href = "/learn-more"}
               >
-                Get Started
+                Learn More and Get Started
               </button>
-              <button className="btn btn-secondary">Learn More</button>
             </div>
           </div>
           <div className="hero-image">

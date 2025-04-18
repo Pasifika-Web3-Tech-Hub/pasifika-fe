@@ -19,6 +19,14 @@
   --background: #FFFFFF;        /* White */
   --card-bg: #f8f8f8;           /* Light Grey */
   --header-height: 80px;
+  
+  /* Custom styling for DynamicWidget buttons */
+  --dynamic-button-bg: linear-gradient(to right, var(--orange), var(--orange-light));
+  --dynamic-button-color: var(--light-text);
+  --dynamic-font-weight: 500;
+  --dynamic-btn-radius: 4px;
+  --dynamic-hover-transform: translateY(-1px);
+  --dynamic-hover-opacity: 0.9;
 }
 
 /* Global Styles */
@@ -436,11 +444,77 @@ ul {
 }
 
 .token-component-content {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 20px;
   border-radius: 8px;
-  padding: 15px;
-  border-left: 2px solid var(--accent-color);
   margin-bottom: 20px;
+}
+
+/* Override Dynamic Widget button styles */
+.dynamic-widget-button,
+.dynamic-widget-button *,
+[class*="dynamicSdkButton"],
+.dwn-connect-button,
+.dwn-login-button,
+[data-testid="connect-button"],
+[data-testid="login-button"],
+.dyn-widget-button,
+[class*="ConnectButton"],
+[class*="LoginButton"],
+[class*="buttonText"],
+[class*="buttonContainer"] button,
+[class*="primaryButton"],
+[class*="secondaryButton"],
+.wallet-connect-button,
+.wallet-login-button,
+[class*="modalButton"],
+[class*="footerButton"],
+[class*="dialogButton"] {
+  background: linear-gradient(to right, var(--orange), var(--orange-light)) !important;
+  color: var(--light-text) !important;
+  font-weight: 500 !important;
+  border-radius: 4px !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  text-transform: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Override Dynamic Widget button hover states */
+.dynamic-widget-button:hover,
+.dynamic-widget-button *:hover,
+[class*="dynamicSdkButton"]:hover,
+.dwn-connect-button:hover,
+.dwn-login-button:hover,
+[data-testid="connect-button"]:hover,
+[data-testid="login-button"]:hover,
+.dyn-widget-button:hover,
+[class*="ConnectButton"]:hover,
+[class*="LoginButton"]:hover,
+[class*="buttonText"]:hover,
+[class*="buttonContainer"] button:hover,
+[class*="primaryButton"]:hover,
+[class*="secondaryButton"]:hover,
+.wallet-connect-button:hover,
+.wallet-login-button:hover,
+[class*="modalButton"]:hover,
+[class*="footerButton"]:hover,
+[class*="dialogButton"]:hover {
+  opacity: 0.9 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Specific styles for the sandbox environment */
+.sandbox-widget [class*="button"],
+.sandbox-container [class*="button"],
+.sandbox-login [class*="button"],
+.sandbox-authentication [class*="button"],
+[class*="sandbox"] [class*="button"] {
+  background: linear-gradient(to right, var(--orange), var(--orange-light)) !important;
+  color: var(--light-text) !important;
+  padding: 10px 16px !important;
+  margin: 5px 0 !important;
 }
 
 /* Footer Banner */
