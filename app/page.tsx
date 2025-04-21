@@ -241,7 +241,6 @@ export default function Main() {
             <div className="token-chart">
               {/* Wallet Connection Widget */}
               <DynamicWidget />
-              
               {/* Logout button when connected */}
               {isLoggedIn && primaryWallet && (
                 <div className="logout-container">
@@ -258,7 +257,6 @@ export default function Main() {
                   </button>
                 </div>
               )}
-              
               {/* Redirect prompt that appears when logged in */}
               {showRedirectPrompt && (
                 <div className="redirect-prompt">
@@ -279,7 +277,6 @@ export default function Main() {
                   </div>
                 </div>
               )}
-              
               {/* Notice about functionality */}
               <div className="redirection-notice">
                 <p>Connect your wallet to access our smart contract services.</p>
@@ -287,6 +284,14 @@ export default function Main() {
             </div>
           </div>
         </div>
+      </div>
+      {/* Spacer div with a fixed height of 1cm */}
+      <div style={{ height: '1cm' }} />
+      {/* Pasifika DePIN Description Section */}
+      <div className="dep-in-section" style={{ background: isDarkMode ? '#222' : '#fff', color: isDarkMode ? '#FF9800' : '#FF5722', padding: '1rem 0', margin: '0 auto', maxWidth: 900, textAlign: 'center', borderRadius: 12, boxShadow: isDarkMode ? '0 2px 16px #111' : '0 2px 16px #eee' }}>
+        <p style={{ fontSize: '1.25rem', fontWeight: 500, margin: 0 }}>
+          The Pasifika Web3 Tech Hub represents a groundbreaking decentralized physical infrastructure network (DePIN) designed specifically for Pacific Island communities. Leveraging the native PASIFIKA token (PSF) and built on Linea's zkEVM Layer-2 technology, this platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.
+        </p>
       </div>
 
       {/* Footer Banner */}

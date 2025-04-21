@@ -55,12 +55,12 @@ ul {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background: var(--background);
   color: var(--dark-text);
   transition: background-color 0.3s, color 0.3s;
+  min-height: unset !important;
 }
 
 .container.dark {
@@ -361,20 +361,32 @@ ul {
 
 /* Token (Wallet Connect) Section */
 .token {
+  margin-bottom: 0 !important;
+  overflow: hidden;
   padding: 0 0 0;
+  min-height: unset !important;
   background-color: var(--dark-grey);
   color: var(--light-text);
   border-top: 2px solid var(--accent-color);
   border-bottom: none;
   width: 100%;
-  margin-bottom: 0;
+}
+
+.token > * {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.token-container, .token-content, .token-chart, .redirection-notice {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .token-banner {
-  background: linear-gradient(to right, var(--orange), var(--orange-light));
   padding: 25px 0;
-  text-align: center;
   margin-bottom: 50px;
+  background: linear-gradient(to right, var(--orange), var(--orange-light));
+  text-align: center;
 }
 
 .token-banner-title {
@@ -389,6 +401,9 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: unset !important;
+  padding: 0 !important;
+  gap: 0 !important;
 }
 
 .token-content {
@@ -443,7 +458,7 @@ ul {
   flex: 1;
   background-color: var(--card-bg);
   border-radius: 4px;
-  padding: 30px;
+  padding: 30px !important;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   border-left: 4px solid var(--accent-color);
 }
@@ -842,6 +857,10 @@ ul {
     margin-bottom: 30px;
   }
   
+  .token-container {
+    gap: 0 !important;
+  }
+  
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -869,4 +888,8 @@ ul {
     display: flex;
     gap: 10px;
   }
+}
+
+.dep-in-section {
+  margin-top: -24px !important;
 }
