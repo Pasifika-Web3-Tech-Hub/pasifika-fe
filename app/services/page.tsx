@@ -2,6 +2,7 @@
 
 import { useDarkMode } from "@/lib/useDarkMode";
 import Image from "next/image";
+import Link from "next/link";
 import "../page.css";
 import "../shared-pages.css";
 import TokenContractInfo from '../components/TokenContractInfo.js';
@@ -50,9 +51,9 @@ export default function Services() {
           
           <div className="nav-menu">
             <div className="nav-item">
-              <a href="/" className="nav-link-button" onClick={handleBackToHome}>
-                Back to Home
-              </a>
+              <Link href="/learn-more" className="nav-link-button">
+                Back to Resources
+              </Link>
             </div>
           </div>
         </div>

@@ -297,7 +297,7 @@ export default function Membership() {
                     className="form-button" 
                     disabled={!walletConnected || isSubmitting}
                   >
-                    {isSubmitting ? "Submitting..." : walletConnected ? "Register for Membership" : "Connect Wallet to Register"}
+                    {isSubmitting ? "Submitting..." : "Register"}
                   </button>
                 </div>
               </form>
