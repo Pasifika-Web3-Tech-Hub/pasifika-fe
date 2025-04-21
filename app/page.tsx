@@ -56,7 +56,7 @@ export default function Main() {
               height={50}
             />
             <div className="logo-text">
-              <span className="logo-accent">Pasifika Web3 Tech Hub</span>
+              <span className="logo-accent">Pasifika</span>
             </div>
           </div>
           
@@ -79,7 +79,7 @@ export default function Main() {
                   }
                 }}
               >
-                Login or Sign Up
+                Login
               </button>
             </div>
           </div>
@@ -90,9 +90,9 @@ export default function Main() {
       <div className="hero">
         <div className="hero-container">
           <div className="hero-content">
-            <h1 className="hero-title">Building The Future of The Pasifika Web3 Marketplace</h1>
+            <h1 className="hero-title">Building The Future with Web3</h1>
             <p className="hero-subtitle">
-              Join us in creating a decentralized ecosystem that empowers Pacific communities
+              Join us in creating a decentralized ecosystem for a marketplace that empowers Pacific communities
               through blockchain technology and digital innovation.
             </p>
             <div className="hero-buttons">
