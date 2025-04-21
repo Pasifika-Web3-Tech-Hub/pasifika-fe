@@ -133,37 +133,6 @@ export default function Membership() {
             <h2>Join the Pasifika Web3 Community</h2>
             <p>Become a member of the Pasifika Web3 Tech Hub and gain access to exclusive benefits, resources, and opportunities within our growing ecosystem.</p>
             
-            <div className="wallet-section">
-              <h3>Connect Your Wallet</h3>
-              <p>To complete your membership registration, please connect your Web3 wallet. This will be used for platform authentication and participating in our DAO governance.</p>
-              
-              {walletConnected ? (
-                <div className="wallet-info">
-                  <div className="wallet-status connected">
-                    <span className="wallet-icon">💼</span>
-                    <span>Wallet Connected</span>
-                  </div>
-                  <div className="wallet-address">
-                    {primaryWallet?.address.substring(0, 6)}...{primaryWallet?.address.substring(primaryWallet?.address.length - 4)}
-                  </div>
-                  <button className="wallet-button disconnect" onClick={() => setShowAuthFlow(true)}>
-                    Disconnect Wallet
-                  </button>
-                </div>
-              ) : (
-                <div className="wallet-connection">
-                  <div className="wallet-status">
-                    <span className="wallet-icon">💼</span>
-                    <span>Wallet Not Connected</span>
-                  </div>
-                  <button className="wallet-button connect" onClick={() => setShowAuthFlow(true)}>
-                    Connect Wallet
-                  </button>
-                  <p className="wallet-note">Supported wallets: MetaMask, WalletConnect, and more</p>
-                </div>
-              )}
-            </div>
-            
             <h3>Membership Benefits</h3>
             <ul>
               <li><strong>Early access</strong> to new platform features and services</li>

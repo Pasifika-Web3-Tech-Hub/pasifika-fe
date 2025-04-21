@@ -11,12 +11,21 @@ import GovernanceInfo from '../components/GovernanceInfo.js';
 import PSFStakingInfo from '../components/PSFStakingInfo.js';
 import TreasuryInfo from '../components/TreasuryInfo.js';
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Services() {
   const { isDarkMode } = useDarkMode();
-  const { handleLogOut } = useDynamicContext();
-  
+  const { handleLogOut, primaryWallet, setShowAuthFlow } = useDynamicContext();
+  const [walletConnected, setWalletConnected] = useState(false);
+
+  useEffect(() => {
+    if (primaryWallet) {
+      setWalletConnected(true);
+    } else {
+      setWalletConnected(false);
+    }
+  }, [primaryWallet]);
+
   // Set flag when navigating back to home page
   const handleBackToHome = () => {
     sessionStorage.setItem('fromServices', 'true');
@@ -95,6 +104,37 @@ export default function Services() {
               <li><strong>Custom smart contract development</strong> for specialized needs</li>
               <li><strong>Technical consulting</strong> on blockchain implementation</li>
             </ul>
+          </div>
+          
+          {/* Connect Your Wallet Section */}
+          <div className="wallet-section">
+            <h3>Connect Your Wallet</h3>
+            <p>To access smart contract services and platform features, please connect your Web3 wallet. This will be used for authentication and DAO participation.</p>
+            {walletConnected ? (
+              <div className="wallet-info">
+                <div className="wallet-status connected">
+                  <span className="wallet-icon">💼</span>
+                  <span>Wallet Connected</span>
+                </div>
+                <div className="wallet-address">
+                  {primaryWallet?.address.substring(0, 6)}...{primaryWallet?.address.substring(primaryWallet?.address.length - 4)}
+                </div>
+                <button className="wallet-button disconnect" onClick={() => setShowAuthFlow(true)}>
+                  Disconnect Wallet
+                </button>
+              </div>
+            ) : (
+              <div className="wallet-connection">
+                <div className="wallet-status">
+                  <span className="wallet-icon">💼</span>
+                  <span>Wallet Not Connected</span>
+                </div>
+                <button className="wallet-button connect" onClick={() => setShowAuthFlow(true)}>
+                  Connect Wallet
+                </button>
+                <p className="wallet-note">Supported wallets: MetaMask, WalletConnect, and more</p>
+              </div>
+            )}
           </div>
           
           {/* Smart Contract Architecture Components */}

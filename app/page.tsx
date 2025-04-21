@@ -290,7 +290,7 @@ export default function Main() {
       {/* Pasifika DePIN Description Section */}
       <div className="dep-in-section" style={{ background: isDarkMode ? '#222' : '#fff', color: isDarkMode ? '#FF9800' : '#FF5722', padding: '1rem 0', margin: '0 auto', maxWidth: 900, textAlign: 'center', borderRadius: 12, boxShadow: isDarkMode ? '0 2px 16px #111' : '0 2px 16px #eee' }}>
         <p style={{ fontSize: '1.25rem', fontWeight: 500, margin: 0 }}>
-          The Pasifika Web3 Tech Hub represents a groundbreaking decentralized physical infrastructure network (DePIN) designed specifically for Pacific Island communities. Leveraging the native PASIFIKA token (PSF) and built on Linea's zkEVM Layer-2 technology, this platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.
+          The Pasifika Web3 Tech Hub represents a groundbreaking decentralized physical infrastructure network (DePIN) designed specifically for Pacific Island communities. Leveraging the native PASIFIKA token (PSF) and built on Linea&apos;s zkEVM Layer-2 technology, this platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.
         </p>
       </div>
 
