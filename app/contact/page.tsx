@@ -10,13 +10,58 @@ import "../shared-pages.css";
 export default function Contact() {
   const { isDarkMode } = useDarkMode();
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    setTimeout(() => {
+    setIsSubmitting(true);
+    
+    try {
+      // Prepare form data for Formspree submission
+      const formspreeData = {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        _subject: `Pasifika Contact: ${formData.subject}`
+      };
+      
+      // Send data to Formspree API
+      const response = await fetch("https://formspree.io/f/mwplaeor", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formspreeData)
+      });
+      
+      if (!response.ok) {
+        throw new Error("Failed to submit form. Please try again.");
+      }
+      
+      // Show success message
       setFormSubmitted(true);
-    }, 1000);
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("There was an error submitting your message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -61,9 +106,9 @@ export default function Contact() {
               <div>
                 <h3>Contact Information</h3>
                 <p><strong>Email:</strong> info@pasifika.xyz</p>
-                <p><strong>Phone:</strong> +1 808-987-6543</p>
-                <p><strong>Location:</strong> Honolulu, Hawaii (Headquarters)</p>
-                <p><strong>Hours:</strong> Monday - Friday, 9am - 5pm (Hawaii Time)</p>
+                <p><strong>Phone:</strong> +676 7760129</p>
+                <p><strong>Location:</strong> The Hill, Vaini, Tonga (Headquarters)</p>
+                <p><strong>Hours:</strong> Monday - Friday, 9am - 5pm (Vaini Time)</p>
                 
                 <h3>Regional Representatives</h3>
                 <p>We have regional representatives in Tonga, Tuvalu, Samoa, Niue, Cook Islands,Fiji, Vanuatu, Solomon Islands, Papua New Guinea, New Zealand and Australia. Please contact our main office for details.</p>
@@ -82,17 +127,37 @@ export default function Contact() {
                   <form onSubmit={handleSubmit}>
                     <div className="form-group">
                       <label htmlFor="name" className="form-label">Your Name</label>
-                      <input type="text" id="name" className="form-input" required />
+                      <input 
+                        type="text" 
+                        id="name" 
+                        className="form-input" 
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required 
+                      />
                     </div>
                     
                     <div className="form-group">
                       <label htmlFor="email" className="form-label">Email Address</label>
-                      <input type="email" id="email" className="form-input" required />
+                      <input 
+                        type="email" 
+                        id="email" 
+                        className="form-input" 
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required 
+                      />
                     </div>
                     
                     <div className="form-group">
                       <label htmlFor="subject" className="form-label">Subject</label>
-                      <select id="subject" className="form-select" required>
+                      <select 
+                        id="subject" 
+                        className="form-select" 
+                        value={formData.subject}
+                        onChange={handleInputChange}
+                        required
+                      >
                         <option value="">Select a subject</option>
                         <option value="general">General Inquiry</option>
                         <option value="support">Technical Support</option>
@@ -105,11 +170,23 @@ export default function Contact() {
                     
                     <div className="form-group">
                       <label htmlFor="message" className="form-label">Your Message</label>
-                      <textarea id="message" className="form-textarea" required></textarea>
+                      <textarea 
+                        id="message" 
+                        className="form-textarea"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        required
+                      ></textarea>
                     </div>
                     
                     <div className="form-group">
-                      <button type="submit" className="form-button">Send Message</button>
+                      <button 
+                        type="submit" 
+                        className="form-button"
+                        disabled={isSubmitting}
+                      >
+                        {isSubmitting ? "Sending..." : "Send Message"}
+                      </button>
                     </div>
                   </form>
                 ) : (

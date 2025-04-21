@@ -481,6 +481,224 @@ ul {
   margin-bottom: 20px;
 }
 
+/* Token Image Container */
+.token-interaction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.token-image-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: rgba(51, 51, 51, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 87, 34, 0.2);
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.token-image-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.token-image {
+  border-radius: 50%;
+  padding: 2px;
+  border: 2px solid var(--orange);
+  background: white;
+  object-fit: contain;
+}
+
+.token-info {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.token-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--orange);
+  margin: 5px 0 0 0;
+}
+
+.token-network {
+  font-size: 0.85rem;
+  color: var(--secondary-text);
+  margin: 5px 0 0 0;
+  opacity: 0.85;
+}
+
+/* Token error message */
+.token-error {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-left: 3px solid #d32f2f;
+  color: #d32f2f;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* Token wallet notice */
+.token-wallet-notice {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: rgba(255, 152, 0, 0.1);
+  border-left: 3px solid var(--orange);
+  color: var(--primary-text);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Token Contract Info Component */
+.token-contract-display {
+  width: 100%;
+}
+
+.docs-button {
+  padding: 8px 12px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--orange);
+  color: var(--primary-text);
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.docs-button:hover {
+  background-color: rgba(255, 87, 34, 0.1);
+}
+
+.token-contract-details {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: var(--card-bg);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 87, 34, 0.2);
+}
+
+.token-info-row {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.token-info-label {
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--secondary-text);
+  margin-bottom: 4px;
+}
+
+.token-info-value {
+  font-family: monospace;
+  padding: 5px 8px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+@media (min-width: 768px) {
+  .token-info-row {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .token-info-label {
+    min-width: 100px;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+  
+  .token-info-value {
+    flex: 1;
+  }
+}
+
+/* Redirection notice styling */
+.redirection-notice {
+  margin-top: 20px;
+  padding: 12px 15px;
+  background-color: rgba(255, 87, 34, 0.1);
+  border-radius: 6px;
+  border-left: 3px solid var(--orange);
+}
+
+.redirection-notice p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--primary-text);
+}
+
+/* Redirect Prompt */
+.redirect-prompt {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 87, 34, 0.1);
+  border-radius: 8px;
+  border-left: 3px solid var(--orange);
+  text-align: center;
+}
+
+.redirect-prompt p {
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: var(--primary-text);
+}
+
+.prompt-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Logout Button */
+.logout-button {
+  background: linear-gradient(to right, #ff5722, #ff9800);
+  opacity: 0.9;
+}
+
+.logout-button:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Logout Container on Home Page */
+.logout-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.logout-container .logout-button {
+  background: linear-gradient(to right, #ff5722, #ff9800);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  border: none;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(255, 87, 34, 0.3);
+  transition: all 0.3s ease;
+}
+
+.logout-container .logout-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 87, 34, 0.4);
+}
+
 /* Override Dynamic Widget button styles */
 .dynamic-widget-button,
 .dynamic-widget-button *,
@@ -640,5 +858,15 @@ ul {
   
   .footer-container {
     grid-template-columns: 1fr;
+  }
+  
+  .prompt-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 10px;
   }
 }

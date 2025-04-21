@@ -39,45 +39,107 @@ export default function Whitepaper() {
       {/* Page Content */}
       <div className="page-content">
         <div className="page-banner">
-          <h1>Whitepaper</h1>
+          <h1>PASIFIKA WEB3 TECH HUB WHITEPAPER</h1>
         </div>
         
         <div className="content-container">
           <div className="content-section">
-            <h2>Pasifika Web3 Marketplace Technical Vision</h2>
-            <p>This whitepaper outlines the technical foundations and strategic vision for the Pasifika Web3 Marketplace, a blockchain-based ecosystem designed specifically for Pacific Island communities.</p>
+            <div className="whitepaper-header">
+              <Image
+                src="/pasifika.png"
+                alt="Pasifika Web3 Tech Hub"
+                width={300}
+                height={300}
+                className="whitepaper-logo"
+              />
+              <h2>A PASIFIKA Token-Powered DePIN for Pacific Island Communities</h2>
+              <p className="whitepaper-version">Version 1.0 | May 2025</p>
+              <div className="whitepaper-divider"></div>
+            </div>
             
-            <h3>Executive Summary</h3>
-            <p>The Pasifika Web3 Marketplace represents a paradigm shift in how Pacific Island communities engage with digital economies. By leveraging blockchain technology, we aim to create a decentralized marketplace that addresses the unique challenges faced by island nations while unlocking new economic opportunities.</p>
+            <h2>EXECUTIVE SUMMARY</h2>
+            <p>The Pasifika Web3 Tech Hub represents a groundbreaking decentralized physical infrastructure network (DePIN) designed specifically for Pacific Island communities. Leveraging the native PASIFIKA token (PSF) and built on Linea's zkEVM Layer-2 technology, this platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.</p>
             
-            <h3>Technology Stack</h3>
-            <p>Our platform is built on a robust technology stack that includes:</p>
+            <p>This whitepaper outlines our comprehensive approach to building a decentralized marketplace that connects PSF token holders, data providers, content creators, artisans, farmers, validators, and global consumers in a tokenized ecosystem that spans both digital and physical infrastructure.</p>
+            
+            <h2>VISION</h2>
+            <p>Our vision is to create a resilient, self-sustaining digital economy that empowers Pacific Islanders to participate in the global Web3 ecosystem while preserving their unique cultural heritage. By connecting physical island resources with digital infrastructure, we create new economic opportunities while addressing key challenges including:</p>
+            
             <ul>
-              <li><strong>Blockchain Layer:</strong> Ethereum-compatible smart contracts with layer-2 scaling solutions</li>
-              <li><strong>Front-end:</strong> Next.js React framework for responsive, accessible interfaces</li>
-              <li><strong>Backend Services:</strong> Distributed node architecture for resilience against connectivity challenges</li>
-              <li><strong>Data Storage:</strong> IPFS for decentralized content storage</li>
-              <li><strong>Identity Management:</strong> Self-sovereign identity protocols with optional KYC</li>
+              <li><strong>Geographic Isolation:</strong> Overcoming distance barriers through digital connectivity</li>
+              <li><strong>Limited Infrastructure:</strong> Building decentralized systems that require minimal physical infrastructure</li>
+              <li><strong>Cultural Preservation:</strong> Creating mechanisms to protect and monetize cultural knowledge and artifacts</li>
+              <li><strong>Climate Vulnerability:</strong> Establishing digital resilience against increasing climate threats</li>
+              <li><strong>Economic Diversification:</strong> Reducing dependence on tourism and external aid through digital opportunities</li>
             </ul>
             
-            <h3>Key Features</h3>
-            <p>The platform includes several innovative features designed for our specific use cases:</p>
+            <h2>TOKENOMICS FRAMEWORK</h2>
+            <p>The PASIFIKA Token (PSF) serves as the core utility and governance token within our ecosystem. Its primary functions include:</p>
+            
+            <div className="grid-2-cols">
+              <div>
+                <h4>Economic Functions</h4>
+                <ul>
+                  <li>Medium of exchange for marketplace transactions</li>
+                  <li>Staking for network security and governance rights</li>
+                  <li>Collateral for DeFi services and microloans</li>
+                  <li>Fee distribution to node operators and validators</li>
+                  <li>Treasury funding for community-driven initiatives</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Governance Functions</h4>
+                <ul>
+                  <li>Protocol parameter adjustments</li>
+                  <li>Treasury fund allocation</li>
+                  <li>Feature prioritization and development</li>
+                  <li>Cultural protection policies</li>
+                  <li>Node operator incentive structures</li>
+                  <li>Marketplace fee determination</li>
+                </ul>
+              </div>
+            </div>
+            
+            <h2>TECHNICAL ARCHITECTURE</h2>
+            <p>Our technical stack combines cutting-edge blockchain technologies with low-bandwidth optimizations designed for the unique connectivity challenges of Pacific Island environments.</p>
+            
+            <h3>Core Components:</h3>
             <ul>
-              <li>Cross-border payment solutions with minimal fees</li>
-              <li>Digital marketplace for cultural and physical goods</li>
-              <li>Tokenized asset exchange compatible with regional regulations</li>
-              <li>Community governance mechanisms for platform evolution</li>
-              <li>Low-bandwidth operation modes for areas with limited connectivity</li>
+              <li><strong>Blockchain Layer:</strong> Linea zkEVM Layer-2 for low-cost, high-speed transactions</li>
+              <li><strong>Node Infrastructure:</strong> Distributed validator network with solar-powered options</li>
+              <li><strong>Smart Contracts:</strong> EVM-compatible contracts governing marketplace, governance, and token mechanics</li>
+              <li><strong>Storage Layer:</strong> IPFS-based system with bandwidth-efficient redundancy</li>
+              <li><strong>Front-End:</strong> Progressive Web App with offline capabilities</li>
+              <li><strong>Oracle Network:</strong> Real-world data feeds for climate monitoring, currency exchange, etc.</li>
+              <li><strong>Identity Framework:</strong> Self-sovereign identity with optional KYC for regulatory compliance</li>
+              <li><strong>AI Infrastructure:</strong> Machine learning systems to enhance platform functionality</li>
             </ul>
             
-            <h3>Implementation Roadmap</h3>
-            <p>Our development follows a phased approach, with clear milestones and deliverables:</p>
+            <h3>Dynamic NFT Implementation</h3>
+            <p>Our innovative Dynamic NFT system is a cornerstone technology that enables efficient representation of both digital and physical assets. These NFTs can:</p>
             <ul>
-              <li><strong>Phase 1 (Q3 2025):</strong> Core marketplace functionality and wallet integration</li>
-              <li><strong>Phase 2 (Q4 2025):</strong> Regional payment gateways and identity framework</li>
-              <li><strong>Phase 3 (Q1 2026):</strong> Governance mechanics and expanded marketplace categories</li>
-              <li><strong>Phase 4 (Q2 2026):</strong> Mobile-first features and offline transaction support</li>
+              <li>Update metadata based on real-world conditions (e.g., crop harvest status)</li>
+              <li>Incorporate royalty distribution for cultural artifacts</li>
+              <li>Track provenance and authenticity of physical items</li>
+              <li>Automatically adjust availability based on inventory</li>
+              <li>Execute state changes based on environmental triggers</li>
             </ul>
+            
+            <div className="read-more-section">
+              <h3>Additional Whitepaper Sections</h3>
+              <p>The full whitepaper contains additional detailed sections covering:</p>
+              <ul>
+                <li>Marketplace Mechanics & Categories</li>
+                <li>Consensus Mechanism & Validation</li>
+                <li>Economic Model & Sustainability</li>
+                <li>Governance Framework & Voting</li>
+                <li>Cultural Protection Mechanisms</li>
+                <li>Regulatory Compliance Strategies</li>
+                <li>Climate Resilience Initiatives</li>
+                <li>Development Roadmap & Milestones</li>
+              </ul>
+              <p>For the complete technical whitepaper and detailed tokenomics information, please visit our <a href="https://github.com/Pasifika-Web3-Tech-Hub/whitepaper" target="_blank" rel="noopener noreferrer" className="repo-link">Whitepaper GitHub Repository</a></p>
+            </div>
           </div>
         </div>
       </div>

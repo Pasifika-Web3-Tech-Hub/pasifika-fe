@@ -6,9 +6,9 @@ export default function Increment() {
 
   const handleIncrement = () => {
     writeContract({
-      address: "0x80d3c57b95a2fca3900f3EAC71196Bf133aaa517", // Add your deployed smart contract address here
+      address: "0x80d3c57b95a2fca3900f3EAC71196Bf133aaa517", 
       abi: abi,
-      functionName: "increment",
+      functionName: "pasifika", 
     });
   };
 

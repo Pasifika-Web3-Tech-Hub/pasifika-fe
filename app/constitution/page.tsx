@@ -44,6 +44,19 @@ export default function Constitution() {
         
         <div className="content-container">
           <div className="content-section">
+            <div className="whitepaper-header">
+              <Image
+                src="/pasifika.png"
+                alt="Pasifika Web3 Tech Hub"
+                width={300}
+                height={300}
+                className="whitepaper-logo"
+              />
+              <h2>Pasifika Web3 Tech Hub Governance Document</h2>
+              <p className="whitepaper-version">Version 1.0 | May 2025</p>
+              <div className="whitepaper-divider"></div>
+            </div>
+            
             <h2>Preamble</h2>
             <p>We, the members of Pasifika Web3 Tech Hub, establish this Decentralized Autonomous Organization (DAO) to create a thriving PASIFIKA token-powered DePIN (Decentralized Physical Infrastructure Network) marketplace for Pacific Island data, digital content, traditional knowledge, handicrafts, and local produce, honoring our cultural heritage while embracing technological innovation. Built on a Blockchain Layer-2 technology and aligned with our vision for AI-native infrastructure, this constitution serves as the foundational document governing our collective.</p>
             

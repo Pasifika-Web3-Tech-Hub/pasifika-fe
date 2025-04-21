@@ -5,12 +5,44 @@ import { useState, useEffect } from "react";
 import { useDarkMode } from "@/lib/useDarkMode";
 import "./page.css";
 import Image from "next/image";
-import Counter from './components/Counter.js';
-import Increment from './components/Increment.js';
+import { useDynamicContext, useIsLoggedIn } from "@dynamic-labs/sdk-react-core";
+import { useRouter } from 'next/navigation';
 
 export default function Main() {
   const { isDarkMode } = useDarkMode();
-
+  const { sdkHasLoaded, primaryWallet, handleLogOut } = useDynamicContext();
+  const isLoggedIn = useIsLoggedIn();
+  const router = useRouter();
+  const [showRedirectPrompt, setShowRedirectPrompt] = useState(false);
+  const [returningFromServices, setReturningFromServices] = useState(false);
+  
+  // Check if the user is returning from services page
+  useEffect(() => {
+    // Use sessionStorage to detect if user has just returned from services
+    const fromServices = sessionStorage.getItem('fromServices');
+    if (fromServices === 'true') {
+      setReturningFromServices(true);
+      sessionStorage.removeItem('fromServices');
+    }
+  }, []);
+  
+  // Effect to show redirect prompt when authenticated
+  useEffect(() => {
+    if (sdkHasLoaded && isLoggedIn && primaryWallet && !returningFromServices) {
+      setShowRedirectPrompt(true);
+    }
+  }, [sdkHasLoaded, isLoggedIn, primaryWallet, returningFromServices]);
+  
+  // Handle redirect to services
+  const handleRedirectToServices = () => {
+    router.push('/services');
+  };
+  
+  // Handle cancel redirect
+  const handleCancelRedirect = () => {
+    setShowRedirectPrompt(false);
+  };
+  
   return (
     <div className={`container ${isDarkMode ? 'dark' : 'light'}`}>
       {/* Header Section - Pasifika Styled */}
@@ -89,17 +121,31 @@ export default function Main() {
         <div className="container">
           <h2 className="section-title">Our Team</h2>
           <p className="section-subtitle">
-            Meet the co-Founders of Pasifika Web3 Tech Hub
+            Meet the Founder and co-Founders of Pasifika Web3 Tech Hub
           </p>
           
           <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon team-member-photo">
+                <Image src="/edwin.png" alt="Edwin Liava'a" width={70} height={70} />
+              </div>
+              <h3 className="feature-title">Edwin Liava'a</h3>
+              <p className="feature-text">
+                Founder, Blockchain & Digital Transformation Engineer
+              </p>
+              <p className="feature-location">Fiji</p>
+              <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                LinkedIn Profile
+              </a>
+            </div>
+            
             <div className="feature-card">
               <div className="feature-icon team-member-photo">
                 <Image src="/tenanoia.png" alt="Tenanoia Veronica Simona" width={70} height={70} />
               </div>
               <h3 className="feature-title">Tenanoia Veronica Simona</h3>
               <p className="feature-text">
-                CEO at Tuvalu Telecommunications Corporation
+                co-Founder, CEO at Tuvalu Telecommunications Corporation
               </p>
               <p className="feature-location">Tuvalu</p>
               <a href="https://www.linkedin.com/in/ACoAAARD0xAB9-x51CLKG-LC1dP5afg_3Kwqjjg" target="_blank" rel="noopener noreferrer" className="linkedin-link">
@@ -113,7 +159,7 @@ export default function Main() {
               </div>
               <h3 className="feature-title">Suzanne Moli Orudiana</h3>
               <p className="feature-text">
-                Managing Director of Intellectual Solutions
+                co-Founder, Managing Director of Intellectual Solutions
               </p>
               <p className="feature-location">Solomon Islands</p>
               <a href="https://www.linkedin.com/in/ACoAAAzXV9ABswa8sUOrI0bjhdxKk2VdF7ZB1-M" target="_blank" rel="noopener noreferrer" className="linkedin-link">
@@ -127,7 +173,7 @@ export default function Main() {
               </div>
               <h3 className="feature-title">Seluvaia Kauvaka</h3>
               <p className="feature-text">
-                Project Coordinator (PMU - SCA & MET)
+                co-Founder, Project Coordinator (PMU - SCA & MET)
               </p>
               <p className="feature-location">Tonga</p>
               <a href="https://www.linkedin.com/in/ACoAABPDT9wB1j9f2wn7lUZ9YJiP8vR6hgvgMco" target="_blank" rel="noopener noreferrer" className="linkedin-link">
@@ -141,7 +187,7 @@ export default function Main() {
               </div>
               <h3 className="feature-title">Lusia Jones</h3>
               <p className="feature-text">
-                Visionary Leader & Heart-led Changemaker
+                co-Founder, Visionary Leader & Heart-led Changemaker
               </p>
               <p className="feature-location">New Zealand</p>
               <a href="https://www.linkedin.com/in/ACoAAALsKcoBcTnEqFKPjl5y6Br5i9fgfRUEVLw" target="_blank" rel="noopener noreferrer" className="linkedin-link">
@@ -155,24 +201,10 @@ export default function Main() {
               </div>
               <h3 className="feature-title">Dean Parker</h3>
               <p className="feature-text">
-                Renewable Energy & Data Center Project Leader
+                co-Founder, Renewable Energy & Data Center Project Leader
               </p>
               <p className="feature-location">Samoa</p>
               <a href="https://www.linkedin.com/in/dean-parker-7389a6213" target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                LinkedIn Profile
-              </a>
-            </div>
-            
-            <div className="feature-card">
-              <div className="feature-icon team-member-photo">
-                <Image src="/edwin.png" alt="Edwin Liava'a" width={70} height={70} />
-              </div>
-              <h3 className="feature-title">Edwin Liava'a</h3>
-              <p className="feature-text">
-                Blockchain & Digital Transformation Engineer
-              </p>
-              <p className="feature-location">Fiji</p>
-              <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                 LinkedIn Profile
               </a>
             </div>
@@ -210,21 +242,47 @@ export default function Main() {
               {/* Wallet Connection Widget */}
               <DynamicWidget />
               
-              {/* Counter and Increment Components */}
-              <div className="token-components">
-                <div className="token-component-item">
-                  <h3 className="token-component-title">Transaction Counter</h3>
-                  <div className="token-component-content">
-                    <Counter />
+              {/* Logout button when connected */}
+              {isLoggedIn && primaryWallet && (
+                <div className="logout-container">
+                  <button 
+                    className="btn logout-button"
+                    onClick={() => {
+                      if (handleLogOut) {
+                        handleLogOut();
+                        window.location.reload();
+                      }
+                    }}
+                  >
+                    Logout from Wallet
+                  </button>
+                </div>
+              )}
+              
+              {/* Redirect prompt that appears when logged in */}
+              {showRedirectPrompt && (
+                <div className="redirect-prompt">
+                  <p>You are now connected to your wallet!</p>
+                  <div className="prompt-buttons">
+                    <button 
+                      className="btn btn-primary" 
+                      onClick={handleRedirectToServices}
+                    >
+                      Continue to Services
+                    </button>
+                    <button 
+                      className="btn btn-secondary" 
+                      onClick={handleCancelRedirect}
+                    >
+                      Stay on Home Page
+                    </button>
                   </div>
                 </div>
-                
-                <div className="token-component-item">
-                  <h3 className="token-component-title">Value Incrementer</h3>
-                  <div className="token-component-content">
-                    <Increment />
-                  </div>
-                </div>
+              )}
+              
+              {/* Notice about functionality */}
+              <div className="redirection-notice">
+                <p>Connect your wallet to access our smart contract services.</p>
               </div>
             </div>
           </div>

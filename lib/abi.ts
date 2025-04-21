@@ -1,7 +1,7 @@
 export const abi = [
     {
     "inputs":[],
-    "name":"increment",
+    "name":"pasifika",
     "outputs":[],
     "stateMutability":"nonpayable",
     "type":"function"

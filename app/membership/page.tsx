@@ -3,20 +3,96 @@
 import { useDarkMode } from "@/lib/useDarkMode";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../page.css";
 import "../shared-pages.css";
+import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 
 export default function Membership() {
   const { isDarkMode } = useDarkMode();
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const { primaryWallet, setShowAuthFlow } = useDynamicContext();
+  const [walletConnected, setWalletConnected] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    linkedin: '',
+    organization: '',
+    position: '',
+    country: '',
+    interests: '',
+    message: '',
+    walletAddress: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    if (primaryWallet) {
+      setWalletConnected(true);
+      setFormData(prev => ({
+        ...prev,
+        walletAddress: primaryWallet.address
+      }));
+    } else {
+      setWalletConnected(false);
+      setFormData(prev => ({
+        ...prev,
+        walletAddress: ''
+      }));
+    }
+  }, [primaryWallet]);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    setTimeout(() => {
+    setIsSubmitting(true);
+    
+    try {
+      // Prepare form data for Formspree submission
+      const formspreeData = {
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        linkedin: formData.linkedin,
+        organization: formData.organization,
+        position: formData.position,
+        country: formData.country,
+        interests: formData.interests,
+        message: formData.message,
+        walletAddress: formData.walletAddress,
+        _subject: "New Pasifika Web3 Tech Hub Membership Registration"
+      };
+      
+      // Send data to Formspree API
+      const response = await fetch("https://formspree.io/f/mwplaeor", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formspreeData)
+      });
+      
+      if (!response.ok) {
+        throw new Error("Failed to submit form. Please try again.");
+      }
+      
+      // Show success message
       setFormSubmitted(true);
-    }, 1000);
+    } catch (error) {
+      console.error("Error sending registration:", error);
+      alert("There was an error submitting your registration. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -57,6 +133,37 @@ export default function Membership() {
             <h2>Join the Pasifika Web3 Community</h2>
             <p>Become a member of the Pasifika Web3 Tech Hub and gain access to exclusive benefits, resources, and opportunities within our growing ecosystem.</p>
             
+            <div className="wallet-section">
+              <h3>Connect Your Wallet</h3>
+              <p>To complete your membership registration, please connect your Web3 wallet. This will be used for platform authentication and participating in our DAO governance.</p>
+              
+              {walletConnected ? (
+                <div className="wallet-info">
+                  <div className="wallet-status connected">
+                    <span className="wallet-icon">💼</span>
+                    <span>Wallet Connected</span>
+                  </div>
+                  <div className="wallet-address">
+                    {primaryWallet?.address.substring(0, 6)}...{primaryWallet?.address.substring(primaryWallet?.address.length - 4)}
+                  </div>
+                  <button className="wallet-button disconnect" onClick={() => setShowAuthFlow(true)}>
+                    Disconnect Wallet
+                  </button>
+                </div>
+              ) : (
+                <div className="wallet-connection">
+                  <div className="wallet-status">
+                    <span className="wallet-icon">💼</span>
+                    <span>Wallet Not Connected</span>
+                  </div>
+                  <button className="wallet-button connect" onClick={() => setShowAuthFlow(true)}>
+                    Connect Wallet
+                  </button>
+                  <p className="wallet-note">Supported wallets: MetaMask, WalletConnect, and more</p>
+                </div>
+              )}
+            </div>
+            
             <h3>Membership Benefits</h3>
             <ul>
               <li><strong>Early access</strong> to new platform features and services</li>
@@ -69,26 +176,88 @@ export default function Membership() {
             
             {!formSubmitted ? (
               <form onSubmit={handleSubmit}>
-                <div className="grid-2-cols">
-                  <div className="form-group">
-                    <label htmlFor="firstName" className="form-label">First Name</label>
-                    <input type="text" id="firstName" className="form-input" required />
-                  </div>
-                  
-                  <div className="form-group">
-                    <label htmlFor="lastName" className="form-label">Last Name</label>
-                    <input type="text" id="lastName" className="form-input" required />
-                  </div>
+                <div className="form-group">
+                  <label htmlFor="fullName" className="form-label">Full Name *</label>
+                  <input 
+                    type="text" 
+                    id="fullName" 
+                    className="form-input" 
+                    value={formData.fullName}
+                    onChange={handleInputChange}
+                    required 
+                  />
                 </div>
                 
                 <div className="form-group">
-                  <label htmlFor="email" className="form-label">Email Address</label>
-                  <input type="email" id="email" className="form-input" required />
+                  <label htmlFor="email" className="form-label">Email Address *</label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    className="form-input" 
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required 
+                  />
                 </div>
                 
                 <div className="form-group">
-                  <label htmlFor="country" className="form-label">Country/Island</label>
-                  <select id="country" className="form-select" required>
+                  <label htmlFor="phone" className="form-label">Phone Number *</label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    className="form-input" 
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    required 
+                  />
+                </div>
+                
+                <div className="form-group">
+                  <label htmlFor="linkedin" className="form-label">LinkedIn Profile URL * (required for member verification)</label>
+                  <input 
+                    type="url" 
+                    id="linkedin" 
+                    className="form-input" 
+                    placeholder="https://www.linkedin.com/in/yourprofile" 
+                    value={formData.linkedin}
+                    onChange={handleInputChange}
+                    required 
+                  />
+                </div>
+                
+                <div className="form-group">
+                  <label htmlFor="organization" className="form-label">Organization/Company *</label>
+                  <input 
+                    type="text" 
+                    id="organization" 
+                    className="form-input" 
+                    value={formData.organization}
+                    onChange={handleInputChange}
+                    required 
+                  />
+                </div>
+                
+                <div className="form-group">
+                  <label htmlFor="position" className="form-label">Role/Position *</label>
+                  <input 
+                    type="text" 
+                    id="position" 
+                    className="form-input" 
+                    value={formData.position}
+                    onChange={handleInputChange}
+                    required 
+                  />
+                </div>
+                
+                <div className="form-group">
+                  <label htmlFor="country" className="form-label">Country/Island *</label>
+                  <select 
+                    id="country" 
+                    className="form-select" 
+                    value={formData.country}
+                    onChange={handleInputChange}
+                    required
+                  >
                     <option value="">Select your country</option>
                     <option value="fiji">Fiji</option>
                     <option value="samoa">Samoa</option>
@@ -109,8 +278,14 @@ export default function Membership() {
                 </div>
                 
                 <div className="form-group">
-                  <label htmlFor="interests" className="form-label">Areas of Interest</label>
-                  <select id="interests" className="form-select" required>
+                  <label htmlFor="interests" className="form-label">Areas of Interest *</label>
+                  <select 
+                    id="interests" 
+                    className="form-select" 
+                    value={formData.interests}
+                    onChange={handleInputChange}
+                    required
+                  >
                     <option value="">Select primary interest</option>
                     <option value="digitalMarketplace">Digital Marketplace</option>
                     <option value="financialServices">Financial Services</option>
@@ -124,17 +299,43 @@ export default function Membership() {
                 
                 <div className="form-group">
                   <label htmlFor="message" className="form-label">Why are you interested in joining? (Optional)</label>
-                  <textarea id="message" className="form-textarea"></textarea>
+                  <textarea 
+                    id="message" 
+                    className="form-textarea"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                  ></textarea>
+                </div>
+                
+                <div className="form-group checkbox-group">
+                  <input type="checkbox" id="terms" required />
+                  <label htmlFor="terms" className="checkbox-label">
+                    I agree to the <Link href="/constitution" className="text-link">Pasifika Constitution</Link> and Terms of Service
+                  </label>
+                </div>
+                
+                <div className="form-group checkbox-group">
+                  <input type="checkbox" id="wallet-confirmation" required disabled={!walletConnected} />
+                  <label htmlFor="wallet-confirmation" className="checkbox-label">
+                    I confirm that I own the connected wallet address and will use it for platform authentication
+                    {!walletConnected && <span className="warning-text"> (Please connect your wallet first)</span>}
+                  </label>
                 </div>
                 
                 <div className="form-group">
-                  <button type="submit" className="form-button">Register for Membership</button>
+                  <button 
+                    type="submit" 
+                    className="form-button" 
+                    disabled={!walletConnected || isSubmitting}
+                  >
+                    {isSubmitting ? "Submitting..." : walletConnected ? "Register for Membership" : "Connect Wallet to Register"}
+                  </button>
                 </div>
               </form>
             ) : (
               <div className="success-message">
                 <h3>Thank You for Registering!</h3>
-                <p>Your membership application has been received. We'll review your information and send you a confirmation email with next steps within 24-48 hours.</p>
+                <p>Your membership application has been successfully submitted. We'll review your information and get back to you with a confirmation soon.</p>
                 <p>In the meantime, feel free to explore more about our platform and community.</p>
               </div>
             )}
