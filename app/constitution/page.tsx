@@ -17,12 +17,12 @@ export default function Constitution() {
           <div className="logo">
             <Image
               src="/pasifika.png"
-              alt="Pasifika Web3 Tech Hub"
+              alt="Pasifika"
               width={50}
               height={50}
             />
             <div className="logo-text">
-              <span className="logo-accent">Pasifika Web3 Tech Hub</span>
+              <span className="logo-accent">Pasifika</span>
             </div>
           </div>
           
@@ -47,12 +47,12 @@ export default function Constitution() {
             <div className="whitepaper-header">
               <Image
                 src="/pasifika.png"
-                alt="Pasifika Web3 Tech Hub"
+                alt="Pasifika"
                 width={300}
                 height={300}
                 className="whitepaper-logo"
               />
-              <h2>Pasifika Web3 Tech Hub Governance Document</h2>
+              <h2>Pasifika Governance Document</h2>
               <p className="whitepaper-version">Version 1.0 | May 2025</p>
               <div className="whitepaper-divider"></div>
             </div>

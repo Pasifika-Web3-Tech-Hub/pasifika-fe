@@ -72,12 +72,12 @@ export default function Contact() {
           <div className="logo">
             <Image
               src="/pasifika.png"
-              alt="Pasifika Web3 Tech Hub"
+              alt="Pasifika"
               width={50}
               height={50}
             />
             <div className="logo-text">
-              <span className="logo-accent">Pasifika Web3 Tech Hub</span>
+              <span className="logo-accent">Pasifika</span>
             </div>
           </div>
           
