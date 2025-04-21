@@ -180,4 +180,4 @@ npm run build
 
 <!-- trigger redeploy for 404.html SPA fix -->
 
-<!-- trigger redeploy -->
+<!-- trigger redeploy for .nojekyll fix -->
