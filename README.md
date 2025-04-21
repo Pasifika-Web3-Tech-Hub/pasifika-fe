@@ -178,4 +178,6 @@ npm run build
 - Cross-chain support
 - Expansion of marketplace functionality
 
+<!-- trigger redeploy for 404.html SPA fix -->
+
 <!-- trigger redeploy -->
