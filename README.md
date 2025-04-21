@@ -1,4 +1,4 @@
-# Pasifika Web3 Tech Hub
+# Pasifika Web3 Tech Hub - Frontend
 
 <div align="center">
   <img src="public/pasifika.png" alt="Pasifika Web3 Tech Hub" width="300" height="300" />
