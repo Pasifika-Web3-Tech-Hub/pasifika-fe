@@ -58,7 +58,7 @@ export default function Tokenomics() {
             </div>
             
             <h2>Overview</h2>
-            <p>The PASIFIKA token (PSF) serves as the native utility and governance token for the Pasifika Web3 Tech Hub ecosystem. Built on the Linea zkEVM Layer-2 platform and aligned with TachyonX's vision for AI-native infrastructure, PSF enables a comprehensive economic model that incentivizes participation, ensures fair governance, and creates sustainable value for Pacific Island communities.</p>
+            <p>The PASIFIKA token (PSF) serves as the native utility and governance token for the Pasifika Web3 Tech Hub ecosystem. Built on the Linea zkEVM Layer-2 platform and aligned with TachyonX&apos;s vision for AI-native infrastructure, PSF enables a comprehensive economic model that incentivizes participation, ensures fair governance, and creates sustainable value for Pacific Island communities.</p>
             
             <h2>Token Utility</h2>
             <p>The PASIFIKA token has multiple use cases within our ecosystem:</p>

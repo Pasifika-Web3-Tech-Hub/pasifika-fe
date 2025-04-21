@@ -58,7 +58,7 @@ export default function Whitepaper() {
             </div>
             
             <h2>EXECUTIVE SUMMARY</h2>
-            <p>The Pasifika Web3 Tech Hub represents a groundbreaking decentralized physical infrastructure network (DePIN) designed specifically for Pacific Island communities. Leveraging the native PASIFIKA token (PSF) and built on Linea's zkEVM Layer-2 technology, this platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.</p>
+            <p>The Pasifika Web3 Tech Hub represents a groundbreaking decentralized physical infrastructure network (DePIN) designed specifically for Pacific Island communities. Leveraging the native PASIFIKA token (PSF) and built on Linea&apos;s zkEVM Layer-2 technology, this platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.</p>
             
             <p>This whitepaper outlines our comprehensive approach to building a decentralized marketplace that connects PSF token holders, data providers, content creators, artisans, farmers, validators, and global consumers in a tokenized ecosystem that spans both digital and physical infrastructure.</p>
             

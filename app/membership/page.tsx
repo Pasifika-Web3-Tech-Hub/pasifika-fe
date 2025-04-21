@@ -335,7 +335,7 @@ export default function Membership() {
             ) : (
               <div className="success-message">
                 <h3>Thank You for Registering!</h3>
-                <p>Your membership application has been successfully submitted. We'll review your information and get back to you with a confirmation soon.</p>
+                <p>Your membership application has been successfully submitted. We&apos;ll review your information and get back to you with a confirmation soon.</p>
                 <p>In the meantime, feel free to explore more about our platform and community.</p>
               </div>
             )}

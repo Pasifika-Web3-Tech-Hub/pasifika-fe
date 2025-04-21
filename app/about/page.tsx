@@ -58,10 +58,10 @@ export default function About() {
             </div>
             
             <h2>Our Story</h2>
-            <p>Pasifika Web3 Tech Hub was founded in 2025 by a team of technologists, entrepreneurs, and community leaders from across the Pacific Islands. Recognizing both the challenges and opportunities that blockchain technology presents for island communities, we came together to create a platform specifically designed for the unique context of Pacific Island nations.</p>
+            <p>We&apos;re on a mission to empower Pacific Island communities through accessible Web3 technologies, creating economic opportunities while preserving and celebrating our cultural heritage. We believe in building decentralized systems that work for people regardless of their location, technical background, or economic status.</p>
             
             <h3>Our Mission</h3>
-            <p>We're on a mission to empower Pacific Island communities through accessible Web3 technologies, creating economic opportunities while preserving and celebrating our cultural heritage. We believe in building decentralized systems that work for people regardless of their location, technical background, or economic status.</p>
+            <p>We&apos;re on a mission to empower Pacific Island communities through accessible Web3 technologies, creating economic opportunities while preserving and celebrating our cultural heritage. We believe in building decentralized systems that work for people regardless of their location, technical background, or economic status.</p>
             
             <h3>Our Vision</h3>
             <p>We envision a future where Pacific Island communities are active participants in the global digital economy, with tools and infrastructure that address our specific needs and challenges. Through the Pasifika Web3 Marketplace, we aim to create resilient economic systems that can withstand geographical isolation, climate challenges, and limited traditional infrastructure.</p>
@@ -72,9 +72,9 @@ export default function About() {
             <div className="features-grid team-grid">
               <div className="feature-card team-member">
                 <div className="feature-icon team-member-photo">
-                  <Image src="/edwin.png" alt="Edwin Liava'a" width={70} height={70} />
+                  <Image src="/edwin.png" alt="Edwin Liava&apos;a" width={70} height={70} />
                 </div>
-                <h3 className="feature-title">Edwin Liava'a</h3>
+                <h3 className="feature-title">Edwin Liava&apos;a</h3>
                 <p className="feature-text">
                   Founder, Blockchain & Digital Transformation Engineer
                 </p>
@@ -166,7 +166,7 @@ export default function About() {
             </ul>
             
             <h3>Our Partners</h3>
-            <p>We're proud to work with a growing network of regional and international partners including:</p>
+            <p>We&apos;re proud to work with a growing network of regional and international partners including:</p>
             <ul>
               <li>Pacific Island regional organizations</li>
               <li>Local government technology initiatives</li>

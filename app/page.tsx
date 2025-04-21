@@ -127,9 +127,9 @@ export default function Main() {
           <div className="features-grid">
             <div className="feature-card">
               <div className="feature-icon team-member-photo">
-                <Image src="/edwin.png" alt="Edwin Liava'a" width={70} height={70} />
+                <Image src="/edwin.png" alt="Edwin Liava&apos;a" width={70} height={70} />
               </div>
-              <h3 className="feature-title">Edwin Liava'a</h3>
+              <h3 className="feature-title">Edwin Liava&apos;a</h3>
               <p className="feature-text">
                 Founder, Blockchain & Digital Transformation Engineer
               </p>

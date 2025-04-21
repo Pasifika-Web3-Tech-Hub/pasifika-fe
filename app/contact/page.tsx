@@ -100,7 +100,7 @@ export default function Contact() {
         <div className="content-container">
           <div className="content-section">
             <h2>Get in Touch</h2>
-            <p>We're excited to hear from you! Whether you have questions about our platform, want to explore partnership opportunities, or need support with your account, our team is here to help.</p>
+            <p>We&apos;re excited to hear from you! Whether you have questions about our platform, want to explore partnership opportunities, or need support with your account, our team is here to help.</p>
             
             <div className="grid-2-cols">
               <div>
