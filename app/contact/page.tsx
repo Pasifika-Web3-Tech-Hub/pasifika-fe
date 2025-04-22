@@ -106,19 +106,35 @@ export default function Contact() {
               <div>
                 <h3>Contact Information</h3>
                 <p><strong>Email:</strong> info@pasifika.xyz</p>
-                <p><strong>Phone:</strong> +676 7760129</p>
-                <p><strong>Location:</strong> The Hill, Vaini, Tonga (Headquarters)</p>
-                <p><strong>Hours:</strong> Monday - Friday, 9am - 5pm (Vaini Time)</p>
-                
+                <p><strong>Whatsapp:</strong> +676 7760129</p>
+                <p><strong>Location:</strong> To be confirmed (Headquarters)</p>
+              
                 <h3>Regional Representatives</h3>
-                <p>We have regional representatives in Tonga, Tuvalu, Samoa, Niue, Cook Islands,Fiji, Vanuatu, Solomon Islands, Papua New Guinea, New Zealand and Australia. Please contact our main office for details.</p>
+                <p>We have regional representatives in Fiji, Tonga, Samoa, Tuvalu, Niue, Cook Islands, Honolulu (Hawaii), Vanuatu, Solomon Islands, Papua New Guinea, New Zealand and Australia.</p>
                 
                 <h3>Social Media</h3>
                 <p>Follow us on social media for the latest updates:</p>
                 <ul>
-                  <li>Twitter: @PasifikaXYZ</li>
-                  <li>Telegram: PasifikaXYZCommunity</li>
-                  <li>Discord: Pasifika XYZ Hub</li>
+                  <li>
+                    <Link 
+                      href="https://www.linkedin.com/company/pasifika-web3" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="social-link"
+                    >
+                      LinkedIn: Pasifika Web3
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      href="https://facebook.com/61575068162411" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="social-link"
+                    >
+                      Facebook: Pasifika Web3
+                    </Link>
+                  </li>
                 </ul>
               </div>
               
