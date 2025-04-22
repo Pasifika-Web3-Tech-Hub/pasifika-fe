@@ -142,14 +142,14 @@ export default function About() {
               
               <div className="feature-card team-member">
                 <div className="feature-icon team-member-photo">
-                  <Image src="/dean.png" alt="Dean Parker" width={70} height={70} />
+                  <Image src="/semisi.png" alt="Semisi Siupeli Taufa" width={70} height={70} />
                 </div>
-                <h3 className="feature-title">Dean Parker</h3>
+                <h3 className="feature-title">Semisi Siupeli Taufa</h3>
                 <p className="feature-text">
-                  co-Founder, Renewable Energy & Data Center Project Leader
+                  co-Founder, Chief System Analyst, Prime Minister&apos;s Office
                 </p>
-                <p className="feature-location">Samoa</p>
-                <a href="https://www.linkedin.com/in/dean-parker-7389a6213" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                <p className="feature-location">Tonga</p>
+                <a href="https://www.linkedin.com/in/semisi-siupeli-taufa-8945aa78/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
               </div>
