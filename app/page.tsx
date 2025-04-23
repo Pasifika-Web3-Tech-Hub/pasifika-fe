@@ -176,14 +176,14 @@ export default function Main() {
             
             <div className="feature-card">
               <div className="feature-icon team-member-photo">
-                <Image src="/seluvaia.png" alt="Seluvaia Kauvaka" width={70} height={70} />
+                <Image src="/shaun.png" alt="Shaun Suliol" width={70} height={70} />
               </div>
-              <h3 className="feature-title">Seluvaia Kauvaka</h3>
+              <h3 className="feature-title">Shaun Suliol</h3>
               <p className="feature-text">
-                co-Founder, Project Coordinator (PMU - SCA & MET)
+                co-Founder, Digital Innovations Specialist
               </p>
-              <p className="feature-location">Tonga</p>
-              <a href="https://www.linkedin.com/in/ACoAABPDT9wB1j9f2wn7lUZ9YJiP8vR6hgvgMco" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+              <p className="feature-location">Federated States of Micronesia</p>
+              <a href="https://www.linkedin.com/in/shaun-suliol-58a748122" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                 LinkedIn Profile
               </a>
             </div>
