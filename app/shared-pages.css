@@ -183,6 +183,7 @@
   border-radius: 4px;
   font-size: 1rem;
   background-color: var(--white);
+  color: #333333;
 }
 
 .form-textarea {
@@ -205,6 +206,20 @@
 .form-button:hover {
   opacity: 0.9;
   transform: translateY(-1px);
+}
+
+/* Dark mode form styles */
+.dark-mode .form-input,
+.dark-mode .form-textarea,
+.dark-mode .form-select {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.dark-mode .form-input::placeholder,
+.dark-mode .form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* Grid layouts */
