@@ -110,7 +110,7 @@ export default function Contact() {
                 <p><strong>Location:</strong> To be confirmed (Headquarters)</p>
               
                 <h3>Regional Representatives</h3>
-                <p>We have regional representatives in Fiji, Tonga, Samoa, Tuvalu, Niue, Cook Islands, Honolulu (Hawaii), Vanuatu, Solomon Islands, Papua New Guinea, New Zealand and Australia.</p>
+                <p>We have regional representatives in Fiji, Tonga, Samoa, Tuvalu, Niue, Cook Islands, Federated States of Micronesia, Honolulu (Hawaii), Vanuatu, Solomon Islands, Papua New Guinea, New Zealand and Australia.</p>
                 
                 <h3>Social Media</h3>
                 <p>Follow us on social media for the latest updates:</p>
