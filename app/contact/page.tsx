@@ -31,8 +31,8 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      // Prepare form data for Formspree submission
-      const formspreeData = {
+      // Prepare form data for FormSubmit.co submission
+      const formsubmitData = {
         name: formData.name,
         email: formData.email,
         subject: formData.subject,
@@ -40,14 +40,14 @@ export default function Contact() {
         _subject: `Pasifika Contact: ${formData.subject}`
       };
       
-      // Send data to Formspree API
-      const response = await fetch("https://formspree.io/f/xrbqgknw", {
+      // Send data to FormSubmit.co API
+      const response = await fetch("https://formsubmit.co/4c9c6823d1dbcdacea84e6851c5cea15", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
-        body: JSON.stringify(formspreeData)
+        body: JSON.stringify(formsubmitData)
       });
       
       if (!response.ok) {
