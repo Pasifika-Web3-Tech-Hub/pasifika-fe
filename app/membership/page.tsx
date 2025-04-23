@@ -283,19 +283,11 @@ export default function Membership() {
                   </label>
                 </div>
                 
-                <div className="form-group checkbox-group">
-                  <input type="checkbox" id="wallet-confirmation" required disabled={!walletConnected} />
-                  <label htmlFor="wallet-confirmation" className="checkbox-label">
-                    I confirm that I own the connected wallet address and will use it for platform authentication
-                    {!walletConnected && <span className="warning-text"> (Please connect your wallet first)</span>}
-                  </label>
-                </div>
-                
                 <div className="form-group">
                   <button 
                     type="submit" 
                     className="form-button" 
-                    disabled={!walletConnected || isSubmitting}
+                    disabled={isSubmitting}
                   >
                     {isSubmitting ? "Submitting..." : "Register"}
                   </button>
