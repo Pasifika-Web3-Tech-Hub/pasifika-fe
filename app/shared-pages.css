@@ -481,6 +481,8 @@
 }
 
 /* Field requirement marker */
+/* Removing these to prevent double asterisks */
+/* 
 .form-label::after {
   content: " *";
   color: var(--orange);
@@ -492,6 +494,7 @@
   color: var(--orange);
   font-weight: bold;
 }
+*/
 
 /* Success message enhancements */
 .success-message {
