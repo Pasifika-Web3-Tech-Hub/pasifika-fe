@@ -146,7 +146,7 @@ export default function Membership() {
             {!formSubmitted ? (
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <label htmlFor="fullName" className="form-label">Full Name *</label>
+                  <label htmlFor="fullName" className="form-label">Full Name <span style={{ color: '#FF5722' }}>*</span></label>
                   <input 
                     type="text" 
                     id="fullName" 
@@ -158,7 +158,7 @@ export default function Membership() {
                 </div>
                 
                 <div className="form-group">
-                  <label htmlFor="email" className="form-label">Email Address *</label>
+                  <label htmlFor="email" className="form-label">Email Address <span style={{ color: '#FF5722' }}>*</span></label>
                   <input 
                     type="email" 
                     id="email" 
@@ -170,7 +170,7 @@ export default function Membership() {
                 </div>
                 
                 <div className="form-group">
-                  <label htmlFor="phone" className="form-label">Phone Number *</label>
+                  <label htmlFor="phone" className="form-label">Phone Number <span style={{ color: '#FF5722' }}>*</span></label>
                   <input 
                     type="tel" 
                     id="phone" 
@@ -182,7 +182,7 @@ export default function Membership() {
                 </div>
                 
                 <div className="form-group">
-                  <label htmlFor="linkedin" className="form-label">LinkedIn Profile URL * (required for member verification)</label>
+                  <label htmlFor="linkedin" className="form-label">LinkedIn Profile URL <span style={{ color: '#FF5722' }}>*</span> (required for member verification)</label>
                   <input 
                     type="url" 
                     id="linkedin" 
@@ -195,7 +195,7 @@ export default function Membership() {
                 </div>
                 
                 <div className="form-group">
-                  <label htmlFor="organization" className="form-label">Organization/Company *</label>
+                  <label htmlFor="organization" className="form-label">Organization/Company <span style={{ color: '#FF5722' }}>*</span></label>
                   <input 
                     type="text" 
                     id="organization" 
@@ -207,7 +207,7 @@ export default function Membership() {
                 </div>
                 
                 <div className="form-group">
-                  <label htmlFor="position" className="form-label">Role/Position *</label>
+                  <label htmlFor="position" className="form-label">Role/Position <span style={{ color: '#FF5722' }}>*</span></label>
                   <input 
                     type="text" 
                     id="position" 
@@ -219,7 +219,7 @@ export default function Membership() {
                 </div>
                 
                 <div className="form-group">
-                  <label htmlFor="country" className="form-label">Country/Island *</label>
+                  <label htmlFor="country" className="form-label">Country/Island <span style={{ color: '#FF5722' }}>*</span></label>
                   <select 
                     id="country" 
                     className="form-select" 
@@ -247,7 +247,7 @@ export default function Membership() {
                 </div>
                 
                 <div className="form-group">
-                  <label htmlFor="interests" className="form-label">Areas of Interest *</label>
+                  <label htmlFor="interests" className="form-label">Areas of Interest <span style={{ color: '#FF5722' }}>*</span></label>
                   <select 
                     id="interests" 
                     className="form-select" 
@@ -267,7 +267,7 @@ export default function Membership() {
                 </div>
                 
                 <div className="form-group">
-                  <label htmlFor="message" className="form-label">Why are you interested in joining? (Optional)</label>
+                  <label htmlFor="message" className="form-label">Why are you interested in joining?</label>
                   <textarea 
                     id="message" 
                     className="form-textarea"

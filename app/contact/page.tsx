@@ -142,7 +142,7 @@ export default function Contact() {
                 {!formSubmitted ? (
                   <form onSubmit={handleSubmit}>
                     <div className="form-group">
-                      <label htmlFor="name" className="form-label">Your Name</label>
+                      <label htmlFor="name" className="form-label">Your Name <span style={{ color: '#FF5722' }}>*</span></label>
                       <input 
                         type="text" 
                         id="name" 
@@ -154,7 +154,7 @@ export default function Contact() {
                     </div>
                     
                     <div className="form-group">
-                      <label htmlFor="email" className="form-label">Email Address</label>
+                      <label htmlFor="email" className="form-label">Email Address <span style={{ color: '#FF5722' }}>*</span></label>
                       <input 
                         type="email" 
                         id="email" 
@@ -166,7 +166,7 @@ export default function Contact() {
                     </div>
                     
                     <div className="form-group">
-                      <label htmlFor="subject" className="form-label">Subject</label>
+                      <label htmlFor="subject" className="form-label">Subject <span style={{ color: '#FF5722' }}>*</span></label>
                       <select 
                         id="subject" 
                         className="form-select" 
@@ -185,7 +185,7 @@ export default function Contact() {
                     </div>
                     
                     <div className="form-group">
-                      <label htmlFor="message" className="form-label">Your Message</label>
+                      <label htmlFor="message" className="form-label">Your Message <span style={{ color: '#FF5722' }}>*</span></label>
                       <textarea 
                         id="message" 
                         className="form-textarea"
