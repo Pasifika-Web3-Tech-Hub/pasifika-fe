@@ -72,7 +72,7 @@ export default function Membership() {
       };
       
       // Send data to Formspree API
-      const response = await fetch("https://formspree.io/f/xgvkekjg", {
+      const response = await fetch("https://formspree.io/f/xvgaorey", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

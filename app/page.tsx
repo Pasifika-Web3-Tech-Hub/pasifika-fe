@@ -208,7 +208,7 @@ export default function Main() {
               </div>
               <h3 className="feature-title">Semisi Siupeli Taufa</h3>
               <p className="feature-text">
-                co-Founder, Chief System Analyst, Prime Minister&apos;s Office
+                co-Founder, Digital Transformation
               </p>
               <p className="feature-location">Tonga</p>
               <a href="https://www.linkedin.com/in/semisi-siupeli-taufa-8945aa78/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
