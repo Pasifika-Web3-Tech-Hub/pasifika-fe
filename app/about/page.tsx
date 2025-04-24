@@ -69,7 +69,13 @@ export default function About() {
             <h2>Our Team</h2>
             <p>Our founding team brings together expertise from blockchain development, community organizing, traditional Pacific knowledge systems, and international finance:</p>
             
-            <div className="features-grid team-grid" style={{ gridTemplateColumns: 'repeat(5, 1fr)', gap: '20px' }}>
+            <div className="features-grid team-grid" style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(3, 200px)', 
+              gap: '20px', 
+              justifyContent: 'center',
+              marginBottom: '20px'
+            }}>
               <div className="feature-card team-member" style={{ width: '200px', height: '240px' }}>
                 <div className="feature-icon team-member-photo">
                   <Image src="/edwin.png" alt="Edwin Liava&apos;a" width={70} height={70} />
@@ -111,7 +117,14 @@ export default function About() {
                   LinkedIn Profile
                 </a>
               </div>
-              
+            </div>
+            
+            <div className="features-grid team-grid" style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(2, 200px)', 
+              gap: '20px', 
+              justifyContent: 'center' 
+            }}>
               <div className="feature-card team-member" style={{ width: '200px', height: '240px' }}>
                 <div className="feature-icon team-member-photo">
                   <Image src="/shaun.png" alt="Shaun Suliol" width={70} height={70} />

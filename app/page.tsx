@@ -131,7 +131,13 @@ export default function Main() {
             Meet the Founder and co-Founders of Pasifika Web3 Tech Hub
           </p>
           
-          <div className="features-grid" style={{ gridTemplateColumns: 'repeat(5, 1fr)', gap: '20px' }}>
+          <div className="features-grid" style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(3, 200px)', 
+            gap: '20px', 
+            justifyContent: 'center',
+            marginBottom: '20px'
+          }}>
             <div className="feature-card" style={{ width: '200px', height: '240px' }}>
               <div className="feature-icon team-member-photo">
                 <Image src="/edwin.png" alt="Edwin Liava&apos;a" width={70} height={70} />
@@ -173,7 +179,14 @@ export default function Main() {
                 LinkedIn Profile
               </a>
             </div>
-            
+          </div>
+          
+          <div className="features-grid" style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(2, 200px)', 
+            gap: '20px', 
+            justifyContent: 'center' 
+          }}>
             <div className="feature-card" style={{ width: '200px', height: '240px' }}>
               <div className="feature-icon team-member-photo">
                 <Image src="/shaun.png" alt="Shaun Suliol" width={70} height={70} />
