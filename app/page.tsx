@@ -131,8 +131,8 @@ export default function Main() {
             Meet the Founder and co-Founders of Pasifika Web3 Tech Hub
           </p>
           
-          <div className="features-grid">
-            <div className="feature-card">
+          <div className="features-grid" style={{ gridTemplateColumns: 'repeat(5, 1fr)', gap: '20px' }}>
+            <div className="feature-card" style={{ width: '200px', height: '240px' }}>
               <div className="feature-icon team-member-photo">
                 <Image src="/edwin.png" alt="Edwin Liava&apos;a" width={70} height={70} />
               </div>
@@ -146,7 +146,7 @@ export default function Main() {
               </a>
             </div>
             
-            <div className="feature-card">
+            <div className="feature-card" style={{ width: '200px', height: '240px' }}>
               <div className="feature-icon team-member-photo">
                 <Image src="/tenanoia.png" alt="Tenanoia Veronica Simona" width={70} height={70} />
               </div>
@@ -160,7 +160,7 @@ export default function Main() {
               </a>
             </div>
             
-            <div className="feature-card">
+            <div className="feature-card" style={{ width: '200px', height: '240px' }}>
               <div className="feature-icon team-member-photo">
                 <Image src="/suzanne.png" alt="Suzanne Moli Orudiana" width={70} height={70} />
               </div>
@@ -174,7 +174,7 @@ export default function Main() {
               </a>
             </div>
             
-            <div className="feature-card">
+            <div className="feature-card" style={{ width: '200px', height: '240px' }}>
               <div className="feature-icon team-member-photo">
                 <Image src="/shaun.png" alt="Shaun Suliol" width={70} height={70} />
               </div>
@@ -188,7 +188,7 @@ export default function Main() {
               </a>
             </div>
             
-            <div className="feature-card">
+            <div className="feature-card" style={{ width: '200px', height: '240px' }}>
               <div className="feature-icon team-member-photo">
                 <Image src="/lusia.png" alt="Lusia Jones" width={70} height={70} />
               </div>
@@ -198,20 +198,6 @@ export default function Main() {
               </p>
               <p className="feature-location">New Zealand</p>
               <a href="https://www.linkedin.com/in/ACoAAALsKcoBcTnEqFKPjl5y6Br5i9fgfRUEVLw" target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                LinkedIn Profile
-              </a>
-            </div>
-            
-            <div className="feature-card">
-              <div className="feature-icon team-member-photo">
-                <Image src="/semisi.png" alt="Semisi Siupeli Taufa" width={70} height={70} />
-              </div>
-              <h3 className="feature-title">Semisi Siupeli Taufa</h3>
-              <p className="feature-text">
-                co-Founder, Digital Transformation
-              </p>
-              <p className="feature-location">Tonga</p>
-              <a href="https://www.linkedin.com/in/semisi-siupeli-taufa-8945aa78/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                 LinkedIn Profile
               </a>
             </div>

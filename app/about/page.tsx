@@ -52,7 +52,7 @@ export default function About() {
                 height={300}
                 className="whitepaper-logo"
               />
-              <h2>Building the Future of Pacific Island Web3 Technology</h2>
+              <h2>Building the Future of Pacific Islands Web3 Technology</h2>
               <p className="whitepaper-version">Established 2025</p>
               <div className="whitepaper-divider"></div>
             </div>
@@ -69,8 +69,8 @@ export default function About() {
             <h2>Our Team</h2>
             <p>Our founding team brings together expertise from blockchain development, community organizing, traditional Pacific knowledge systems, and international finance:</p>
             
-            <div className="features-grid team-grid">
-              <div className="feature-card team-member">
+            <div className="features-grid team-grid" style={{ gridTemplateColumns: 'repeat(5, 1fr)', gap: '20px' }}>
+              <div className="feature-card team-member" style={{ width: '200px', height: '240px' }}>
                 <div className="feature-icon team-member-photo">
                   <Image src="/edwin.png" alt="Edwin Liava&apos;a" width={70} height={70} />
                 </div>
@@ -84,7 +84,7 @@ export default function About() {
                 </a>
               </div>
               
-              <div className="feature-card team-member">
+              <div className="feature-card team-member" style={{ width: '200px', height: '240px' }}>
                 <div className="feature-icon team-member-photo">
                   <Image src="/tenanoia.png" alt="Tenanoia Veronica Simona" width={70} height={70} />
                 </div>
@@ -98,7 +98,7 @@ export default function About() {
                 </a>
               </div>
               
-              <div className="feature-card team-member">
+              <div className="feature-card team-member" style={{ width: '200px', height: '240px' }}>
                 <div className="feature-icon team-member-photo">
                   <Image src="/suzanne.png" alt="Suzanne Moli Orudiana" width={70} height={70} />
                 </div>
@@ -112,7 +112,7 @@ export default function About() {
                 </a>
               </div>
               
-              <div className="feature-card team-member">
+              <div className="feature-card team-member" style={{ width: '200px', height: '240px' }}>
                 <div className="feature-icon team-member-photo">
                   <Image src="/shaun.png" alt="Shaun Suliol" width={70} height={70} />
                 </div>
@@ -126,7 +126,7 @@ export default function About() {
                 </a>
               </div>
               
-              <div className="feature-card team-member">
+              <div className="feature-card team-member" style={{ width: '200px', height: '240px' }}>
                 <div className="feature-icon team-member-photo">
                   <Image src="/lusia.png" alt="Lusia Jones" width={70} height={70} />
                 </div>
@@ -136,20 +136,6 @@ export default function About() {
                 </p>
                 <p className="feature-location">New Zealand</p>
                 <a href="https://www.linkedin.com/in/ACoAAALsKcoBcTnEqFKPjl5y6Br5i9fgfRUEVLw" target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                  LinkedIn Profile
-                </a>
-              </div>
-              
-              <div className="feature-card team-member">
-                <div className="feature-icon team-member-photo">
-                  <Image src="/semisi.png" alt="Semisi Siupeli Taufa" width={70} height={70} />
-                </div>
-                <h3 className="feature-title">Semisi Siupeli Taufa</h3>
-                <p className="feature-text">
-                  co-Founder, Digital Transformation
-                </p>
-                <p className="feature-location">Tonga</p>
-                <a href="https://www.linkedin.com/in/semisi-siupeli-taufa-8945aa78/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
               </div>
