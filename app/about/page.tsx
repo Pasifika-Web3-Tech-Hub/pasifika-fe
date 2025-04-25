@@ -172,8 +172,6 @@ export default function About() {
               <li>Pacific Island regional organizations</li>
               <li>Local government technology initiatives</li>
               <li>International blockchain development firms</li>
-              <li>TachyonX accelerator program</li>
-              <li>Linea zkEVM Layer-2 ecosystem</li>
               <li>Academic institutions researching decentralized systems</li>
               <li>Community development organizations</li>
             </ul>
