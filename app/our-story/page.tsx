@@ -133,57 +133,64 @@ export default function OurStory() {
             </div>
 
             <h2>Key Milestones</h2>
-            <div className="key-milestones" style={{ marginBottom: '40px', overflowX: 'auto' }}>
-              <table style={{ 
-                width: '100%', 
-                borderCollapse: 'collapse',
-                marginBottom: '30px',
-                border: `1px solid ${isDarkMode ? '#444' : '#eee'}`
-              }}>
+            <div style={{ overflowX: 'auto', marginBottom: '30px' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '15px' }}>
                 <thead>
-                  <tr style={{ 
-                    backgroundColor: isDarkMode ? '#333' : '#f5f5f5',
-                    borderBottom: `2px solid ${isDarkMode ? '#555' : '#ddd'}`
-                  }}>
+                  <tr style={{ backgroundColor: isDarkMode ? '#333333' : '#f2f2f2', borderBottom: '2px solid #FF5722' }}>
                     <th style={{ padding: '12px 15px', textAlign: 'left' }}>Date</th>
                     <th style={{ padding: '12px 15px', textAlign: 'left' }}>Milestone</th>
                     <th style={{ padding: '12px 15px', textAlign: 'left' }}>Description</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}` }}>
-                    <td style={{ padding: '12px 15px' }}>January 1, 2025</td>
-                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>Project Initiation</td>
-                    <td style={{ padding: '12px 15px' }}>Official launch of the Pasifika Web3 Tech Hub planning phase</td>
+                  <tr style={{ borderBottom: '1px solid #ddd' }}>
+                    <td style={{ padding: '12px 15px' }}>April 15, 2025</td>
+                    <td style={{ padding: '12px 15px', fontWeight: '500' }}>Proof of Concept Launch</td>
+                    <td style={{ padding: '12px 15px' }}>Initial platform demonstrating core concepts at pasifika.xyz</td>
                   </tr>
-                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}`, backgroundColor: isDarkMode ? '#2a2a2a' : '#f9f9f9' }}>
-                    <td style={{ padding: '12px 15px' }}>March 15, 2025</td>
-                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>Community Consultations</td>
-                    <td style={{ padding: '12px 15px' }}>Completion of initial stakeholder engagement across Pacific nations</td>
+                  <tr style={{ borderBottom: '1px solid #ddd', backgroundColor: isDarkMode ? '#333333' : '#f8f8f8' }}>
+                    <td style={{ padding: '12px 15px' }}>May 30, 2025</td>
+                    <td style={{ padding: '12px 15px', fontWeight: '500' }}>Chainlink Hackathon Start</td>
+                    <td style={{ padding: '12px 15px' }}>Begin intensive development of competition submissions</td>
                   </tr>
-                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}` }}>
-                    <td style={{ padding: '12px 15px' }}>May 1, 2025</td>
-                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>PoC Development</td>
-                    <td style={{ padding: '12px 15px' }}>Start of technical development for Proof of Concept</td>
+                  <tr style={{ borderBottom: '1px solid #ddd' }}>
+                    <td style={{ padding: '12px 15px' }}>June 29, 2025</td>
+                    <td style={{ padding: '12px 15px', fontWeight: '500' }}>Hackathon Submission</td>
+                    <td style={{ padding: '12px 15px' }}>Complete and submit projects for all three Chainlink prize tracks</td>
                   </tr>
-                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}`, backgroundColor: isDarkMode ? '#2a2a2a' : '#f9f9f9' }}>
-                    <td style={{ padding: '12px 15px' }}>July 1, 2025</td>
-                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>PoC Launch</td>
-                    <td style={{ padding: '12px 15px' }}>Public release of Proof of Concept</td>
+                  <tr style={{ borderBottom: '1px solid #ddd', backgroundColor: isDarkMode ? '#333333' : '#f8f8f8' }}>
+                    <td style={{ padding: '12px 15px' }}>July 18, 2025</td>
+                    <td style={{ padding: '12px 15px', fontWeight: '500' }}>Hackathon Results</td>
+                    <td style={{ padding: '12px 15px' }}>Potential funding source if projects place in prize categories</td>
                   </tr>
-                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}` }}>
-                    <td style={{ padding: '12px 15px' }}>January 1, 2026</td>
-                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>MVP Development</td>
-                    <td style={{ padding: '12px 15px' }}>Beginning of Minimum Viable Product development</td>
+                  <tr style={{ borderBottom: '1px solid #ddd' }}>
+                    <td style={{ padding: '12px 15px' }}>August 1, 2025</td>
+                    <td style={{ padding: '12px 15px', fontWeight: '500' }}>Hub71 Application</td>
+                    <td style={{ padding: '12px 15px' }}>Submission of comprehensive application for Cohort 18</td>
                   </tr>
-                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}`, backgroundColor: isDarkMode ? '#2a2a2a' : '#f9f9f9' }}>
+                  <tr style={{ borderBottom: '1px solid #ddd', backgroundColor: isDarkMode ? '#333333' : '#f8f8f8' }}>
+                    <td style={{ padding: '12px 15px' }}>December 15, 2025</td>
+                    <td style={{ padding: '12px 15px', fontWeight: '500' }}>Seed Funding Close</td>
+                    <td style={{ padding: '12px 15px' }}>Target date for completing initial seed funding round</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid #ddd' }}>
+                    <td style={{ padding: '12px 15px' }}>February 1, 2026</td>
+                    <td style={{ padding: '12px 15px', fontWeight: '500' }}>First Hub Launch</td>
+                    <td style={{ padding: '12px 15px' }}>Opening of first physical location with full technical infrastructure</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid #ddd', backgroundColor: isDarkMode ? '#333333' : '#f8f8f8' }}>
+                    <td style={{ padding: '12px 15px' }}>April 1, 2026</td>
+                    <td style={{ padding: '12px 15px', fontWeight: '500' }}>Training Program Launch</td>
+                    <td style={{ padding: '12px 15px' }}>Begin comprehensive developer training curriculum for local talent</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid #ddd' }}>
                     <td style={{ padding: '12px 15px' }}>July 1, 2026</td>
-                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>Production dApps Launch</td>
+                    <td style={{ padding: '12px 15px', fontWeight: '500' }}>Production dApps Launch</td>
                     <td style={{ padding: '12px 15px' }}>First full-scale applications deployed to mainnet</td>
                   </tr>
-                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}` }}>
+                  <tr style={{ borderBottom: '1px solid #ddd', backgroundColor: isDarkMode ? '#333333' : '#f8f8f8' }}>
                     <td style={{ padding: '12px 15px' }}>December 1, 2026</td>
-                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>Regional Expansion Complete</td>
+                    <td style={{ padding: '12px 15px', fontWeight: '500' }}>Regional Expansion Complete</td>
                     <td style={{ padding: '12px 15px' }}>All three hub locations operational across Pacific region</td>
                   </tr>
                 </tbody>
