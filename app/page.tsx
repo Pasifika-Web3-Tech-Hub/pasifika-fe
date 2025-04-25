@@ -123,6 +123,66 @@ export default function Main() {
         </div>
       </div>
 
+      {/* Our Story Link Section */}
+      <div style={{ 
+        padding: '20px 0', 
+        backgroundColor: isDarkMode ? 'rgba(255, 87, 34, 0.1)' : 'rgba(255, 152, 0, 0.05)', 
+        margin: '0 auto 40px',
+        borderTop: '1px solid #FF5722',
+        borderBottom: '1px solid #FF5722',
+        textAlign: 'center'
+      }}>
+        <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <div style={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            padding: '20px'
+          }}>
+            <h2 style={{ 
+              fontSize: '1.8rem', 
+              marginBottom: '15px',
+              background: 'linear-gradient(to right, #FF5722, #FF9800)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
+              Discover Our Journey
+            </h2>
+            <p style={{ fontSize: '1.1rem', marginBottom: '20px', maxWidth: '700px' }}>
+              Learn about the vision, progress, and future of Pasifika Web3 Tech Hub as we build a decentralized ecosystem for Pacific Island communities.
+            </p>
+            <a 
+              href="/our-story" 
+              style={{
+                display: 'inline-block',
+                padding: '12px 30px',
+                backgroundColor: '#FF5722',
+                color: 'white',
+                borderRadius: '30px',
+                textDecoration: 'none',
+                fontWeight: '500',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 4px 8px rgba(255, 87, 34, 0.3)',
+                border: 'none',
+                cursor: 'pointer'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-3px)';
+                e.currentTarget.style.boxShadow = '0 6px 12px rgba(255, 87, 34, 0.4)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 8px rgba(255, 87, 34, 0.3)';
+              }}
+            >
+              Read Our Story
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Our Team Section - Pasifika Styled */}
       <div className="features" style={{ paddingTop: '20px' }}>
         <div className="container">

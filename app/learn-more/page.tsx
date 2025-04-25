@@ -86,6 +86,13 @@ export default function LearnMore() {
             </div>
           </Link>
           
+          <Link href="/our-story" className="nav-card">
+            <div className="nav-card-inner">
+              <h2>Our Story</h2>
+              <p>The journey of Pasifika Web3 Tech Hub</p>
+            </div>
+          </Link>
+          
           <Link href="/about" className="nav-card">
             <div className="nav-card-inner">
               <h2>About Us</h2>
