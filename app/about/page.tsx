@@ -168,12 +168,12 @@ export default function About() {
             
             <h3>Our Partners</h3>
             <p>We&apos;re proud to work with a growing network of regional and international partners including:</p>
-            <ul>
-              <li>Pacific Island regional organizations</li>
-              <li>Local government technology initiatives</li>
-              <li>International blockchain development firms</li>
-              <li>Academic institutions researching decentralized systems</li>
-              <li>Community development organizations</li>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '25px', marginBottom: '20px' }}>
+              <li style={{ margin: '10px 0', fontSize: '1.05rem' }}><span style={{ color: '#FF5722', fontWeight: '500' }}>Pacific Island regional organizations</span></li>
+              <li style={{ margin: '10px 0', fontSize: '1.05rem' }}><span style={{ color: '#FF5722', fontWeight: '500' }}>Local government technology initiatives</span></li>
+              <li style={{ margin: '10px 0', fontSize: '1.05rem' }}><span style={{ color: '#FF5722', fontWeight: '500' }}>International blockchain development firms</span></li>
+              <li style={{ margin: '10px 0', fontSize: '1.05rem' }}><span style={{ color: '#FF5722', fontWeight: '500' }}>Academic institutions researching decentralized systems</span></li>
+              <li style={{ margin: '10px 0', fontSize: '1.05rem' }}><span style={{ color: '#FF5722', fontWeight: '500' }}>Community development organizations</span></li>
             </ul>
             
             <div className="team-values">
