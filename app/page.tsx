@@ -133,12 +133,12 @@ export default function Main() {
           
           <div className="features-grid" style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(3, 200px)', 
-            gap: '20px', 
+            gridTemplateColumns: 'repeat(3, 1fr)', 
+            gap: '30px', 
             justifyContent: 'center',
-            marginBottom: '20px'
+            marginBottom: '30px'
           }}>
-            <div className="feature-card" style={{ width: '200px', height: '240px' }}>
+            <div className="feature-card">
               <div className="feature-icon team-member-photo">
                 <Image src="/edwin.png" alt="Edwin Liava&apos;a" width={70} height={70} />
               </div>
@@ -146,13 +146,13 @@ export default function Main() {
               <p className="feature-text">
                 Founder, Blockchain & Digital Transformation Engineer
               </p>
-              <p className="feature-location">Fiji</p>
+              <p className="feature-location">Tonga, Fiji, Samoa</p>
               <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                 LinkedIn Profile
               </a>
             </div>
             
-            <div className="feature-card" style={{ width: '200px', height: '240px' }}>
+            <div className="feature-card">
               <div className="feature-icon team-member-photo">
                 <Image src="/tenanoia.png" alt="Tenanoia Veronica Simona" width={70} height={70} />
               </div>
@@ -166,7 +166,7 @@ export default function Main() {
               </a>
             </div>
             
-            <div className="feature-card" style={{ width: '200px', height: '240px' }}>
+            <div className="feature-card">
               <div className="feature-icon team-member-photo">
                 <Image src="/shaun.png" alt="Shaun Suliol" width={70} height={70} />
               </div>
@@ -183,11 +183,13 @@ export default function Main() {
           
           <div className="features-grid" style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(2, 200px)', 
-            gap: '20px', 
-            justifyContent: 'center' 
+            gridTemplateColumns: 'repeat(2, 1fr)', 
+            gap: '30px', 
+            justifyContent: 'center',
+            maxWidth: '66%',
+            margin: '0 auto'
           }}>
-            <div className="feature-card" style={{ width: '200px', height: '240px' }}>
+            <div className="feature-card">
               <div className="feature-icon team-member-photo">
                 <Image src="/suzanne.png" alt="Suzanne Moli Orudiana" width={70} height={70} />
               </div>
@@ -201,7 +203,7 @@ export default function Main() {
               </a>
             </div>
             
-            <div className="feature-card" style={{ width: '200px', height: '240px' }}>
+            <div className="feature-card">
               <div className="feature-icon team-member-photo">
                 <Image src="/lusia.png" alt="Lusia Jones" width={70} height={70} />
               </div>
