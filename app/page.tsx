@@ -168,14 +168,14 @@ export default function Main() {
             
             <div className="feature-card" style={{ width: '200px', height: '240px' }}>
               <div className="feature-icon team-member-photo">
-                <Image src="/suzanne.png" alt="Suzanne Moli Orudiana" width={70} height={70} />
+                <Image src="/shaun.png" alt="Shaun Suliol" width={70} height={70} />
               </div>
-              <h3 className="feature-title">Suzanne Moli Orudiana</h3>
+              <h3 className="feature-title">Shaun Suliol</h3>
               <p className="feature-text">
-                co-Founder, Managing Director of Intellectual Solutions
+                co-Founder, Digital Innovations Specialist
               </p>
-              <p className="feature-location">Solomon Islands</p>
-              <a href="https://www.linkedin.com/in/ACoAAAzXV9ABswa8sUOrI0bjhdxKk2VdF7ZB1-M" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+              <p className="feature-location">Federated States of Micronesia</p>
+              <a href="https://www.linkedin.com/in/shaun-suliol-58a748122" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                 LinkedIn Profile
               </a>
             </div>
@@ -189,14 +189,14 @@ export default function Main() {
           }}>
             <div className="feature-card" style={{ width: '200px', height: '240px' }}>
               <div className="feature-icon team-member-photo">
-                <Image src="/shaun.png" alt="Shaun Suliol" width={70} height={70} />
+                <Image src="/suzanne.png" alt="Suzanne Moli Orudiana" width={70} height={70} />
               </div>
-              <h3 className="feature-title">Shaun Suliol</h3>
+              <h3 className="feature-title">Suzanne Moli Orudiana</h3>
               <p className="feature-text">
-                co-Founder, Digital Innovations Specialist
+                co-Founder, Managing Director of Intellectual Solutions
               </p>
-              <p className="feature-location">Federated States of Micronesia</p>
-              <a href="https://www.linkedin.com/in/shaun-suliol-58a748122" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+              <p className="feature-location">Solomon Islands</p>
+              <a href="https://www.linkedin.com/in/ACoAAAzXV9ABswa8sUOrI0bjhdxKk2VdF7ZB1-M" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                 LinkedIn Profile
               </a>
             </div>
