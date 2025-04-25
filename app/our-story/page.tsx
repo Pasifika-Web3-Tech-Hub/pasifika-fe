@@ -117,30 +117,77 @@ export default function OurStory() {
             </p>
 
             <h2>Our Timeline</h2>
-            <div className="timeline-container" style={{ marginBottom: '40px' }}>
-              <div className="mermaid-diagram" ref={mermaidRef}>
-                {`
-                %%{init: {'theme': '${isDarkMode ? 'dark' : 'default'}', 'themeVariables': { 'primaryColor': '#FF5722', 'primaryTextColor': '#fff' }}}%%
-                timeline
-                    title Pasifika Web3 Tech Hub Development Timeline
-                    section Planning Phase
-                      January 2025 : Initial concept development
-                      February 2025 : Community consultations
-                      March 2025 : Research & partnerships
-                    section Development
-                      April 2025 : Technical architecture design
-                      May 2025 : Website development
-                      June 2025 : Prototype testing
-                    section Launch 
-                      July 2025 : Proof of Concept launch
-                      August 2025 : Community feedback integration
-                      September 2025 : Platform expansion
-                    section Future Roadmap
-                      Q4 2025 : Production version development
-                      Q1 2026 : Full-scale platform launch
-                      Q2 2026 : Regional expansion
-                `}
-              </div>
+            <div className="timeline-container" style={{ marginBottom: '40px', textAlign: 'center' }}>
+              <Image 
+                src="/timeline.png" 
+                alt="Pasifika Web3 Tech Hub Timeline" 
+                width={900} 
+                height={500}
+                style={{ 
+                  maxWidth: '100%', 
+                  height: 'auto',
+                  borderRadius: '8px',
+                  boxShadow: isDarkMode ? '0 4px 20px rgba(0, 0, 0, 0.4)' : '0 4px 20px rgba(0, 0, 0, 0.1)'
+                }}
+              />
+            </div>
+
+            <h2>Key Milestones</h2>
+            <div className="key-milestones" style={{ marginBottom: '40px', overflowX: 'auto' }}>
+              <table style={{ 
+                width: '100%', 
+                borderCollapse: 'collapse',
+                marginBottom: '30px',
+                border: `1px solid ${isDarkMode ? '#444' : '#eee'}`
+              }}>
+                <thead>
+                  <tr style={{ 
+                    backgroundColor: isDarkMode ? '#333' : '#f5f5f5',
+                    borderBottom: `2px solid ${isDarkMode ? '#555' : '#ddd'}`
+                  }}>
+                    <th style={{ padding: '12px 15px', textAlign: 'left' }}>Date</th>
+                    <th style={{ padding: '12px 15px', textAlign: 'left' }}>Milestone</th>
+                    <th style={{ padding: '12px 15px', textAlign: 'left' }}>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}` }}>
+                    <td style={{ padding: '12px 15px' }}>January 1, 2025</td>
+                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>Project Initiation</td>
+                    <td style={{ padding: '12px 15px' }}>Official launch of the Pasifika Web3 Tech Hub planning phase</td>
+                  </tr>
+                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}`, backgroundColor: isDarkMode ? '#2a2a2a' : '#f9f9f9' }}>
+                    <td style={{ padding: '12px 15px' }}>March 15, 2025</td>
+                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>Community Consultations</td>
+                    <td style={{ padding: '12px 15px' }}>Completion of initial stakeholder engagement across Pacific nations</td>
+                  </tr>
+                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}` }}>
+                    <td style={{ padding: '12px 15px' }}>May 1, 2025</td>
+                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>PoC Development</td>
+                    <td style={{ padding: '12px 15px' }}>Start of technical development for Proof of Concept</td>
+                  </tr>
+                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}`, backgroundColor: isDarkMode ? '#2a2a2a' : '#f9f9f9' }}>
+                    <td style={{ padding: '12px 15px' }}>July 1, 2025</td>
+                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>PoC Launch</td>
+                    <td style={{ padding: '12px 15px' }}>Public release of Proof of Concept</td>
+                  </tr>
+                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}` }}>
+                    <td style={{ padding: '12px 15px' }}>January 1, 2026</td>
+                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>MVP Development</td>
+                    <td style={{ padding: '12px 15px' }}>Beginning of Minimum Viable Product development</td>
+                  </tr>
+                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}`, backgroundColor: isDarkMode ? '#2a2a2a' : '#f9f9f9' }}>
+                    <td style={{ padding: '12px 15px' }}>July 1, 2026</td>
+                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>Production dApps Launch</td>
+                    <td style={{ padding: '12px 15px' }}>First full-scale applications deployed to mainnet</td>
+                  </tr>
+                  <tr style={{ borderBottom: `1px solid ${isDarkMode ? '#444' : '#eee'}` }}>
+                    <td style={{ padding: '12px 15px' }}>December 1, 2026</td>
+                    <td style={{ padding: '12px 15px', color: '#FF5722', fontWeight: '500' }}>Regional Expansion Complete</td>
+                    <td style={{ padding: '12px 15px' }}>All three hub locations operational across Pacific region</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
             <h2>Vision and Impact</h2>
@@ -181,6 +228,179 @@ export default function OurStory() {
                 <p>Developing decentralized solutions that can withstand climate-related challenges facing island nations.</p>
               </div>
             </div>
+
+            <p style={{ marginBottom: '20px' }}>
+              The Pasifika Web3 Tech Hub will serve as:
+            </p>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '25px', marginBottom: '30px' }}>
+              <li style={{ margin: '10px 0' }}>An innovation incubator for local entrepreneurs</li>
+              <li style={{ margin: '10px 0' }}>A training center developing regional Web3 talent</li>
+              <li style={{ margin: '10px 0' }}>A bridge connecting Pacific projects to global funding</li>
+              <li style={{ margin: '10px 0' }}>A catalyst for sustainable economic development</li>
+            </ul>
+
+            <p style={{ marginBottom: '30px', fontWeight: '500' }}>
+              Our metrics for success include training 500+ developers in the first year, incubating 20+ regional startups, and reducing remittance costs by 70% for participating communities.
+            </p>
+
+            <h2>Funding Strategy and Roadmap</h2>
+            <p style={{ marginBottom: '20px' }}>
+              We are pursuing a multi-faceted funding approach combining:
+            </p>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '25px', marginBottom: '30px' }}>
+              <li style={{ margin: '10px 0' }}>Strategic grants from tech foundations and development agencies</li>
+              <li style={{ margin: '10px 0' }}>Web3 hackathon prizes and challenge funds</li>
+              <li style={{ margin: '10px 0' }}>Private investment from impact-focused venture capital</li>
+              <li style={{ margin: '10px 0' }}>Strategic partnerships with established blockchain protocols</li>
+              <li style={{ margin: '10px 0' }}>Web3 accelerator programs supporting early-stage blockchain startups</li>
+            </ul>
+
+            <p style={{ marginBottom: '30px' }}>
+              The upcoming Chainlink Chromion Hackathon (May 30 - June 29, 2025) presents an ideal opportunity to showcase our solutions, build valuable connections, and potentially secure initial funding through their prize tracks, which include Grand Prize ($35,000), Onchain Finance tracks (up to $8,000), Cross-Chain projects (up to $10,000), and AI integration (up to $5,000).
+            </p>
+
+            <h2>Hackathon Strategy</h2>
+            <p>
+              For the Chainlink Chromion Hackathon (May 30 - June 29, 2025), we will focus on:
+            </p>
+            <div className="hackathon-tracks" style={{ marginBottom: '30px' }}>
+              <div className="track-item" style={{
+                padding: '20px',
+                backgroundColor: isDarkMode ? '#333333' : '#f8f8f8',
+                borderRadius: '8px',
+                marginBottom: '15px',
+                borderLeft: '4px solid #FF5722'
+              }}>
+                <h4 style={{ marginBottom: '10px' }}>Cross-Chain Track ($10,000 first prize)</h4>
+                <p>Developing a cross-chain remittance solution that connects Pacific islands to global financial systems with minimal fees</p>
+              </div>
+              
+              <div className="track-item" style={{
+                padding: '20px',
+                backgroundColor: isDarkMode ? '#333333' : '#f8f8f8',
+                borderRadius: '8px',
+                marginBottom: '15px',
+                borderLeft: '4px solid #FF9800'
+              }}>
+                <h4 style={{ marginBottom: '10px' }}>Onchain Finance Track ($8,000 first prize)</h4>
+                <p>Building a tokenization platform for Pacific-based real-world assets (RWA) with a focus on sustainable resources and cultural assets</p>
+              </div>
+              
+              <div className="track-item" style={{
+                padding: '20px',
+                backgroundColor: isDarkMode ? '#333333' : '#f8f8f8',
+                borderRadius: '8px',
+                marginBottom: '15px',
+                borderLeft: '4px solid #FF5722'
+              }}>
+                <h4 style={{ marginBottom: '10px' }}>AI Track ($5,000 first prize)</h4>
+                <p>Creating an AI-powered financial literacy and Web3 education platform tailored to Pacific Island contexts and languages</p>
+              </div>
+            </div>
+            
+            <p style={{ marginBottom: '20px' }}>
+              Our project submissions will emphasize:
+            </p>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '25px', marginBottom: '30px' }}>
+              <li style={{ margin: '8px 0' }}>Regional impact and problem-solving</li>
+              <li style={{ margin: '8px 0' }}>Technical innovation and implementation quality</li>
+              <li style={{ margin: '8px 0' }}>Scalability across the diverse Pacific region</li>
+              <li style={{ margin: '8px 0' }}>Integration with Chainlink&apos;s oracle services</li>
+              <li style={{ margin: '8px 0' }}>Clear path to post-hackathon development</li>
+            </ul>
+
+            <h2>Implementation Schedule</h2>
+            <div style={{ marginBottom: '30px' }}>
+              <p style={{ marginBottom: '15px' }}>Our development roadmap includes these key phases:</p>
+              <ul style={{ listStyleType: 'disc', paddingLeft: '25px' }}>
+                <li style={{ margin: '10px 0' }}><strong>Foundation</strong>: Proof of Concept Launch and Team Expansion (April-May 2025)</li>
+                <li style={{ margin: '10px 0' }}><strong>Funding Activities</strong>: Hackathon participation and seed funding (May-December 2025)</li>
+                <li style={{ margin: '10px 0' }}><strong>Technical Development</strong>: MVP development of core platforms (July 2025 onwards)</li>
+                <li style={{ margin: '10px 0' }}><strong>Hub Launch</strong>: Physical locations and training programs (February 2026-December 2026)</li>
+              </ul>
+            </div>
+
+            <h2>Alternative Funding Avenues</h2>
+            <p style={{ marginBottom: '20px' }}>
+              While we prepare for the Chainlink Hackathon and continue to explore accelerator options, we&apos;re also pursuing:
+            </p>
+            
+            <div className="funding-avenues" style={{ marginBottom: '40px' }}>
+              <div className="avenue-item" style={{
+                padding: '20px',
+                backgroundColor: isDarkMode ? '#333333' : '#f8f8f8',
+                borderRadius: '8px',
+                marginBottom: '15px',
+                borderLeft: '4px solid #FF5722'
+              }}>
+                <h4 style={{ marginBottom: '10px' }}>ADB Startup Matchmaking</h4>
+                <p>The Asian Development Bank&apos;s startup program has no set deadline - applications can be submitted year-round. ADB administrators review submissions to ensure alignment with their Operational Priority Areas and connect startups with relevant subject-matter experts. This continuous application process allows us flexibility in our funding timeline.</p>
+              </div>
+              
+              <div className="avenue-item" style={{
+                padding: '20px',
+                backgroundColor: isDarkMode ? '#333333' : '#f8f8f8',
+                borderRadius: '8px',
+                marginBottom: '15px',
+                borderLeft: '4px solid #FF9800'
+              }}>
+                <h4 style={{ marginBottom: '10px' }}>ADB Key Indicators Cover Design Contest</h4>
+                <p>This competition has a May 30, 2025 deadline, providing an opportunity to showcase our design capabilities and gain visibility with ADB stakeholders. The Asian Development Bank&apos;s flagship statistical publication features an annual cover design contest with monetary prizes.</p>
+              </div>
+              
+              <div className="avenue-item" style={{
+                padding: '20px',
+                backgroundColor: isDarkMode ? '#333333' : '#f8f8f8',
+                borderRadius: '8px',
+                marginBottom: '15px',
+                borderLeft: '4px solid #FF5722'
+              }}>
+                <h4 style={{ marginBottom: '10px' }}>Hub71</h4>
+                <p>Abu Dhabi&apos;s global tech ecosystem that provides incentives, support, and networking for startups with high growth potential. The current deadline for Cohort 18 is August 1, 2025, with the programme starting in February 2026.</p>
+              </div>
+              
+              <div className="avenue-item" style={{
+                padding: '20px',
+                backgroundColor: isDarkMode ? '#333333' : '#f8f8f8',
+                borderRadius: '8px',
+                marginBottom: '15px',
+                borderLeft: '4px solid #FF9800'
+              }}>
+                <h4 style={{ marginBottom: '10px' }}>Regional Grants</h4>
+                <p>Pacific-focused development grants from organizations committed to digital transformation in the region.</p>
+              </div>
+              
+              <div className="avenue-item" style={{
+                padding: '20px',
+                backgroundColor: isDarkMode ? '#333333' : '#f8f8f8',
+                borderRadius: '8px',
+                marginBottom: '15px',
+                borderLeft: '4px solid #FF5722'
+              }}>
+                <h4 style={{ marginBottom: '10px' }}>Strategic Partnerships</h4>
+                <p>Collaborations with established blockchain protocols looking to expand their reach into new markets.</p>
+              </div>
+              
+              <div className="avenue-item" style={{
+                padding: '20px',
+                backgroundColor: isDarkMode ? '#333333' : '#f8f8f8',
+                borderRadius: '8px',
+                marginBottom: '15px',
+                borderLeft: '4px solid #FF9800'
+              }}>
+                <h4 style={{ marginBottom: '10px' }}>Alternative Web3 Accelerators</h4>
+                <p>We are researching other Web3 accelerator programs with upcoming application deadlines, including Techstars Web3 2025 program which could provide both funding and valuable connections in the blockchain ecosystem.</p>
+              </div>
+            </div>
+
+            <h2>Next Steps</h2>
+            <p>With seed funding, we will:</p>
+            <ol style={{ paddingLeft: '25px', marginBottom: '20px' }}>
+              <li style={{ margin: '10px 0' }}>Expand our technical team focused on Pacific-specific Web3 solutions</li>
+              <li style={{ margin: '10px 0' }}>Establish physical hubs in 3 strategic Pacific locations</li>
+              <li style={{ margin: '10px 0' }}>Launch our comprehensive developer training program</li>
+              <li style={{ margin: '10px 0' }}>Deploy our first full-scale decentralized applications addressing regional needs</li>
+            </ol>
 
             <h2>Our Commitment</h2>
             <p>
