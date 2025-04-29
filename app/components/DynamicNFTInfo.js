@@ -2,6 +2,7 @@
 import { useWriteContract } from "wagmi";
 import { abi } from "@/lib/abi";
 import '../page.css';
+import WalletActionButton from './WalletActionButton';
 
 export default function DynamicNFTInfo() {
   const { writeContract, isPending } = useWriteContract();
@@ -18,12 +19,12 @@ export default function DynamicNFTInfo() {
   };
 
   return (
-    <button 
-      className="docs-button" 
+    <WalletActionButton 
       onClick={handleDynamicNFT}
       disabled={isPending}
+      isPending={isPending}
     >
       {isPending ? "Processing Dynamic NFT..." : "Display Dynamic NFT Details"}
-    </button>
+    </WalletActionButton>
   );
 }

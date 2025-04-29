@@ -5,6 +5,7 @@ import { abi } from "@/lib/abi";
 import Image from "next/image";
 import { useState } from "react";
 import '../page.css';
+import WalletActionButton from './WalletActionButton';
 
 export default function TokenContractInfo() {
   const { writeContract, isPending } = useWriteContract();
@@ -23,13 +24,13 @@ export default function TokenContractInfo() {
 
   return (
     <div className="token-interaction">
-      <button 
-        className="docs-button" 
+      <WalletActionButton 
         onClick={handleShowToken}
         disabled={isPending}
+        isPending={isPending}
       >
         {isPending ? "Processing PSF Token..." : "Show PSF Token Details"}
-      </button>
+      </WalletActionButton>
       
       {showImage && (
         <div className="token-image-container">

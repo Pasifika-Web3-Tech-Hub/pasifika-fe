@@ -2,6 +2,7 @@
 import { useWriteContract } from "wagmi";
 import { abi } from "@/lib/abi";
 import '../page.css';
+import WalletActionButton from './WalletActionButton';
 
 export default function GovernanceInfo() {
   const { writeContract, isPending } = useWriteContract();
@@ -16,12 +17,12 @@ export default function GovernanceInfo() {
   };
 
   return (
-    <button 
-      className="docs-button" 
+    <WalletActionButton 
       onClick={handleGovernance}
       disabled={isPending}
+      isPending={isPending}
     >
       {isPending ? "Processing Governance..." : "View Governance Details"}
-    </button>
+    </WalletActionButton>
   );
 }

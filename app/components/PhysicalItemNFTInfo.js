@@ -2,6 +2,7 @@
 import { useWriteContract } from "wagmi";
 import { abi } from "@/lib/abi";
 import '../page.css';
+import WalletActionButton from './WalletActionButton';
 
 export default function PhysicalItemNFTInfo() {
   const { writeContract, isPending } = useWriteContract();
@@ -18,12 +19,12 @@ export default function PhysicalItemNFTInfo() {
   };
 
   return (
-    <button 
-      className="docs-button" 
+    <WalletActionButton 
       onClick={handlePhysicalNFT}
       disabled={isPending}
+      isPending={isPending}
     >
       {isPending ? "Processing Marketplace Item..." : "View Marketplace Item"}
-    </button>
+    </WalletActionButton>
   );
 }

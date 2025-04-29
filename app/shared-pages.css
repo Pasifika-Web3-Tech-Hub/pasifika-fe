@@ -594,6 +594,39 @@
   font-style: italic;
 }
 
+/* Wallet Action Button Styles */
+.wallet-action-container {
+  position: relative;
+  display: inline-block;
+}
+
+.wallet-warning {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #FF5722;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-top: 10px;
+  z-index: 10;
+  text-align: center;
+  animation: fadeIn 0.3s ease-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.wallet-warning p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Disabled button styles */
 .form-button:disabled {
   background: #ccc;

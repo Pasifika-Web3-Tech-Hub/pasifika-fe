@@ -1,6 +1,8 @@
 // app/components/PSFStakingInfo.js
 import { useWriteContract } from "wagmi";
 import { abi } from "@/lib/abi";
+import '../page.css';
+import WalletActionButton from './WalletActionButton';
 
 export default function PSFStakingInfo() {
   const { writeContract, isPending } = useWriteContract();
@@ -17,12 +19,12 @@ export default function PSFStakingInfo() {
   };
 
   return (
-    <button 
-      className="docs-button" 
+    <WalletActionButton 
       onClick={handleInteractWithStaking}
       disabled={isPending}
+      isPending={isPending}
     >
       {isPending ? "Processing staking..." : "Token Staking System"}
-    </button>
+    </WalletActionButton>
   );
 }

@@ -1,6 +1,8 @@
 // app/components/TreasuryInfo.js
 import { useWriteContract } from "wagmi";
 import { abi } from "@/lib/abi";
+import '../page.css';
+import WalletActionButton from './WalletActionButton';
 
 export default function TreasuryInfo() {
   const { writeContract, isPending } = useWriteContract();
@@ -17,12 +19,12 @@ export default function TreasuryInfo() {
   };
 
   return (
-    <button 
-      className="docs-button" 
+    <WalletActionButton 
       onClick={handleInteractWithTreasury}
       disabled={isPending}
+      isPending={isPending}
     >
       {isPending ? "Processing treasury..." : "Treasury Management"}
-    </button>
+    </WalletActionButton>
   );
 }
