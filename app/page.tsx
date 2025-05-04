@@ -183,13 +183,6 @@ export default function Main() {
         </div>
       </div>
 
-      {/* Service Motto Section */}
-      <div className="service-motto" style={{ padding: '20px 0', backgroundColor: 'transparent' }}>
-        <div className="container" style={{ textAlign: 'center', margin: '2rem auto' }}>
-          <h2 className="motto-title" style={{ fontSize: '1.8rem', color: '#FF5722', marginBottom: '10px' }}>- Always At Your Service -</h2>
-        </div>
-      </div>
-
       {/* Login and Footer Combined Section */}
       <div className="token">
         <div className="token-banner">
