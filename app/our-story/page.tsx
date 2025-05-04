@@ -106,7 +106,76 @@ export default function OurStory() {
             </ul>
 
             <h2>Our Team</h2>
-            <p>
+            <p style={{ marginBottom: '20px' }}>
+              Meet the Founder and co-Founders of Pasifika Web3 Tech Hub
+            </p>
+            
+            <div className="features-grid" style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(2, 1fr)', 
+              gap: '30px', 
+              justifyContent: 'center',
+              maxWidth: '66%',
+              margin: '0 auto'
+            }}>
+              <div className="feature-card">
+                <div className="feature-icon team-member-photo">
+                  <Image src="/edwin.png" alt="Edwin Liava&apos;a" width={70} height={70} />
+                </div>
+                <h3 className="feature-title">Edwin Liava&apos;a</h3>
+                <p className="feature-text">
+                  Founder, Blockchain & Digital Transformation Engineer
+                </p>
+                <p className="feature-location">Pacific Islands</p>
+                <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                  LinkedIn Profile
+                </a>
+              </div>
+              
+              <div className="feature-card">
+                <div className="feature-icon team-member-photo">
+                  <Image src="/john.png" alt="John Liava&apos;a" width={70} height={70} />
+                </div>
+                <h3 className="feature-title">John Liava&apos;a</h3>
+                <p className="feature-text">
+                  co-Founder, ICT / Systems Engineer
+                </p>
+                <p className="feature-location">Pacific Islands</p>
+                <a href="https://www.linkedin.com/in/john-liava-a-5b42251a0/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                  LinkedIn Profile
+                </a>
+              </div>
+              
+              <div className="feature-card">
+                <div className="feature-icon team-member-photo">
+                  <Image src="/david.png" alt="David Liava&apos;a" width={70} height={70} />
+                </div>
+                <h3 className="feature-title">David Liava&apos;a</h3>
+                <p className="feature-text">
+                  co-Founder, Quantity Surveyor
+                </p>
+                <p className="feature-location">Pacific Islands</p>
+                <a href="https://www.linkedin.com/in/david-liava%E2%80%99a-905827260/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                  LinkedIn Profile
+                </a>
+              </div>
+              
+              <div className="feature-card">
+                <div className="feature-icon team-member-photo">
+                  <Image src="/selafine.png" alt="Selafine Liava&apos;a" width={70} height={70} />
+                </div>
+                <h3 className="feature-title">Selafine Liava&apos;a</h3>
+                <p className="feature-text">
+                  co-Founder, Project Officer
+                </p>
+                <p className="feature-location">Pacific Islands</p>
+                <a href="https://www.linkedin.com/in/selafine-liava%E2%80%99a-643616363/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                  LinkedIn Profile
+                </a>
+              </div>
+            </div>
+
+            <p style={{ marginTop: '30px' }}>
               Pasifika Web3 Tech Hub is now built on a streamlined, family-based team approach. After careful reflection, we&apos;ve pivoted from traditional Web2 methodologies to a more focused, essential development model that aligns with Web3 principles.
             </p>
             <p>

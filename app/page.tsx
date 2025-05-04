@@ -183,78 +183,10 @@ export default function Main() {
         </div>
       </div>
 
-      {/* Our Team Section - Pasifika Styled */}
-      <div className="features" style={{ paddingTop: '20px' }}>
-        <div className="container">
-          <h2 className="section-title">Our Team</h2>
-          <p className="section-subtitle">
-            Meet the Founder and co-Founders of Pasifika Web3 Tech Hub
-          </p>
-          
-          <div className="features-grid" style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(2, 1fr)', 
-            gap: '30px', 
-            justifyContent: 'center',
-            maxWidth: '66%',
-            margin: '0 auto'
-          }}>
-            <div className="feature-card">
-              <div className="feature-icon team-member-photo">
-                <Image src="/edwin.png" alt="Edwin Liava&apos;a" width={70} height={70} />
-              </div>
-              <h3 className="feature-title">Edwin Liava&apos;a</h3>
-              <p className="feature-text">
-                Founder, Blockchain & Digital Transformation Engineer
-              </p>
-              <p className="feature-location">Pacific Islands</p>
-              <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                LinkedIn Profile
-              </a>
-            </div>
-            
-            <div className="feature-card">
-              <div className="feature-icon team-member-photo">
-                <Image src="/john.png" alt="John Liava&apos;a" width={70} height={70} />
-              </div>
-              <h3 className="feature-title">John Liava&apos;a</h3>
-              <p className="feature-text">
-                co-Founder, ICT / Systems Engineer
-              </p>
-              <p className="feature-location">Pacific Islands</p>
-              <a href="https://www.linkedin.com/in/john-liava-a-5b42251a0/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                LinkedIn Profile
-              </a>
-            </div>
-            
-            <div className="feature-card">
-              <div className="feature-icon team-member-photo">
-                <Image src="/david.png" alt="David Liava&apos;a" width={70} height={70} />
-              </div>
-              <h3 className="feature-title">David Liava&apos;a</h3>
-              <p className="feature-text">
-                co-Founder, Quantity Surveyor
-              </p>
-              <p className="feature-location">Pacific Islands</p>
-              <a href="https://www.linkedin.com/in/david-liava%E2%80%99a-905827260/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                LinkedIn Profile
-              </a>
-            </div>
-            
-            <div className="feature-card">
-              <div className="feature-icon team-member-photo">
-                <Image src="/selafine.png" alt="Selafine Liava&apos;a" width={70} height={70} />
-              </div>
-              <h3 className="feature-title">Selafine Liava&apos;a</h3>
-              <p className="feature-text">
-                co-Founder, Project Officer
-              </p>
-              <p className="feature-location">Pacific Islands</p>
-              <a href="https://www.linkedin.com/in/selafine-liava%E2%80%99a-643616363/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                LinkedIn Profile
-              </a>
-            </div>
-          </div>
+      {/* Service Motto Section */}
+      <div className="service-motto" style={{ padding: '20px 0', backgroundColor: 'transparent' }}>
+        <div className="container" style={{ textAlign: 'center', margin: '2rem auto' }}>
+          <h2 className="motto-title" style={{ fontSize: '1.8rem', color: '#FF5722', marginBottom: '10px' }}>- Always At Your Service -</h2>
         </div>
       </div>
 
