@@ -67,57 +67,15 @@ export default function About() {
             <p>We envision a future where Pacific Island communities are active participants in the global digital economy, with tools and infrastructure that address our specific needs and challenges. Through the Pasifika Web3 Marketplace, we aim to create resilient economic systems that can withstand geographical isolation, climate challenges, and limited traditional infrastructure.</p>
             
             <h2>Our Team</h2>
-            <p>Our founding team brings together expertise from blockchain development, community organizing, traditional Pacific knowledge systems, and international finance:</p>
-            
-            <div className="features-grid team-grid" style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(3, 1fr)', 
-              gap: '30px', 
-              justifyContent: 'center',
-              marginBottom: '30px'
-            }}>
-              <div className="feature-card team-member">
-                <div className="feature-icon team-member-photo">
-                  <Image src="/edwin.png" alt="Edwin Liava&apos;a" width={70} height={70} />
-                </div>
-                <h3 className="feature-title">Edwin Liava&apos;a</h3>
-                <p className="feature-text">
-                  Founder, Blockchain & Digital Transformation Engineer
-                </p>
-                <p className="feature-location">Tonga, Fiji, Samoa</p>
-                <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                  LinkedIn Profile
-                </a>
-              </div>
-              
-              <div className="feature-card team-member">
-                <div className="feature-icon team-member-photo">
-                  <Image src="/tenanoia.png" alt="Tenanoia Veronica Simona" width={70} height={70} />
-                </div>
-                <h3 className="feature-title">Tenanoia Veronica Simona</h3>
-                <p className="feature-text">
-                  co-Founder, CEO at Tuvalu Telecommunications Corporation
-                </p>
-                <p className="feature-location">Tuvalu</p>
-                <a href="https://www.linkedin.com/in/ACoAAARD0xAB9-x51CLKG-LC1dP5afg_3Kwqjjg" target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                  LinkedIn Profile
-                </a>
-              </div>
-              
-              <div className="feature-card team-member">
-                <div className="feature-icon team-member-photo">
-                  <Image src="/shaun.png" alt="Shaun Suliol" width={70} height={70} />
-                </div>
-                <h3 className="feature-title">Shaun Suliol</h3>
-                <p className="feature-text">
-                  co-Founder, Digital Innovations Specialist
-                </p>
-                <p className="feature-location">Federated States of Micronesia</p>
-                <a href="https://www.linkedin.com/in/shaun-suliol-58a748122" target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                  LinkedIn Profile
-                </a>
-              </div>
-            </div>
+            <p>Pasifika Web3 Tech Hub is now built on a streamlined, family-based team approach. After careful reflection, we&apos;ve pivoted from traditional Web2 methodologies to a more focused, essential development model that aligns with Web3 principles.</p>
+            <p>Our core team consists of family members with deep expertise in blockchain development and Pacific Island contexts. This structure allows us to:</p>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '25px', marginBottom: '30px' }}>
+              <li style={{ margin: '10px 0' }}>Move faster with a smaller, focused team</li>
+              <li style={{ margin: '10px 0' }}>Reduce unnecessary complexities and dependencies</li>
+              <li style={{ margin: '10px 0' }}>Leverage deep family connections and shared vision</li>
+              <li style={{ margin: '10px 0' }}>Focus exclusively on essential platform components</li>
+              <li style={{ margin: '10px 0' }}>Maintain strong Pacific Island cultural ties</li>
+            </ul>
             
             <div className="features-grid team-grid" style={{ 
               display: 'grid', 
@@ -129,41 +87,69 @@ export default function About() {
             }}>
               <div className="feature-card team-member">
                 <div className="feature-icon team-member-photo">
-                  <Image src="/suzanne.png" alt="Suzanne Moli Orudiana" width={70} height={70} />
+                  <Image src="/edwin.png" alt="Edwin Liava&apos;a" width={70} height={70} />
                 </div>
-                <h3 className="feature-title">Suzanne Moli Orudiana</h3>
+                <h3 className="feature-title">Edwin Liava&apos;a</h3>
                 <p className="feature-text">
-                  co-Founder, Managing Director of Intellectual Solutions
+                  Founder, Blockchain & Digital Transformation Engineer
                 </p>
-                <p className="feature-location">Solomon Islands</p>
-                <a href="https://www.linkedin.com/in/ACoAAAzXV9ABswa8sUOrI0bjhdxKk2VdF7ZB1-M" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                <p className="feature-location">Pacific Islands</p>
+                <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
               </div>
               
               <div className="feature-card team-member">
                 <div className="feature-icon team-member-photo">
-                  <Image src="/lusia.png" alt="Lusia Jones" width={70} height={70} />
+                  <Image src="/john.png" alt="John Liava&apos;a" width={70} height={70} />
                 </div>
-                <h3 className="feature-title">Lusia Jones</h3>
+                <h3 className="feature-title">John Liava&apos;a</h3>
                 <p className="feature-text">
-                  co-Founder, Visionary Leader & Heart-led Changemaker
+                  co-Founder, ICT / Systems Engineer
                 </p>
-                <p className="feature-location">New Zealand</p>
-                <a href="https://www.linkedin.com/in/ACoAAALsKcoBcTnEqFKPjl5y6Br5i9fgfRUEVLw" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                <p className="feature-location">Pacific Islands</p>
+                <a href="https://www.linkedin.com/in/john-liava-a-5b42251a0/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                  LinkedIn Profile
+                </a>
+              </div>
+              
+              <div className="feature-card team-member">
+                <div className="feature-icon team-member-photo">
+                  <Image src="/david.png" alt="David Liava&apos;a" width={70} height={70} />
+                </div>
+                <h3 className="feature-title">David Liava&apos;a</h3>
+                <p className="feature-text">
+                  co-Founder, Quantity Surveyor
+                </p>
+                <p className="feature-location">Pacific Islands</p>
+                <a href="https://www.linkedin.com/in/david-liava%E2%80%99a-905827260/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                  LinkedIn Profile
+                </a>
+              </div>
+              
+              <div className="feature-card team-member">
+                <div className="feature-icon team-member-photo">
+                  <Image src="/selafine.png" alt="Selafine Liava&apos;a" width={70} height={70} />
+                </div>
+                <h3 className="feature-title">Selafine Liava&apos;a</h3>
+                <p className="feature-text">
+                  co-Founder, Project Officer
+                </p>
+                <p className="feature-location">Pacific Islands</p>
+                <a href="https://www.linkedin.com/in/selafine-liava%E2%80%99a-643616363/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
               </div>
             </div>
             
             <h3>Our Approach</h3>
-            <p>We believe in building technology that is:</p>
+            <p>We&apos;ve pivoted to a streamlined, family-based development approach that:</p>
             <ul>
-              <li><strong>Community-driven:</strong> Developed with and for Pacific communities</li>
-              <li><strong>Culturally respectful:</strong> Honoring Pacific values and traditions</li>
-              <li><strong>Practically focused:</strong> Addressing real economic and social needs</li>
-              <li><strong>Environmentally conscious:</strong> Minimizing ecological impact</li>
-              <li><strong>Inclusive by design:</strong> Accessible regardless of technical knowledge</li>
+              <li><strong>Self-funded:</strong> Operating independently of external seed funding</li>
+              <li><strong>Essential-focused:</strong> Building only the core components needed for our platform</li>
+              <li><strong>Decentralized-first:</strong> Creating a platform that operates independently of any jurisdiction or centralized authority</li>
+              <li><strong>Family-driven:</strong> Leveraging deep family connections and shared vision</li>
+              <li><strong>Web3-native:</strong> Building technology that aligns with fundamental Web3 principles</li>
             </ul>
             
             <h3>Our Partners</h3>

@@ -53,25 +53,21 @@ export default function Whitepaper() {
                 className="whitepaper-logo"
               />
               <h2>A PASIFIKA Token-Powered DePIN for Pacific Island Communities</h2>
-              <p className="whitepaper-version">Version 1.0 | May 2025</p>
+              <p className="whitepaper-version">Currently Under Review</p>
               <div className="whitepaper-divider"></div>
             </div>
+            
+            <h2>Whitepaper Status</h2>
+            <p>The whitepaper is currently under review as we pivot to a streamlined, family-based development approach. Key aspects are being re-evaluated to better align with our new direction of building a decentralized platform that operates independently of any jurisdiction or centralized authority.</p>
+            
+            <p>Check back for updates on our technical vision and implementation details as we refine our approach to better serve Pacific Island communities through Web3 principles.</p>
             
             <h2>EXECUTIVE SUMMARY</h2>
             <p>The Pasifika Web3 Tech Hub represents a groundbreaking decentralized physical infrastructure network (DePIN) designed specifically for Pacific Island communities. Leveraging the native PASIFIKA token (PSF) and built on Linea&apos;s zkEVM Layer-2 technology, this platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.</p>
             
             <p>This whitepaper outlines our comprehensive approach to building a decentralized marketplace that connects PSF token holders, data providers, content creators, artisans, farmers, validators, and global consumers in a tokenized ecosystem that spans both digital and physical infrastructure.</p>
             
-            <h2>VISION</h2>
-            <p>Our vision is to create a resilient, self-sustaining digital economy that empowers Pacific Islanders to participate in the global Web3 ecosystem while preserving their unique cultural heritage. By connecting physical island resources with digital infrastructure, we create new economic opportunities while addressing key challenges including:</p>
-            
-            <ul>
-              <li><strong>Geographic Isolation:</strong> Overcoming distance barriers through digital connectivity</li>
-              <li><strong>Limited Infrastructure:</strong> Building decentralized systems that require minimal physical infrastructure</li>
-              <li><strong>Cultural Preservation:</strong> Creating mechanisms to protect and monetize cultural knowledge and artifacts</li>
-              <li><strong>Climate Vulnerability:</strong> Establishing digital resilience against increasing climate threats</li>
-              <li><strong>Economic Diversification:</strong> Reducing dependence on tourism and external aid through digital opportunities</li>
-            </ul>
+
             
             <h2>TOKENOMICS FRAMEWORK</h2>
             <p>The PASIFIKA Token (PSF) serves as the core utility and governance token within our ecosystem. Its primary functions include:</p>

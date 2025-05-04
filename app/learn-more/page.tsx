@@ -51,24 +51,10 @@ export default function LearnMore() {
             </div>
           </Link>
           
-          <Link href="/constitution" className="nav-card">
-            <div className="nav-card-inner">
-              <h2>Constitution</h2>
-              <p>Our governing principles and values</p>
-            </div>
-          </Link>
-          
           <Link href="/whitepaper" className="nav-card">
             <div className="nav-card-inner">
               <h2>Whitepaper</h2>
-              <p>Technical vision and implementation details</p>
-            </div>
-          </Link>
-          
-          <Link href="/tokenomics" className="nav-card">
-            <div className="nav-card-inner">
-              <h2>Tokenomics</h2>
-              <p>Token distribution and economic model</p>
+              <p>Currently Under Review</p>
             </div>
           </Link>
           
@@ -82,7 +68,7 @@ export default function LearnMore() {
           <Link href="/membership" className="nav-card">
             <div className="nav-card-inner">
               <h2>Membership Registration</h2>
-              <p>Sign up to become a member</p>
+              <p>Currently Under Review</p>
             </div>
           </Link>
           

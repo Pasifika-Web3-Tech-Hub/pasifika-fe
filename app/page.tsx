@@ -193,10 +193,11 @@ export default function Main() {
           
           <div className="features-grid" style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(3, 1fr)', 
+            gridTemplateColumns: 'repeat(2, 1fr)', 
             gap: '30px', 
             justifyContent: 'center',
-            marginBottom: '30px'
+            maxWidth: '66%',
+            margin: '0 auto'
           }}>
             <div className="feature-card">
               <div className="feature-icon team-member-photo">
@@ -206,7 +207,7 @@ export default function Main() {
               <p className="feature-text">
                 Founder, Blockchain & Digital Transformation Engineer
               </p>
-              <p className="feature-location">Tonga, Fiji, Samoa</p>
+              <p className="feature-location">Pacific Islands</p>
               <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                 LinkedIn Profile
               </a>
@@ -214,65 +215,42 @@ export default function Main() {
             
             <div className="feature-card">
               <div className="feature-icon team-member-photo">
-                <Image src="/tenanoia.png" alt="Tenanoia Veronica Simona" width={70} height={70} />
+                <Image src="/john.png" alt="John Liava&apos;a" width={70} height={70} />
               </div>
-              <h3 className="feature-title">Tenanoia Veronica Simona</h3>
+              <h3 className="feature-title">John Liava&apos;a</h3>
               <p className="feature-text">
-                co-Founder, CEO at Tuvalu Telecommunications Corporation
+                co-Founder, ICT / Systems Engineer
               </p>
-              <p className="feature-location">Tuvalu</p>
-              <a href="https://www.linkedin.com/in/ACoAAARD0xAB9-x51CLKG-LC1dP5afg_3Kwqjjg" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+              <p className="feature-location">Pacific Islands</p>
+              <a href="https://www.linkedin.com/in/john-liava-a-5b42251a0/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                 LinkedIn Profile
               </a>
             </div>
             
             <div className="feature-card">
               <div className="feature-icon team-member-photo">
-                <Image src="/shaun.png" alt="Shaun Suliol" width={70} height={70} />
+                <Image src="/david.png" alt="David Liava&apos;a" width={70} height={70} />
               </div>
-              <h3 className="feature-title">Shaun Suliol</h3>
+              <h3 className="feature-title">David Liava&apos;a</h3>
               <p className="feature-text">
-                co-Founder, Digital Innovations Specialist
+                co-Founder, Quantity Surveyor
               </p>
-              <p className="feature-location">Federated States of Micronesia</p>
-              <a href="https://www.linkedin.com/in/shaun-suliol-58a748122" target="_blank" rel="noopener noreferrer" className="linkedin-link">
-                LinkedIn Profile
-              </a>
-            </div>
-          </div>
-          
-          <div className="features-grid" style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(2, 1fr)', 
-            gap: '30px', 
-            justifyContent: 'center',
-            maxWidth: '66%',
-            margin: '0 auto'
-          }}>
-            <div className="feature-card">
-              <div className="feature-icon team-member-photo">
-                <Image src="/suzanne.png" alt="Suzanne Moli Orudiana" width={70} height={70} />
-              </div>
-              <h3 className="feature-title">Suzanne Moli Orudiana</h3>
-              <p className="feature-text">
-                co-Founder, Managing Director of Intellectual Solutions
-              </p>
-              <p className="feature-location">Solomon Islands</p>
-              <a href="https://www.linkedin.com/in/ACoAAAzXV9ABswa8sUOrI0bjhdxKk2VdF7ZB1-M" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+              <p className="feature-location">Pacific Islands</p>
+              <a href="https://www.linkedin.com/in/david-liava%E2%80%99a-905827260/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                 LinkedIn Profile
               </a>
             </div>
             
             <div className="feature-card">
               <div className="feature-icon team-member-photo">
-                <Image src="/lusia.png" alt="Lusia Jones" width={70} height={70} />
+                <Image src="/selafine.png" alt="Selafine Liava&apos;a" width={70} height={70} />
               </div>
-              <h3 className="feature-title">Lusia Jones</h3>
+              <h3 className="feature-title">Selafine Liava&apos;a</h3>
               <p className="feature-text">
-                co-Founder, Visionary Leader & Heart-led Changemaker
+                co-Founder, Project Officer
               </p>
-              <p className="feature-location">New Zealand</p>
-              <a href="https://www.linkedin.com/in/ACoAAALsKcoBcTnEqFKPjl5y6Br5i9fgfRUEVLw" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+              <p className="feature-location">Pacific Islands</p>
+              <a href="https://www.linkedin.com/in/selafine-liava%E2%80%99a-643616363/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                 LinkedIn Profile
               </a>
             </div>
@@ -360,6 +338,7 @@ export default function Main() {
         <p style={{ fontSize: '1.25rem', fontWeight: 500, margin: 0 }}>
           The Pasifika Web3 Tech Hub represents a groundbreaking decentralized physical infrastructure network (DePIN) designed specifically for Pacific Island communities. Leveraging the native PASIFIKA token (PSF) and building our Proof of Concept (POC) on Linea&apos;s solid zkEVM Layer-2 solution, we are also evaluating alternatives for our production version. On the EVM stack Arbitrum, zkSync Era, StarkNet, Base, and Polygon zkEVM. On the Bitcoin-Native stack RootStock which is also EVM compatible and Internet Computer (ICP). Our platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.
         </p>
+        <p>We&apos;re on a mission to empower Pacific Island communities through accessible Web3 technologies, creating economic opportunities while preserving and celebrating our cultural heritage. We believe in building decentralized systems that work for people regardless of their location, technical background, or economic status.</p>
       </div>
 
       {/* Footer Banner */}

@@ -130,18 +130,10 @@ export default function Membership() {
         
         <div className="content-container">
           <div className="content-section">
-            <h2>Join the Pasifika Web3 Community</h2>
-            <p>Become a member of the Pasifika Web3 Tech Hub and gain access to exclusive benefits, resources, and opportunities within our growing ecosystem.</p>
+            <h2>Membership Program Status</h2>
+            <p>Our membership program is currently under review as we pivot to a streamlined, family-based development approach. We&apos;re re-evaluating our membership structure to better align with our new direction of building a decentralized platform that operates independently of any jurisdiction or centralized authority.</p>
             
-            <h3>Membership Benefits</h3>
-            <ul>
-              <li><strong>Early access</strong> to new platform features and services</li>
-              <li><strong>Reduced fees</strong> on marketplace transactions</li>
-              <li><strong>Voting rights</strong> in platform governance decisions</li>
-              <li><strong>Educational resources</strong> on Web3 technologies</li>
-              <li><strong>Networking opportunities</strong> with other Pacific Web3 enthusiasts</li>
-              <li><strong>Participation</strong> in community-funded initiatives</li>
-            </ul>
+            <p>Check back for updates on our membership program as we refine our approach to better serve Pacific Island communities through Web3 principles.</p>
             
             {!formSubmitted ? (
               <form onSubmit={handleSubmit}>
