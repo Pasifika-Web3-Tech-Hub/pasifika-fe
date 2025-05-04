@@ -189,6 +189,58 @@ export default function OurStory() {
             </ul>
             <p>The whitepaper is currently under review as we pivot to a streamlined, family-based development approach. Key aspects are being re-evaluated to better align with our new direction of building a decentralized platform that operates independently of any jurisdiction or centralized authority.</p>
 
+            <h2>Our Mission</h2>
+            <p>We&apos;re on a mission to empower Pacific Island communities through accessible Web3 technologies, creating economic opportunities while preserving and celebrating our cultural heritage. We believe in building decentralized systems that work for people regardless of their location, technical background, or economic status.</p>
+            
+            <h2>Our Vision</h2>
+            <p>We envision a future where Pacific Island communities are active participants in the global digital economy, with tools and infrastructure that address our specific needs and challenges. Through the Pasifika Web3 Marketplace, we aim to create resilient economic systems that can withstand geographical isolation, climate challenges, and limited traditional infrastructure.</p>
+
+            <h2>Our Approach</h2>
+            <p>We&apos;ve pivoted to a streamlined, family-based development approach that:</p>
+            <ul>
+              <li><strong>Self-funded:</strong> Operating independently of external seed funding</li>
+              <li><strong>Essential-focused:</strong> Building only the core components needed for our platform</li>
+              <li><strong>Decentralized-first:</strong> Creating a platform that operates independently of any jurisdiction or centralized authority</li>
+              <li><strong>Family-driven:</strong> Leveraging deep family connections and shared vision</li>
+              <li><strong>Web3-native:</strong> Building technology that aligns with fundamental Web3 principles</li>
+            </ul>
+
+            <h2>Our Partners</h2>
+            <p>We&apos;re proud to work with a growing network of regional and international partners including:</p>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '25px', marginBottom: '20px' }}>
+              <li style={{ margin: '10px 0', fontSize: '1.05rem' }}><span style={{ color: '#FF5722', fontWeight: '500' }}>Pacific Island regional organizations</span></li>
+              <li style={{ margin: '10px 0', fontSize: '1.05rem' }}><span style={{ color: '#FF5722', fontWeight: '500' }}>Local government technology initiatives</span></li>
+              <li style={{ margin: '10px 0', fontSize: '1.05rem' }}><span style={{ color: '#FF5722', fontWeight: '500' }}>International blockchain development firms</span></li>
+              <li style={{ margin: '10px 0', fontSize: '1.05rem' }}><span style={{ color: '#FF5722', fontWeight: '500' }}>Academic institutions researching decentralized systems</span></li>
+              <li style={{ margin: '10px 0', fontSize: '1.05rem' }}><span style={{ color: '#FF5722', fontWeight: '500' }}>Community development organizations</span></li>
+            </ul>
+
+            <div className="team-values">
+              <h2>Our Values</h2>
+              <div className="values-grid">
+                <div className="value-item">
+                  <div className="value-icon">🤝</div>
+                  <h4>Community</h4>
+                  <p>Building technology that strengthens Pacific communities and traditions</p>
+                </div>
+                <div className="value-item">
+                  <div className="value-icon">🌊</div>
+                  <h4>Resilience</h4>
+                  <p>Creating systems that adapt to the unique challenges of island environments</p>
+                </div>
+                <div className="value-item">
+                  <div className="value-icon">🌱</div>
+                  <h4>Sustainability</h4>
+                  <p>Designing eco-friendly solutions that respect our natural environment</p>
+                </div>
+                <div className="value-item">
+                  <div className="value-icon">🔗</div>
+                  <h4>Connection</h4>
+                  <p>Bridging traditional knowledge with emerging technologies</p>
+                </div>
+              </div>
+            </div>
+
             <h2>Milestones</h2>
             <div style={{ overflowX: 'auto', marginBottom: '30px' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '15px' }}>
