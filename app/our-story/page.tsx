@@ -183,13 +183,12 @@ export default function OurStory() {
 
 
 
-
             <h2>Our Team</h2>
             <p style={{ marginBottom: '20px' }}>
               Meet the Founder and co-Founders of Pasifika Web3 Tech Hub
             </p>
             
-            <div className="features-grid" style={{ 
+            <div className="team-grid" style={{ 
               display: 'grid', 
               gridTemplateColumns: 'repeat(2, 1fr)', 
               gap: '30px', 
@@ -197,58 +196,82 @@ export default function OurStory() {
               maxWidth: '66%',
               margin: '0 auto'
             }}>
-              <div className="feature-card">
-                <div className="feature-icon team-member-photo">
-                  <Image src="/edwin.png" alt="Edwin Liava&apos;a" width={70} height={70} />
+              <div className="team-member">
+                <div className="member-photo-container">
+                  <Image 
+                    src="/edwin.png" 
+                    alt="Edwin Liava&apos;a" 
+                    width={150} 
+                    height={150} 
+                    style={{ borderRadius: '50%' }}
+                  />
                 </div>
-                <h3 className="feature-title">Edwin Liava&apos;a</h3>
-                <p className="feature-text">
+                <h3 className="member-name">Edwin Liava&apos;a</h3>
+                <p className="member-role">
                   Founder, Blockchain & Digital Transformation Engineer
                 </p>
-                <p className="feature-location">Pacific Islands</p>
+                <p className="member-location">Pacific Islands</p>
                 <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
               </div>
               
-              <div className="feature-card">
-                <div className="feature-icon team-member-photo">
-                  <Image src="/john.png" alt="John Liava&apos;a" width={70} height={70} />
+              <div className="team-member">
+                <div className="member-photo-container">
+                  <Image 
+                    src="/john.png" 
+                    alt="John Liava&apos;a" 
+                    width={150} 
+                    height={150} 
+                    style={{ borderRadius: '50%' }}
+                  />
                 </div>
-                <h3 className="feature-title">John Liava&apos;a</h3>
-                <p className="feature-text">
+                <h3 className="member-name">John Liava&apos;a</h3>
+                <p className="member-role">
                   co-Founder, ICT / Systems Engineer
                 </p>
-                <p className="feature-location">Pacific Islands</p>
-                <a href="https://www.linkedin.com/in/john-liava-a-5b42251a0/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                <p className="member-location">Pacific Islands</p>
+                <a href="https://www.linkedin.com/in/john-liava&apos;a-5b42251a0/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
               </div>
               
-              <div className="feature-card">
-                <div className="feature-icon team-member-photo">
-                  <Image src="/david.png" alt="David Liava&apos;a" width={70} height={70} />
+              <div className="team-member">
+                <div className="member-photo-container">
+                  <Image 
+                    src="/david.png" 
+                    alt="David Liava&apos;a" 
+                    width={150} 
+                    height={150} 
+                    style={{ borderRadius: '50%' }}
+                  />
                 </div>
-                <h3 className="feature-title">David Liava&#39;a</h3>
-                <p className="feature-text">
+                <h3 className="member-name">David Liava&apos;a</h3>
+                <p className="member-role">
                   co-Founder, Quantity Surveyor
                 </p>
-                <p className="feature-location">Pacific Islands</p>
-                <a href="https://www.linkedin.com/in/david-liava&#39;a-905827260/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                <p className="member-location">Pacific Islands</p>
+                <a href="https://www.linkedin.com/in/david-liava&apos;a-905827260/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
               </div>
               
-              <div className="feature-card">
-                <div className="feature-icon team-member-photo">
-                  <Image src="/selafine.png" alt="Selafine Liava&#39;a" width={70} height={70} />
+              <div className="team-member">
+                <div className="member-photo-container">
+                  <Image 
+                    src="/selafine.png" 
+                    alt="Selafine Liava&apos;a" 
+                    width={150} 
+                    height={150} 
+                    style={{ borderRadius: '50%' }}
+                  />
                 </div>
-                <h3 className="feature-title">Selafine Liava&#39;a</h3>
-                <p className="feature-text">
+                <h3 className="member-name">Selafine Liava&apos;a</h3>
+                <p className="member-role">
                   co-Founder, Project Officer
                 </p>
-                <p className="feature-location">Pacific Islands</p>
-                <a href="https://www.linkedin.com/in/selafine-liava&#39;a-643616363/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                <p className="member-location">Pacific Islands</p>
+                <a href="https://www.linkedin.com/in/selafine-liava&apos;a-643616363/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
               </div>
