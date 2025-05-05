@@ -197,44 +197,21 @@ export default function OurStory() {
               margin: '0 auto',
               padding: '0 15px'
             }}>
-              <div className="team-member" style={{
-                textAlign: 'center',
-                padding: '20px',
-                background: isDarkMode ? '#333' : '#fff',
-                borderRadius: '15px',
-                boxShadow: isDarkMode ? '0 2px 10px rgba(0,0,0,0.2)' : '0 2px 10px rgba(0,0,0,0.1)',
-                transition: 'transform 0.3s ease'
-              }}>
-                <div className="member-photo-container" style={{
-                  marginBottom: '15px'
-                }}>
+              <div className="team-member">
+                <div className="member-photo-container">
                   <Image 
                     src="/edwin.png" 
                     alt="Edwin Liava&apos;a" 
-                    width={120} 
-                    height={120} 
-                    style={{ 
-                      borderRadius: '50%',
-                      boxShadow: '0 0 15px rgba(0,0,0,0.1)',
-                      transition: 'transform 0.3s ease'
-                    }}
+                    width={150} 
+                    height={150} 
+                    style={{ borderRadius: '50%' }}
                   />
                 </div>
-                <h3 className="member-name" style={{
-                  fontSize: '1.2rem',
-                  margin: '10px 0',
-                  color: isDarkMode ? '#fff' : '#333'
-                }}>Edwin Liava&apos;a</h3>
-                <p className="member-role" style={{
-                  fontSize: '0.95rem',
-                  color: isDarkMode ? '#ccc' : '#666'
-                }}>
+                <h3 className="member-name">Edwin Liava&apos;a</h3>
+                <p className="member-role">
                   Founder, Blockchain & Digital Transformation Engineer
                 </p>
-                <p className="member-location" style={{
-                  fontSize: '0.9rem',
-                  color: isDarkMode ? '#999' : '#999'
-                }}>Pacific Islands</p>
+                <p className="member-location">Pacific Islands</p>
                 <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
