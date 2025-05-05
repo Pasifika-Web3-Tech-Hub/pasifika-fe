@@ -189,29 +189,62 @@ export default function OurStory() {
             </p>
             
             <div className="team-grid" style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'repeat(2, 1fr)', 
-              gap: '30px', 
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '20px',
               justifyContent: 'center',
-              maxWidth: '66%',
-              margin: '0 auto'
+              maxWidth: '90%',
+              margin: '0 auto',
+              padding: '0 15px'
             }}>
-              <div className="team-member">
-                <div className="member-photo-container">
+              <div className="team-member" style={{
+                textAlign: 'center',
+                padding: '20px',
+                background: isDarkMode ? '#333' : '#fff',
+                borderRadius: '15px',
+                boxShadow: isDarkMode ? '0 2px 10px rgba(0,0,0,0.2)' : '0 2px 10px rgba(0,0,0,0.1)',
+                transition: 'transform 0.3s ease'
+              }}>
+                <div className="member-photo-container" style={{
+                  marginBottom: '15px'
+                }}>
                   <Image 
                     src="/edwin.png" 
                     alt="Edwin Liava&apos;a" 
-                    width={150} 
-                    height={150} 
-                    style={{ borderRadius: '50%' }}
+                    width={120} 
+                    height={120} 
+                    style={{ 
+                      borderRadius: '50%',
+                      boxShadow: '0 0 15px rgba(0,0,0,0.1)',
+                      transition: 'transform 0.3s ease'
+                    }}
                   />
                 </div>
-                <h3 className="member-name">Edwin Liava&apos;a</h3>
-                <p className="member-role">
+                <h3 className="member-name" style={{
+                  fontSize: '1.2rem',
+                  margin: '10px 0',
+                  color: isDarkMode ? '#fff' : '#333'
+                }}>Edwin Liava&apos;a</h3>
+                <p className="member-role" style={{
+                  fontSize: '0.95rem',
+                  color: isDarkMode ? '#ccc' : '#666'
+                }}>
                   Founder, Blockchain & Digital Transformation Engineer
                 </p>
-                <p className="member-location">Pacific Islands</p>
-                <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                <p className="member-location" style={{
+                  fontSize: '0.9rem',
+                  color: isDarkMode ? '#999' : '#999'
+                }}>Pacific Islands</p>
+                <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link" style={{
+                  display: 'inline-block',
+                  padding: '8px 15px',
+                  background: '#0077B5',
+                  color: '#fff',
+                  borderRadius: '5px',
+                  textDecoration: 'none',
+                  marginTop: '10px',
+                  transition: 'background 0.3s ease'
+                }}>
                   LinkedIn Profile
                 </a>
               </div>
