@@ -235,16 +235,7 @@ export default function OurStory() {
                   fontSize: '0.9rem',
                   color: isDarkMode ? '#999' : '#999'
                 }}>Pacific Islands</p>
-                <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link" style={{
-                  display: 'inline-block',
-                  padding: '8px 15px',
-                  background: '#0077B5',
-                  color: '#fff',
-                  borderRadius: '5px',
-                  textDecoration: 'none',
-                  marginTop: '10px',
-                  transition: 'background 0.3s ease'
-                }}>
+                <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
               </div>
