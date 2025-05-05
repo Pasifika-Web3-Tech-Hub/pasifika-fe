@@ -157,19 +157,24 @@ export default function OurStory() {
                 <p>Launch of Proof of Concept platform</p>
               </div>
               <div className="milestone-item">
-                <div className="milestone-icon">🌐</div>
+                <div className="milestone-icon">💻</div>
                 <h4>2025 Q2</h4>
-                <p>Initial regional partnerships established</p>
+                <p>Development of Production Version</p>
               </div>
               <div className="milestone-item">
-                <div className="milestone-icon">🤝</div>
+                <div className="milestone-icon">🛠️</div>
                 <h4>2025 Q3</h4>
-                <p>First community pilot program</p>
+                <p>Implementation of Production Version</p>
               </div>
               <div className="milestone-item">
-                <div className="milestone-icon">📈</div>
+                <div className="milestone-icon">🚀</div>
                 <h4>2025 Q4</h4>
-                <p>Expansion to additional Pacific Island communities</p>
+                <p>Deployment of Production Version</p>
+              </div>
+              <div className="milestone-item">
+                <div className="milestone-icon">🎉</div>
+                <h4>2026 Q1</h4>
+                <p>Official Launch of Pasifika Production Version 1.0</p>
               </div>
             </div>
 

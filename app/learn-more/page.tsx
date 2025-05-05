@@ -79,12 +79,7 @@ export default function LearnMore() {
             </div>
           </Link>
           
-          <Link href="/about" className="nav-card">
-            <div className="nav-card-inner">
-              <h2>About Us</h2>
-              <p>Our mission and journey</p>
-            </div>
-          </Link>
+
           
           <Link href="/contact" className="nav-card">
             <div className="nav-card-inner">
