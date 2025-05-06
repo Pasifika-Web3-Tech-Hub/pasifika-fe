@@ -872,3 +872,111 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* View details link for smart contract pages */
+.view-details-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4a6fa5;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.view-details-link:hover {
+  background-color: #345681;
+}
+
+.dark .view-details-link {
+  background-color: #5a7fb5;
+}
+
+.dark .view-details-link:hover {
+  background-color: #4a6fa5;
+}
+
+/* Service Navigation */
+.services-navigation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.service-nav-item {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.service-nav-item:hover {
+  transform: translateY(-5px);
+}
+
+.service-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 87, 34, 0.1);
+}
+
+.light .service-card {
+  background-color: #fff;
+}
+
+.dark .service-card {
+  background-color: #222;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 87, 34, 0.3);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem 0;
+  color: #FF5722;
+}
+
+.service-card p {
+  font-size: 1rem;
+  margin: 0 0 1.5rem 0;
+  flex-grow: 1;
+}
+
+.service-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.75rem;
+  opacity: 0.7;
+}
+
+.service-button {
+  background-color: #FF5722;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.service-button:hover {
+  background-color: #FF9800;
+}

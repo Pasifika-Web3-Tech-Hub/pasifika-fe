@@ -87,8 +87,8 @@ export default function OurStory() {
 
             <h2>Our Vision</h2>
             <p>We envision a future where Pacific Island communities are active participants in the global digital economy, with tools and infrastructure that address our specific needs and challenges. Through the Pasifika Web3 Marketplace, we aim to create resilient economic systems that can withstand geographical isolation, climate challenges, and limited traditional infrastructure.</p>
-
-
+            
+            <p>Central to our vision is the development of the <strong>Pasifika Exchange</strong> - the first decentralized exchange designed specifically for Pacific Island communities. This groundbreaking platform will enable secure trading of digital assets with low fees and cross-island interoperability, bringing financial inclusion and new economic opportunities to previously underserved regions.</p>
 
             <h2>Our Mission</h2>
             <p>We&apos;re on a mission to empower Pacific Island communities through accessible Web3 technologies, creating economic opportunities while preserving and celebrating our cultural heritage. We believe in building decentralized systems that work for people regardless of their location, technical background, or economic status.</p>

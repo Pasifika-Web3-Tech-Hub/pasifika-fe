@@ -1,0 +1,290 @@
+/* Membership Registration Page Styles */
+
+.membership-tiers-overview {
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.tier-overview-card {
+  background-color: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+}
+
+.tier-overview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tier-overview-card h4 {
+  color: var(--highlight-color);
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #FF5722;
+  padding-bottom: 0.5rem;
+}
+
+.tier-price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.tier-features {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tier-features li {
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.tier-features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #FF5722;
+  font-weight: bold;
+}
+
+.tier-features strong {
+  color: #FF5722;
+}
+
+/* Profit Sharing Overview */
+.profit-sharing-overview {
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.profit-sharing-overview h3 {
+  color: var(--text-color);
+  margin-top: 0;
+  border-bottom: 2px solid #FF5722;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.profit-sharing-overview ul {
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.profit-sharing-overview li {
+  margin-bottom: 0.75rem;
+}
+
+.profit-sharing-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: space-between;
+}
+
+.profit-detail-item {
+  flex: 1;
+  min-width: 200px;
+  background-color: var(--bg-primary);
+  padding: 1.25rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.detail-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FF5722;
+  margin: 0 0 0.5rem;
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Wallet Connection Section */
+.wallet-connection-section {
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.connect-wallet-btn {
+  padding: 0.8rem 2rem;
+  background-color: #FF5722;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+}
+
+.connect-wallet-btn:hover {
+  background-color: #E64A19;
+}
+
+.wallet-connected {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Registration Form Enhancements */
+.registration-form {
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #FF5722;
+  padding-bottom: 0.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #FF5722;
+  outline: none;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-top: 0.25rem;
+}
+
+.checkbox-label {
+  font-size: 0.95rem;
+}
+
+.text-link {
+  color: #FF5722;
+  text-decoration: underline;
+}
+
+.form-button {
+  background-color: #FF5722;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+.form-button:hover {
+  background-color: #E64A19;
+}
+
+.form-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.success-message {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.success-message h3 {
+  color: #4CAF50;
+  margin-top: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tiers-grid,
+  .profit-sharing-details,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .membership-tiers-overview,
+  .profit-sharing-overview,
+  .wallet-connection-section,
+  .registration-form {
+    padding: 1.5rem;
+  }
+}

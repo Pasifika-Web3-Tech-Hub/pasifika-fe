@@ -261,7 +261,7 @@ export default function Main() {
       {/* Pasifika DePIN Description Section */}
       <div className="dep-in-section" style={{ background: isDarkMode ? '#222' : '#fff', color: isDarkMode ? '#FF9800' : '#FF5722', padding: '1rem 0', margin: '0 auto', maxWidth: 900, textAlign: 'center', borderRadius: 12, boxShadow: isDarkMode ? '0 2px 16px #111' : '0 2px 16px #eee' }}>
         <p style={{ fontSize: '1.25rem', fontWeight: 500, margin: 0 }}>
-          The Pasifika Web3 Tech Hub represents a groundbreaking decentralized physical infrastructure network (DePIN) designed specifically for Pacific Island communities. Building our Proof of Concept (POC) on Linea&apos;s solid zkEVM Layer-2 solution, we are also evaluating alternatives for our production version. On the EVM stack Arbitrum, zkSync Era, StarkNet, Base, and Polygon zkEVM. On the Bitcoin-Native stack RootStock which is also EVM compatible and Internet Computer (ICP). Our platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.
+          The Pasifika Web3 Tech Hub represents a groundbreaking decentralized physical infrastructure network (DePIN) designed specifically for Pacific Island communities. We have migrated to Arbitrum and our use cases & proof of concept are now live on Arbitrum testnet. We chose Arbitrum for its exceptional throughput, security inherited from Ethereum, and low transaction fees that benefit our Pacific Island users. Our platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.
         </p>
       </div>
 

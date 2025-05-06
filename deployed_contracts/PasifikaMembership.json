@@ -1,8 +1,8 @@
 {
-  "contractName": "PasifikaTreasury",
+  "contractName": "PasifikaMembership",
   "address": "0x80d3c57b95a2fca3900f3EAC71196Bf133aaa517",
   "network": "Arbitrum Sepolia",
   "chainId": 421614,
   "explorer": "https://sepolia.arbiscan.io/address/0x80d3c57b95a2fca3900f3EAC71196Bf133aaa517",
-  "deployedAt": "2025-05-06T07:54:29Z"
+  "deployedAt": "2025-05-06T06:48:20Z"
 }

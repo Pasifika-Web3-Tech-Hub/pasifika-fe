@@ -5,10 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "../page.css";
 import "../shared-pages.css";
-import TokenContractInfo from '../components/TokenContractInfo.js';
-import DynamicNFTInfo from '../components/DynamicNFTInfo.js';
 import PhysicalItemNFTInfo from '../components/PhysicalItemNFTInfo.js';
-import GovernanceInfo from '../components/GovernanceInfo.js';
 import PSFStakingInfo from '../components/PSFStakingInfo.js';
 import TreasuryInfo from '../components/TreasuryInfo.js';
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
@@ -158,36 +155,12 @@ export default function Services() {
             <div className="section-content smart-contracts-section">
               <div className="smart-contract-card">
                 <div className="card-header">
-                  <h3>Token Contracts</h3>
-                  <div className="component-icon"><span className="emoji-fix">📚</span></div>
+                  <h3>Marketplace Contracts</h3>
+                  <div className="component-icon"><span className="emoji-fix">🏪</span></div>
                 </div>
-                <p>Implementation of the PASIFIKA (PSF) token, including minting, distribution, and staking mechanisms tailored for the Pacific economy.</p>
-                <div className="demo-component token-demo">
-                  <div className="token-visual">
-                    <Image
-                      src="/pasifika.png"
-                      alt="PSF Token"
-                      width={80}
-                      height={80}
-                      className="token-image-preview"
-                    />
-                    <div className="token-preview-info">
-                      <p className="token-preview-title">PSF Token</p>
-                      <p className="token-preview-address">0x2e57c2f37283941C7804DA0b97BFf3f8dc821eA2</p>
-                    </div>
-                  </div>
-                  <TokenContractInfo />
-                </div>
-              </div>
-              
-              <div className="smart-contract-card">
-                <div className="card-header">
-                  <h3>Node Operator Rewards</h3>
-                  <div className="component-icon"><span className="emoji-fix">📡</span></div>
-                </div>
-                <p>Incentive distribution system for network participants who maintain infrastructure nodes across the Pacific island nations.</p>
+                <p>Decentralized exchange infrastructure for both digital and physical goods with escrow, reputation, and dispute resolution mechanisms.</p>
                 <div className="demo-component">
-                  <PSFStakingInfo />
+                  <PhysicalItemNFTInfo />
                 </div>
               </div>
               
@@ -204,98 +177,22 @@ export default function Services() {
               
               <div className="smart-contract-card">
                 <div className="card-header">
-                  <h3>Dynamic NFT System</h3>
-                  <div className="component-icon"><span className="emoji-fix">🖼️</span></div>
+                  <h3>Node Operator Rewards</h3>
+                  <div className="component-icon"><span className="emoji-fix">📡</span></div>
                 </div>
-                <p>Evolving NFTs representing Pacific cultural assets with embedded royalty systems that ensure creators receive ongoing compensation.</p>
+                <p>Incentive distribution system for network participants who maintain infrastructure nodes across the Pacific island nations.</p>
                 <div className="demo-component">
-                  <DynamicNFTInfo />
-                </div>
-              </div>
-              
-              <div className="smart-contract-card">
-                <div className="card-header">
-                  <h3>Marketplace Contracts</h3>
-                  <div className="component-icon"><span className="emoji-fix">🏪</span></div>
-                </div>
-                <p>Decentralized exchange infrastructure for both digital and physical goods with escrow, reputation, and dispute resolution mechanisms.</p>
-                <div className="demo-component">
-                  <PhysicalItemNFTInfo />
-                </div>
-              </div>
-              
-              <div className="smart-contract-card">
-                <div className="card-header">
-                  <h3>Governance System</h3>
-                  <div className="component-icon"><span className="emoji-fix">⚖️</span></div>
-                </div>
-                <p>DAO-based governance allowing community members to propose, vote on, and implement changes to the platform and resource allocation.</p>
-                <div className="demo-component">
-                  <GovernanceInfo />
+                  <PSFStakingInfo />
                 </div>
               </div>
               
               <div className="smart-contract-card inactive">
                 <div className="card-header">
-                  <h3>Validator Framework</h3>
-                  <div className="component-icon"><span className="emoji-fix">✅</span></div>
-                </div>
-                <p>Consensus mechanism for validating network transactions with specific adaptation for low-bandwidth environments in Pacific regions.</p>
-                <div className="production-notice">Will be available in the production version</div>
-              </div>
-              
-              <div className="smart-contract-card inactive">
-                <div className="card-header">
-                  <h3>Oracle Integration</h3>
-                  <div className="component-icon"><span className="emoji-fix">🔮</span></div>
-                </div>
-                <p>Real-world data feeds for climate monitoring, currency exchange rates, and other inputs critical to Pacific communities and economies.</p>
-                <div className="production-notice">Will be available in the production version</div>
-              </div>
-              
-              <div className="smart-contract-card inactive">
-                <div className="card-header">
-                  <h3>Cultural Protection System</h3>
-                  <div className="component-icon"><span className="emoji-fix">🛡️</span></div>
-                </div>
-                <p>Smart contracts that enforce traditional ownership concepts and prevent misappropriation of cultural knowledge and symbols.</p>
-                <div className="production-notice">Will be available in the production version</div>
-              </div>
-              
-              <div className="smart-contract-card inactive">
-                <div className="card-header">
-                  <h3>AI Agent Coordination</h3>
-                  <div className="component-icon"><span className="emoji-fix">🤖</span></div>
-                </div>
-                <p>Smart contract interfaces for AI agents that support platform operations, data analysis, and personalized services for users.</p>
-                <div className="production-notice">Will be available in the production version</div>
-              </div>
-              
-              <div className="smart-contract-card inactive">
-                <div className="card-header">
-                  <h3>Security Audits</h3>
-                  <div className="component-icon"><span className="emoji-fix">🔒</span></div>
-                </div>
-                <p>Regular security audits and penetration testing to ensure the integrity of our smart contracts and user data.</p>
-                <div className="production-notice">Will be available in the production version</div>
-              </div>
-              
-              <div className="smart-contract-card inactive">
-                <div className="card-header">
-                  <h3>Infrastructure Contracts</h3>
-                  <div className="component-icon"><span className="emoji-fix">🌐</span></div>
-                </div>
-                <p>Smart contracts managing the infrastructure layer, including node deployment, network topology, and resource allocation.</p>
-                <div className="production-notice">Will be available in the production version</div>
-              </div>
-              
-              <div className="smart-contract-card inactive">
-                <div className="card-header">
-                  <h3>Disaster Relief Fund</h3>
+                  <h3>Pasifika Exchange</h3>
                   <div className="component-icon"><span className="emoji-fix">🌊</span></div>
                 </div>
-                <p>Community-managed fund for disaster relief and recovery efforts, utilizing blockchain for transparent and efficient allocation of resources.</p>
-                <div className="production-notice">Will be available in the production version</div>
+                <p>The first decentralized exchange designed specifically for Pacific Island communities, enabling secure trading of digital assets with low fees and cross-island interoperability.</p>
+                <div className="production-notice">Coming soon in 2025</div>
               </div>
             </div>
           </div>

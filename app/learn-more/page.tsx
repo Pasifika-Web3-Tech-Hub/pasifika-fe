@@ -54,7 +54,7 @@ export default function LearnMore() {
           <Link href="/whitepaper" className="nav-card">
             <div className="nav-card-inner">
               <h2>Whitepaper</h2>
-              <p>Currently Under Review</p>
+              <p>Our vision and technical roadmap</p>
             </div>
           </Link>
           
@@ -68,7 +68,7 @@ export default function LearnMore() {
           <Link href="/membership" className="nav-card">
             <div className="nav-card-inner">
               <h2>Membership Registration</h2>
-              <p>Currently Under Review</p>
+              <p>Join our community membership program</p>
             </div>
           </Link>
           

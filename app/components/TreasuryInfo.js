@@ -1,30 +1,27 @@
 // app/components/TreasuryInfo.js
-import { useWriteContract } from "wagmi";
-import { abi } from "@/lib/abi";
+import Link from 'next/link';
 import '../page.css';
-import WalletActionButton from './WalletActionButton';
 
 export default function TreasuryInfo() {
-  const { writeContract, isPending } = useWriteContract();
-
-  // Contract address from PasifikaTreasury.json
-  const CONTRACT_ADDRESS = "0x25832FC1A9A3eC86487595086e4719B43014B5Db";
-
-  const handleInteractWithTreasury = () => {
-    writeContract({
-      address: CONTRACT_ADDRESS,
-      abi: abi,
-      functionName: "pasifika",
-    });
-  };
-
   return (
-    <WalletActionButton 
-      onClick={handleInteractWithTreasury}
-      disabled={isPending}
-      isPending={isPending}
-    >
-      {isPending ? "Processing treasury..." : "Treasury Management"}
-    </WalletActionButton>
+    <div className="component-info">
+      <div className="component-details">
+        <div className="component-metrics">
+          <div className="metric">
+            <span className="metric-value">3</span>
+            <span className="metric-label">Active Funds</span>
+          </div>
+          <div className="metric">
+            <span className="metric-value">5%</span>
+            <span className="metric-label">Growth Rate</span>
+          </div>
+        </div>
+        <div className="component-action">
+          <Link href="/treasury-management">
+            <button className="view-details-button">Manage Treasury Funds</button>
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }

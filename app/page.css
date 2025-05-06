@@ -820,6 +820,67 @@ ul {
   box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
 }
 
+/* Component Info Styling */
+.component-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.component-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.component-metrics {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+}
+
+.metric-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FF5722;
+}
+
+.metric-label {
+  font-size: 14px;
+  color: #777;
+}
+
+.component-action {
+  display: flex;
+  justify-content: center;
+}
+
+.view-details-button {
+  background-color: #FF5722;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-button:hover {
+  background-color: #FF9800;
+}
+
+.dark .metric-label {
+  color: #aaa;
+}
+
 /* Footer Banner */
 .footer-banner {
   background-color: var(--dark-grey);

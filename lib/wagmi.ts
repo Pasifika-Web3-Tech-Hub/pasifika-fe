@@ -1,14 +1,16 @@
 // lib/wagmi.ts
 import { http, createConfig } from "wagmi";
-import { lineaSepolia, linea } from "wagmi/chains"; // Add this
+import { lineaSepolia, linea, arbitrumSepolia, arbitrum } from "wagmi/chains"; // Added Arbitrum chains
 
 export const config = createConfig({
-  chains: [lineaSepolia, linea], // Add this
+  chains: [lineaSepolia, linea, arbitrumSepolia, arbitrum], // Added Arbitrum chains
   multiInjectedProviderDiscovery: false,
   ssr: true,
   transports: {
-    [lineaSepolia.id]: http(), // Add this
-    [linea.id]: http(), // and this
+    [lineaSepolia.id]: http(),
+    [linea.id]: http(),
+    [arbitrumSepolia.id]: http(), // Added Arbitrum Sepolia
+    [arbitrum.id]: http(), // Added Arbitrum
   },
 });
 

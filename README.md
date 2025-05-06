@@ -11,7 +11,7 @@ A decentralized platform connecting Pacific Island communities to Web3 technolog
 
 ## Overview
 
-The Pasifika Web3 Tech Hub is a Proof of Concept (POC) platform designed to empower Pacific Island communities through blockchain technology. Our mission is to build a decentralized digital ecosystem that addresses specific regional challenges while creating economic opportunities across the Pacific.
+The Pasifika Web3 Tech Hub is a platform designed to empower Pacific Island communities through blockchain technology. Our mission is to build a decentralized digital ecosystem that addresses specific regional challenges while creating economic opportunities across the Pacific. Our production environment is now live on Arbitrum testnet.
 
 ## Technical Components
 
@@ -25,15 +25,13 @@ This project is built using:
   - EIP-712 for typed data signing
   - Viem for smart contract interactions
 - **Smart Contracts**:
-  - PSF token (ERC20) on Linea zkEVM
-  - Dynamic NFT contract
+  - Membership tiers (Guest, Member, Node Operator)
   - Staking contract
-  - Treasury management
+  - Treasury management with profit sharing program
   - Physical item NFT representation
-  - DAO governance
 - **Form Handling**:
   - Formspree for contact and registration submissions
-  - Client-side validation
+  - Client-side validation with terms of service agreement
 - **Deployments**:
   - Vercel-ready configuration
   - Static generation for performance optimization
@@ -42,12 +40,35 @@ This project is built using:
 
 The platform includes the following key features:
 
-- **Home Page**: Team overview, platform introduction
+- **Home Page**: Team overview, platform introduction, blockchain infrastructure
 - **Services**: Integration with smart contracts, user-friendly Web3 interactions
+- **Membership Portal**: View membership status, join/upgrade tiers, profit sharing program
 - **Membership Registration**: Web3 wallet connection, member profile creation
-- **Documentation**: Whitepaper, Tokenomics, Constitution
+- **Terms of Service**: Comprehensive membership policies and platform rules
+- **Documentation**: Whitepaper and technical resources
 - **About Us**: Team details, mission, values
 - **Contact**: Regional representatives, inquiry form
+
+## Membership Tiers
+
+The platform offers three membership tiers:
+
+1. **Guest (Tier 0)**:
+   - Free access
+   - 1% transaction fee
+   - No profit-sharing eligibility
+
+2. **Member (Tier 1)**:
+   - 0.005 ETH membership fee
+   - 0.5% transaction fee
+   - Profit-sharing eligibility
+   - Governance participation
+
+3. **Node Operator (Tier 2)**:
+   - ETH staking required
+   - 0.25% transaction fee
+   - Priority access to services
+   - Enhanced profit-sharing
 
 ## System Architecture
 
@@ -59,25 +80,23 @@ flowchart TD
     B --> E[Documentation]
     B --> F[About Us]
     B --> G[Contact]
+    B --> W[Membership Portal]
+    B --> X[Terms of Service]
     
     C --> H[Connect Wallet]
     H --> I[Fill Registration Form]
     I --> J[Submit via Formspree]
     J --> K[Confirmation]
     
-    D --> L[PSF Token]
-    D --> M[Dynamic NFT]
     D --> N[Staking]
     D --> O[Treasury]
     D --> P[NFT Representation]
-    D --> Q[Governance]
     
-    L --> R[View Token Details]
-    L --> S[Wallet Interaction]
+    W --> Y[View Membership Status]
+    W --> Z[Join/Upgrade Membership]
+    W --> AA[View Profit Sharing]
     
     E --> T[Whitepaper]
-    E --> U[Tokenomics]
-    E --> V[Constitution]
 ```
 
 ## User Flow Process
@@ -99,7 +118,7 @@ sequenceDiagram
     Wallet-->>UI: Return wallet address
     
     alt Service Interaction
-        User->>UI: Select service (Token, NFT, etc.)
+        User->>UI: Select service (NFT, etc.)
         UI->>Contract: Read contract data
         Contract-->>UI: Return data
         User->>UI: Initiate transaction
@@ -111,23 +130,33 @@ sequenceDiagram
         UI-->>User: Show confirmation
     else Membership Registration
         User->>UI: Fill registration form
+        User->>UI: Accept Terms of Service
         User->>UI: Submit form
         UI->>Form: Send registration data
         Form-->>UI: Confirm submission
         UI-->>User: Show success message
+    else Membership Portal
+        User->>UI: View membership status
+        UI->>Contract: Fetch membership data
+        Contract-->>UI: Return membership tier
+        User->>UI: Select Join/Upgrade
+        UI->>Wallet: Request transaction
+        Wallet-->>User: Confirm fee payment
+        User-->>Wallet: Approve
+        Wallet->>Contract: Execute membership change
+        Contract-->>UI: Return updated status
+        UI-->>User: Show confirmation
     end
 ```
 
 ## Smart Contract Integration
 
-The platform interacts with the following smart contracts deployed on the Linea zkEVM Layer-2 solution:
+The platform interacts with the following smart contracts deployed on Arbitrum:
 
-1. **PSF Token**: ERC-20 token with utility functions for the Pasifika ecosystem
-2. **Dynamic NFT**: Evolving digital assets reflecting real-world achievements
-3. **PSF Staking**: Token staking for rewards and governance rights
-4. **Treasury Management**: Community fund management
-5. **Physical Item NFT**: Digital representation of physical assets
-6. **Governance**: DAO-based decision-making
+1. **Membership Contract**: Manages membership tiers and access rights
+2. **Staking Contract**: Token staking for rewards and governance rights
+3. **Treasury Management**: Community fund management with profit sharing distribution
+4. **Physical Item NFT**: Digital representation of physical assets
 
 ## Getting Started
 
@@ -155,10 +184,9 @@ npm run dev
 
 Create a `.env.local` file with the following variables:
 ```
-NEXT_PUBLIC_CHAIN_ID=        # Linea zkEVM Chain ID
+NEXT_PUBLIC_CHAIN_ID=        # Arbitrum Chain ID
 NEXT_PUBLIC_DYNAMIC_KEY=     # Dynamic API Key
-NEXT_PUBLIC_PSF_TOKEN=       # PSF Token Contract Address
-NEXT_PUBLIC_DYNAMIC_NFT=     # Dynamic NFT Contract Address
+NEXT_PUBLIC_MEMBERSHIP=      # Membership Contract Address
 NEXT_PUBLIC_STAKING=         # Staking Contract Address
 ```
 
