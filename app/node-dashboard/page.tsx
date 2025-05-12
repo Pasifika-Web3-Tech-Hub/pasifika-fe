@@ -5,33 +5,46 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
-import { useAccount, useChainId } from "wagmi";
-import { formatEther } from "viem";
+import { useAccount, useChainId, useBalance, useReadContract, useWriteContract } from "wagmi";
+import { formatEther, parseEther } from "viem";
+import PasifikaWalletConnect from "../components/PasifikaWalletConnect";
 import "../page.css";
 import "../shared-pages.css";
 import "../components/NodeOperator.css";
+import "./dashboard.css";
 
 export default function NodeDashboard() {
   const { isDarkMode } = useDarkMode();
-  const { primaryWallet, setShowAuthFlow } = useDynamicContext();
-  const { address } = useAccount();
+  const { primaryWallet } = useDynamicContext();
+  const { address, isConnected } = useAccount();
   const chainId = useChainId();
   const [walletConnected, setWalletConnected] = useState(false);
   const [network, setNetwork] = useState('');
+  const [showStakeModal, setShowStakeModal] = useState(false);
+  const [stakeAmount, setStakeAmount] = useState('');
   const [nodeData, setNodeData] = useState({
     isOperator: false,
     stake: '0',
     rewards: '0',
     nodeStatus: 'Inactive',
-    loading: false
+    loading: true
+  });
+  
+  // Get wallet balance using wagmi hook
+  const { data: balanceData } = useBalance({
+    address: address
   });
 
   // Check if wallet is connected
   useEffect(() => {
-    if (primaryWallet) {
-      setWalletConnected(true);
+    setWalletConnected(isConnected);
+    
+    if (isConnected) {
+      // Check node operator status and fetch data
+      // For now, we'll simulate this data
+      setNodeData(prev => ({ ...prev, loading: true }));
       
-      // Simulate node data for demo purposes
+      // Simulate loading real blockchain data
       setTimeout(() => {
         setNodeData({
           isOperator: true,
@@ -42,26 +55,40 @@ export default function NodeDashboard() {
         });
       }, 1500);
     } else {
-      setWalletConnected(false);
+      // Reset data when wallet disconnects
+      setNodeData({
+        isOperator: false,
+        stake: '0',
+        rewards: '0',
+        nodeStatus: 'Inactive',
+        loading: false
+      });
     }
-  }, [primaryWallet]);
+  }, [isConnected]);
 
   // Detect current network based on chainId
   useEffect(() => {
     if (chainId) {
       // Simple network detection based on chainId using number comparison
       const chainIdNum = Number(chainId);
-      if (chainIdNum === 42161 || chainIdNum === 421614) {
+      if (chainIdNum === 42161 || chainIdNum === 421614 || chainIdNum === 421613) {
+        // Arbitrum One (42161) or Arbitrum Nova (421614) or Arbitrum Goerli (421613)
         setNetwork('arbitrum');
       } else if (chainIdNum === 59144) {
+        // Linea Mainnet
         setNetwork('linea');
       } else if (chainIdNum === 30 || chainIdNum === 31) {
+        // RSK Mainnet (30) or RSK Testnet (31)
         setNetwork('rootstock');
       } else {
-        setNetwork('');
+        // Default to arbitrum for development purposes
+        setNetwork('arbitrum');
       }
+    } else if (isConnected) {
+      // If connected but no chainId, default to Arbitrum
+      setNetwork('arbitrum');
     }
-  }, [chainId]);
+  }, [chainId, isConnected]);
 
   // Helper function to get network display name
   const getNetworkDisplayName = (networkId: string): string => {
@@ -115,25 +142,39 @@ export default function NodeDashboard() {
           {!walletConnected ? (
             <div className="content-section">
               <div className="wallet-connection">
-                <div className="wallet-status">
-                  <span className="wallet-icon">💼</span>
-                  <span>Wallet Not Connected</span>
+                <h3>Node Operator Dashboard</h3>
+                <p>Connect your wallet to access your Node Operator Dashboard</p>
+                <div className="wallet-connect-wrapper" style={{ maxWidth: '400px', margin: '20px auto' }}>
+                  <PasifikaWalletConnect />
                 </div>
-                <button className="wallet-button connect" onClick={() => setShowAuthFlow(true)}>
-                  Connect Wallet
-                </button>
-                <p className="wallet-note">Connect your wallet to view your node operator dashboard</p>
               </div>
             </div>
           ) : !network ? (
             <div className="content-section">
               <div className="network-alert">
                 <h3>Unsupported Network</h3>
-                <p>Please switch to one of the following supported networks:</p>
+                <p>Please switch to Arbitrum network. The Pasifika Tech Hub is deployed on Arbitrum.</p>
+                <div className="network-info" style={{ marginTop: '20px', marginBottom: '20px' }}>
+                  <p>The project has migrated to Arbitrum for its blockchain infrastructure. Key benefits:</p>
+                  <ul style={{ textAlign: 'left', paddingLeft: '30px', marginTop: '10px' }}>
+                    <li>Exceptional throughput</li>
+                    <li>Security inherited from Ethereum</li>
+                    <li>Low transaction fees (important for Pacific Island users)</li>
+                  </ul>
+                </div>
                 <div className="network-buttons-large">
-                  <button className="network-button-large">Linea</button>
-                  <button className="network-button-large">Arbitrum</button>
-                  <button className="network-button-large">RootStock</button>
+                  <button 
+                    className="network-button-large"
+                    style={{ backgroundColor: '#9945FF' }}
+                    onClick={() => {
+                      // In a real implementation, this would use the wagmi switchNetwork function
+                      alert('Switching to Arbitrum network');
+                      // Simulate network switch
+                      setTimeout(() => setNetwork('arbitrum'), 500);
+                    }}
+                  >
+                    Switch to Arbitrum
+                  </button>
                 </div>
               </div>
             </div>
@@ -190,9 +231,113 @@ export default function NodeDashboard() {
               </div>
               
               <div className="node-actions">
-                <button className="action-button stake">Add Stake</button>
-                <button className="action-button withdraw" disabled>Withdraw Rewards</button>
+                <button 
+                  className="action-button stake" 
+                  onClick={() => setShowStakeModal(true)}
+                >
+                  Add Stake
+                </button>
+                <button 
+                  className="action-button withdraw" 
+                  disabled={parseFloat(nodeData.rewards) <= 0}
+                  onClick={() => {
+                    alert('Withdrawing rewards: ' + nodeData.rewards + ' ' + getCurrencySymbol(network));
+                    // In a real implementation, we would call the smart contract to withdraw rewards
+                    setNodeData(prev => ({ ...prev, rewards: '0' }));
+                  }}
+                >
+                  Withdraw Rewards
+                </button>
               </div>
+              
+              {/* Staking Modal */}
+              {showStakeModal && (
+                <div className="modal-overlay" style={{
+                  position: 'fixed',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  zIndex: 100
+                }}>
+                  <div className="modal-content" style={{
+                    backgroundColor: isDarkMode ? '#333' : '#fff',
+                    padding: '20px',
+                    borderRadius: '8px',
+                    maxWidth: '400px',
+                    width: '100%',
+                    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)'
+                  }}>
+                    <h3 style={{ marginBottom: '15px', color: isDarkMode ? '#fff' : '#333' }}>Add Stake</h3>
+                    <p style={{ marginBottom: '20px', color: isDarkMode ? '#ccc' : '#666' }}>Current balance: {balanceData ? parseFloat(formatEther(balanceData.value)).toFixed(4) : '0'} {balanceData?.symbol}</p>
+                    
+                    <div style={{ marginBottom: '20px' }}>
+                      <label htmlFor="stakeAmount" style={{ display: 'block', marginBottom: '5px', color: isDarkMode ? '#ccc' : '#555' }}>Stake Amount:</label>
+                      <input
+                        type="number"
+                        id="stakeAmount"
+                        value={stakeAmount}
+                        onChange={(e) => setStakeAmount(e.target.value)}
+                        placeholder="Enter amount to stake"
+                        style={{
+                          width: '100%',
+                          padding: '10px',
+                          borderRadius: '4px',
+                          border: `1px solid ${isDarkMode ? '#555' : '#ddd'}`,
+                          backgroundColor: isDarkMode ? '#444' : '#fff',
+                          color: isDarkMode ? '#fff' : '#333'
+                        }}
+                      />
+                    </div>
+                    
+                    <div style={{ display: 'flex', gap: '10px', justifyContent: 'flex-end' }}>
+                      <button 
+                        onClick={() => setShowStakeModal(false)}
+                        style={{
+                          padding: '8px 16px',
+                          border: 'none',
+                          borderRadius: '4px',
+                          backgroundColor: isDarkMode ? '#555' : '#e0e0e0',
+                          color: isDarkMode ? '#fff' : '#333',
+                          cursor: 'pointer'
+                        }}
+                      >
+                        Cancel
+                      </button>
+                      <button 
+                        onClick={() => {
+                          if (stakeAmount && parseFloat(stakeAmount) > 0) {
+                            // In a real implementation, we would call the smart contract to add stake
+                            alert(`Adding stake: ${stakeAmount} ${getCurrencySymbol(network)}`);
+                            setNodeData(prev => ({
+                              ...prev,
+                              stake: (parseFloat(prev.stake) + parseFloat(stakeAmount)).toString()
+                            }));
+                            setStakeAmount('');
+                            setShowStakeModal(false);
+                          }
+                        }}
+                        style={{
+                          padding: '8px 16px',
+                          border: 'none',
+                          borderRadius: '4px',
+                          backgroundColor: '#FF5722',
+                          color: '#fff',
+                          cursor: 'pointer',
+                          fontWeight: 'bold'
+                        }}
+                        disabled={!stakeAmount || parseFloat(stakeAmount) <= 0}
+                      >
+                        Stake
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              )}
               
               {network === 'rootstock' && (
                 <div className="profit-sharing-info">

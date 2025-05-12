@@ -170,6 +170,15 @@
   text-align: center;
 }
 
+.wallet-connection-wrapper {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
 .wallet-status {
   display: flex;
   align-items: center;
@@ -297,6 +306,11 @@
 }
 
 .dark .wallet-connection {
+  background: #282828;
+  border-color: #444;
+}
+
+.dark .wallet-connection-wrapper {
   background: #282828;
   border-color: #444;
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { DynamicWidget } from "@/lib/dynamic";
+import PasifikaWalletConnect from "./components/PasifikaWalletConnect";
 import { useState, useEffect } from "react";
 import { useDarkMode } from "@/lib/useDarkMode";
 import "./page.css";
@@ -210,8 +210,8 @@ export default function Main() {
               </div>
             </div>
             <div className="token-chart">
-              {/* Wallet Connection Widget */}
-              <DynamicWidget />
+              {/* Custom Wallet Connection Widget */}
+              <PasifikaWalletConnect />
               {/* Logout button when connected */}
               {isLoggedIn && primaryWallet && (
                 <div className="logout-container">

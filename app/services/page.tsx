@@ -10,6 +10,7 @@ import PhysicalItemNFTInfo from '../components/PhysicalItemNFTInfo.js';
 import NodeOperatorInfo from '../components/NodeOperatorInfo.js';
 import TreasuryInfo from '../components/TreasuryInfo.js';
 import '../components/NodeOperator.css';
+import PasifikaWalletConnect from '../components/PasifikaWalletConnect';
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
 import { useEffect, useState, useCallback } from "react";
 import { useRouter } from 'next/navigation';
@@ -281,36 +282,32 @@ export default function Services() {
               </div>
             )}
             
-            {!walletConnected ? (
-              <div className="wallet-connection">
-                <div className="wallet-status">
-                  <span className="wallet-icon">💼</span>
-                  <span>Wallet Not Connected</span>
-                </div>
-                <button className="service-action-button connect" onClick={() => setShowAuthFlow(true)}>
-                  Connect Wallet
-                </button>
-                <p className="wallet-note">Supported wallets: MetaMask, WalletConnect, and more</p>
-              </div>
-            ) : (
-              <div className="wallet-connection">
-                <div className="wallet-status connected">
-                  <span className="wallet-icon">✅</span>
-                  <span>Wallet Connected</span>
-                </div>
-                <div className="wallet-actions">
-                  <button className="service-action-button" style={{ backgroundColor: '#9945FF' }} onClick={navigateToNodeDashboard}>
+            <div className="wallet-connection-wrapper">
+              <PasifikaWalletConnect />
+              {primaryWallet && (
+                <div className="additional-wallet-actions" style={{ marginTop: '15px' }}>
+                  <button 
+                    className="service-action-button" 
+                    style={{ 
+                      backgroundColor: '#9945FF', 
+                      color: 'white',
+                      padding: '10px 16px',
+                      borderRadius: '4px',
+                      border: 'none',
+                      cursor: 'pointer',
+                      fontWeight: 'bold',
+                      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                      width: '100%',
+                      marginTop: '10px',
+                      transition: 'all 0.2s ease',
+                    }}
+                    onClick={navigateToNodeDashboard}
+                  >
                     Node Dashboard
                   </button>
-                  <button className="service-action-button" style={{ backgroundColor: '#666', boxShadow: '0 3px 8px rgba(0, 0, 0, 0.2)' }} onClick={handleLogOut}>
-                    Disconnect
-                  </button>
                 </div>
-                <p className="wallet-address">
-                  {primaryWallet && primaryWallet.address ? `${primaryWallet.address.substring(0, 6)}...${primaryWallet.address.substring(primaryWallet.address.length - 4)}` : ''}
-                </p>
-              </div>
-            )}
+              )}
+            </div>
           </div>
           {/* Smart Contract Architecture Components */}
           <div className="content-section smart-contract-section">
