@@ -94,41 +94,6 @@
   margin-bottom: 2rem;
 }
 
-.action-button {
-  padding: 0.75rem 1.5rem;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border: none;
-}
-
-.action-button.stake {
-  background-color: var(--pasifika-primary);
-  color: white;
-}
-
-.action-button.stake:hover {
-  background-color: var(--pasifika-accent);
-  transform: translateY(-2px);
-}
-
-.action-button.withdraw {
-  background-color: #4caf50;
-  color: white;
-}
-
-.action-button.withdraw:hover:not(:disabled) {
-  background-color: #45a049;
-  transform: translateY(-2px);
-}
-
-.action-button:disabled {
-  background-color: #cccccc;
-  cursor: not-allowed;
-  transform: none;
-}
-
 .loading-indicator {
   display: flex;
   flex-direction: column;

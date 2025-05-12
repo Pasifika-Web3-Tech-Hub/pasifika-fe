@@ -191,7 +191,21 @@ export default function NodeDashboard() {
                 <h3>Not a Node Operator</h3>
                 <p>You are not registered as a node operator on {getNetworkDisplayName(network)}.</p>
                 <Link href="/services">
-                  <button className="primary-button">Return to Services</button>
+                  <button 
+                    style={{
+                      padding: '12px 24px',
+                      backgroundColor: network === 'arbitrum' ? '#9945FF' : network === 'linea' ? '#3F88C5' : '#F9A620',
+                      color: '#FFFFFF',
+                      borderRadius: '8px',
+                      border: 'none',
+                      cursor: 'pointer',
+                      fontWeight: 'bold',
+                      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                      transition: 'all 0.2s ease',
+                    }}
+                  >
+                    Return to Services
+                  </button>
                 </Link>
               </div>
             </div>
@@ -232,18 +246,40 @@ export default function NodeDashboard() {
               
               <div className="node-actions">
                 <button 
-                  className="action-button stake" 
                   onClick={() => setShowStakeModal(true)}
+                  style={{
+                    padding: '12px 24px',
+                    backgroundColor: network === 'arbitrum' ? '#9945FF' : network === 'linea' ? '#3F88C5' : '#F9A620',
+                    color: '#FFFFFF',
+                    borderRadius: '8px',
+                    border: 'none',
+                    cursor: 'pointer',
+                    fontWeight: 'bold',
+                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                    marginRight: '15px',
+                    transition: 'all 0.2s ease',
+                  }}
                 >
                   Add Stake
                 </button>
                 <button 
-                  className="action-button withdraw" 
                   disabled={parseFloat(nodeData.rewards) <= 0}
                   onClick={() => {
                     alert('Withdrawing rewards: ' + nodeData.rewards + ' ' + getCurrencySymbol(network));
                     // In a real implementation, we would call the smart contract to withdraw rewards
                     setNodeData(prev => ({ ...prev, rewards: '0' }));
+                  }}
+                  style={{
+                    padding: '12px 24px',
+                    backgroundColor: parseFloat(nodeData.rewards) <= 0 ? '#aaa' : network === 'arbitrum' ? '#9945FF' : network === 'linea' ? '#3F88C5' : '#F9A620',
+                    color: '#FFFFFF',
+                    borderRadius: '8px',
+                    border: 'none',
+                    cursor: parseFloat(nodeData.rewards) <= 0 ? 'not-allowed' : 'pointer',
+                    fontWeight: 'bold',
+                    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                    transition: 'all 0.2s ease',
+                    opacity: parseFloat(nodeData.rewards) <= 0 ? 0.6 : 1,
                   }}
                 >
                   Withdraw Rewards
@@ -294,16 +330,19 @@ export default function NodeDashboard() {
                       />
                     </div>
                     
-                    <div style={{ display: 'flex', gap: '10px', justifyContent: 'flex-end' }}>
+                    <div style={{ display: 'flex', gap: '15px', justifyContent: 'flex-end' }}>
                       <button 
                         onClick={() => setShowStakeModal(false)}
                         style={{
-                          padding: '8px 16px',
+                          padding: '12px 24px',
                           border: 'none',
-                          borderRadius: '4px',
+                          borderRadius: '8px',
                           backgroundColor: isDarkMode ? '#555' : '#e0e0e0',
                           color: isDarkMode ? '#fff' : '#333',
-                          cursor: 'pointer'
+                          cursor: 'pointer',
+                          fontWeight: 'bold',
+                          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                          transition: 'all 0.2s ease'
                         }}
                       >
                         Cancel
@@ -322,13 +361,16 @@ export default function NodeDashboard() {
                           }
                         }}
                         style={{
-                          padding: '8px 16px',
+                          padding: '12px 24px',
                           border: 'none',
-                          borderRadius: '4px',
-                          backgroundColor: '#FF5722',
+                          borderRadius: '8px',
+                          backgroundColor: (!stakeAmount || parseFloat(stakeAmount) <= 0) ? '#aaa' : (network === 'arbitrum' ? '#9945FF' : network === 'linea' ? '#3F88C5' : '#F9A620'),
                           color: '#fff',
-                          cursor: 'pointer',
-                          fontWeight: 'bold'
+                          cursor: (!stakeAmount || parseFloat(stakeAmount) <= 0) ? 'not-allowed' : 'pointer',
+                          fontWeight: 'bold',
+                          boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                          transition: 'all 0.2s ease',
+                          opacity: (!stakeAmount || parseFloat(stakeAmount) <= 0) ? 0.6 : 1
                         }}
                         disabled={!stakeAmount || parseFloat(stakeAmount) <= 0}
                       >
