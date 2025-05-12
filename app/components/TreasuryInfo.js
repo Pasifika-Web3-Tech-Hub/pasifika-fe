@@ -18,7 +18,7 @@ export default function TreasuryInfo() {
         </div>
         <div className="component-action">
           <Link href="/treasury-management">
-            <button className="view-details-button">Manage Treasury Funds</button>
+            <button className="service-action-button">Manage Treasury Funds</button>
           </Link>
         </div>
       </div>

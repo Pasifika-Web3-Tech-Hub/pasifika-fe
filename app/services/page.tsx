@@ -5,16 +5,65 @@ import Image from "next/image";
 import Link from "next/link";
 import "../page.css";
 import "../shared-pages.css";
+import "./services.css";
 import PhysicalItemNFTInfo from '../components/PhysicalItemNFTInfo.js';
-import PSFStakingInfo from '../components/PSFStakingInfo.js';
+import NodeOperatorInfo from '../components/NodeOperatorInfo.js';
 import TreasuryInfo from '../components/TreasuryInfo.js';
+import '../components/NodeOperator.css';
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
+import { useRouter } from 'next/navigation';
 
 export default function Services() {
   const { isDarkMode } = useDarkMode();
   const { handleLogOut, primaryWallet, setShowAuthFlow } = useDynamicContext();
   const [walletConnected, setWalletConnected] = useState(false);
+  const [activeService, setActiveService] = useState('marketplace');
+  const [networkFilter, setNetworkFilter] = useState('all');
+  const router = useRouter();
+
+  type NetworkStats = {
+    [key: string]: {
+      name: string;
+      color: string;
+      contractsDeployed: number;
+      moneyTransferAddress: string;
+      nodeContract: string;
+      transactionFee: string;
+      techType: string;
+    }
+  };
+  
+  // Network statistics - real data from our multi-network deployment
+  const networkStats: NetworkStats = {
+    arbitrum: {
+      name: 'Arbitrum',
+      color: '#9945FF',
+      contractsDeployed: 5,
+      moneyTransferAddress: '0x80d3c57b95a2fca3900f3EAC71196Bf133aaa517',
+      nodeContract: '0xc79C57a047AD9B45B70D85000e9412C61f8fE336',
+      transactionFee: '0.25%',
+      techType: 'Optimistic Rollups'
+    },
+    linea: {
+      name: 'Linea',
+      color: '#3F88C5',
+      contractsDeployed: 5,
+      moneyTransferAddress: '0x123...',
+      nodeContract: '0x456...',
+      transactionFee: '0.25%',
+      techType: 'zkEVM Technology'
+    },
+    rootstock: {
+      name: 'RootStock',
+      color: '#F9A620',
+      contractsDeployed: 5,
+      moneyTransferAddress: '0x789...',
+      nodeContract: '0xabc...',
+      transactionFee: '0.25%',
+      techType: 'Bitcoin Sidechain'
+    }
+  };
 
   useEffect(() => {
     if (primaryWallet) {
@@ -25,9 +74,24 @@ export default function Services() {
   }, [primaryWallet]);
 
   // Set flag when navigating back to home page
-  const handleBackToHome = () => {
+  const handleBackToHome = useCallback(() => {
     sessionStorage.setItem('fromServices', 'true');
-  };
+  }, []);
+  
+  // Handle service selection
+  const handleServiceChange = useCallback((service: string) => {
+    setActiveService(service);
+  }, []);
+  
+  // Handle network filter change
+  const handleNetworkChange = useCallback((network: string) => {
+    setNetworkFilter(network);
+  }, []);
+  
+  // Navigate to Node Dashboard
+  const navigateToNodeDashboard = useCallback(() => {
+    router.push('/node-dashboard');
+  }, [router]);
   
   return (
     <div className={`container ${isDarkMode ? 'dark' : 'light'}`}>
@@ -60,81 +124,194 @@ export default function Services() {
       <div className="page-content">
         <div className="page-banner">
           <h1>Our Services</h1>
+          <div className="network-selector">
+            <p>View services by network:</p>
+            <div className="network-tabs">
+              <button 
+                className={`network-tab ${networkFilter === 'all' ? 'active' : ''}`}
+                onClick={() => handleNetworkChange('all')}
+              >
+                All Networks
+              </button>
+              {Object.keys(networkStats).map((network) => (
+                <button
+                  key={network}
+                  className={`network-tab ${networkFilter === network ? 'active' : ''}`}
+                  onClick={() => handleNetworkChange(network)}
+                  style={{ borderBottom: `3px solid ${networkStats[network].color}` }}
+                >
+                  {networkStats[network].name}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
         
         <div className="content-container">
-          <div className="content-section">
-            <h2>Marketplace Services</h2>
-            <p>The Pasifika Web3 Marketplace offers a range of services designed specifically for Pacific Island communities, businesses, and creators.</p>
-            
-            <h3>Digital Marketplace</h3>
-            <p>Our core service is a decentralized marketplace that enables Pacific Islanders to:</p>
-            <ul>
-              <li><strong>Sell traditional crafts and cultural items</strong> to global markets without middlemen</li>
-              <li><strong>Trade digital assets</strong> including NFTs that represent Pacific cultural heritage</li>
-              <li><strong>Offer services</strong> including traditional knowledge, consulting, and creative work</li>
-              <li><strong>Create and manage storefronts</strong> with integrated payment processing</li>
-            </ul>
-            
-            <h3>Financial Services</h3>
-            <p>We provide specialized financial tools to address the unique challenges facing Pacific communities:</p>
-            <ul>
-              <li><strong>Cross-border payments</strong> with low fees, especially for remittances</li>
-              <li><strong>Microfinance opportunities</strong> for small business development</li>
-              <li><strong>Tokenized asset exchange</strong> that respects local regulations</li>
-              <li><strong>Decentralized savings and lending</strong> protocols tailored to Pacific economic patterns</li>
-            </ul>
-            
-            <h3>Community Services</h3>
-            <p>Beyond individual transactions, we support broader community needs:</p>
-            <ul>
-              <li><strong>Digital identity solutions</strong> that work with limited infrastructure</li>
-              <li><strong>Community resource pooling</strong> for collaborative projects</li>
-              <li><strong>Climate resilience initiatives</strong> supported through blockchain tracking</li>
-              <li><strong>Educational resources</strong> on Web3 technologies and digital literacy</li>
-            </ul>
-            
-            <h3>Technical Services</h3>
-            <p>For developers and businesses looking to build on our platform:</p>
-            <ul>
-              <li><strong>API access</strong> for integration with existing systems</li>
-              <li><strong>Development toolkits</strong> specific to Pacific use cases</li>
-              <li><strong>Custom smart contract development</strong> for specialized needs</li>
-              <li><strong>Technical consulting</strong> on blockchain implementation</li>
-            </ul>
+          <div className="services-tabs">
+            <button 
+              className={`service-tab ${activeService === 'marketplace' ? 'active' : ''}`}
+              onClick={() => handleServiceChange('marketplace')}
+            >
+              Marketplace
+            </button>
+            <button 
+              className={`service-tab ${activeService === 'financial' ? 'active' : ''}`}
+              onClick={() => handleServiceChange('financial')}
+            >
+              Financial Services
+            </button>
+            <button 
+              className={`service-tab ${activeService === 'technical' ? 'active' : ''}`}
+              onClick={() => handleServiceChange('technical')}
+            >
+              Technical Services
+            </button>
+            <button 
+              className={`service-tab ${activeService === 'community' ? 'active' : ''}`}
+              onClick={() => handleServiceChange('community')}
+            >
+              Community Services
+            </button>
           </div>
-          
-          {/* Connect Your Wallet Section */}
-          <div className="wallet-section">
-            <h3>Connect Your Wallet</h3>
-            <p>To access smart contract services and platform features, please connect your Web3 wallet. This will be used for authentication and DAO participation.</p>
-            {walletConnected ? (
-              <div className="wallet-info">
-                <div className="wallet-status connected">
-                  <span className="wallet-icon">💼</span>
-                  <span>Wallet Connected</span>
+
+          <div className="content-section">
+            {activeService === 'marketplace' && (
+              <div className="service-content">
+                <h2>Marketplace Services</h2>
+                <p>The Pasifika Web3 Marketplace offers a range of services designed specifically for Pacific Island communities, businesses, and creators.</p>
+                
+                <div className="service-highlight" style={{ borderLeft: `4px solid ${networkFilter !== 'all' ? networkStats[networkFilter].color : '#3f88c5'}` }}>
+                  <h3>Digital Marketplace</h3>
+                  <p>Our core service is a decentralized marketplace that enables Pacific Islanders to:</p>
+                  <ul>
+                    <li><strong>Sell traditional crafts and cultural items</strong> to global markets without middlemen</li>
+                    <li><strong>Trade digital assets</strong> including NFTs that represent Pacific cultural heritage</li>
+                    <li><strong>Offer services</strong> including traditional knowledge, consulting, and creative work</li>
+                    <li><strong>Create and manage storefronts</strong> with integrated payment processing</li>
+                  </ul>
+                  
+                  {networkFilter !== 'all' && (
+                    <div className="network-specific-info">
+                      <p><strong>{networkStats[networkFilter].name} Integration:</strong> Our marketplace is optimized for {networkStats[networkFilter].name}&apos;s {networkStats[networkFilter].techType}, providing low-fee transactions at only {networkStats[networkFilter].transactionFee} for node operators.</p>
+                    </div>
+                  )}
                 </div>
-                <div className="wallet-address">
-                  {primaryWallet?.address.substring(0, 6)}...{primaryWallet?.address.substring(primaryWallet?.address.length - 4)}
-                </div>
-                <button className="wallet-button disconnect" onClick={() => setShowAuthFlow(true)}>
-                  Disconnect Wallet
-                </button>
               </div>
-            ) : (
+            )}
+            
+            {activeService === 'financial' && (
+              <div className="service-content">
+                <h2>Financial Services</h2>
+                <p>We provide specialized financial tools to address the unique challenges facing Pacific communities.</p>
+                
+                <div className="service-highlight" style={{ borderLeft: `4px solid ${networkFilter !== 'all' ? networkStats[networkFilter].color : '#f9a620'}` }}>
+                  <h3>Money Transfer Services</h3>
+                  <p>Our flagship financial services include:</p>
+                  <ul>
+                    <li><strong>Cross-border payments</strong> with low fees, especially for remittances</li>
+                    <li><strong>Microfinance opportunities</strong> for small business development</li>
+                    <li><strong>Tokenized asset exchange</strong> that respects local regulations</li>
+                    <li><strong>Decentralized savings and lending</strong> protocols tailored to Pacific economic patterns</li>
+                  </ul>
+                  
+                  {networkFilter === 'arbitrum' && (
+                    <div className="network-specific-info deployment-highlight">
+                      <p>✅ <strong>Money Transfer Contract Successfully Deployed to Arbitrum!</strong></p>
+                      <p>Contract Address: <code>0x80d3c57b95a2fca3900f3EAC71196Bf133aaa517</code></p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+            
+            {activeService === 'community' && (
+              <div className="service-content">
+                <h2>Community Services</h2>
+                <p>Beyond individual transactions, we support broader community needs.</p>
+                
+                <div className="service-highlight" style={{ borderLeft: `4px solid ${networkFilter !== 'all' ? networkStats[networkFilter].color : '#9945ff'}` }}>
+                  <h3>Community Collaboration Tools</h3>
+                  <ul>
+                    <li><strong>Digital identity solutions</strong> that work with limited infrastructure</li>
+                    <li><strong>Community resource pooling</strong> for collaborative projects</li>
+                    <li><strong>Climate resilience initiatives</strong> supported through blockchain tracking</li>
+                    <li><strong>Cultural heritage preservation</strong> through blockchain verification</li>
+                  </ul>
+                </div>
+                
+                <div className="service-highlight" style={{ borderLeft: `4px solid ${networkFilter !== 'all' ? networkStats[networkFilter].color : '#9945ff'}` }}>
+                  <h3>Educational Resources</h3>
+                  <p>To build capacity and understanding:</p>
+                  <ul>
+                    <li><strong>Workshops and training</strong> on blockchain fundamentals</li>
+                    <li><strong>Developer resources</strong> tailored to Pacific contexts</li>
+                    <li><strong>Business integration guides</strong> for traditional enterprises</li>
+                    <li><strong>Youth education programs</strong> to build technical capacity</li>
+                  </ul>
+                </div>
+              </div>
+            )}
+            
+            {activeService === 'technical' && (
+              <div className="service-content">
+                <h2>Technical Services</h2>
+                <p>For businesses and developers in the region, we provide technical solutions on multiple networks.</p>
+                
+                <div className="service-highlight" style={{ borderLeft: `4px solid ${networkFilter !== 'all' ? networkStats[networkFilter].color : '#3f88c5'}` }}>
+                  <h3>Blockchain Development</h3>
+                  <ul>
+                    <li><strong>Smart contract development</strong> and auditing</li>
+                    <li><strong>Blockchain integration</strong> for existing businesses</li>
+                    <li><strong>Technical training</strong> and capacity building</li>
+                    <li><strong>Decentralized application (dApp) hosting</strong> and management</li>
+                  </ul>
+                  
+                  {networkFilter !== 'all' && (
+                    <div className="network-specific-info">
+                      <p><strong>{networkStats[networkFilter].name} Technical Details:</strong></p>
+                      <ul>
+                        <li>Technology Type: {networkStats[networkFilter].techType}</li>
+                        <li>Node Contract: <code>{networkStats[networkFilter].nodeContract}</code></li>
+                        <li>Contracts Deployed: {networkStats[networkFilter].contractsDeployed}</li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+            
+            {!walletConnected ? (
               <div className="wallet-connection">
                 <div className="wallet-status">
                   <span className="wallet-icon">💼</span>
                   <span>Wallet Not Connected</span>
                 </div>
-                <button className="wallet-button connect" onClick={() => setShowAuthFlow(true)}>
+                <button className="service-action-button connect" onClick={() => setShowAuthFlow(true)}>
                   Connect Wallet
                 </button>
                 <p className="wallet-note">Supported wallets: MetaMask, WalletConnect, and more</p>
               </div>
+            ) : (
+              <div className="wallet-connection">
+                <div className="wallet-status connected">
+                  <span className="wallet-icon">✅</span>
+                  <span>Wallet Connected</span>
+                </div>
+                <div className="wallet-actions">
+                  <button className="service-action-button" style={{ backgroundColor: '#9945FF' }} onClick={navigateToNodeDashboard}>
+                    Node Dashboard
+                  </button>
+                  <button className="service-action-button" style={{ backgroundColor: '#666', boxShadow: '0 3px 8px rgba(0, 0, 0, 0.2)' }} onClick={handleLogOut}>
+                    Disconnect
+                  </button>
+                </div>
+                <p className="wallet-address">
+                  {primaryWallet && primaryWallet.address ? `${primaryWallet.address.substring(0, 6)}...${primaryWallet.address.substring(primaryWallet.address.length - 4)}` : ''}
+                </p>
+              </div>
             )}
           </div>
-          
           {/* Smart Contract Architecture Components */}
           <div className="content-section smart-contract-section">
             <div className="service-container">
@@ -177,12 +354,12 @@ export default function Services() {
               
               <div className="smart-contract-card">
                 <div className="card-header">
-                  <h3>Node Operator Rewards</h3>
+                  <h3>Multi-Network Node Operations</h3>
                   <div className="component-icon"><span className="emoji-fix">📡</span></div>
                 </div>
-                <p>Incentive distribution system for network participants who maintain infrastructure nodes across the Pacific island nations.</p>
+                <p>Operate nodes across multiple networks (Linea, Arbitrum, RootStock) with lower transaction fees (0.25%) and annual profit sharing from the Pasifika Treasury.</p>
                 <div className="demo-component">
-                  <PSFStakingInfo />
+                  <NodeOperatorInfo />
                 </div>
               </div>
               

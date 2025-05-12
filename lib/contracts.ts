@@ -4,10 +4,10 @@ import PasifikaTreasuryAbi from '../deployed_contracts/PasifikaTreasury_ABI.json
 import PasifikaMembershipAbi from '../deployed_contracts/PasifikaMembership_ABI.json';
 import PasifikaMoneyTransferAbi from '../deployed_contracts/PasifikaMoneyTransfer_ABI.json';
 
-// Import contract addresses
-import PasifikaTreasuryAddress from '../deployed_contracts/PasifikaTreasury.json';
-import PasifikaMembershipAddress from '../deployed_contracts/PasifikaMembership.json';
-import PasifikaMoneyTransferAddress from '../deployed_contracts/PasifikaMoneyTransfer.json';
+// Import Arbitrum contract addresses
+import PasifikaTreasuryAddress from '../deployed_contracts/PasifikaTreasury_arbitrum.json';
+import PasifikaMembershipAddress from '../deployed_contracts/PasifikaMembership_arbitrum.json';
+import PasifikaMoneyTransferAddress from '../deployed_contracts/PasifikaMoneyTransfer_arbitrum.json';
 
 // Contract information types
 export interface ContractInfo {

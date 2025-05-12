@@ -68,7 +68,7 @@ export default function OurStory() {
                 height={300}
                 className="whitepaper-logo"
               />
-              <h2>Bridging Pacific Islands to the Digital Economy</h2>
+              <h2>Pacific Values in Digital Form</h2>
               <p className="whitepaper-version">Established 2025</p>
               <div className="whitepaper-divider"></div>
             </div>
@@ -81,12 +81,15 @@ export default function OurStory() {
               borderLeft: '4px solid #FF5722'
             }}>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
-                The Pasifika Web3 Tech Hub represents a groundbreaking decentralized physical infrastructure network (DePIN) designed specifically for Pacific Island communities. Building our Proof of Concept (POC) on Linea&apos;s solid zkEVM Layer-2 solution, we are also evaluating alternatives for our production version. On the EVM stack Arbitrum, zkSync Era, StarkNet, Base, and Polygon zkEVM. On the Bitcoin-Native stack RootStock which is also EVM compatible and Internet Computer (ICP). Our platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.
+                <strong>&quot;If we take care of our own, they will take care of us&quot;</strong> — This powerful concept of reciprocity and community care isn&apos;t just a nice sentiment, it&apos;s the architectural blueprint for our entire system. Our platform operates across three complementary Ethereum EVM based chains: <strong>Linea</strong>, <strong>RootStock (RSK)</strong>, and <strong>Arbitrum</strong> to create a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.
               </p>
             </div>
 
+            <h2>Pacific Values in Digital Form</h2>
+            <p>At the heart of Pasifika Web3 Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: <strong>&quot;If we take care of our own, they will take care of us.&quot;</strong> Ethereum&apos;s ecosystem, with its focus on decentralization, community governance, and shared prosperity, provides the perfect technological expression of these Pacific values. When we examined various blockchain platforms, Ethereum EVM based chains aligned naturally with our cultural ethos.</p>
+            
             <h2>Our Vision</h2>
-            <p>We envision a future where Pacific Island communities are active participants in the global digital economy, with tools and infrastructure that address our specific needs and challenges. Through the Pasifika Web3 Marketplace, we aim to create resilient economic systems that can withstand geographical isolation, climate challenges, and limited traditional infrastructure.</p>
+            <p>We envision a future where Pacific Island communities are active participants in the global digital economy, with tools and infrastructure that address our specific needs and challenges. Through the Pasifika Web3 Marketplace operating across multiple networks, we aim to create resilient economic systems that can withstand geographical isolation, climate challenges, and limited traditional infrastructure.</p>
             
             <p>Central to our vision is the development of the <strong>Pasifika Exchange</strong> - the first decentralized exchange designed specifically for Pacific Island communities. This groundbreaking platform will enable secure trading of digital assets with low fees and cross-island interoperability, bringing financial inclusion and new economic opportunities to previously underserved regions.</p>
 
@@ -303,7 +306,26 @@ export default function OurStory() {
               <li style={{ margin: '10px 0', fontSize: '1.05rem' }}><span style={{ color: '#FF5722', fontWeight: '500' }}>Sustainable technology organizations</span></li>
             </ul>
 
-            <p>With the successful launch of our Proof of Concept at <a href="https://pasifika.xyz/" target="_blank" rel="noopener noreferrer" style={{ color: '#FF5722', textDecoration: 'underline' }}>pasifika.xyz</a>, we&apos;ve demonstrated the viability of our model. Our initial platform showcases native blockchain solutions tailored to regional needs, including:</p>
+            <div style={{ marginTop: '30px', marginBottom: '30px', padding: '20px', backgroundColor: isDarkMode ? '#333333' : '#f8f8f8', borderRadius: '8px' }}>
+              <h3 style={{ color: '#FF5722', marginTop: '0' }}>Technical Advantages of Our Multi-Chain Approach</h3>
+              
+              <div style={{ marginBottom: '15px' }}>
+                <h4 style={{ color: isDarkMode ? '#3f88c5' : '#3f88c5', margin: '0' }}>Linea: Scaling With Zero Knowledge</h4>
+                <p>Linea&apos;s zkEVM Layer-2 technology dramatically reduces transaction costs while maintaining Ethereum&apos;s robust security model. For communities where every fraction of a cent matters, this efficiency is crucial for financial inclusion.</p>
+              </div>
+              
+              <div style={{ marginBottom: '15px' }}>
+                <h4 style={{ color: isDarkMode ? '#f9a620' : '#f9a620', margin: '0' }}>RSK: Bitcoin Integration with Smart Contracts</h4>
+                <p>As a Bitcoin sidechain, RSK allows us to work with RBTC (Bitcoin on RSK) while leveraging the programmability of smart contracts. Our treasury was initially seeded with 27,281 RIF tokens received from the RSK Hactivator program, showcasing the real-world support this technology brings to Pacific innovation.</p>
+              </div>
+              
+              <div>
+                <h4 style={{ color: isDarkMode ? '#9945ff' : '#9945ff', margin: '0' }}>Arbitrum: Optimistic Rollups for Broader Integration</h4>
+                <p>Arbitrum&apos;s optimistic rollup technology gives us additional scaling options and ensures our platform remains connected to the broader Ethereum ecosystem, expanding opportunities for Pacific Islanders.</p>
+              </div>
+            </div>
+            
+            <p>With the successful launch of our Proof of Concept at <a href="https://pasifika.xyz/" target="_blank" rel="noopener noreferrer" style={{ color: '#FF5722', textDecoration: 'underline' }}>pasifika.xyz</a>, we&apos;ve demonstrated the viability of our model. Our multi-network platform showcases native blockchain solutions tailored to regional needs, including:</p>
 
             <h2>Next Steps</h2>
             <p>With our streamlined approach, we are now:</p>
@@ -315,6 +337,25 @@ export default function OurStory() {
               <li style={{ margin: '10px 0' }}>Expand to additional Pacific Islands</li>
             </ol>
 
+            <h2>Building a Community Owned Financial System</h2>
+            <p>The technical architecture of our platform directly implements our community values through smart contracts:</p>
+            
+            <ul style={{ listStyleType: 'disc', paddingLeft: '25px', marginBottom: '30px' }}>
+              <li style={{ margin: '10px 0' }}><strong>Tiered Membership System:</strong> We&apos;ve created a simplified 3-tier structure (Guest, Member, Node Operator) with graduated fee structures (1%, 0.5%, 0.25%) that reward deeper community involvement</li>
+              <li style={{ margin: '10px 0' }}><strong>Annual Profit Sharing:</strong> Every year from December 27 to December 24 (Pasifika Financial Year), 50% of treasury profits are distributed equally to all members</li>
+              <li style={{ margin: '10px 0' }}><strong>Transparent Fund Management:</strong> Our Pasifika Treasury contracts enable transparent management of community funds with clearly defined allocation processes</li>
+            </ul>
+            
+            <h2>Beyond the Technology: Cultural Significance</h2>
+            <p>
+              What truly sets our approach apart is how these Ethereum EVM based technologies allow us to encode Pacific Island cultural values into digital infrastructure:
+            </p>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '25px', marginBottom: '30px' }}>
+              <li style={{ margin: '10px 0' }}><strong>Reciprocity:</strong> Just as traditional Pacific economies function on gift giving and mutual support, our profit sharing mechanism ensures value flows back to community members</li>
+              <li style={{ margin: '10px 0' }}><strong>Shared Stewardship:</strong> The graduated fee structure mirrors traditional systems where those with greater responsibility to the community receive greater benefits</li>
+              <li style={{ margin: '10px 0' }}><strong>Accessibility:</strong> By keeping fees low through Layer 2 scaling solutions, we ensure that participation remains accessible to all community members, regardless of economic status</li>
+            </ul>
+            
             <h2>Our Commitment</h2>
             <p>
               As we move forward, we remain committed to our founding principles:
@@ -324,6 +365,7 @@ export default function OurStory() {
               <li style={{ margin: '10px 0' }}><strong>Inclusivity:</strong> Ensuring benefits reach all community members</li>
               <li style={{ margin: '10px 0' }}><strong>Innovation with Purpose:</strong> Technology guided by real-world needs</li>
               <li style={{ margin: '10px 0' }}><strong>Long-Term Sustainability:</strong> Building systems that will serve communities for generations</li>
+              <li style={{ margin: '10px 0' }}><strong>Multi-Network Resilience:</strong> Ensuring our community isn&apos;t dependent on any single blockchain network</li>
             </ul>
             
             <div className="join-us-section" style={{ 
@@ -334,11 +376,11 @@ export default function OurStory() {
               textAlign: 'center'
             }}>
               <h3 style={{ marginBottom: '15px' }}>Join Our Journey</h3>
+              <p style={{ marginBottom: '20px', fontSize: '1.2rem', fontWeight: 'bold' }}>
+                &quot;If we take care of our own, they will take care of us&quot;
+              </p>
               <p style={{ marginBottom: '20px' }}>
-              The Pasifika Web3 Tech Hub will serve as:
-            </p>
-              <p style={{ marginBottom: '20px' }}>
-                The Pasifika Web3 Tech Hub is more than a platform—it&apos;s a movement to bring digital economic empowerment to Pacific Island communities. Whether you&apos;re a developer, investor, community leader, or simply passionate about the intersection of technology and social impact, we invite you to join us.
+                The Pasifika Web3 Tech Hub is more than a platform—it&apos;s a movement to bring digital economic empowerment to Pacific Island communities through multiple blockchain networks. Whether you&apos;re a developer, investor, community leader, or simply passionate about the intersection of technology and cultural values, we invite you to join us.
               </p>
               <Link href="/contact" className="btn btn-primary" style={{ display: 'inline-block' }}>
                 Contact Us to Get Involved

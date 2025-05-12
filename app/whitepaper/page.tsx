@@ -53,14 +53,18 @@ export default function Whitepaper() {
                 height={300}
                 className="whitepaper-logo"
               />
-              <h2>A Community-Powered DePIN for Pacific Island Communities on Arbitrum</h2>
-              <p className="whitepaper-version">Version 2.0 | May 2025</p>
+              <h2>Pacific Values in Digital Form: A Multi-Network Community-Powered DePIN</h2>
+              <p className="whitepaper-version">Version 3.0 | May 2025</p>
               <div className="whitepaper-divider"></div>
             </div>
             
             <h2>EXECUTIVE SUMMARY</h2>
             <p>
-              The Pasifika Web3 Tech Hub represents a groundbreaking decentralized physical infrastructure network (DePIN) designed specifically for Pacific Island communities. Built on Arbitrum&apos;s Layer-2 scaling solution on Ethereum, this platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.
+              At the heart of Pasifika Web3 Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: <strong>&quot;If we take care of our own, they will take care of us.&quot;</strong> This powerful concept of reciprocity and community care serves as the architectural blueprint for our entire system.
+            </p>
+            
+            <p>
+              Our platform operates across three complementary Ethereum EVM based chains: <strong>Linea</strong>, <strong>RootStock (RSK)</strong>, and <strong>Arbitrum</strong>. This multi-network approach provides flexibility, resilience, and increased accessibility for Pacific Island communities while leveraging the unique strengths of each blockchain.
             </p>
             
             <p>
@@ -75,23 +79,31 @@ export default function Whitepaper() {
                 <li>Risk of cultural knowledge loss and exploitation</li>
                 <li>Limited technological infrastructure and digital inclusion</li>
                 <li>Need for sustainable economic development models</li>
+                <li>Network dependency and single-chain vulnerability</li>
               </ul>
             </div>
             
             <p>
-              Our solution implements a community-powered marketplace with integrated physical infrastructure (node operators, distribution hubs, craft documentation centers) and digital components (Arbitrum blockchain, marketplace, metadata systems) that generates real value while preserving cultural integrity.
+              Our solution implements a community-powered marketplace with integrated physical infrastructure (node operators, distribution hubs, craft documentation centers) and multi-network digital components (Linea, RootStock, and Arbitrum blockchains, marketplace, metadata systems) that generates real value while preserving cultural integrity.
             </p>
             
             <h2>TABLE OF CONTENTS</h2>
             <div className="toc">
               <ol>
-                <li>Introduction & Vision</li>
+                <li>Introduction & Pacific Values in Digital Form</li>
                 <li>Market Analysis & Opportunity</li>
+                <li>Multi-Chain Technical Advantages
+                  <ul>
+                    <li>Linea: Scaling With Zero Knowledge</li>
+                    <li>RootStock: Bitcoin Integration with Smart Contracts</li>
+                    <li>Arbitrum: Optimistic Rollups for Broader Integration</li>
+                  </ul>
+                </li>
                 <li>Platform Architecture
                   <ul>
                     <li>Physical Infrastructure</li>
                     <li>Digital Infrastructure</li>
-                    <li>Integration Model</li>
+                    <li>Multi-Network Integration Model</li>
                   </ul>
                 </li>
                 <li>Membership System
@@ -285,7 +297,7 @@ export default function Whitepaper() {
             
             <h2>CONCLUSION</h2>
             <p>
-              The Pasifika Web3 Tech Hub represents a breakthrough approach to blockchain-enabled economic development that centers Pacific Island communities, cultures, and context. By integrating physical infrastructure with digital capabilities through our membership-based model on Arbitrum, we create a self-reinforcing ecosystem that generates real value while preserving cultural heritage.
+              The Pasifika Web3 Tech Hub represents a breakthrough approach to blockchain-enabled economic development that centers Pacific Island communities, cultures, and context. By integrating physical infrastructure with digital capabilities through our membership-based model across Linea, RootStock, and Arbitrum networks, we create a self-reinforcing ecosystem that generates real value while preserving cultural heritage.
             </p>
             
             <p>
@@ -293,7 +305,8 @@ export default function Whitepaper() {
             </p>
             
             <ol>
-              <li><strong>Cultural-First Design:</strong> Built from the ground up to respect and protect Pacific Island cultural heritage while enabling economic opportunities</li>
+              <li><strong>Pacific Values in Digital Form:</strong> Built from the ground up to encode the principle &quot;If we take care of our own, they will take care of us&quot; into smart contract architecture</li>
+              <li><strong>Multi-Network Resilience:</strong> Strategic deployment across Linea (zkEVM), RootStock (Bitcoin sidechain), and Arbitrum (optimistic rollups) for complementary strengths</li>
               <li><strong>Integrated Physical-Digital Infrastructure:</strong> Seamless connection between computational resources, physical distribution, and digital marketplace</li>
               <li><strong>Community Governance:</strong> Transparent decision-making with special provisions ensuring Pacific Islander representation and leadership</li>
               <li><strong>Profit-Sharing Model:</strong> Implementation of the principle &quot;If we take care of our own, they will take care of us&quot; through annual distributions</li>
@@ -301,7 +314,7 @@ export default function Whitepaper() {
             </ol>
             
             <p>
-              Through these innovations, the Pasifika Web3 Tech Hub aims to create a model for blockchain-enabled sustainable development that can be adapted for cultural communities worldwide while specifically serving the unique needs of Pacific Island nations.
+              Through these innovations, the Pasifika Web3 Tech Hub aims to create a model for blockchain-enabled sustainable development that embodies Pacific cultural values in digital form. Our multi-network approach ensures resilience, accessibility, and flexibility while specifically serving the unique needs of Pacific Island nations and creating a blueprint that can be adapted for cultural communities worldwide.
             </p>
             
             <div className="whitepaper-footer">

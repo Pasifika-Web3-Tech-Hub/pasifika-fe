@@ -1,0 +1,330 @@
+/* Services Page Custom Styles */
+
+.network-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.network-selector p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.network-tabs {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.network-tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+  color: white;
+}
+
+.network-tab.active {
+  font-weight: 600;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.network-tab.active.all {
+  border-color: white;
+  background-color: rgba(51, 51, 51, 0.4);
+  color: white;
+}
+
+.network-tab.active.arbitrum {
+  border-color: #9945FF;
+  background-color: rgba(153, 69, 255, 0.8);
+  color: white;
+}
+
+.network-tab.active.linea {
+  border-color: #3F88C5;
+  background-color: rgba(63, 136, 197, 0.8);
+  color: white;
+}
+
+.network-tab.active.rootstock {
+  border-color: #F9A620;
+  background-color: rgba(249, 166, 32, 0.8);
+  color: white;
+}
+
+.network-tab:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.services-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  justify-content: center;
+}
+
+.service-tab {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #e0e0e0;
+  background: #f8f8f8;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.service-tab.active {
+  background: #FF5722;
+  color: white;
+  border-color: #FF5722;
+  box-shadow: 0 3px 8px rgba(255, 87, 34, 0.3);
+}
+
+.service-tab:hover:not(.active) {
+  background: #e8e8e8;
+}
+
+.service-content {
+  animation: fadeIn 0.4s ease;
+}
+
+.service-highlight {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.service-highlight:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.service-action-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  background-color: #FF5722;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 3px 8px rgba(255, 87, 34, 0.3);
+}
+
+.service-action-button:hover {
+  background-color: #E64A19;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(255, 87, 34, 0.4);
+}
+
+.network-specific-info {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.deployment-highlight {
+  background-color: #e8f5e9;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+}
+
+.deployment-highlight p {
+  margin: 0.5rem 0;
+}
+
+.deployment-highlight code {
+  background: rgba(0,0,0,0.05);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+.wallet-connection {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.wallet-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.wallet-icon {
+  font-size: 1.5rem;
+}
+
+.wallet-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.wallet-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wallet-button.connect {
+  background: #FF5722;
+  color: white;
+  box-shadow: 0 3px 8px rgba(255, 87, 34, 0.3);
+}
+
+.wallet-button.dashboard {
+  background: #9945FF;
+  color: white;
+  box-shadow: 0 3px 8px rgba(153, 69, 255, 0.3);
+}
+
+.wallet-button.disconnect {
+  background: #f5f5f5;
+  color: #666;
+}
+
+.wallet-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.wallet-address {
+  font-family: monospace;
+  background: rgba(0,0,0,0.05);
+  padding: 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Dark mode adjustments */
+.dark .service-tab {
+  background: #333;
+  border-color: #444;
+  color: #f0f0f0;
+}
+
+.dark .service-tab.active {
+  background: #FF5722;
+  border-color: #FF5722;
+}
+
+.dark .service-action-button {
+  background-color: #FF5722;
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(255, 87, 34, 0.3);
+}
+
+.dark .service-action-button:hover {
+  background-color: #E64A19;
+}
+
+.dark .network-tab.active.all {
+  border-color: #f0f0f0;
+  background-color: rgba(240, 240, 240, 0.1);
+  color: #f0f0f0;
+}
+
+.dark .network-tab.active.arbitrum {
+  border-color: #b97aff;
+  background-color: rgba(185, 122, 255, 0.15);
+  color: #b97aff;
+}
+
+.dark .network-tab.active.linea {
+  border-color: #67a3d9;
+  background-color: rgba(103, 163, 217, 0.15);
+  color: #67a3d9;
+}
+
+.dark .network-tab.active.rootstock {
+  border-color: #ffba52;
+  background-color: rgba(255, 186, 82, 0.15);
+  color: #ffba52;
+}
+
+.dark .service-tab:hover:not(.active) {
+  background: #444;
+}
+
+.dark .service-highlight {
+  background: #282828;
+}
+
+.dark .network-specific-info {
+  border-top-color: #444;
+}
+
+.dark .deployment-highlight {
+  background-color: #1b5e20;
+  color: #f0f0f0;
+}
+
+.dark .wallet-connection {
+  background: #282828;
+  border-color: #444;
+}
+
+.dark .wallet-button.disconnect {
+  background: #333;
+  color: #e0e0e0;
+}
+
+.dark .wallet-address {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .network-tabs,
+  .services-tabs {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .network-tab,
+  .service-tab {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .wallet-actions {
+    flex-direction: column;
+  }
+}

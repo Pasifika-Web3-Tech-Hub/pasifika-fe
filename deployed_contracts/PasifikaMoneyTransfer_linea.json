@@ -1,0 +1,9 @@
+{
+  "network": "linea",
+  "chainId": 59140,
+  "name": "PasifikaMoneyTransfer",
+  "address": "0x3f4501A82ba208cebdcfC182bF9baC227aFd4A40",
+  "deployer": "Unknown",
+  "deployedAt": "2025-05-12T02:49:26Z",
+  "explorer": "https://goerli.lineascan.build/address/0x3f4501A82ba208cebdcfC182bF9baC227aFd4A40"
+}

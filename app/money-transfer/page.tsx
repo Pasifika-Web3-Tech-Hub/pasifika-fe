@@ -11,9 +11,9 @@ import "../page.css";
 import "../shared-pages.css";
 import "./money-transfer.css";
 
-// Get contract info
-import moneyTransferContractInfo from "../../deployed_contracts/PasifikaMoneyTransfer.json";
-import moneyTransferAbi from "../../deployed_contracts/PasifikaMoneyTransfer_ABI.json";
+// Get contract info - using Arbitrum deployment
+import moneyTransferContractInfo from "../../deployed_contracts/PasifikaMoneyTransfer_arbitrum.json";
+import moneyTransferAbi from "../../deployed_contracts/PasifikaMoneyTransfer_arbitrum_ABI.json";
 
 export default function MoneyTransfer() {
   const { isDarkMode } = useDarkMode();

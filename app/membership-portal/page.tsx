@@ -11,9 +11,9 @@ import "../page.css";
 import "../shared-pages.css";
 import "./membership.css";
 
-// Get contract info
-import membershipContractInfo from "../../deployed_contracts/PasifikaMembership.json";
-import membershipAbi from "../../deployed_contracts/PasifikaMembership_ABI.json";
+// Get contract info - using Arbitrum deployment
+import membershipContractInfo from "../../deployed_contracts/PasifikaMembership_arbitrum.json";
+import membershipAbi from "../../deployed_contracts/PasifikaMembership_arbitrum_ABI.json";
 
 export default function MembershipPortal() {
   const { isDarkMode } = useDarkMode();

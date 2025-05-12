@@ -92,8 +92,7 @@ export default function Main() {
           <div className="hero-content">
             <h1 className="hero-title">Building The Future with Web3</h1>
             <p className="hero-subtitle">
-              Join us in creating a decentralized ecosystem for a marketplace that empowers Pacific communities
-              through blockchain technology and digital innovation.
+              Join us in creating a decentralized ecosystem for a marketplace that empowers Pacific communities through blockchain technology and digital innovation.
             </p>
             <div className="hero-buttons">
               <button 
@@ -259,11 +258,60 @@ export default function Main() {
       </div>
       {/* Spacer div with a fixed height of 1cm */}
       <div style={{ height: '1cm' }} />
-      {/* Pasifika DePIN Description Section */}
-      <div className="dep-in-section" style={{ background: isDarkMode ? '#222' : '#fff', color: isDarkMode ? '#FF9800' : '#FF5722', padding: '1rem 0', margin: '0 auto', maxWidth: 900, textAlign: 'center', borderRadius: 12, boxShadow: isDarkMode ? '0 2px 16px #111' : '0 2px 16px #eee' }}>
-        <p style={{ fontSize: '1.25rem', fontWeight: 500, margin: 0 }}>
-          The Pasifika Web3 Tech Hub represents a groundbreaking decentralized physical infrastructure network (DePIN) designed specifically for Pacific Island communities. We have migrated to Arbitrum and our use cases & proof of concept are now live on Arbitrum testnet. We chose Arbitrum for its exceptional throughput, security inherited from Ethereum, and low transaction fees that benefit our Pacific Island users. Our platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.
+      {/* Multi-Chain Approach Section */}
+      <div className="dep-in-section" style={{ background: isDarkMode ? '#222' : '#fff', padding: '1.5rem', margin: '0 auto', maxWidth: 900, borderRadius: 12, boxShadow: isDarkMode ? '0 2px 16px #111' : '0 2px 16px #eee' }}>
+        <h2 style={{ textAlign: 'center', color: isDarkMode ? '#FF9800' : '#FF5722', marginBottom: '1.5rem' }}>Our Multi-Chain Approach</h2>
+        
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+          {/* Linea */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', padding: '1rem', background: isDarkMode ? '#333' : '#f8f8f8', borderRadius: '8px', borderLeft: '4px solid #3f88c5' }}>
+            <h3 style={{ color: isDarkMode ? '#3f88c5' : '#3f88c5', margin: '0' }}>Linea: Scaling With Zero Knowledge</h3>
+            <p style={{ margin: '0' }}>
+              Linea&apos;s zkEVM technology dramatically reduces transaction costs while maintaining Ethereum&apos;s security. For communities where every fraction of a cent matters, this efficiency is crucial for financial inclusion.
+            </p>
+          </div>
+          
+          {/* RSK */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', padding: '1rem', background: isDarkMode ? '#333' : '#f8f8f8', borderRadius: '8px', borderLeft: '4px solid #f9a620' }}>
+            <h3 style={{ color: isDarkMode ? '#f9a620' : '#f9a620', margin: '0' }}>RootStock: Bitcoin Integration</h3>
+            <p style={{ margin: '0' }}>
+              As a Bitcoin sidechain, RSK allows us to work with RBTC while leveraging smart contracts. Our treasury was initially seeded with 27,281 RIF tokens, showcasing the support this technology brings to Pacific innovation.
+            </p>
+          </div>
+          
+          {/* Arbitrum */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', padding: '1rem', background: isDarkMode ? '#333' : '#f8f8f8', borderRadius: '8px', borderLeft: '4px solid #9945ff' }}>
+            <h3 style={{ color: isDarkMode ? '#9945ff' : '#9945ff', margin: '0' }}>Arbitrum: Optimistic Rollups</h3>
+            <p style={{ margin: '0' }}>
+              Arbitrum&apos;s optimistic rollup technology gives us additional scaling options and ensures our platform remains connected to the broader Ethereum ecosystem, expanding opportunities for Pacific Islanders.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      {/* Cultural Values Section */}
+      <div className="dep-in-section" style={{ background: isDarkMode ? '#222' : '#fff', padding: '1.5rem', margin: '1.5rem auto', maxWidth: 900, textAlign: 'center', borderRadius: 12, boxShadow: isDarkMode ? '0 2px 16px #111' : '0 2px 16px #eee' }}>
+        <h2 style={{ color: isDarkMode ? '#FF9800' : '#FF5722', marginBottom: '1rem' }}>Beyond Technology: Cultural Significance</h2>
+        <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+          What truly sets our approach apart is how these Ethereum EVM based technologies allow us to encode Pacific Island cultural values into digital infrastructure:
         </p>
+        
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', textAlign: 'left' }}>
+          <div>
+            <h3 style={{ color: isDarkMode ? '#FF9800' : '#FF5722', margin: '0' }}>🤝 Reciprocity</h3>
+            <p>Just as traditional Pacific economies function on gift giving and mutual support, our profit sharing mechanism ensures value flows back to community members.</p>
+          </div>
+          
+          <div>
+            <h3 style={{ color: isDarkMode ? '#FF9800' : '#FF5722', margin: '0' }}>🌴 Shared Stewardship</h3>
+            <p>The graduated fee structure mirrors traditional systems where those with greater responsibility to the community receive greater benefits.</p>
+          </div>
+          
+          <div>
+            <h3 style={{ color: isDarkMode ? '#FF9800' : '#FF5722', margin: '0' }}>🏝️ Accessibility</h3>
+            <p>By keeping fees low through Layer 2 scaling solutions, we ensure that participation remains accessible to all community members, regardless of economic status.</p>
+          </div>
+        </div>
       </div>
 
       {/* Footer Banner */}

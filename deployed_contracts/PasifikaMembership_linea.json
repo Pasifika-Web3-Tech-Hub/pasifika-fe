@@ -1,0 +1,9 @@
+{
+  "network": "linea",
+  "chainId": 59140,
+  "name": "PasifikaMembership",
+  "address": "0xbF2fa0952F53786B2EC8C33A9335ce54f5B3fC46",
+  "deployer": "Unknown",
+  "deployedAt": "2025-05-12T02:38:07Z",
+  "explorer": "https://goerli.lineascan.build/address/0xbF2fa0952F53786B2EC8C33A9335ce54f5B3fC46"
+}

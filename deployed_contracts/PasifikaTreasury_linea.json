@@ -1,0 +1,9 @@
+{
+  "network": "linea",
+  "chainId": 59140,
+  "name": "PasifikaTreasury",
+  "address": "0xe8CC4de8de7502bD175F7016d68a1aCb1D4a1628",
+  "deployer": "Unknown",
+  "deployedAt": "2025-05-12T01:52:36Z",
+  "explorer": "https://goerli.lineascan.build/address/0xe8CC4de8de7502bD175F7016d68a1aCb1D4a1628"
+}
