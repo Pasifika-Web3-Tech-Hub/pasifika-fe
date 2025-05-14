@@ -235,7 +235,7 @@ export default function OurStory() {
                   co-Founder, ICT / Systems Engineer
                 </p>
                 <p className="member-location">Pacific Islands</p>
-                <a href="https://www.linkedin.com/in/john-liava&apos;a-5b42251a0/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                <a href="https://www.linkedin.com/in/john-liava-a-5b42251a0/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
               </div>
@@ -255,7 +255,7 @@ export default function OurStory() {
                   co-Founder, Quantity Surveyor
                 </p>
                 <p className="member-location">Pacific Islands</p>
-                <a href="https://www.linkedin.com/in/david-liava&apos;a-905827260/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                <a href="https://www.linkedin.com/in/david-liava%E2%80%99a-905827260/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
               </div>
@@ -275,7 +275,7 @@ export default function OurStory() {
                   co-Founder, Project Officer
                 </p>
                 <p className="member-location">Pacific Islands</p>
-                <a href="https://www.linkedin.com/in/selafine-liava&apos;a-643616363/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                <a href="https://www.linkedin.com/in/selafine-liava%E2%80%99a-643616363/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
               </div>
