@@ -46,15 +46,6 @@ export default function Services() {
       transactionFee: '0.25%',
       techType: 'Optimistic Rollups'
     },
-    linea: {
-      name: 'Linea',
-      color: '#3F88C5',
-      contractsDeployed: 5,
-      moneyTransferAddress: '0x123...',
-      nodeContract: '0x456...',
-      transactionFee: '0.25%',
-      techType: 'zkEVM Technology'
-    },
     rootstock: {
       name: 'RootStock',
       color: '#F9A620',
@@ -63,6 +54,15 @@ export default function Services() {
       nodeContract: '0xabc...',
       transactionFee: '0.25%',
       techType: 'Bitcoin Sidechain'
+    },
+    linea: {
+      name: 'Linea',
+      color: '#3F88C5',
+      contractsDeployed: 5,
+      moneyTransferAddress: '0x123...',
+      nodeContract: '0x456...',
+      transactionFee: '0.25%',
+      techType: 'zkEVM Technology'
     }
   };
 
@@ -351,10 +351,10 @@ export default function Services() {
               
               <div className="smart-contract-card">
                 <div className="card-header">
-                  <h3>Multi-Network Node Operations</h3>
+                  <h3>Cross-Chain Node Operations</h3>
                   <div className="component-icon"><span className="emoji-fix">📡</span></div>
                 </div>
-                <p>Operate nodes across multiple networks (Linea, Arbitrum, RootStock) with lower transaction fees (0.25%) and annual profit sharing from the Pasifika Treasury.</p>
+                <p>Operate interoperable nodes across multiple EVM Compatible networks (Arbitrum, RootStock, Linea) with lower transaction fees (0.25%) and annual profit sharing from the Pasifika Treasury.</p>
                 <div className="demo-component">
                   <NodeOperatorInfo />
                 </div>
@@ -365,7 +365,7 @@ export default function Services() {
                   <h3>Pasifika Exchange</h3>
                   <div className="component-icon"><span className="emoji-fix">🌊</span></div>
                 </div>
-                <p>The first decentralized exchange designed specifically for Pacific Island communities, enabling secure trading of digital assets with low fees and cross-island interoperability.</p>
+                <p>The first cross-chain decentralized exchange designed specifically for Pacific Island communities, enabling secure trading of digital assets with low fees across multiple blockchain networks and cross-island interoperability.</p>
                 <div className="production-notice">Coming soon in 2025</div>
               </div>
             </div>

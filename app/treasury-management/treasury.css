@@ -1,4 +1,52 @@
 /* Treasury Management Styles */
+
+/* RootStock Funding Highlight */
+.funding-highlight {
+  background-color: rgba(249, 166, 32, 0.1); /* RootStock brand color with opacity */
+  border-left: 4px solid #F9A620; /* RootStock color */
+  padding: 20px 25px;
+  margin: 20px auto 30px;
+  max-width: 900px;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.funding-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background-color: #F9A620;
+  color: #000;
+  font-weight: 700;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.funding-highlight h3 {
+  color: #F9A620;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.funding-highlight p {
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+/* Dark theme compatibility */
+:root[data-theme="dark"] .funding-highlight {
+  background-color: rgba(249, 166, 32, 0.15);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
 .treasury-container {
   margin-top: 2rem;
   background-color: var(--card-bg);

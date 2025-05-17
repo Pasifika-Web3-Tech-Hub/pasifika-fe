@@ -14,11 +14,11 @@ A decentralized multi-network platform connecting Pacific Island communities to 
 
 At the heart of Pasifika Web3 Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: **"If we take care of our own, they will take care of us."** This powerful concept of reciprocity and community care isn't just a nice sentiment, it's the architectural blueprint for our entire system.
 
-Ethereum's ecosystem, with its focus on decentralization, community governance, and shared prosperity, provides the perfect technological expression of these Pacific values. When we examined various blockchain platforms, Ethereum EVM based chains aligned naturally with our cultural ethos.
+EVM Compatible networks, with their focus on decentralization, community governance, and shared prosperity, provide the perfect technological expression of these Pacific values. When we examined various blockchain platforms, those supporting EVM compatibility aligned naturally with our cultural ethos while enabling cross-chain interoperability.
 
-## Technical Advantages of Our Multi-Chain Approach
+## Technical Advantages of Our Interoperability Approach
 
-Our platform operates across three complementary Ethereum EVM based chains: Linea, RSK (Rootstock), and Arbitrum. This wasn't a random selection, but a deliberate strategy to leverage the unique strengths of each:
+Our platform operates across three complementary EVM Compatible chains: Linea, RSK (Rootstock), and Arbitrum. This wasn't a random selection, but a deliberate strategy to leverage the unique strengths of each while ensuring seamless interoperability:
 
 ### Linea: Scaling With Zero Knowledge
 Linea's zkEVM Layer-2 technology dramatically reduces transaction costs while maintaining Ethereum's robust security model. For communities where every fraction of a cent matters, this efficiency is crucial for financial inclusion.
@@ -27,7 +27,7 @@ Linea's zkEVM Layer-2 technology dramatically reduces transaction costs while ma
 As a Bitcoin sidechain, RSK allows us to work with RBTC (Bitcoin on RSK) while leveraging the programmability of smart contracts. Our treasury was initially seeded with 27,281 RIF tokens received from the RSK Hactivator program, showcasing the real-world support this technology brings to Pacific innovation.
 
 ### Arbitrum: Optimistic Rollups for Broader Integration
-Arbitrum's optimistic rollup technology gives us additional scaling options and ensures our platform remains connected to the broader Ethereum ecosystem, expanding opportunities for Pacific Islanders.
+Arbitrum's optimistic rollup technology gives us additional scaling options and ensures our platform remains connected to the broader Web3 ecosystem, expanding opportunities for Pacific Islanders through interoperable blockchain solutions.
 
 ## Building a Community Owned Financial System
 
@@ -50,10 +50,10 @@ This project is built using:
   - Dynamic network switching
   - Cross-chain compatibility
 - **Web3 Integration**:
-  - Wagmi library for Ethereum interactions
-  - Dynamic Labs SDK for wallet connection
+  - Wagmi library for cross-chain interactions
+  - Dynamic Labs SDK for multi-chain wallet connection
   - EIP-712 for typed data signing
-  - Viem for smart contract interactions
+  - Viem for interoperable smart contract interactions
 - **Smart Contracts**:
   - Membership tiers (Guest, Member, Node Operator)
   - Staking contract
@@ -87,7 +87,7 @@ What truly sets our approach apart is how these Ethereum EVM based technologies 
 
 - **Shared Stewardship**: The graduated fee structure mirrors traditional systems where those with greater responsibility to the community receive greater benefits.
 
-- **Accessibility**: By keeping fees low through Layer 2 scaling solutions, we ensure that participation remains accessible to all community members, regardless of economic status.
+- **Accessibility**: By keeping fees low through Layer 2 scaling solutions and enabling cross-chain interoperability, we ensure that participation remains accessible to all community members, regardless of economic status or preferred blockchain network.
 
 ## Membership Tiers
 
@@ -102,7 +102,7 @@ The platform offers three membership tiers on each supported network:
    - Network-specific fee (0.005 ETH on Arbitrum/Linea, 0.0001 RBTC on RootStock)
    - 0.5% transaction fee (50% discount)
    - Profit-sharing eligibility
-   - Governance participation
+   - Cross-chain governance participation
 
 3. **Node Operator (Tier 2)**:
    - Native token staking required (ETH/RBTC)
@@ -122,6 +122,8 @@ flowchart TD
     B --> G[Contact]
     B --> W[Membership Portal]
     B --> X[Terms of Service]
+    B --> NO[Node Operator Dashboard]
+    B --> EX[Pasifika Exchange]
     
     C --> H[Connect Wallet]
     H --> I[Fill Registration Form]
@@ -131,12 +133,22 @@ flowchart TD
     D --> N[Staking]
     D --> O[Treasury]
     D --> P[NFT Representation]
+    D --> Q[Node Operations]
     
     W --> Y[View Membership Status]
     W --> Z[Join/Upgrade Membership]
     W --> AA[View Profit Sharing]
     
     E --> T[Whitepaper]
+    
+    NO --> NOA[View Node Status]
+    NO --> NOB[Manage Stake]
+    NO --> NOC[View Rewards]
+    NO --> NOD[Network Selection]
+    
+    EX --> EXA[Token Swapping]
+    EX --> EXB[Liquidity Provision]
+    EX --> EXC[Cross-Chain Trading]
 ```
 
 ## User Flow Process
@@ -148,6 +160,7 @@ sequenceDiagram
     participant Wallet as Web3 Wallet
     participant Contract as Smart Contracts
     participant Form as Form Backend
+    participant Exchange as Pasifika Exchange
     
     User->>UI: Visit platform
     User->>UI: Navigate to Services/Membership
@@ -186,15 +199,45 @@ sequenceDiagram
         Wallet->>Contract: Execute membership change
         Contract-->>UI: Return updated status
         UI-->>User: Show confirmation
+    else Node Operator Dashboard
+        User->>UI: Access Node Dashboard
+        UI->>Contract: Fetch node status
+        Contract-->>UI: Return node data
+        User->>UI: Select network (Arbitrum/Linea/RootStock)
+        UI->>Contract: Fetch network-specific data
+        Contract-->>UI: Return network data
+        User->>UI: Manage stake (add/withdraw)
+        UI->>Wallet: Request transaction
+        Wallet-->>User: Confirm transaction
+        User-->>Wallet: Approve
+        Wallet->>Contract: Execute staking operation
+        Contract-->>UI: Return updated stake
+        UI-->>User: Show confirmation
+    else Pasifika Exchange
+        User->>UI: Access Exchange
+        UI->>Exchange: Fetch trading pairs
+        Exchange-->>UI: Return available pairs
+        User->>UI: Select cross-chain swap
+        UI->>Exchange: Request quote
+        Exchange-->>UI: Return quote
+        User->>UI: Confirm swap
+        UI->>Wallet: Request transaction approval
+        Wallet-->>User: Confirm transaction
+        User-->>Wallet: Approve
+        Wallet->>Exchange: Execute swap
+        Exchange->>Contract: Update balances
+        Contract-->>Exchange: Confirm state change
+        Exchange-->>UI: Return swap result
+        UI-->>User: Show confirmation
     end
 ```
 
-## Multi-Network Smart Contract Integration
+## Cross-Chain Smart Contract Interoperability
 
-The platform interacts with the following smart contracts deployed across multiple networks (Arbitrum, Linea, and RootStock):
+The platform interacts with the following smart contracts deployed across multiple EVM Compatible networks (Arbitrum, Linea, and RootStock) with full interoperability:
 
 1. **Membership Contract**: Manages membership tiers and access rights
 2. **Staking Contract**: Token staking for rewards and governance rights
 3. **Treasury Management**: Community fund management with profit sharing distribution
 4. **Physical Item NFT**: Digital representation of physical assets
-5. **Network-Specific Adapters**: Handle network-specific token operations and chain integration
+5. **Cross-Chain Adapters**: Handle interoperability between different blockchain networks, enabling seamless token operations across multiple chains

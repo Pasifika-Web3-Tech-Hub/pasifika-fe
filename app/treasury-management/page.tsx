@@ -184,6 +184,13 @@ export default function TreasuryManagement() {
         <h1>Treasury Management</h1>
         <p>Manage treasury funds, monitor transactions, and oversee fee collections</p>
       </div>
+      
+      {/* RootStock Funding Highlight */}
+      <div className="funding-highlight">
+        <div className="funding-badge">Seed Funded</div>
+        <h3>RootStock Hactivator Program Contribution</h3>
+        <p>Our seed funding was secured through our successful participation and contribution to the RootStock (RSK) Hactivator Program, supporting our multi-chain infrastructure development.</p>
+      </div>
 
       {/* Content Section */}
       <div className="content-container">

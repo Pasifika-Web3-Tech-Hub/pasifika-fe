@@ -64,7 +64,7 @@ export default function Whitepaper() {
             </p>
             
             <p>
-              Our platform operates across three complementary Ethereum EVM based chains: <strong>Linea</strong>, <strong>RootStock (RSK)</strong>, and <strong>Arbitrum</strong>. This multi-network approach provides flexibility, resilience, and increased accessibility for Pacific Island communities while leveraging the unique strengths of each blockchain.
+              Our platform operates across three complementary EVM Compatible chains: <strong>Linea</strong>, <strong>RootStock (RSK)</strong>, and <strong>Arbitrum</strong>. This interoperability approach provides flexibility, resilience, and increased accessibility for Pacific Island communities while leveraging the unique strengths of each blockchain network.
             </p>
             
             <p>
@@ -306,7 +306,7 @@ export default function Whitepaper() {
             
             <ol>
               <li><strong>Pacific Values in Digital Form:</strong> Built from the ground up to encode the principle &quot;If we take care of our own, they will take care of us&quot; into smart contract architecture</li>
-              <li><strong>Multi-Network Resilience:</strong> Strategic deployment across Linea (zkEVM), RootStock (Bitcoin sidechain), and Arbitrum (optimistic rollups) for complementary strengths</li>
+              <li><strong>Blockchain Interoperability:</strong> Strategic deployment across Linea (zkEVM), RootStock (Bitcoin sidechain), and Arbitrum (optimistic rollups) for complementary strengths and cross-chain functionality</li>
               <li><strong>Integrated Physical-Digital Infrastructure:</strong> Seamless connection between computational resources, physical distribution, and digital marketplace</li>
               <li><strong>Community Governance:</strong> Transparent decision-making with special provisions ensuring Pacific Islander representation and leadership</li>
               <li><strong>Profit-Sharing Model:</strong> Implementation of the principle &quot;If we take care of our own, they will take care of us&quot; through annual distributions</li>
@@ -314,7 +314,7 @@ export default function Whitepaper() {
             </ol>
             
             <p>
-              Through these innovations, the Pasifika Web3 Tech Hub aims to create a model for blockchain-enabled sustainable development that embodies Pacific cultural values in digital form. Our multi-network approach ensures resilience, accessibility, and flexibility while specifically serving the unique needs of Pacific Island nations and creating a blueprint that can be adapted for cultural communities worldwide.
+              Through these innovations, the Pasifika Web3 Tech Hub aims to create a model for blockchain-enabled sustainable development that embodies Pacific cultural values in digital form. Our interoperability approach ensures resilience, accessibility, and flexibility across multiple blockchain ecosystems while specifically serving the unique needs of Pacific Island nations and creating a blueprint that can be adapted for cultural communities worldwide.
             </p>
             
             <div className="whitepaper-footer">

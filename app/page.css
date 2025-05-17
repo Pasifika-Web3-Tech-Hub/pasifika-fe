@@ -877,6 +877,39 @@ ul {
   background-color: #FF9800;
 }
 
+/* Command Button Style */
+.command-button {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  gap: 12px;
+  min-width: 240px;
+  justify-content: space-between;
+  color: black;
+}
+
+.command-button .button-icon {
+  font-size: 20px;
+}
+
+.command-button .button-text {
+  flex: 1;
+  text-align: center;
+}
+
+.command-button .button-arrow {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.command-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 87, 34, 0.3);
+}
+
 .dark .metric-label {
   color: #aaa;
 }

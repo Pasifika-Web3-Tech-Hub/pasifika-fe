@@ -81,12 +81,43 @@ export default function OurStory() {
               borderLeft: '4px solid #FF5722'
             }}>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
-                <strong>&quot;If we take care of our own, they will take care of us&quot;</strong> — This powerful concept of reciprocity and community care isn&apos;t just a nice sentiment, it&apos;s the architectural blueprint for our entire system. Our platform operates across three complementary Ethereum EVM based chains: <strong>Linea</strong>, <strong>RootStock (RSK)</strong>, and <strong>Arbitrum</strong> to create a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.
+                <strong>&quot;If we take care of our own, they will take care of us&quot;</strong> — This powerful concept of reciprocity and community care isn&apos;t just a nice sentiment, it&apos;s the architectural blueprint for our entire system. Our platform operates across multiple EVM Compatible chains: <strong>Arbitrum</strong>, <strong>RootStock (RSK)</strong>, and <strong>Linea</strong> to create a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders through blockchain interoperability.
+              </p>
+            </div>
+            
+            <div style={{ 
+              backgroundColor: 'rgba(249, 166, 32, 0.1)',
+              borderLeft: '4px solid #F9A620',
+              padding: '20px 25px',
+              margin: '30px 0',
+              borderRadius: '0 8px 8px 0',
+              position: 'relative',
+              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.05)'
+            }}>
+              <div style={{ 
+                position: 'absolute',
+                top: '-12px',
+                right: '20px',
+                backgroundColor: '#F9A620',
+                color: '#000',
+                fontWeight: 700,
+                fontSize: '12px',
+                padding: '5px 10px',
+                borderRadius: '20px',
+                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px'
+              }}>
+                Seed Funded
+              </div>
+              <h3 style={{ color: '#F9A620', marginBottom: '10px' }}>RootStock Hactivator Program</h3>
+              <p style={{ lineHeight: '1.6' }}>
+                Our journey was accelerated by our successful contribution to the RootStock (RSK) Hactivator Program, which provided the seed funding and technical expertise to launch our blockchain interoperability initiative. This partnership with RootStock (RSK) proved pivotal in developing our multi-chain infrastructure and establishing our presence in the Bitcoin ecosystem through RSK&apos;s Bitcoin sidechain technology.
               </p>
             </div>
 
             <h2>Pacific Values in Digital Form</h2>
-            <p>At the heart of Pasifika Web3 Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: <strong>&quot;If we take care of our own, they will take care of us.&quot;</strong> Ethereum&apos;s ecosystem, with its focus on decentralization, community governance, and shared prosperity, provides the perfect technological expression of these Pacific values. When we examined various blockchain platforms, Ethereum EVM based chains aligned naturally with our cultural ethos.</p>
+            <p>At the heart of Pasifika Web3 Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: <strong>&quot;If we take care of our own, they will take care of us.&quot;</strong> EVM Compatible blockchains, with their focus on decentralization, community governance, and shared prosperity, provide the perfect technological expression of these Pacific values. When we examined various blockchain platforms, those supporting EVM compatibility aligned naturally with our cultural ethos while enabling interoperability across multiple networks.</p>
             
             <h2>Our Vision</h2>
             <p>We envision a future where Pacific Island communities are active participants in the global digital economy, with tools and infrastructure that address our specific needs and challenges. Through the Pasifika Web3 Marketplace operating across multiple networks, we aim to create resilient economic systems that can withstand geographical isolation, climate challenges, and limited traditional infrastructure.</p>
@@ -348,14 +379,14 @@ export default function OurStory() {
             
             <h2>Beyond the Technology: Cultural Significance</h2>
             <p>
-              What truly sets our approach apart is how these Ethereum EVM based technologies allow us to encode Pacific Island cultural values into digital infrastructure:
+              What truly sets our approach apart is how these EVM Compatible technologies allow us to encode Pacific Island cultural values into digital infrastructure while enabling seamless interaction across multiple blockchain networks:
             </p>
             <ul style={{ listStyleType: 'disc', paddingLeft: '25px', marginBottom: '30px' }}>
               <li style={{ margin: '10px 0' }}><strong>Reciprocity:</strong> Just as traditional Pacific economies function on gift giving and mutual support, our profit sharing mechanism ensures value flows back to community members</li>
               <li style={{ margin: '10px 0' }}><strong>Shared Stewardship:</strong> The graduated fee structure mirrors traditional systems where those with greater responsibility to the community receive greater benefits</li>
-              <li style={{ margin: '10px 0' }}><strong>Accessibility:</strong> By keeping fees low through Layer 2 scaling solutions, we ensure that participation remains accessible to all community members, regardless of economic status</li>
+              <li style={{ margin: '10px 0' }}><strong>Accessibility:</strong> By keeping fees low through Layer 2 scaling solutions and enabling cross-chain interoperability, we ensure that participation remains accessible to all community members, regardless of economic status or preferred blockchain network</li>
             </ul>
-            
+
             <h2>Our Commitment</h2>
             <p>
               As we move forward, we remain committed to our founding principles:
@@ -365,7 +396,7 @@ export default function OurStory() {
               <li style={{ margin: '10px 0' }}><strong>Inclusivity:</strong> Ensuring benefits reach all community members</li>
               <li style={{ margin: '10px 0' }}><strong>Innovation with Purpose:</strong> Technology guided by real-world needs</li>
               <li style={{ margin: '10px 0' }}><strong>Long-Term Sustainability:</strong> Building systems that will serve communities for generations</li>
-              <li style={{ margin: '10px 0' }}><strong>Multi-Network Resilience:</strong> Ensuring our community isn&apos;t dependent on any single blockchain network</li>
+              <li style={{ margin: '10px 0' }}><strong>Multi-Network Resilience:</strong> Creating true interoperability between different blockchain networks to ensure our community isn&apos;t dependent on any single technology or ecosystem</li>
             </ul>
             
             <div className="join-us-section" style={{ 
@@ -380,7 +411,7 @@ export default function OurStory() {
                 &quot;If we take care of our own, they will take care of us&quot;
               </p>
               <p style={{ marginBottom: '20px' }}>
-                The Pasifika Web3 Tech Hub is more than a platform—it&apos;s a movement to bring digital economic empowerment to Pacific Island communities through multiple blockchain networks. Whether you&apos;re a developer, investor, community leader, or simply passionate about the intersection of technology and cultural values, we invite you to join us.
+                The Pasifika Web3 Tech Hub is more than a platform—it&apos;s a movement to bring digital economic empowerment to Pacific Island communities through blockchain interoperability. Whether you&apos;re a developer, investor, community leader, or simply passionate about the intersection of technology and cultural values across different blockchain ecosystems, we invite you to join us.
               </p>
               <Link href="/contact" className="btn btn-primary" style={{ display: 'inline-block' }}>
                 Contact Us to Get Involved

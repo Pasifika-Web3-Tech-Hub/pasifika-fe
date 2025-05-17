@@ -267,7 +267,7 @@ export default function Main() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', padding: '1rem', background: isDarkMode ? '#333' : '#f8f8f8', borderRadius: '8px', borderLeft: '4px solid #3f88c5' }}>
             <h3 style={{ color: isDarkMode ? '#3f88c5' : '#3f88c5', margin: '0' }}>Linea: Scaling With Zero Knowledge</h3>
             <p style={{ margin: '0' }}>
-              Linea&apos;s zkEVM technology dramatically reduces transaction costs while maintaining Ethereum&apos;s security. For communities where every fraction of a cent matters, this efficiency is crucial for financial inclusion.
+              Linea&apos;s zkEVM technology dramatically reduces transaction costs while maintaining robust EVM compatibility and security. For communities where every fraction of a cent matters, this efficiency is crucial for financial inclusion.
             </p>
           </div>
           
@@ -283,7 +283,7 @@ export default function Main() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', padding: '1rem', background: isDarkMode ? '#333' : '#f8f8f8', borderRadius: '8px', borderLeft: '4px solid #9945ff' }}>
             <h3 style={{ color: isDarkMode ? '#9945ff' : '#9945ff', margin: '0' }}>Arbitrum: Optimistic Rollups</h3>
             <p style={{ margin: '0' }}>
-              Arbitrum&apos;s optimistic rollup technology gives us additional scaling options and ensures our platform remains connected to the broader Ethereum ecosystem, expanding opportunities for Pacific Islanders.
+              Arbitrum&apos;s optimistic rollup technology gives us additional scaling options and ensures our platform remains connected to multiple blockchain ecosystems through interoperability, expanding opportunities for Pacific Islanders.
             </p>
           </div>
         </div>
@@ -293,7 +293,7 @@ export default function Main() {
       <div className="dep-in-section" style={{ background: isDarkMode ? '#222' : '#fff', padding: '1.5rem', margin: '1.5rem auto', maxWidth: 900, textAlign: 'center', borderRadius: 12, boxShadow: isDarkMode ? '0 2px 16px #111' : '0 2px 16px #eee' }}>
         <h2 style={{ color: isDarkMode ? '#FF9800' : '#FF5722', marginBottom: '1rem' }}>Beyond Technology: Cultural Significance</h2>
         <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-          What truly sets our approach apart is how these Ethereum EVM based technologies allow us to encode Pacific Island cultural values into digital infrastructure:
+          What truly sets our approach apart is how these EVM Compatible technologies allow us to encode Pacific Island cultural values into digital infrastructure while enabling seamless interoperability across blockchain networks:
         </p>
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', textAlign: 'left' }}>
@@ -309,7 +309,7 @@ export default function Main() {
           
           <div>
             <h3 style={{ color: isDarkMode ? '#FF9800' : '#FF5722', margin: '0' }}>🏝️ Accessibility</h3>
-            <p>By keeping fees low through Layer 2 scaling solutions, we ensure that participation remains accessible to all community members, regardless of economic status.</p>
+            <p>By keeping fees low through Layer 2 scaling solutions and enabling cross-chain interoperability, we ensure that participation remains accessible to all community members, regardless of economic status or preferred blockchain network.</p>
           </div>
         </div>
       </div>

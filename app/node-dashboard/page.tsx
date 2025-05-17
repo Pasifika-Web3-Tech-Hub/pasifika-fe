@@ -22,6 +22,7 @@ export default function NodeDashboard() {
   const [network, setNetwork] = useState('');
   const [showStakeModal, setShowStakeModal] = useState(false);
   const [stakeAmount, setStakeAmount] = useState('');
+  const [showNetworkSelector, setShowNetworkSelector] = useState(false);
   const [nodeData, setNodeData] = useState({
     isOperator: false,
     stake: '0',
@@ -100,9 +101,60 @@ export default function NodeDashboard() {
     return names[networkId] || 'Unknown Network';
   };
   
+  // Get network color
+  const getNetworkColor = (networkId: string): string => {
+    const colors: Record<string, string> = {
+      'linea': '#3F88C5',
+      'rootstock': '#F9A620',
+      'arbitrum': '#9945FF'
+    };
+    return colors[networkId] || '#FF5722';
+  };
+  
   // Format currency based on network
   const getCurrencySymbol = (networkId: string): string => {
     return networkId === 'rootstock' ? 'RBTC' : 'ETH';
+  };
+  
+  // Handle manual network switching
+  const handleNetworkSwitch = (networkId: string) => {
+    setNetwork(networkId);
+    setShowNetworkSelector(false);
+    
+    // In a real implementation, you would also switch the network in the wallet
+    // and fetch appropriate data for that network
+    
+    // Simulate loading new blockchain data
+    setNodeData(prev => ({ ...prev, loading: true }));
+    
+    setTimeout(() => {
+      // Sample data, would be fetched from blockchain in real implementation
+      const networkData = {
+        arbitrum: {
+          isOperator: true,
+          stake: '1.25',
+          rewards: '0.05',
+          nodeStatus: 'Active'
+        },
+        rootstock: {
+          isOperator: true,
+          stake: '0.0075',
+          rewards: '0.00025',
+          nodeStatus: 'Active'
+        },
+        linea: {
+          isOperator: true,
+          stake: '2.75',
+          rewards: '0.12',
+          nodeStatus: 'Active'
+        }
+      };
+      
+      setNodeData({
+        ...networkData[networkId as keyof typeof networkData],
+        loading: false
+      });
+    }, 1500);
   };
 
   return (
@@ -136,6 +188,44 @@ export default function NodeDashboard() {
       <div className="page-content">
         <div className="page-banner">
           <h1>Node Operator Dashboard</h1>
+          {/* Network selector */}
+          <div className="network-selector-container">
+            <button 
+              className="network-display-button"
+              onClick={() => setShowNetworkSelector(!showNetworkSelector)}
+              style={{ borderColor: getNetworkColor(network) }}
+            >
+              <div className="network-indicator" style={{ backgroundColor: getNetworkColor(network) }}></div>
+              {getNetworkDisplayName(network)}
+              <span className="dropdown-arrow">▼</span>
+            </button>
+            
+            {showNetworkSelector && (
+              <div className="network-dropdown">
+                <div 
+                  className={`network-option ${network === 'arbitrum' ? 'active' : ''}`}
+                  onClick={() => handleNetworkSwitch('arbitrum')}
+                >
+                  <div className="network-indicator" style={{ backgroundColor: '#9945FF' }}></div>
+                  Arbitrum
+                </div>
+                <div 
+                  className={`network-option ${network === 'rootstock' ? 'active' : ''}`}
+                  onClick={() => handleNetworkSwitch('rootstock')}
+                >
+                  <div className="network-indicator" style={{ backgroundColor: '#F9A620' }}></div>
+                  RootStock
+                </div>
+                <div 
+                  className={`network-option ${network === 'linea' ? 'active' : ''}`}
+                  onClick={() => handleNetworkSwitch('linea')}
+                >
+                  <div className="network-indicator" style={{ backgroundColor: '#3F88C5' }}></div>
+                  Linea
+                </div>
+              </div>
+            )}
+          </div>
         </div>
         
         <div className="content-container">
@@ -149,73 +239,66 @@ export default function NodeDashboard() {
                 </div>
               </div>
             </div>
-          ) : !network ? (
-            <div className="content-section">
-              <div className="network-alert">
-                <h3>Unsupported Network</h3>
-                <p>Please switch to Arbitrum network. The Pasifika Tech Hub is deployed on Arbitrum.</p>
-                <div className="network-info" style={{ marginTop: '20px', marginBottom: '20px' }}>
-                  <p>The project has migrated to Arbitrum for its blockchain infrastructure. Key benefits:</p>
-                  <ul style={{ textAlign: 'left', paddingLeft: '30px', marginTop: '10px' }}>
-                    <li>Exceptional throughput</li>
-                    <li>Security inherited from Ethereum</li>
-                    <li>Low transaction fees (important for Pacific Island users)</li>
-                  </ul>
-                </div>
-                <div className="network-buttons-large">
-                  <button 
-                    className="network-button-large"
-                    style={{ backgroundColor: '#9945FF' }}
-                    onClick={() => {
-                      // In a real implementation, this would use the wagmi switchNetwork function
-                      alert('Switching to Arbitrum network');
-                      // Simulate network switch
-                      setTimeout(() => setNetwork('arbitrum'), 500);
-                    }}
-                  >
-                    Switch to Arbitrum
-                  </button>
-                </div>
-              </div>
-            </div>
-          ) : nodeData.loading ? (
-            <div className="content-section">
-              <div className="loading-indicator">
-                <div className="spinner"></div>
-                <p>Loading node data...</p>
-              </div>
-            </div>
-          ) : !nodeData.isOperator ? (
-            <div className="content-section">
-              <div className="not-operator-message">
-                <h3>Not a Node Operator</h3>
-                <p>You are not registered as a node operator on {getNetworkDisplayName(network)}.</p>
-                <Link href="/services">
-                  <button 
-                    style={{
-                      padding: '12px 24px',
-                      backgroundColor: network === 'arbitrum' ? '#9945FF' : network === 'linea' ? '#3F88C5' : '#F9A620',
-                      color: '#FFFFFF',
-                      borderRadius: '8px',
-                      border: 'none',
-                      cursor: 'pointer',
-                      fontWeight: 'bold',
-                      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
-                      transition: 'all 0.2s ease',
-                    }}
-                  >
-                    Return to Services
-                  </button>
-                </Link>
-              </div>
-            </div>
           ) : (
             <div className="content-section">
               <div className="dashboard-header">
-                <div className="dashboard-network">
-                  <span className="network-label">Network:</span>
-                  <span className="network-value">{getNetworkDisplayName(network)}</span>
+                <div className="dashboard-network-info" style={{ borderColor: getNetworkColor(network) }}>
+                <div className="network-header" style={{ backgroundColor: getNetworkColor(network) }}>
+                  <h2>Network: {getNetworkDisplayName(network)}</h2>
                 </div>
+                <div className="network-content">
+                  <p>You are operating a node on the {getNetworkDisplayName(network)} network.</p>
+                  
+                  {/* Network-specific information */}
+                  {network === 'arbitrum' && (
+                    <div className="network-details">
+                      <p>Arbitrum uses optimistic rollups to provide high throughput and low fees while maintaining security.</p>
+                      <div className="network-stats">
+                        <div className="stat-item">
+                          <span className="stat-label">Transaction Speed</span>
+                          <span className="stat-value">~0.5-2 seconds</span>
+                        </div>
+                        <div className="stat-item">
+                          <span className="stat-label">Average Fee</span>
+                          <span className="stat-value">~0.0001 ETH</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {network === 'rootstock' && (
+                    <div className="network-details">
+                      <p>RootStock is a Bitcoin sidechain with EVM compatibility, allowing for smart contracts secured by Bitcoin.</p>
+                      <div className="network-stats">
+                        <div className="stat-item">
+                          <span className="stat-label">Transaction Speed</span>
+                          <span className="stat-value">~30 seconds</span>
+                        </div>
+                        <div className="stat-item">
+                          <span className="stat-label">Average Fee</span>
+                          <span className="stat-value">~0.00001 RBTC</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {network === 'linea' && (
+                    <div className="network-details">
+                      <p>Linea&apos;s zkEVM technology drastically reduces transaction costs while maintaining robust EVM compatibility.</p>
+                      <div className="network-stats">
+                        <div className="stat-item">
+                          <span className="stat-label">Transaction Speed</span>
+                          <span className="stat-value">~1-3 seconds</span>
+                        </div>
+                        <div className="stat-item">
+                          <span className="stat-label">Average Fee</span>
+                          <span className="stat-value">~0.00015 ETH</span>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
                 <div className="node-status">
                   <span className="status-indicator active"></span>
                   <span className="status-text">Node Active</span>
@@ -381,22 +464,43 @@ export default function NodeDashboard() {
                 </div>
               )}
               
-              {network === 'rootstock' && (
-                <div className="profit-sharing-info">
-                  <h3>Annual Profit Sharing</h3>
-                  <p>As a RootStock node operator, you are eligible for the annual profit sharing event (December 27 to December 24).</p>
-                  <div className="profit-sharing-stats">
-                    <div className="ps-stat">
-                      <span className="ps-label">Profit Share:</span>
-                      <span className="ps-value">50%</span>
-                    </div>
-                    <div className="ps-stat">
-                      <span className="ps-label">Next Distribution:</span>
-                      <span className="ps-value">December 24, 2025</span>
-                    </div>
+              {/* Annual Profit Sharing - shown for all networks */}
+              <div className="profit-sharing-info" style={{ borderColor: getNetworkColor(network) }}>
+                <h3>Annual Profit Sharing</h3>
+                <p>As a {getNetworkDisplayName(network)} node operator, you are eligible for the annual profit sharing event (December 27 to December 24).</p>
+                <div className="profit-sharing-stats">
+                  <div className="ps-stat">
+                    <span className="ps-label">Profit Share:</span>
+                    <span className="ps-value">50%</span>
                   </div>
+                  <div className="ps-stat">
+                    <span className="ps-label">Next Distribution:</span>
+                    <span className="ps-value">December 24, 2025</span>
+                  </div>
+                  
+                  {/* Network specific profit sharing info */}
+                  {network === 'arbitrum' && (
+                    <div className="ps-stat">
+                      <span className="ps-label">2024 Est. Distribution:</span>
+                      <span className="ps-value">0.25 ETH</span>
+                    </div>
+                  )}
+                  
+                  {network === 'rootstock' && (
+                    <div className="ps-stat">
+                      <span className="ps-label">2024 Est. Distribution:</span>
+                      <span className="ps-value">0.005 RBTC</span>
+                    </div>
+                  )}
+                  
+                  {network === 'linea' && (
+                    <div className="ps-stat">
+                      <span className="ps-label">2024 Est. Distribution:</span>
+                      <span className="ps-value">0.35 ETH</span>
+                    </div>
+                  )}
                 </div>
-              )}
+              </div>
             </div>
           )}
         </div>

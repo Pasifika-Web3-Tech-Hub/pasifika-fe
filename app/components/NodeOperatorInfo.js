@@ -18,17 +18,6 @@ export default function NodeOperatorInfo() {
       techType: 'Optimistic Rollups'
     },
     {
-      id: 'linea',
-      name: 'Linea',
-      totalNodes: '5',
-      minStake: '0.01 ETH',
-      fee: '0.25%',
-      contractAddress: '0x123...',
-      isDeployed: true,
-      color: '#3f88c5',
-      techType: 'zkEVM Technology'
-    },
-    {
       id: 'rootstock',
       name: 'RootStock (RSK)',
       totalNodes: '7',
@@ -38,6 +27,17 @@ export default function NodeOperatorInfo() {
       isDeployed: true,
       color: '#f9a620',
       techType: 'Bitcoin Sidechain'
+    },
+    {
+      id: 'linea',
+      name: 'Linea',
+      totalNodes: '5',
+      minStake: '0.01 ETH',
+      fee: '0.25%',
+      contractAddress: '0x123...',
+      isDeployed: true,
+      color: '#3f88c5',
+      techType: 'zkEVM Technology'
     }
   ];
 
@@ -45,7 +45,7 @@ export default function NodeOperatorInfo() {
     <div className="node-operator-info">
       <h2>Multi-Network Node Operator Information</h2>
       <p className="description">
-        The Pasifika Web3 Tech Hub operates across three networks: Linea, RootStock and Arbitrum.
+        The Pasifika Web3 Tech Hub operates across three networks: Arbitrum, RootStock and Linea.
       </p>
 
       <div className="networks-grid">
@@ -80,7 +80,11 @@ export default function NodeOperatorInfo() {
       
       <div className="component-action">
         <Link href="/node-dashboard">
-          <button className="view-details-button">Node Dashboard</button>
+          <button className="primary-button command-button">
+            <span className="button-icon">🖥️</span>
+            <span className="button-text">Node Operator Dashboard</span>
+            <span className="button-arrow">→</span>
+          </button>
         </Link>
       </div>
         
