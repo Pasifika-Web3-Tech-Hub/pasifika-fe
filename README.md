@@ -18,7 +18,7 @@ EVM Compatible networks, with their focus on decentralization, community governa
 
 ## Technical Advantages of Our Interoperability Approach
 
-Our platform operates across three complementary EVM Compatible chains: Linea, RSK (Rootstock), and Arbitrum. This wasn't a random selection, but a deliberate strategy to leverage the unique strengths of each while ensuring seamless interoperability:
+Our platform operates across three complementary EVM Compatible chains: Linea, RSK (Rootstock), and Arbitrum. This wasn't a random selection, but a deliberate strategy to leverage the unique strengths of each while ensuring seamless interoperability for the Pasifika Exchange - the first dedicated digital asset exchange for Pacific Islands:
 
 ### Linea: Scaling With Zero Knowledge
 Linea's zkEVM Layer-2 technology dramatically reduces transaction costs while maintaining Ethereum's robust security model. For communities where every fraction of a cent matters, this efficiency is crucial for financial inclusion.
@@ -26,18 +26,18 @@ Linea's zkEVM Layer-2 technology dramatically reduces transaction costs while ma
 ### RSK: Bitcoin Integration with Smart Contracts
 As a Bitcoin sidechain, RSK allows us to work with RBTC (Bitcoin on RSK) while leveraging the programmability of smart contracts. Our treasury was initially seeded with 27,281 RIF tokens received from the RSK Hactivator program, showcasing the real-world support this technology brings to Pacific innovation.
 
-### Arbitrum: Optimistic Rollups for Broader Integration
-Arbitrum's optimistic rollup technology gives us additional scaling options and ensures our platform remains connected to the broader Web3 ecosystem, expanding opportunities for Pacific Islanders through interoperable blockchain solutions.
+### Arbitrum: Optimistic Rollups for Scalability
+Arbitrum's optimistic rollup technology provides exceptional throughput capabilities and security inherited from Ethereum, expanding trading options available to Pacific Islanders through the Pasifika Exchange.
 
-## Building a Community Owned Financial System
+## Building the First Pacific Islands Exchange
 
-The technical architecture of our platform directly implements our community values through smart contracts:
+The technical architecture of our platform directly implements our community values through smart contracts and exchange functionality:
 
-- **Tiered Membership System**: We've created a simplified 3-tier structure (Guest, Member, Node Operator) with graduated fee structures (1%, 0.5%, 0.25%) that reward deeper community involvement.
+- **Exchange Features**: Our platform offers token swapping, liquidity provision, and cross-chain trading capabilities specifically designed for Pacific Island users and their unique needs.
 
-- **Annual Profit Sharing**: Every year from December 27 to December 24 (Pasifika Financial Year), 50% of treasury profits are distributed equally to all members, ensuring the community directly benefits from the platform's success.
+- **Tiered Membership System**: We've created a simplified 3-tier structure (Guest, Member, Node Operator) with graduated fee structures (1%, 0.5%, 0.25%) that reward deeper community involvement with reduced trading fees.
 
-- **Transparent Fund Management**: Our Pasifika Treasury contract enables transparent, secure management of community funds with multi-signature controls and clearly defined allocation processes.
+- **Transparent Fund Management**: Our Pasifika Treasury contract enables transparent, secure management of exchange funds with multi-signature controls and clearly defined allocation processes.
 
 ## Technical Components
 
@@ -234,7 +234,7 @@ sequenceDiagram
 
 ## Cross-Chain Smart Contract Interoperability
 
-The platform interacts with the following smart contracts deployed across multiple EVM Compatible networks (Arbitrum, Linea, and RootStock) with full interoperability:
+The platform interacts with the following smart contracts deployed across multiple EVM Compatible networks (Linea, RootStock, and Arbitrum) with full interoperability:
 
 1. **Membership Contract**: Manages membership tiers and access rights
 2. **Staking Contract**: Token staking for rewards and governance rights

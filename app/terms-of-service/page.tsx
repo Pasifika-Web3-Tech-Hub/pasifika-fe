@@ -57,8 +57,8 @@ export default function TermsOfService() {
               <p>The Pasifika Web3 Tech Hub offers a tiered membership system with the following levels:</p>
               <ul>
                 <li><strong>Guest (Tier 0):</strong> Free access with a 1% transaction fee and no profit-sharing eligibility.</li>
-                <li><strong>Member (Tier 1):</strong> Requires payment of 0.005 ETH with a 0.5% transaction fee, profit-sharing eligibility, and governance participation.</li>
-                <li><strong>Node Operator (Tier 2):</strong> Requires ETH staking with a 0.25% transaction fee, priority access, and enhanced profit-sharing.</li>
+                <li><strong>Member (Tier 1):</strong> Requires payment of 0.005 ETH (or 0.0001 RBTC on RootStock) with a 0.5% transaction fee, profit-sharing eligibility, and exchange benefits.</li>
+                <li><strong>Node Operator (Tier 2):</strong> Requires ETH staking (or RBTC staking on RootStock) with a 0.25% transaction fee, priority access, and enhanced profit-sharing.</li>
               </ul>
               <p>Membership fees are non-refundable. Your membership tier determines your transaction fees, governance rights, and profit-sharing eligibility.</p>
             </div>
@@ -69,7 +69,7 @@ export default function TermsOfService() {
               <ul>
                 <li>Must maintain active membership for at least 3 months before distribution</li>
                 <li>Minimum of 5 transactions on the platform during the financial year</li>
-                <li>Transaction volume of at least 1 ETH during the financial year</li>
+                <li>Transaction volume of at least 1 ETH (or equivalent 0.02 RBTC on RootStock) during the financial year</li>
                 <li>Distributions occur annually on December 24</li>
               </ul>
               <p>The Pasifika Financial Year runs from December 27 to December 24. 50% of treasury profits are distributed to eligible members. The actual share amount varies based on membership tier, activity level, and overall treasury performance.</p>

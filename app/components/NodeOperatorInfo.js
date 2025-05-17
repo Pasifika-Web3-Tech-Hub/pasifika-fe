@@ -32,7 +32,7 @@ export default function NodeOperatorInfo() {
       id: 'linea',
       name: 'Linea',
       totalNodes: '5',
-      minStake: '0.01 ETH',
+      minStake: '0.01 ETH / 0.0002 RBTC',
       fee: '0.25%',
       contractAddress: '0x123...',
       isDeployed: true,

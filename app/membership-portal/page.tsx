@@ -368,7 +368,7 @@ export default function MembershipPortal() {
                   <div className={`tier-card ${membershipStatus === 'Member' ? 'active' : ''}`}>
                     <div className="tier-header">
                       <h4 className="tier-name">Member (Tier 1)</h4>
-                      <div className="tier-price">0.005 ETH</div>
+                      <div className="tier-price">0.005 ETH or 0.0001 RBTC</div>
                     </div>
                     <div className="tier-benefits">
                       <ul>
@@ -386,7 +386,7 @@ export default function MembershipPortal() {
                           onClick={handleJoinMembership}
                           disabled={isPending || isLoading}
                         >
-                          {isPending || isLoading ? "Processing..." : "Join (0.005 ETH)"}
+                          {isPending || isLoading ? "Processing..." : "Join (0.005 ETH/0.0001 RBTC)"}
                         </button>
                       )}
                       {walletConnected && membershipStatus === 'Member' && (
@@ -410,7 +410,7 @@ export default function MembershipPortal() {
                   <div className={`tier-card ${membershipStatus === 'Node Operator' ? 'active' : ''}`}>
                     <div className="tier-header">
                       <h4 className="tier-name">Node Operator (Tier 2)</h4>
-                      <div className="tier-price">Requires ETH Staking</div>
+                      <div className="tier-price">Requires ETH or RBTC Staking</div>
                     </div>
                     <div className="tier-benefits">
                       <ul>
@@ -502,7 +502,7 @@ export default function MembershipPortal() {
                     <ul>
                       <li>Must maintain active membership for at least <span className="eligibility-highlight">3 months</span> before distribution</li>
                       <li>Minimum of <span className="eligibility-highlight">5 transactions</span> on the platform during the financial year</li>
-                      <li>Transaction volume of at least <span className="eligibility-highlight">1 ETH</span> during the financial year</li>
+                      <li>Transaction volume of at least <span className="eligibility-highlight">1 ETH</span> (or <span className="eligibility-highlight">0.02 RBTC</span> on RootStock) during the financial year</li>
                       <li>The Pasifika Financial Year runs from <span className="eligibility-highlight">December 27 to December 24</span></li>
                     </ul>
                     

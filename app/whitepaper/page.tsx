@@ -53,7 +53,7 @@ export default function Whitepaper() {
                 height={300}
                 className="whitepaper-logo"
               />
-              <h2>Pacific Values in Digital Form: A Multi-Network Community-Powered DePIN</h2>
+              <h2>Pacific Values in Digital Form: The First Exchange for Pacific Islands</h2>
               <p className="whitepaper-version">Version 3.0 | May 2025</p>
               <div className="whitepaper-divider"></div>
             </div>
@@ -64,11 +64,11 @@ export default function Whitepaper() {
             </p>
             
             <p>
-              Our platform operates across three complementary EVM Compatible chains: <strong>Linea</strong>, <strong>RootStock (RSK)</strong>, and <strong>Arbitrum</strong>. This interoperability approach provides flexibility, resilience, and increased accessibility for Pacific Island communities while leveraging the unique strengths of each blockchain network.
+              The Pasifika Exchange operates across three complementary EVM Compatible chains: <strong>Linea</strong>, <strong>RootStock (RSK)</strong>, and <strong>Arbitrum</strong>. This interoperability approach provides flexibility, resilience, and increased accessibility for Pacific Island communities while leveraging the unique strengths of each blockchain network to create the first dedicated digital asset exchange for Pacific Islands.
             </p>
             
             <p>
-              This whitepaper outlines our comprehensive approach to building a decentralized marketplace that connects community members, data providers, content creators, artisans, farmers, validators, and global consumers in an ecosystem that spans both digital and physical infrastructure.
+              This whitepaper outlines our comprehensive approach to building the first Exchange for Pacific Islands that connects community members, local businesses, traders, artisans, and global markets in an ecosystem that spans both digital and physical infrastructure.
             </p>
             
             <div className="challenges-box">
@@ -81,6 +81,47 @@ export default function Whitepaper() {
                 <li>Need for sustainable economic development models</li>
                 <li>Network dependency and single-chain vulnerability</li>
               </ul>
+            </div>
+            
+            <div className="membership-box" style={{ marginTop: '2rem', padding: '1.5rem', backgroundColor: isDarkMode ? '#2a2a2a' : '#f5f5f5', borderRadius: '8px', border: '1px solid ' + (isDarkMode ? '#444' : '#ddd') }}>
+              <h3 style={{ marginTop: 0 }}>Multi-Network Membership Tiers</h3>
+              <p>Our platform offers three membership tiers with cross-chain functionality:</p>
+              
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginTop: '1.5rem' }}>
+                <div style={{ padding: '1.25rem', backgroundColor: isDarkMode ? '#333' : '#fff', borderRadius: '8px', boxShadow: isDarkMode ? '0 2px 8px rgba(0,0,0,0.3)' : '0 2px 8px rgba(0,0,0,0.1)' }}>
+                  <h4 style={{ color: '#FF5722', marginTop: 0, borderBottom: '2px solid #FF5722', paddingBottom: '0.5rem' }}>Guest (Tier 0)</h4>
+                  <p style={{ fontWeight: 600 }}>Free Access</p>
+                  <ul style={{ paddingLeft: '1.5rem', marginBottom: 0 }}>
+                    <li>1% transaction fee</li>
+                    <li>Basic platform access</li>
+                    <li>No profit-sharing eligibility</li>
+                  </ul>
+                </div>
+                
+                <div style={{ padding: '1.25rem', backgroundColor: isDarkMode ? '#333' : '#fff', borderRadius: '8px', boxShadow: isDarkMode ? '0 2px 8px rgba(0,0,0,0.3)' : '0 2px 8px rgba(0,0,0,0.1)' }}>
+                  <h4 style={{ color: '#FF5722', marginTop: 0, borderBottom: '2px solid #FF5722', paddingBottom: '0.5rem' }}>Member (Tier 1)</h4>
+                  <p style={{ fontWeight: 600 }}>0.005 ETH or 0.0001 RBTC</p>
+                  <ul style={{ paddingLeft: '1.5rem', marginBottom: 0 }}>
+                    <li>0.5% transaction fee</li>
+                    <li>Full Exchange access</li>
+                    <li>Profit-sharing eligibility</li>
+                    <li>Cross-chain functionality</li>
+                  </ul>
+                </div>
+                
+                <div style={{ padding: '1.25rem', backgroundColor: isDarkMode ? '#333' : '#fff', borderRadius: '8px', boxShadow: isDarkMode ? '0 2px 8px rgba(0,0,0,0.3)' : '0 2px 8px rgba(0,0,0,0.1)' }}>
+                  <h4 style={{ color: '#FF5722', marginTop: 0, borderBottom: '2px solid #FF5722', paddingBottom: '0.5rem' }}>Node Operator (Tier 2)</h4>
+                  <p style={{ fontWeight: 600 }}>ETH or RBTC Staking</p>
+                  <ul style={{ paddingLeft: '1.5rem', marginBottom: 0 }}>
+                    <li>0.25% transaction fee</li>
+                    <li>Priority Exchange access</li>
+                    <li>Enhanced profit-sharing</li>
+                    <li>Network operation rewards</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <p style={{ marginTop: '1.5rem', fontSize: '0.95rem', fontStyle: 'italic' }}>Annual profit-sharing requires a minimum transaction volume of 1 ETH (or equivalent 0.02 RBTC on RootStock) during the Pasifika Financial Year (December 27 to December 24).</p>
             </div>
             
             <p>
@@ -308,7 +349,7 @@ export default function Whitepaper() {
               <li><strong>Pacific Values in Digital Form:</strong> Built from the ground up to encode the principle &quot;If we take care of our own, they will take care of us&quot; into smart contract architecture</li>
               <li><strong>Blockchain Interoperability:</strong> Strategic deployment across Linea (zkEVM), RootStock (Bitcoin sidechain), and Arbitrum (optimistic rollups) for complementary strengths and cross-chain functionality</li>
               <li><strong>Integrated Physical-Digital Infrastructure:</strong> Seamless connection between computational resources, physical distribution, and digital marketplace</li>
-              <li><strong>Community Governance:</strong> Transparent decision-making with special provisions ensuring Pacific Islander representation and leadership</li>
+              <li><strong>Exchange Trading:</strong> Seamless token swapping, liquidity provision, and cross-chain trading capabilities specifically designed for Pacific Island users</li>
               <li><strong>Profit-Sharing Model:</strong> Implementation of the principle &quot;If we take care of our own, they will take care of us&quot; through annual distributions</li>
               <li><strong>Island-Specific Localization:</strong> Comprehensive adaptation for each island&apos;s unique cultural context and infrastructure needs</li>
             </ol>

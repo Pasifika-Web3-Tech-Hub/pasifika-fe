@@ -97,13 +97,13 @@ export default function MoneyTransfer() {
     const mockHistory = [
       { 
         recipient: "0x1234...5678", 
-        amount: "0.01 ETH", 
+        amount: "0.01 ETH / 0.0002 RBTC", 
         date: new Date(Date.now() - 86400000).toLocaleString(),
         status: "Completed"
       },
       { 
         recipient: "0x8765...4321", 
-        amount: "0.05 ETH", 
+        amount: "0.05 ETH / 0.001 RBTC", 
         date: new Date(Date.now() - 172800000).toLocaleString(),
         status: "Completed"
       }
@@ -319,9 +319,9 @@ export default function MoneyTransfer() {
                   </div>
                   
                   <div className="fee-info">
-                    <p>Network Fee: <span className="fee-amount">0.001 ETH</span></p>
-                    <p>Service Fee ({membershipLevel === "Member" ? "0.5%" : membershipLevel === "Node Operator" ? "0.25%" : "1%"}): <span className="fee-amount">{feeEstimate} ETH</span></p>
-                    <p>Total: <span className="total-amount">{amount ? (parseFloat(amount) + parseFloat(feeEstimate) + 0.001).toFixed(6) : "0.001"} ETH</span></p>
+                    <p>Network Fee: <span className="fee-amount">0.001 ETH / 0.00002 RBTC</span></p>
+                    <p>Service Fee ({membershipLevel === "Member" ? "0.5%" : membershipLevel === "Node Operator" ? "0.25%" : "1%"}): <span className="fee-amount">{feeEstimate} ETH / {(parseFloat(feeEstimate) * 0.02).toFixed(6)} RBTC</span></p>
+                    <p>Total: <span className="total-amount">{amount ? (parseFloat(amount) + parseFloat(feeEstimate) + 0.001).toFixed(6) : "0.001"} ETH / {amount ? ((parseFloat(amount) + parseFloat(feeEstimate) + 0.001) * 0.02).toFixed(6) : "0.00002"} RBTC</span></p>
                   </div>
                   
                   <button 

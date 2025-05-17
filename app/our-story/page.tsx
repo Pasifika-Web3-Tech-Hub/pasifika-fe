@@ -81,7 +81,7 @@ export default function OurStory() {
               borderLeft: '4px solid #FF5722'
             }}>
               <p style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
-                <strong>&quot;If we take care of our own, they will take care of us&quot;</strong> — This powerful concept of reciprocity and community care isn&apos;t just a nice sentiment, it&apos;s the architectural blueprint for our entire system. Our platform operates across multiple EVM Compatible chains: <strong>Arbitrum</strong>, <strong>RootStock (RSK)</strong>, and <strong>Linea</strong> to create a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders through blockchain interoperability.
+                <strong>&quot;If we take care of our own, they will take care of us&quot;</strong> — This powerful concept of reciprocity and community care isn&apos;t just a nice sentiment, it&apos;s the architectural blueprint for our entire system. Our platform leverages interoperability across three EVM Compatible chains: <strong>Linea</strong>, <strong>RootStock (RSK)</strong>, and <strong>Arbitrum</strong> to create the first dedicated Exchange for Pacific Islands, fostering a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders.
               </p>
             </div>
             
@@ -351,8 +351,8 @@ export default function OurStory() {
               </div>
               
               <div>
-                <h4 style={{ color: isDarkMode ? '#9945ff' : '#9945ff', margin: '0' }}>Arbitrum: Optimistic Rollups for Broader Integration</h4>
-                <p>Arbitrum&apos;s optimistic rollup technology gives us additional scaling options and ensures our platform remains connected to the broader Ethereum ecosystem, expanding opportunities for Pacific Islanders.</p>
+                <h4 style={{ color: isDarkMode ? '#9945ff' : '#9945ff', margin: '0' }}>Arbitrum: Optimistic Rollups for Scalability</h4>
+                <p>Arbitrum&apos;s optimistic rollup technology provides exceptional throughput capabilities and security inherited from Ethereum, expanding opportunities for Pacific Islanders through our Exchange platform.</p>
               </div>
             </div>
             

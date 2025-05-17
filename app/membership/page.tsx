@@ -151,7 +151,7 @@ export default function Membership() {
                 
                 <div className="tier-overview-card">
                   <h4>Member (Tier 1)</h4>
-                  <p className="tier-price">0.005 ETH</p>
+                  <p className="tier-price">0.005 ETH or 0.0001 RBTC</p>
                   <ul className="tier-features">
                     <li>All Guest benefits</li>
                     <li><strong>0.5%</strong> transaction fee</li>
@@ -163,7 +163,7 @@ export default function Membership() {
                 
                 <div className="tier-overview-card">
                   <h4>Node Operator (Tier 2)</h4>
-                  <p className="tier-price">Requires ETH Staking</p>
+                  <p className="tier-price">Requires ETH or RBTC Staking</p>
                   <ul className="tier-features">
                     <li>All Member benefits</li>
                     <li><strong>0.25%</strong> transaction fee</li>
@@ -183,7 +183,7 @@ export default function Membership() {
               <ul>
                 <li>Must maintain active membership for at least <strong>3 months</strong> before distribution</li>
                 <li>Minimum of <strong>5 transactions</strong> on the platform during the financial year</li>
-                <li>Transaction volume of at least <strong>1 ETH</strong> during the financial year</li>
+                <li>Transaction volume of at least <strong>1 ETH</strong> (or equivalent <strong>0.02 RBTC</strong> on RootStock) during the financial year</li>
                 <li>The Pasifika Financial Year runs from <strong>December 27 to December 24</strong></li>
               </ul>
               
@@ -350,7 +350,7 @@ export default function Membership() {
                       <option value="education">Education & Resources</option>
                       <option value="communityInitiatives">Community Initiatives</option>
                       <option value="nodeOperation">Node Operation</option>
-                      <option value="governance">DAO Governance</option>
+                      <option value="exchange">Exchange Trading</option>
                     </select>
                   </div>
                   
