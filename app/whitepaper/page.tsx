@@ -262,13 +262,34 @@ export default function Whitepaper() {
             
             <h3>3.2 Digital Infrastructure</h3>
             
-            <h4>3.2.1 Arbitrum Blockchain Layer</h4>
+            <h4>3.2.1 Multi-Chain Blockchain Layer</h4>
+            <p>The Pasifika Web3 Tech Hub operates across three complementary EVM-compatible blockchain networks to create a resilient, flexible, and user-focused infrastructure:</p>
+
+            <h5>RootStock (RSK):</h5>
             <ul>
-              <li>Layer-2 scaling for lower transaction costs</li>
-              <li>EVM compatibility for developer tools</li>
-              <li>Smart contract framework for marketplace logic</li>
-              <li>Fraud-proof security model</li>
-              <li>Support for complex logic in marketplace contracts</li>
+              <li>Bitcoin sidechain with EVM compatibility</li>
+              <li>Bitcoin-level security for critical transactions</li>
+              <li>Native RBTC currency for Bitcoin ecosystem integration</li>
+              <li>Familiar smart contract framework for developers</li>
+              <li>Merge-mining with Bitcoin for enhanced security</li>
+            </ul>
+
+            <h5>Arbitrum:</h5>
+            <ul>
+              <li>Optimistic rollup layer-2 scaling solution</li>
+              <li>Lower transaction costs with Ethereum security</li>
+              <li>Rich ecosystem of existing protocols and applications</li>
+              <li>EVM compatibility for marketplace smart contracts</li>
+              <li>Enhanced throughput for high-volume periods</li>
+            </ul>
+
+            <h5>Linea:</h5>
+            <ul>
+              <li>Zero-knowledge rollup technology for scaling</li>
+              <li>Mathematically provable transaction validation</li>
+              <li>Reduced settlement times for trading operations</li>
+              <li>EVM compatibility for consistent developer experience</li>
+              <li>Integration with Ethereum&apos;s robust security model</li>
             </ul>
             
             <h4>3.2.2 Marketplace Interface</h4>
@@ -282,15 +303,18 @@ export default function Whitepaper() {
             
             <h3>3.3 Pasifika Exchange</h3>
             <p>
-              The Pasifika Exchange represents a cornerstone of our platform infrastructure as the first decentralized exchange designed specifically for Pacific Island communities. This groundbreaking financial component will:
+              The Pasifika Exchange represents a cornerstone of our platform infrastructure as the first decentralized exchange designed specifically for Pacific Island communities with full cross-chain interoperability across RootStock, Arbitrum, and Linea networks. This groundbreaking financial component will:
             </p>
             <ul>
-              <li>Enable secure trading of digital assets with low fees and cross-island interoperability</li>
-              <li>Facilitate remittances and cross-border transfers between islands</li>
-              <li>Provide liquidity for local asset trading and community tokens</li>
+              <li>Enable secure trading of digital assets with low fees across all three blockchain networks</li>
+              <li>Facilitate cross-chain swaps between RootStock (Bitcoin ecosystem), Arbitrum, and Linea</li>
+              <li>Provide seamless liquidity bridging between networks through integrated cross-chain infrastructure</li>
+              <li>Support network-specific assets and tokens while maintaining interoperability</li>
               <li>Implement specialized order matching for low-volume but culturally significant assets</li>
-              <li>Support fiat on/off ramps with localized payment methods</li>
-              <li>Feature an intuitive interface optimized for island connectivity constraints</li>
+              <li>Optimize gas fees by selecting the most cost-effective network for different transaction types</li>
+              <li>Support fiat on/off ramps with localized payment methods across all supported chains</li>
+              <li>Feature an intuitive interface optimized for island connectivity constraints with network switching capabilities</li>
+              <li>Provide resilience through multi-chain redundancy, ensuring platform availability even during network congestion</li>
             </ul>
             
             <h2>5. MARKETPLACE DESIGN</h2>
