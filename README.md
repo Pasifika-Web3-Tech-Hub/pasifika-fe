@@ -18,7 +18,7 @@ EVM Compatible networks, with their focus on decentralization, community governa
 
 ## Technical Advantages of Our Interoperability Approach
 
-Our platform operates across three complementary EVM Compatible chains: Linea, RSK (Rootstock), and Arbitrum. This wasn't a random selection, but a deliberate strategy to leverage the unique strengths of each while ensuring seamless interoperability for the Pasifika Exchange - the first dedicated digital asset exchange for Pacific Islands:
+The Pasifika Web3 Tech Hub has officially migrated to Arbitrum as our primary blockchain infrastructure, with continued support for interoperability with RSK (Rootstock) and Linea. Our proof of concept and use cases are now live on Arbitrum testnet. This strategic selection leverages the unique strengths of each chain while ensuring seamless interoperability for the Pasifika Exchange - the first dedicated digital asset exchange for Pacific Islands:
 
 ### Linea: Scaling With Zero Knowledge
 Linea's zkEVM Layer-2 technology dramatically reduces transaction costs while maintaining Ethereum's robust security model. For communities where every fraction of a cent matters, this efficiency is crucial for financial inclusion.
@@ -26,14 +26,18 @@ Linea's zkEVM Layer-2 technology dramatically reduces transaction costs while ma
 ### RSK: Bitcoin Integration with Smart Contracts
 As a Bitcoin sidechain, RSK allows us to work with RBTC (Bitcoin on RSK) while leveraging the programmability of smart contracts. Our treasury was initially seeded with 27,281 RIF tokens received from the RSK Hactivator program, showcasing the real-world support this technology brings to Pacific innovation.
 
-### Arbitrum: Optimistic Rollups for Scalability
-Arbitrum's optimistic rollup technology provides exceptional throughput capabilities and security inherited from Ethereum, expanding trading options available to Pacific Islanders through the Pasifika Exchange.
+### Arbitrum: Our Primary Network
+Arbitrum was chosen as our primary blockchain infrastructure for its exceptional throughput capabilities, security inherited from Ethereum, and low transaction fees (crucial for Pacific Island users). Arbitrum's optimistic rollup technology expands trading options available to Pacific Islanders through the Pasifika Exchange while keeping costs accessible.
 
 ## Building the First Pacific Islands Exchange
 
 The technical architecture of our platform directly implements our community values through smart contracts and exchange functionality:
 
-- **Exchange Features**: Our platform offers token swapping, liquidity provision, and cross-chain trading capabilities specifically designed for Pacific Island users and their unique needs.
+- **Exchange Features**: Our platform offers token swapping, liquidity provision, and cross-chain bridging capabilities specifically designed for Pacific Island users and their unique needs.
+
+- **Cross-Chain Bridge**: We've integrated a Cross-Chain Bridge component that enables seamless token transfers between supported networks (Arbitrum, RootStock, and Linea) with an intuitive user interface and real-time token balance display.
+
+- **Multi-Network Support**: Users can easily switch between networks (Arbitrum, RootStock, Linea) with our network manager and view token balances across all supported chains.
 
 - **Tiered Membership System**: We've created a simplified 3-tier structure (Guest, Member, Node Operator) with graduated fee structures (1%, 0.5%, 0.25%) that reward deeper community involvement with reduced trading fees.
 
@@ -48,17 +52,20 @@ This project is built using:
 - **Multi-Network Support**:
   - Network-specific contract loading
   - Dynamic network switching
-  - Cross-chain compatibility
+  - Cross-chain compatibility via Cross-Chain Bridge
+  - Token mappings across Arbitrum, RootStock, and Linea networks
 - **Web3 Integration**:
-  - Wagmi library for cross-chain interactions
+  - Wagmi v2 library for cross-chain interactions
   - Dynamic Labs SDK for multi-chain wallet connection
   - EIP-712 for typed data signing
   - Viem for interoperable smart contract interactions
+  - React-toastify for transaction notifications
 - **Smart Contracts**:
   - Membership tiers (Guest, Member, Node Operator)
   - Staking contract
   - Treasury management with profit sharing program
   - Physical item NFT representation
+  - Exchange contracts for token swapping
 - **Form Handling**:
   - Formspree for contact and registration submissions
   - Client-side validation with terms of service agreement
@@ -148,7 +155,12 @@ flowchart TD
     
     EX --> EXA[Token Swapping]
     EX --> EXB[Liquidity Provision]
-    EX --> EXC[Cross-Chain Trading]
+    EX --> EXC[Cross-Chain Bridge]
+    EX --> EXD[Token Balance Display]
+    EXC --> CCB1[Source Chain Selection]
+    EXC --> CCB2[Target Chain Selection]
+    EXC --> CCB3[Token Selection]
+    EXC --> CCB4[Amount Input]
 ```
 
 ## User Flow Process
