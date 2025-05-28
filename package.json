@@ -20,6 +20,7 @@
     "next": "13.5.11",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-toastify": "^11.0.5",
     "viem": "*",
     "wagmi": "^2.5.7"
   },
