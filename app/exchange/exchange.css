@@ -214,28 +214,33 @@
 }
 
 .feature-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 32px 1fr;
   align-items: center;
-  gap: 10px;
   padding: 10px 5px;
 }
 
 .feature-icon {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 24px;
+  width: 24px;
   height: 24px;
   background: linear-gradient(135deg, #ff6b00 0%, #ff9e00 100%);
   color: white;
   font-weight: bold;
   border-radius: 50%;
   font-size: 14px;
+  margin: 0;
+  text-align: center;
+  line-height: 1;
 }
 
 .feature-text {
   font-size: 16px;
   line-height: 24px;
+  margin: 0;
+  padding-left: 8px;
 }
 
 .action-button:hover:not(:disabled) {
