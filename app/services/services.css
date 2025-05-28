@@ -342,3 +342,69 @@
     flex-direction: column;
   }
 }
+
+/* Exchange section styles */
+.inactive {
+  opacity: 0.7;
+}
+
+.active {
+  border: 1px solid rgba(255, 107, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(255, 107, 0, 0.1);
+}
+
+.production-notice {
+  background-color: #333;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.network-list-mini {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0;
+  flex-wrap: wrap;
+}
+
+.network-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.action-link {
+  text-decoration: none;
+}
+
+.exchange-button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #ff6b00 0%, #ff9e00 100%);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(255, 107, 0, 0.2);
+}
+
+.exchange-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 107, 0, 0.3);
+}
+
+/* Dark mode adjustments for Exchange */
+.dark .network-badge {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .active {
+  border-color: rgba(255, 107, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(255, 107, 0, 0.2);
+}

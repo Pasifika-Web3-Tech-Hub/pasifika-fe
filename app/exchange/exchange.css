@@ -1,3 +1,9 @@
+/* Import shared styles */
+@import url('../page.css');
+@import url('../shared-pages.css');
+@import url('./header-fix.css');
+
+/* Exchange Page specific styles */
 .exchange-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -23,10 +29,14 @@
   border: none;
   color: var(--foreground-dim);
   font-size: 1.1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
 }
 
 .tab-button:hover {
@@ -35,16 +45,36 @@
 }
 
 .tab-button.active {
-  color: var(--foreground);
-  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  background: linear-gradient(135deg, #ff6b00 0%, #ff9e00 100%);
+  box-shadow: 0 2px 4px rgba(255, 107, 0, 0.2);
 }
 
-.card {
+.tab-icon {
+  font-size: 1.2rem;
+}
+
+.exchange-panel {
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  border-radius: 16px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-panel {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.welcome-content {
+  padding: 2rem;
 }
 
 .card-title {
@@ -252,6 +282,100 @@
   position: relative;
   width: 80px;
   height: 16px;
+}
+
+/* Dark mode adjustments */
+.dark .page-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dark .tab-button {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dark .tab-button:hover {
+  color: white;
+}
+
+.dark .welcome-description {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dark .network-details p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .network-badges {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .network-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .network-card {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .exchange-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    flex: 1 1 calc(50% - 0.5rem);
+    justify-content: center;
+  }
+}
+
+/* Network list styling */
+.network-info {
+  margin: 1.5rem 0;
+}
+
+/* Connect Wallet button styling */
+.connect-wallet-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.connect-button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #ff6b00 0%, #ff9e00 100%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 107, 0, 0.2);
+}
+
+.connect-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(255, 107, 0, 0.3);
+}
+
+.network-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+.network-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  font-weight: 500;
 }
 
 .loading:after {

@@ -9,6 +9,7 @@ import "./services.css";
 import PhysicalItemNFTInfo from '../components/PhysicalItemNFTInfo.js';
 import NodeOperatorInfo from '../components/NodeOperatorInfo.js';
 import TreasuryInfo from '../components/TreasuryInfo.js';
+import ExchangeInfo from '../components/ExchangeInfo.js';
 import '../components/NodeOperator.css';
 import PasifikaWalletConnect from '../components/PasifikaWalletConnect';
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
@@ -360,13 +361,15 @@ export default function Services() {
                 </div>
               </div>
               
-              <div className="smart-contract-card inactive">
+              <div className="smart-contract-card active">
                 <div className="card-header">
                   <h3>Pasifika Exchange</h3>
                   <div className="component-icon"><span className="emoji-fix">🌊</span></div>
                 </div>
                 <p>The first cross-chain decentralized exchange designed specifically for Pacific Island communities, enabling secure trading of digital assets with low fees across multiple blockchain networks and cross-island interoperability.</p>
-                <div className="production-notice">Coming soon in 2025</div>
+                <div className="demo-component">
+                  <ExchangeInfo />
+                </div>
               </div>
             </div>
           </div>

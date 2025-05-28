@@ -1,6 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Providers from "@/lib/providers";
+import dynamic from "next/dynamic";
+
+// Import the MetaMaskProviderFix component with dynamic import to ensure it only loads on client
+const MetaMaskProviderFix = dynamic(
+  () => import('./components/MetaMaskProviderFix'),
+  { ssr: false }
+);
 
 export const metadata: Metadata = {
   title: "Pasifika",
@@ -14,7 +21,25 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Add a script to prevent MetaMask mobile provider errors */}
+        <script dangerouslySetInnerHTML={{ __html: `
+          if (typeof window !== 'undefined' && window.ethereum && window.ethereum.isMetaMask) {
+            const originalProvider = window.ethereum;
+            window.ethereum = new Proxy(originalProvider, {
+              get: function(target, prop) {
+                if (prop === 'getMobileProvider') {
+                  return function() { return null; };
+                }
+                return target[prop];
+              }
+            });
+            console.log('MetaMask provider patched in head');
+          }
+        `}} />
+      </head>
       <body style={{ fontFamily: 'system-ui, sans-serif' }}>
+        <MetaMaskProviderFix />
         <Providers>{children}</Providers>
       </body>
     </html>
