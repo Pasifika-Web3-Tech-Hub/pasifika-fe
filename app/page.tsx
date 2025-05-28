@@ -63,7 +63,6 @@ export default function Main() {
           <div className="nav-menu">
             <div className="nav-item">
               <button
-                className="btn btn-primary"
                 onClick={() => {
                   const tokenBanner = document.querySelector('.token-banner');
                   if (tokenBanner) {
@@ -77,6 +76,28 @@ export default function Main() {
                       behavior: 'smooth'
                     });
                   }
+                }}
+                style={{
+                  display: 'inline-block',
+                  padding: '12px 25px',
+                  background: 'linear-gradient(to right, var(--orange), var(--orange-light))',
+                  color: 'white',
+                  borderRadius: '4px',
+                  textDecoration: 'none',
+                  fontWeight: '500',
+                  fontSize: '16px',
+                  transition: 'opacity 0.3s, transform 0.3s',
+                  border: 'none',
+                  cursor: 'pointer',
+                  minWidth: '140px'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.opacity = '0.9';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.opacity = '1';
+                  e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
                 Login
@@ -98,6 +119,13 @@ export default function Main() {
               <button 
                 className="btn btn-primary"
                 onClick={() => window.location.href = "/learn-more"}
+                style={{
+                  padding: '12px 30px',
+                  fontSize: '16px',
+                  fontWeight: '500',
+                  borderRadius: '30px',
+                  boxShadow: '0 4px 8px rgba(255, 87, 34, 0.3)'
+                }}
               >
                 Learn More and Get Started
               </button>
@@ -158,10 +186,11 @@ export default function Main() {
               style={{
                 display: 'inline-block',
                 padding: '12px 30px',
-                backgroundColor: '#FF5722',
+                background: 'linear-gradient(to right, #FF5722, #FF9800)',
                 color: 'white',
                 borderRadius: '30px',
                 textDecoration: 'none',
+                fontSize: '16px',
                 fontWeight: '500',
                 transition: 'all 0.3s ease',
                 boxShadow: '0 4px 8px rgba(255, 87, 34, 0.3)',

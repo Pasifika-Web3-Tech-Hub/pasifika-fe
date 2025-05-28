@@ -56,14 +56,35 @@ export default function PasifikaWalletConnect() {
         </div>
       ) : (
         // Connect wallet view
-        <div className="connect-wallet-container">
+        <div className="connect-wallet-container" style={{ display: 'flex', justifyContent: 'center', width: '100%', margin: '20px 0' }}>
           {connecting ? (
             // Show the Dynamic Labs widget only when actively connecting
             <DynamicWidget />
           ) : (
             <button 
-              className={styles['connect-button']}
               onClick={handleConnectWallet}
+              style={{
+                display: 'inline-block',
+                padding: '12px 30px',
+                background: 'linear-gradient(to right, #FF5722, #FF9800)',
+                color: 'white',
+                borderRadius: '30px',
+                textDecoration: 'none',
+                fontSize: '16px',
+                fontWeight: '500',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 4px 8px rgba(255, 87, 34, 0.3)',
+                border: 'none',
+                cursor: 'pointer'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-3px)';
+                e.currentTarget.style.boxShadow = '0 6px 12px rgba(255, 87, 34, 0.4)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = '0 4px 8px rgba(255, 87, 34, 0.3)';
+              }}
             >
               Connect Wallet
             </button>

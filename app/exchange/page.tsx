@@ -151,16 +151,16 @@ export default function ExchangePage() {
               
               <div className="features-list">
                 <div className="feature-item">
-                  <div className="feature-icon">✓</div>
-                  <div>Low fees across all supported networks</div>
+                  <span className="feature-icon">✓</span>
+                  <span className="feature-text">Low fees across all supported networks</span>
                 </div>
                 <div className="feature-item">
-                  <div className="feature-icon">✓</div>
-                  <div>Cross-chain interoperability</div>
+                  <span className="feature-icon">✓</span>
+                  <span className="feature-text">Cross-chain interoperability</span>
                 </div>
                 <div className="feature-item">
-                  <div className="feature-icon">✓</div>
-                  <div>Local token support</div>
+                  <span className="feature-icon">✓</span>
+                  <span className="feature-text">Local token support</span>
                 </div>
               </div>
               
