@@ -208,16 +208,20 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin: 28px 0;
+  margin: 28px auto;
   width: 100%;
   max-width: 420px;
+  align-items: center;
 }
 
 .feature-item {
   display: grid;
   grid-template-columns: 32px 1fr;
   align-items: center;
+  justify-content: start;
   padding: 10px 5px;
+  width: 100%;
+  max-width: 320px;
 }
 
 .feature-icon {
@@ -241,6 +245,7 @@
   line-height: 24px;
   margin: 0;
   padding-left: 8px;
+  text-align: left;
 }
 
 .action-button:hover:not(:disabled) {
