@@ -92,8 +92,8 @@ export default function ExchangeInfo() {
       <div className="fee-tier-info">
         <h4>3-Tier Fee Structure</h4>
         <ul>
-          <li><strong>Guest:</strong> 0.50% fee</li>
-          <li><strong>Member:</strong> 0.30% fee</li>
+          <li><strong>Guest:</strong> 1.00% fee</li>
+          <li><strong>Member:</strong> 0.50% fee</li>
           <li><strong>Node Operator:</strong> 0.25% fee</li>
         </ul>
         <p>
