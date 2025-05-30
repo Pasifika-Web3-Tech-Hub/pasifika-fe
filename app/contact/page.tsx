@@ -106,8 +106,7 @@ export default function Contact() {
               <div>
                 <h3>Contact Information</h3>
                 <p><strong>Email:</strong> info@pasifika.xyz</p>
-                <p><strong>Whatsapp:</strong> +676 7760129</p>
-                <p><strong>Location:</strong> To be confirmed (Headquarters)</p>
+                <p><strong>Location:</strong> Pacific Islands</p>
               
                 <h3>Regional Representatives</h3>
                 <p>We have regional representatives in Fiji, Tonga, Samoa, Tuvalu, Niue, Cook Islands, Federated States of Micronesia, Honolulu (Hawaii), Vanuatu, Solomon Islands, Papua New Guinea, New Zealand and Australia.</p>
