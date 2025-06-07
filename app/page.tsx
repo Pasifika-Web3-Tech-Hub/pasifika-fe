@@ -61,48 +61,7 @@ export default function Main() {
           </div>
           
           <div className="nav-menu">
-            <div className="nav-item">
-              <button
-                onClick={() => {
-                  const tokenBanner = document.querySelector('.token-banner');
-                  if (tokenBanner) {
-                    // Use scrollIntoView with an offset to ensure the banner is visible
-                    const headerHeight = 80; // Height of the fixed header
-                    const yOffset = -headerHeight; // Offset to account for the fixed header
-                    const y = tokenBanner.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                    
-                    window.scrollTo({
-                      top: y,
-                      behavior: 'smooth'
-                    });
-                  }
-                }}
-                style={{
-                  display: 'inline-block',
-                  padding: '12px 25px',
-                  background: 'linear-gradient(to right, var(--orange), var(--orange-light))',
-                  color: 'white',
-                  borderRadius: '4px',
-                  textDecoration: 'none',
-                  fontWeight: '500',
-                  fontSize: '16px',
-                  transition: 'opacity 0.3s, transform 0.3s',
-                  border: 'none',
-                  cursor: 'pointer',
-                  minWidth: '140px'
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.opacity = '0.9';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.opacity = '1';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                }}
-              >
-                Login
-              </button>
-            </div>
+            {/* Login button removed */}
           </div>
         </div>
       </div>

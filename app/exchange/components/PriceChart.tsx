@@ -108,6 +108,41 @@ export default function PriceChart({
     
     return `M ${points.join(' L ')}`;
   };
+  
+  // Create SVG path for the gradient-filled area below the chart line
+  const createAreaPath = () => {
+    if (priceHistory.length === 0) return '';
+    
+    // Calculate points for line
+    const linePoints = priceHistory.map((point, index) => {
+      const x = padding + (index * (innerWidth / (priceHistory.length - 1)));
+      const y = padding + innerHeight - ((point.price - minPrice) / range * innerHeight);
+      return `${x},${y}`;
+    });
+    
+    // Create a path that includes the line points and then goes back along the bottom
+    const startX = padding;
+    const endX = padding + innerWidth;
+    const bottomY = padding + innerHeight;
+    
+    return `M ${startX},${bottomY} L ${linePoints.join(' L ')} L ${endX},${bottomY} Z`;
+  };
+  
+  // Calculate price change percentage
+  const calculatePriceChange = () => {
+    if (priceHistory.length < 2) return { percent: 0, isPositive: true };
+    
+    const oldPrice = priceHistory[0].price;
+    const newPrice = priceHistory[priceHistory.length - 1].price;
+    const change = ((newPrice - oldPrice) / oldPrice) * 100;
+    
+    return {
+      percent: Math.abs(change).toFixed(2),
+      isPositive: change >= 0
+    };
+  };
+  
+  const priceChange = calculatePriceChange();
 
   if (isLoading) {
     return (
@@ -129,25 +164,61 @@ export default function PriceChart({
     <div className="card">
       <h3 className="card-title">{tokenSymbol} Price Chart</h3>
       
-      <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
-        <div style={{ fontSize: '0.85rem', color: 'var(--foreground-dim)' }}>
-          Current Price:
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', padding: '0 10px' }}>
+        <div style={{ textAlign: 'left' }}>
+          <div style={{ fontSize: '0.85rem', color: 'var(--foreground-dim)' }}>
+            Current Price:
+          </div>
+          <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
+            ${priceHistory.length > 0 ? priceHistory[priceHistory.length - 1].price.toFixed(2) : '0'}
+          </div>
         </div>
-        <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
-          ${priceHistory.length > 0 ? priceHistory[priceHistory.length - 1].price.toFixed(2) : '0'}
+        
+        <div style={{
+          textAlign: 'right',
+          padding: '6px 12px',
+          borderRadius: '4px',
+          backgroundColor: priceChange.isPositive ? 'rgba(46, 200, 94, 0.1)' : 'rgba(255, 91, 87, 0.1)',
+          border: `1px solid ${priceChange.isPositive ? 'rgba(46, 200, 94, 0.3)' : 'rgba(255, 91, 87, 0.3)'}`
+        }}>
+          <div style={{ fontSize: '0.85rem', color: 'var(--foreground-dim)' }}>
+            30-Day Change
+          </div>
+          <div style={{
+            fontSize: '1.2rem',
+            fontWeight: 'bold',
+            color: priceChange.isPositive ? '#2EC85E' : '#FF5B57',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '4px'
+          }}>
+            {priceChange.isPositive ? '+' : '-'}{priceChange.percent}%
+            <span style={{ fontSize: '1rem' }}>
+              {priceChange.isPositive ? '↑' : '↓'}
+            </span>
+          </div>
         </div>
       </div>
       
       <div style={{ overflowX: 'auto' }}>
         <svg width={chartWidth} height={chartHeight} viewBox={`0 0 ${chartWidth} ${chartHeight}`}>
+          {/* Gradient definitions */}
+          <defs>
+            <linearGradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stopColor={priceChange.isPositive ? '#2EC85E' : '#FF5B57'} stopOpacity="0.4" />
+              <stop offset="100%" stopColor={priceChange.isPositive ? '#2EC85E' : '#FF5B57'} stopOpacity="0.05" />
+            </linearGradient>
+          </defs>
+          
           {/* Chart background */}
           <rect 
             x={padding} 
             y={padding} 
             width={innerWidth} 
             height={innerHeight} 
-            fill="rgba(0, 0, 0, 0.1)" 
+            fill="rgba(20, 20, 30, 0.15)" 
             stroke="rgba(255, 255, 255, 0.1)" 
+            rx="4"
           />
           
           {/* Horizontal guide lines */}
@@ -173,13 +244,57 @@ export default function PriceChart({
             </g>
           ))}
           
+          {/* Area under the curve with gradient */}
+          <path
+            d={createAreaPath()}
+            fill="url(#areaGradient)"
+          />
+          
           {/* Price line */}
           <path
             d={createPath()}
             fill="none"
-            stroke="var(--primary)"
-            strokeWidth="2"
+            stroke={priceChange.isPositive ? '#2EC85E' : '#FF5B57'}
+            strokeWidth="3"
+            strokeLinecap="round"
           />
+          
+          {/* Data points at specific intervals */}
+          {priceHistory.filter((_, i) => i % 6 === 0 || i === priceHistory.length - 1).map((point, i) => {
+            const x = padding + (i * 6 * (innerWidth / (priceHistory.length - 1)));
+            const y = padding + innerHeight - ((point.price - minPrice) / range * innerHeight);
+            
+            // For the last point, use the actual position
+            if (i === Math.floor(priceHistory.length / 6)) {
+              const lastIdx = priceHistory.length - 1;
+              const lastX = padding + (lastIdx * (innerWidth / (priceHistory.length - 1)));
+              const lastY = padding + innerHeight - ((priceHistory[lastIdx].price - minPrice) / range * innerHeight);
+              
+              return (
+                <circle
+                  key="last-point"
+                  cx={lastX}
+                  cy={lastY}
+                  r="4"
+                  fill="#FFFFFF"
+                  stroke={priceChange.isPositive ? '#2EC85E' : '#FF5B57'}
+                  strokeWidth="2"
+                />
+              );
+            }
+            
+            return (
+              <circle
+                key={i}
+                cx={x}
+                cy={y}
+                r="3"
+                fill={priceChange.isPositive ? '#2EC85E' : '#FF5B57'}
+                stroke="#FFFFFF"
+                strokeWidth="1"
+              />
+            );
+          })}
           
           {/* Time labels */}
           {priceHistory.filter((_, i) => i % 6 === 0).map((point, i) => (
@@ -197,10 +312,20 @@ export default function PriceChart({
         </svg>
       </div>
       
-      <div style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.85rem', color: 'var(--foreground-dim)' }}>
-        Data source: Chainlink Price Feed (Proof-of-Concept)
-        <div style={{ marginTop: '0.5rem', color: 'var(--primary)' }}>
-          {tokenSymbol} historical price trends shown for demonstration purposes
+      <div style={{ 
+        display: 'flex',
+        justifyContent: 'space-between', 
+        alignItems: 'center',
+        marginTop: '1rem', 
+        fontSize: '0.85rem', 
+        color: 'var(--foreground-dim)',
+        padding: '0 10px'
+      }}>
+        <div>
+          Data source: Chainlink Price Feed
+        </div>
+        <div style={{ color: 'var(--primary)' }}>
+          {tokenSymbol} market trends
         </div>
       </div>
     </div>

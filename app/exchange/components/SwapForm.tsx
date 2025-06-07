@@ -32,7 +32,7 @@ export default function SwapForm() {
   const [swapDirection, setSwapDirection] = useState('ethToToken'); // or 'tokenToEth'
   const [slippage, setSlippage] = useState(0.5); // 0.5% slippage by default
   const [showApproval, setShowApproval] = useState(false);
-  const [showChart, setShowChart] = useState(false);
+  const [showChart, setShowChart] = useState(true); // Default to showing chart
   
   const { address } = useAccount();
   const { data: ethBalance } = useBalance({ address });
@@ -55,7 +55,7 @@ export default function SwapForm() {
 
   const { data: estimatedEth } = useETHOutEstimate(
     swapDirection === 'tokenToEth' ? selectedToken.address : undefined, 
-    tokenAmount ? parseEther(tokenAmount) : BigInt(0)
+    tokenAmount ? parseUnits(tokenAmount, selectedToken.decimals) : BigInt(0)
   );
 
   // Update the opposite field when one changes
@@ -111,7 +111,7 @@ export default function SwapForm() {
       } else {
         await swapTokensForETH(
           selectedToken.address,
-          parseEther(tokenAmount),
+          parseUnits(tokenAmount, selectedToken.decimals),
           getMinEth()
         );
       }
@@ -131,12 +131,22 @@ export default function SwapForm() {
         />
       )}
       
+      {/* USDC Price Chart - Centered with responsive container */}
       {showChart && (
-        <PriceChart
-          tokenAddress={selectedToken.address as Address}
-          tokenSymbol={selectedToken.symbol}
-          tokenDecimals={selectedToken.decimals}
-        />
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center', 
+          marginBottom: '20px',
+          width: '100%',
+          overflow: 'hidden'
+        }}>
+          <PriceChart
+            tokenAddress={selectedToken.address as Address}
+            tokenSymbol={selectedToken.symbol}
+            tokenDecimals={selectedToken.decimals}
+          />
+        </div>
       )}
       
       <div className="card">
@@ -156,7 +166,7 @@ export default function SwapForm() {
             {showChart ? 'Hide Chart' : 'Show Chart'} 📊
           </button>
         </div>
-        
+
         <div style={{ 
           padding: '10px 15px', 
           backgroundColor: 'rgba(41, 182, 246, 0.1)', 
@@ -178,186 +188,202 @@ export default function SwapForm() {
             Currently operating on <strong>Arbitrum Sepolia testnet</strong> with limited token selection.
           </p>
         </div>
-      <div className="exchange-form">
-        {swapDirection === 'ethToToken' ? (
-          <>
-            <div className="form-group">
-              <label>You pay</label>
-              <div className="input-container">
-                <input
-                  type="number"
-                  className="input-field"
-                  placeholder="0.0"
-                  value={ethAmount}
-                  onChange={(e) => setEthAmount(e.target.value)}
-                />
-                <button className="max-button" onClick={handleMaxEth}>
-                  MAX
-                </button>
-              </div>
-              <TokenBalance 
-                tokenSymbol="ETH" 
-                className="token-balance-display" 
-              />
-            </div>
 
-            <div className="swap-arrow" onClick={toggleSwapDirection}>
-              ↓
-            </div>
-
-            <div className="form-group">
-              <label>You receive</label>
-              <div className="input-container">
-                <input
-                  type="number"
-                  className="input-field"
-                  placeholder="0.0"
-                  value={tokenAmount}
-                  onChange={(e) => setTokenAmount(e.target.value)}
-                  readOnly
+        <div className="exchange-form">
+          {swapDirection === 'ethToToken' ? (
+            <>
+              <div className="form-group">
+                <label>You pay</label>
+                <div className="input-container">
+                  <input
+                    type="number"
+                    className="input-field"
+                    placeholder="0.0"
+                    value={ethAmount}
+                    onChange={(e) => setEthAmount(e.target.value)}
+                  />
+                  <button className="max-button" onClick={handleMaxEth}>
+                    MAX
+                  </button>
+                </div>
+                <TokenBalance 
+                  tokenSymbol="ETH" 
+                  className="token-balance-display" 
                 />
               </div>
-              <TokenBalance 
-                tokenAddress={selectedToken.address as Address}
-                tokenSymbol={selectedToken.symbol}
-                tokenDecimals={selectedToken.decimals}
-                className="token-balance-display" 
-              />
-              <select
-                className="token-select"
-                value={selectedToken.address}
-                onChange={(e) => {
-                  const token = AVAILABLE_TOKENS.find(t => t.address === e.target.value);
-                  if (token) {
-                    setSelectedToken(token);
-                    setShowApproval(false); // Reset approval state when token changes
-                  }
-                }}
-              >
-                {AVAILABLE_TOKENS.map(token => (
-                  <option key={token.address} value={token.address}>
-                    {token.symbol} - {token.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="form-group">
-              <label>You pay</label>
-              <div className="input-container">
-                <input
-                  type="number"
-                  className="input-field"
-                  placeholder="0.0"
-                  value={tokenAmount}
-                  onChange={(e) => setTokenAmount(e.target.value)}
+
+              <div className="swap-arrow" onClick={toggleSwapDirection}>
+                ↓
+              </div>
+
+              <div className="form-group">
+                <label>You receive</label>
+                <div className="input-container">
+                  <input
+                    type="number"
+                    className="input-field"
+                    placeholder="0.0"
+                    value={tokenAmount}
+                    onChange={(e) => setTokenAmount(e.target.value)}
+                    readOnly
+                  />
+                </div>
+                <TokenBalance 
+                  tokenAddress={selectedToken.address as Address}
+                  tokenSymbol={selectedToken.symbol}
+                  tokenDecimals={selectedToken.decimals}
+                  className="token-balance-display" 
                 />
+                <select
+                  className="token-select"
+                  value={selectedToken.address}
+                  onChange={(e) => {
+                    const token = AVAILABLE_TOKENS.find(t => t.address === e.target.value);
+                    if (token) {
+                      setSelectedToken(token);
+                      setShowApproval(false); // Reset approval state when token changes
+                    }
+                  }}
+                >
+                  {AVAILABLE_TOKENS.map(token => (
+                    <option key={token.address} value={token.address}>
+                      {token.symbol} - {token.name}
+                    </option>
+                  ))}
+                </select>
               </div>
-              <TokenBalance 
-                tokenAddress={selectedToken.address as Address}
-                tokenSymbol={selectedToken.symbol}
-                tokenDecimals={selectedToken.decimals}
-                className="token-balance-display" 
-              />
-              <select
-                className="token-select"
-                value={selectedToken.address}
-                onChange={(e) => {
-                  const token = AVAILABLE_TOKENS.find(t => t.address === e.target.value);
-                  if (token) {
-                    setSelectedToken(token);
-                    setShowApproval(false); // Reset approval state when token changes
-                  }
-                }}
-              >
-                {AVAILABLE_TOKENS.map(token => (
-                  <option key={token.address} value={token.address}>
-                    {token.symbol} - {token.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div className="swap-arrow" onClick={toggleSwapDirection}>
-              ↓
-            </div>
-
-            <div className="form-group">
-              <label>You receive</label>
-              <div className="input-container">
-                <input
-                  type="number"
-                  className="input-field"
-                  placeholder="0.0"
-                  value={ethAmount}
-                  onChange={(e) => setEthAmount(e.target.value)}
-                  readOnly
+            </>
+          ) : (
+            <>
+              <div className="form-group">
+                <label>You pay</label>
+                <div className="input-container">
+                  <input
+                    type="number"
+                    className="input-field"
+                    placeholder="0.0"
+                    value={tokenAmount}
+                    onChange={(e) => setTokenAmount(e.target.value)}
+                  />
+                </div>
+                <TokenBalance 
+                  tokenAddress={selectedToken.address as Address}
+                  tokenSymbol={selectedToken.symbol}
+                  tokenDecimals={selectedToken.decimals}
+                  className="token-balance-display" 
                 />
+                <select
+                  className="token-select"
+                  value={selectedToken.address}
+                  onChange={(e) => {
+                    const token = AVAILABLE_TOKENS.find(t => t.address === e.target.value);
+                    if (token) {
+                      setSelectedToken(token);
+                      setShowApproval(false); // Reset approval state when token changes
+                    }
+                  }}
+                >
+                  {AVAILABLE_TOKENS.map(token => (
+                    <option key={token.address} value={token.address}>
+                      {token.symbol} - {token.name}
+                    </option>
+                  ))}
+                </select>
               </div>
-              <div style={{ marginTop: '0.5rem', fontSize: '0.85rem', color: 'var(--foreground-dim)' }}>
-                ETH
-              </div>
-            </div>
-          </>
-        )}
 
-        <div className="price-info">
-          <div>Slippage Tolerance: {slippage}%</div>
-          <div>
-            Rate: 1 {swapDirection === 'ethToToken' ? 'ETH' : selectedToken.symbol} = 
-            {swapDirection === 'ethToToken' 
-              ? ethAmount && tokenAmount 
-                ? ` ${(Number(tokenAmount) / Number(ethAmount)).toFixed(6)} ${selectedToken.symbol}`
-                : ` 0 ${selectedToken.symbol}`
-              : tokenAmount && ethAmount
-                ? ` ${(Number(ethAmount) / Number(tokenAmount)).toFixed(6)} ETH`
-                : ` 0 ETH`
-            }
+              <div className="swap-arrow" onClick={toggleSwapDirection}>
+                ↓
+              </div>
+
+              <div className="form-group">
+                <label>You receive</label>
+                <div className="input-container">
+                  <input
+                    type="number"
+                    className="input-field"
+                    placeholder="0.0"
+                    value={ethAmount}
+                    onChange={(e) => setEthAmount(e.target.value)}
+                    readOnly
+                  />
+                </div>
+                <div style={{ marginTop: '0.5rem', fontSize: '0.85rem', color: 'var(--foreground-dim)' }}>
+                  ETH
+                </div>
+              </div>
+            </>
+          )}
+
+          <div className="price-info">
+            <div>Slippage Tolerance: {slippage}%</div>
+            <div>
+              Rate: 1 {swapDirection === 'ethToToken' ? 'ETH' : selectedToken.symbol} = 
+              {swapDirection === 'ethToToken' 
+                ? ethAmount && tokenAmount 
+                  ? ` ${(Number(tokenAmount) / Number(ethAmount)).toFixed(6)} ${selectedToken.symbol}`
+                  : ` 0 ${selectedToken.symbol}`
+                : tokenAmount && ethAmount
+                  ? ` ${(Number(ethAmount) / Number(tokenAmount)).toFixed(6)} ETH`
+                  : ` 0 ETH`
+              }
+            </div>
           </div>
-        </div>
 
-        <button 
-          className="action-button" 
-          onClick={handleSwap}
-          disabled={
-            isPending || 
-            !ethAmount || 
-            !tokenAmount || 
-            Number(ethAmount) <= 0 || 
-            Number(tokenAmount) <= 0
-          }
-        >
-          {isPending ? 'Swapping...' : 'Swap'}
-        </button>
-
-        {isSuccess && (
-          <div style={{ color: 'green', marginTop: '0.5rem' }}>
-            Swap successful!
-          </div>
-        )}
-
-        {isError && (
-          <div style={{ color: 'red', marginTop: '0.5rem' }}>
-            Error: {error?.message || 'Unknown error'}
-          </div>
-        )}
-        
-        {swapDirection === 'tokenToEth' && (
           <button 
             className="action-button" 
-            onClick={() => setShowApproval(true)}  
-            style={{ 
-              marginTop: '1rem', 
-              background: 'rgba(255, 255, 255, 0.1)',
-              color: 'var(--foreground)'
-            }}>
-            Manage Token Approvals
+            onClick={handleSwap}
+            disabled={
+              isPending || 
+              !ethAmount || 
+              !tokenAmount || 
+              Number(ethAmount) <= 0 || 
+              Number(tokenAmount) <= 0
+            }
+          >
+            {isPending ? 'Swapping...' : 'Swap'}
           </button>
-        )}
+
+          {isSuccess && (
+            <div style={{ color: 'green', marginTop: '0.5rem' }}>
+              Swap successful!
+            </div>
+          )}
+
+          {isError && (
+            <div style={{ color: 'red', marginTop: '0.5rem' }}>
+              Error: {error?.message || 'Unknown error'}
+            </div>
+          )}
+          
+          <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '1rem' }}>
+            {swapDirection === 'tokenToEth' && (
+              <button 
+                className="action-button" 
+                onClick={() => setShowApproval(true)}  
+                style={{ 
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  color: 'var(--foreground)',
+                  flex: '1 1 auto',
+                  marginRight: '0.5rem'
+                }}>
+                Manage Token Approvals
+              </button>
+            )}
+            
+            <button 
+              className="action-button" 
+              onClick={() => setShowChart(!showChart)}  
+              style={{ 
+                background: 'rgba(255, 255, 255, 0.1)',
+                color: 'var(--foreground)',
+                flex: '1 1 auto',
+                marginLeft: swapDirection === 'tokenToEth' ? '0.5rem' : '0'
+              }}>
+              {showChart ? 'Hide Price Chart' : 'Show Price Chart'}
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
     </>
   );
 }
