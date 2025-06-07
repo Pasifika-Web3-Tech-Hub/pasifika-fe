@@ -1,8 +1,8 @@
 {
   "name": "PasifikaPriceFeed",
-  "address": "0x80d3c57b95a2fca3900f3EAC71196Bf133aaa517",
+  "address": "0x96F1C4fE633bD7fE6DeB30411979bE3d0e2246b4",
   "network": "arbitrum-sepolia",
-  "explorer": "https://sepolia.arbiscan.io/address/0x80d3c57b95a2fca3900f3EAC71196Bf133aaa517",
-  "deployed": "2025-05-14T10:00:24Z",
+  "explorer": "https://sepolia.arbiscan.io/address/0x96F1C4fE633bD7fE6DeB30411979bE3d0e2246b4",
+  "deployed": "2025-06-07T09:27:30Z",
   "description": "Price feed oracle for the Pasifika Exchange on Arbitrum"
 }
