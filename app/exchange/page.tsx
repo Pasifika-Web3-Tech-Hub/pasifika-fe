@@ -65,6 +65,37 @@ export default function ExchangePage() {
           <p className="page-subtitle">Secure cross-chain trading for Pacific Island communities</p>
         </div>
 
+        <div className="proof-of-concept-banner" style={{
+          backgroundColor: isDarkMode ? 'rgba(255, 87, 34, 0.15)' : 'rgba(255, 87, 34, 0.1)',
+          border: '1px solid #FF5722',
+          borderRadius: '8px',
+          padding: '15px',
+          margin: '0 0 25px 0',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '12px'
+        }}>
+          <div style={{
+            backgroundColor: '#FF5722',
+            borderRadius: '50%',
+            width: '30px',
+            height: '30px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexShrink: 0
+          }}>
+            <span style={{ color: 'white', fontWeight: 'bold', fontSize: '18px' }}>!</span>
+          </div>
+          <div>
+            <h3 style={{ margin: '0 0 5px 0', color: isDarkMode ? '#FF7043' : '#D84315' }}>Proof of Concept</h3>
+            <p style={{ margin: 0, fontSize: '14px' }}>
+              The Pasifika Exchange is currently in proof-of-concept stage with enhanced Chainlink price feed integration and decimal handling. 
+              Some features may be limited and transactions are operating on the Arbitrum Sepolia testnet only.
+            </p>
+          </div>
+        </div>
+
         {isConnected ? (
           <div className="connected-content">
             <div className="feature-banner">

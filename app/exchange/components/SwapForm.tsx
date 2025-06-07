@@ -156,6 +156,28 @@ export default function SwapForm() {
             {showChart ? 'Hide Chart' : 'Show Chart'} 📊
           </button>
         </div>
+        
+        <div style={{ 
+          padding: '10px 15px', 
+          backgroundColor: 'rgba(41, 182, 246, 0.1)', 
+          borderLeft: '3px solid #29B6F6',
+          borderRadius: '4px',
+          marginBottom: '1rem',
+          fontSize: '0.9rem'
+        }}>
+          <p style={{ margin: '0 0 8px 0', fontWeight: 500 }}>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#29B6F6">
+                <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"></path>
+              </svg>
+              Proof-of-Concept: Chainlink Integration
+            </span>
+          </p>
+          <p style={{ margin: '0', color: 'var(--foreground-dim)' }}>
+            This exchange is using Chainlink price feed oracles with secure decimal handling to prevent overflow/underflow issues. 
+            Currently operating on <strong>Arbitrum Sepolia testnet</strong> with limited token selection.
+          </p>
+        </div>
       <div className="exchange-form">
         {swapDirection === 'ethToToken' ? (
           <>

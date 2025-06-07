@@ -54,7 +54,7 @@ export default function Whitepaper() {
                 className="whitepaper-logo"
               />
               <h2>Pacific Values in Digital Form: The First Exchange for Pacific Islands</h2>
-              <p className="whitepaper-version">Version 3.0 | May 2025</p>
+              <p className="whitepaper-version">Version 3.1 | June 2025</p>
               <div className="whitepaper-divider"></div>
             </div>
             
@@ -64,7 +64,7 @@ export default function Whitepaper() {
             </p>
             
             <p>
-              The Pasifika Exchange operates across three complementary EVM Compatible chains: <strong>Linea</strong>, <strong>RootStock (RSK)</strong>, and <strong>Arbitrum</strong>. This interoperability approach provides flexibility, resilience, and increased accessibility for Pacific Island communities while leveraging the unique strengths of each blockchain network to create the first dedicated digital asset exchange for Pacific Islands.
+              The Pasifika Exchange operates across three complementary EVM Compatible chains: <strong>Linea</strong>, <strong>RootStock (RSK)</strong>, and <strong>Arbitrum</strong>. This interoperability approach provides flexibility, resilience, and increased accessibility for Pacific Island communities while leveraging the unique strengths of each blockchain network to create the first dedicated digital asset exchange for Pacific Islands. Enhanced with <strong>Chainlink price feed integration</strong> and secure decimal handling, our platform ensures reliable token valuations and safe cross-chain transfers.
             </p>
             
             <p>
@@ -80,6 +80,7 @@ export default function Whitepaper() {
                 <li>Limited technological infrastructure and digital inclusion</li>
                 <li>Need for sustainable economic development models</li>
                 <li>Network dependency and single-chain vulnerability</li>
+                <li>Unreliable price data and financial calculation errors</li>
               </ul>
             </div>
             
@@ -317,6 +318,33 @@ export default function Whitepaper() {
               <li>Provide resilience through multi-chain redundancy, ensuring platform availability even during network congestion</li>
             </ul>
             
+            <h3>3.4 Chainlink Price Feed Integration</h3>
+            <p>
+              Our platform has been enhanced with Chainlink&apos;s decentralized oracle network to provide secure, reliable, and tamper-proof price data for all token valuations. This critical infrastructure improvement ensures:
+            </p>
+            <ul>
+              <li>Accurate and manipulation-resistant price data from Chainlink&apos;s decentralized oracle network</li>
+              <li>Safe decimal handling that prevents arithmetic overflow and underflow in financial calculations</li>
+              <li>Optimized token conversion mechanics that properly scale between 18-decimal tokens and 8-decimal price feeds</li>
+              <li>Validation mechanisms to prevent negative price attacks and other oracle exploits</li>
+              <li>Enhanced cross-chain financial safety with consistent price data across all supported networks</li>
+              <li>Reduced technical risk through proper scaling of asset values</li>
+            </ul>
+            
+            <div className="technical-callout" style={{ margin: '2rem 0', padding: '1.5rem', backgroundColor: isDarkMode ? '#27333D' : '#E8F4FC', borderRadius: '8px', border: '1px solid ' + (isDarkMode ? '#37475A' : '#C9E3F3') }}>
+              <h4 style={{ marginTop: 0, color: '#3498DB' }}>Technical Implementation Highlight</h4>
+              <p>
+                The Pasifika Exchange implements advanced decimal handling to ensure secure financial calculations between various token systems. When converting token amounts (with 18 decimals) to USD values (using Chainlink&apos;s 8-decimal price feeds), we employ a specialized scaling approach:
+              </p>
+              <ol style={{ marginBottom: 0 }}>
+                <li>Token amounts are first scaled down by dividing by 10^10</li>
+                <li>The scaled amount is then multiplied by the Chainlink price feed value</li>
+                <li>The result is adjusted according to price feed decimals for precision</li>
+                <li>All conversions include input validation to prevent negative prices</li>
+                <li>Arithmetic safety checks prevent overflow/underflow conditions</li>
+              </ol>
+            </div>
+            
             <h2>5. MARKETPLACE DESIGN</h2>
             <p>The marketplace encompases a wide range of products and services specific to Pacific Island communities.</p>
             
@@ -382,8 +410,58 @@ export default function Whitepaper() {
               Through these innovations, the Pasifika Web3 Tech Hub aims to create a model for blockchain-enabled sustainable development that embodies Pacific cultural values in digital form. Our interoperability approach ensures resilience, accessibility, and flexibility across multiple blockchain ecosystems while specifically serving the unique needs of Pacific Island nations and creating a blueprint that can be adapted for cultural communities worldwide.
             </p>
             
+            <h2>10. DEVELOPMENT ROADMAP</h2>
+            <p>The Pasifika Web3 Tech Hub project follows a phased development approach aligned with community needs and technological maturity:</p>
+            
+            <div className="roadmap-timeline" style={{ margin: '2rem 0' }}>
+              <div className="timeline-item" style={{ marginBottom: '2rem', padding: '0 0 0 2rem', borderLeft: '2px solid #3498DB', position: 'relative' }}>
+                <div style={{ position: 'absolute', left: '-10px', backgroundColor: isDarkMode ? '#333' : '#fff', width: '20px', height: '20px', borderRadius: '50%', border: '2px solid #3498DB' }}></div>
+                <h3 style={{ marginTop: 0 }}>Phase 1: Foundation (Completed Q4 2024)</h3>
+                <ul>
+                  <li><strong>Core Smart Contract Development:</strong> Development and auditing of core marketplace and exchange contracts</li>
+                  <li><strong>Multi-Chain Architecture:</strong> Implementation of cross-chain compatibility across RootStock, Arbitrum, and Linea</li>
+                  <li><strong>Frontend Interface:</strong> Development of responsive, mobile-first platform interfaces</li>
+                  <li><strong>Whitepaper & Documentation:</strong> Comprehensive documentation of technical specifications and governance</li>
+                </ul>
+              </div>
+              
+              <div className="timeline-item" style={{ marginBottom: '2rem', padding: '0 0 0 2rem', borderLeft: '2px solid #3498DB', position: 'relative' }}>
+                <div style={{ position: 'absolute', left: '-10px', backgroundColor: '#3498DB', width: '20px', height: '20px', borderRadius: '50%', border: '2px solid #3498DB' }}></div>
+                <h3 style={{ marginTop: 0 }}>Phase 2: Technical Enhancement (Current - Q2 2025)</h3>
+                <ul>
+                  <li><strong>Chainlink Price Feed Integration:</strong> Implementation of secure oracle price feeds for token valuations ✓</li>
+                  <li><strong>Decimal Handling Optimization:</strong> Enhanced safety mechanisms for financial calculations ✓</li>
+                  <li><strong>Cross-Chain Bridge Security:</strong> Advanced validation and arithmetic safety for cross-chain transfers ✓</li>
+                  <li><strong>Network Expansion:</strong> Additional EVM chain integrations and testnet deployments in progress</li>
+                  <li><strong>Enhanced Frontend Integration:</strong> UI/UX improvements and full wallet integration in progress</li>
+                </ul>
+              </div>
+              
+              <div className="timeline-item" style={{ marginBottom: '2rem', padding: '0 0 0 2rem', borderLeft: '2px solid #3498DB', position: 'relative' }}>
+                <div style={{ position: 'absolute', left: '-10px', backgroundColor: isDarkMode ? '#333' : '#fff', width: '20px', height: '20px', borderRadius: '50%', border: '2px solid #3498DB' }}></div>
+                <h3 style={{ marginTop: 0 }}>Phase 3: Community Expansion (Q3 2025 - Q4 2025)</h3>
+                <ul>
+                  <li><strong>Local Node Operator Network:</strong> Deployment of physical infrastructure across Pacific Islands</li>
+                  <li><strong>Cultural Asset Framework:</strong> Specialized NFT standards for cultural preservation</li>
+                  <li><strong>Governance Structure:</strong> Implementation of community governance mechanisms</li>
+                  <li><strong>Island-Specific Customization:</strong> Localized platform adaptations</li>
+                </ul>
+              </div>
+              
+              <div className="timeline-item" style={{ padding: '0 0 0 2rem', borderLeft: '2px solid #3498DB', position: 'relative' }}>
+                <div style={{ position: 'absolute', left: '-10px', backgroundColor: isDarkMode ? '#333' : '#fff', width: '20px', height: '20px', borderRadius: '50%', border: '2px solid #3498DB' }}></div>
+                <h3 style={{ marginTop: 0 }}>Phase 4: Full Implementation (2026)</h3>
+                <ul>
+                  <li><strong>Mainnet Launch:</strong> Full production deployment across all networks</li>
+                  <li><strong>Distribution Hub Network:</strong> Physical hub establishment across islands</li>
+                  <li><strong>Cross-Chain Liquidity:</strong> Comprehensive liquidity provision across all integrated chains</li>
+                  <li><strong>Full Fiat Integration:</strong> Localized payment options for all supported regions</li>
+                </ul>
+              </div>
+            </div>
+            
             <div className="whitepaper-footer">
-              <p><em>This whitepaper outlines the vision and implementation plan for the Pasifika Web3 Tech Hub as of May 2025. The project is under active development, and some details may evolve as the platform matures.</em></p>
+              <p><em>This whitepaper outlines the vision and implementation plan for the Pasifika Web3 Tech Hub as of June 2025. The project is under active development, and some details may evolve as the platform matures.</em></p>
               <p><em>Building a decentralized future rooted in Pacific traditions</em></p>
             </div>
             
@@ -398,13 +476,12 @@ export default function Whitepaper() {
                 View Whitepaper on GitHub
               </a>
             </div>
+            
+            <div className="footer-banner">
+              <p>Copyright &copy; Pasifika 2025 | Version 3.1 - June 2025</p>
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Footer Banner */}
-      <div className="footer-banner">
-        <p>Copyright &copy; Pasifika 2025</p>
       </div>
     </div>
   );

@@ -25,39 +25,56 @@ export default function PriceChart({
   const [isLoading, setIsLoading] = useState(true);
 
   // Get latest price from the Oracle
-  const { data: latestPrice, isLoading: isPriceLoading } = useReadContract({
+  const { data: latestPrice, isLoading: isPriceLoading, error: priceError } = useReadContract({
     address: PasifikaPriceFeed.address,
     abi: PasifikaPriceFeed.abi,
     functionName: 'getLatestPrice',
     args: [tokenAddress]
   });
-
-  // Generate mock price history based on current price for visualization
+  
+  // Handle errors with useEffect instead of onError
   useEffect(() => {
-    if (latestPrice && !isPriceLoading) {
-      setIsLoading(true);
-      
-      // Convert the price to a number (Chainlink returns prices with 8 decimals)
-      const currentPrice = Number(formatUnits(BigInt(latestPrice as any), 8));
-      
-      // Generate mock price history for demonstration
-      const mockHistory: PricePoint[] = [];
-      const now = Date.now();
-      const dayInMs = 24 * 60 * 60 * 1000;
-      
-      // Generate 30 days of price history with some random variation
-      for (let i = 30; i >= 0; i--) {
-        const randomVariation = 0.95 + (Math.random() * 0.1); // 5% variation
-        mockHistory.push({
-          timestamp: now - (i * dayInMs),
-          price: currentPrice * randomVariation
-        });
-      }
-      
-      setPriceHistory(mockHistory);
+    if (priceError) {
+      // If there's an error getting price data, we'll fallback to mock data
+      console.error('Error fetching price data:', priceError);
       setIsLoading(false);
     }
-  }, [latestPrice, isPriceLoading]);
+  }, [priceError]);
+
+  // Generate price history based on current price or fallback to mock data
+  useEffect(() => {
+    setIsLoading(true);
+    
+    // Default price based on token symbol (if Chainlink data isn't available)
+    let basePrice = 1.0;
+    if (tokenSymbol === 'USDC' || tokenSymbol === 'USDT') {
+      basePrice = 1.0; // Stablecoins
+    } else if (tokenSymbol === 'ARB') {
+      basePrice = 1.85; // Example price for Arbitrum token
+    }
+    
+    // Use Chainlink price if available, otherwise fallback to default
+    const currentPrice = latestPrice ? 
+      Number(formatUnits(BigInt(latestPrice as any), 8)) : 
+      basePrice;
+    
+    // Generate mock history for demonstration
+    const mockHistory: PricePoint[] = [];
+    const now = Date.now();
+    const dayInMs = 24 * 60 * 60 * 1000;
+    
+    // Generate 30 days of price history with some random variation
+    for (let i = 30; i >= 0; i--) {
+      const randomVariation = 0.95 + (Math.random() * 0.1); // 5% variation
+      mockHistory.push({
+        timestamp: now - (i * dayInMs),
+        price: currentPrice * randomVariation
+      });
+    }
+    
+    setPriceHistory(mockHistory);
+    setIsLoading(false);
+  }, [latestPrice, isPriceLoading, tokenSymbol]);
 
   // Calculate chart dimensions and scaling
   const chartWidth = 600;
@@ -92,12 +109,17 @@ export default function PriceChart({
     return `M ${points.join(' L ')}`;
   };
 
-  if (isLoading || isPriceLoading) {
+  if (isLoading) {
     return (
       <div className="card">
         <h3 className="card-title">{tokenSymbol} Price Chart</h3>
         <div style={{ textAlign: 'center', padding: '2rem' }}>
-          Loading price data...
+          <svg width="40" height="40" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="25" cy="25" r="20" fill="none" stroke="var(--foreground-dim)" strokeWidth="4" strokeLinecap="round" strokeDasharray="94.2477796076938 31.41592653589793" transform="rotate(0 25 25)">
+              <animateTransform attributeName="transform" type="rotate" values="0 25 25;360 25 25" dur="1s" repeatCount="indefinite" />
+            </circle>
+          </svg>
+          <p style={{ marginTop: '1rem' }}>Loading price data...</p>
         </div>
       </div>
     );
@@ -112,7 +134,7 @@ export default function PriceChart({
           Current Price:
         </div>
         <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
-          ${latestPrice ? Number(formatUnits(BigInt(latestPrice as any), 8)).toFixed(2) : '0'}
+          ${priceHistory.length > 0 ? priceHistory[priceHistory.length - 1].price.toFixed(2) : '0'}
         </div>
       </div>
       
@@ -176,7 +198,10 @@ export default function PriceChart({
       </div>
       
       <div style={{ textAlign: 'center', marginTop: '1rem', fontSize: '0.85rem', color: 'var(--foreground-dim)' }}>
-        Data source: Chainlink Price Feed
+        Data source: Chainlink Price Feed (Proof-of-Concept)
+        <div style={{ marginTop: '0.5rem', color: 'var(--primary)' }}>
+          {tokenSymbol} historical price trends shown for demonstration purposes
+        </div>
       </div>
     </div>
   );

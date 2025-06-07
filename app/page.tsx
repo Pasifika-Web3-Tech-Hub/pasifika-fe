@@ -212,6 +212,133 @@ export default function Main() {
         </div>
       </div>
 
+      {/* Pasifika Exchange Feature Section */}
+      <div style={{ 
+        padding: '60px 0', 
+        backgroundColor: isDarkMode ? 'rgba(0, 0, 0, 0.8)' : 'rgba(255, 255, 255, 0.9)',
+        borderRadius: '8px',
+        margin: '40px auto',
+        maxWidth: '1200px'
+      }}>
+        <div className="container" style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 20px' }}>
+          <h2 style={{ 
+            fontSize: '2.5rem', 
+            textAlign: 'center',
+            marginBottom: '30px',
+            background: 'linear-gradient(to right, #FF5722, #FF9800)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}>
+            Pasifika Exchange
+          </h2>
+          <p style={{ fontSize: '1.2rem', textAlign: 'center', marginBottom: '40px', maxWidth: '800px', margin: '0 auto 40px' }}>
+            Our cross-chain decentralized exchange platform built specifically for Pacific Island communities
+          </p>
+          
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '30px' }}>
+            {/* Feature 1: Chainlink Price Feeds */}
+            <div style={{
+              flex: '1 1 300px',
+              maxWidth: '350px',
+              padding: '30px',
+              backgroundColor: isDarkMode ? 'rgba(50, 50, 50, 0.7)' : 'rgba(255, 255, 255, 0.9)',
+              borderRadius: '12px',
+              boxShadow: isDarkMode ? '0 8px 24px rgba(0, 0, 0, 0.3)' : '0 8px 24px rgba(200, 200, 200, 0.3)',
+              transition: 'transform 0.3s ease',
+              cursor: 'pointer',
+              border: `1px solid ${isDarkMode ? '#444' : '#eee'}`
+            }} onMouseOver={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)'
+            }} onMouseOut={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)'
+            }}>
+              <div style={{ fontSize: '3rem', marginBottom: '20px', color: '#FF5722' }}>🔗</div>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: '10px', color: isDarkMode ? '#FF9800' : '#FF5722' }}>Reliable Price Oracle</h3>
+              <p>
+                Secure and reliable token valuations through Chainlink price feeds with advanced decimal handling for financial safety.
+              </p>
+            </div>
+
+            {/* Feature 2: Cross-Chain Bridge */}
+            <div style={{
+              flex: '1 1 300px',
+              maxWidth: '350px',
+              padding: '30px',
+              backgroundColor: isDarkMode ? 'rgba(50, 50, 50, 0.7)' : 'rgba(255, 255, 255, 0.9)', 
+              borderRadius: '12px',
+              boxShadow: isDarkMode ? '0 8px 24px rgba(0, 0, 0, 0.3)' : '0 8px 24px rgba(200, 200, 200, 0.3)',
+              transition: 'transform 0.3s ease',
+              cursor: 'pointer',
+              border: `1px solid ${isDarkMode ? '#444' : '#eee'}`
+            }} onMouseOver={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)'
+            }} onMouseOut={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)'
+            }}>
+              <div style={{ fontSize: '3rem', marginBottom: '20px', color: '#FF5722' }}>🌉</div>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: '10px', color: isDarkMode ? '#FF9800' : '#FF5722' }}>Cross-Chain Bridge</h3>
+              <p>
+                Connect multiple blockchain networks with our cross-chain bridge functionality powered by Chainlink CCIP technology.
+              </p>
+            </div>
+
+            {/* Feature 3: Arbitrum Integration */}
+            <div style={{
+              flex: '1 1 300px',
+              maxWidth: '350px',
+              padding: '30px',
+              backgroundColor: isDarkMode ? 'rgba(50, 50, 50, 0.7)' : 'rgba(255, 255, 255, 0.9)',
+              borderRadius: '12px',
+              boxShadow: isDarkMode ? '0 8px 24px rgba(0, 0, 0, 0.3)' : '0 8px 24px rgba(200, 200, 200, 0.3)',
+              transition: 'transform 0.3s ease', 
+              cursor: 'pointer',
+              border: `1px solid ${isDarkMode ? '#444' : '#eee'}`
+            }} onMouseOver={(e) => {
+              e.currentTarget.style.transform = 'translateY(-5px)'
+            }} onMouseOut={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)'
+            }}>
+              <div style={{ fontSize: '3rem', marginBottom: '20px', color: '#FF5722' }}>⚡</div>
+              <h3 style={{ fontSize: '1.4rem', marginBottom: '10px', color: isDarkMode ? '#FF9800' : '#FF5722' }}>Low-Fee Trading</h3>
+              <p>
+                Trade with minimal fees on Arbitrum&apos;s Layer-2 network, ensuring cost-effective transactions for Pacific Island users.
+              </p>
+            </div>
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '40px' }}>
+            <a 
+              href="/exchange" 
+              style={{
+                display: 'inline-block',
+                padding: '16px 40px',
+                background: 'linear-gradient(to right, #FF5722, #FF9800)',
+                color: 'white',
+                borderRadius: '30px',
+                textDecoration: 'none',
+                fontSize: '18px',
+                fontWeight: '600',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 4px 15px rgba(255, 87, 34, 0.4)',
+                border: 'none',
+                cursor: 'pointer'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
+                e.currentTarget.style.boxShadow = '0 6px 20px rgba(255, 87, 34, 0.5)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.boxShadow = '0 4px 15px rgba(255, 87, 34, 0.4)';
+              }}
+            >
+              Explore Pasifika Exchange
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Login and Footer Combined Section */}
       <div className="token">
         <div className="token-banner">
