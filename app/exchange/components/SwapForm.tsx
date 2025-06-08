@@ -133,19 +133,26 @@ export default function SwapForm() {
       
       {/* USDC Price Chart - Centered with responsive container */}
       {showChart && (
-        <div style={{
+        <div className="price-chart-wrapper" style={{
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center', 
           marginBottom: '20px',
           width: '100%',
+          maxWidth: '100%',
           overflow: 'hidden'
         }}>
-          <PriceChart
-            tokenAddress={selectedToken.address as Address}
-            tokenSymbol={selectedToken.symbol}
-            tokenDecimals={selectedToken.decimals}
-          />
+          <div style={{
+            width: '100%',
+            maxWidth: '900px', // Cap the maximum width for desktop screens
+            margin: '0 auto'
+          }}>
+            <PriceChart
+              tokenAddress={selectedToken.address as Address}
+              tokenSymbol={selectedToken.symbol}
+              tokenDecimals={selectedToken.decimals}
+            />
+          </div>
         </div>
       )}
       

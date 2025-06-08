@@ -4,78 +4,28 @@ import Link from 'next/link';
 import '../page.css';
 
 export default function NodeOperatorInfo() {
-  // Static display information about node operation across networks
-  const networks = [
-    {
-      id: 'arbitrum',
-      name: 'Arbitrum',
-      totalNodes: '8',
-      minStake: '0.01 ETH',
-      fee: '0.25%',
-      contractAddress: '0xc79C57a047AD9B45B70D85000e9412C61f8fE336',
-      isDeployed: true,
-      color: '#9945ff',
-      techType: 'Optimistic Rollups'
-    },
-    {
-      id: 'rootstock',
-      name: 'RootStock (RSK)',
-      totalNodes: '7',
-      minStake: '0.001 RBTC',
-      fee: '0.25%',
-      contractAddress: '0x456...',
-      isDeployed: true,
-      color: '#f9a620',
-      techType: 'Bitcoin Sidechain'
-    },
-    {
-      id: 'linea',
-      name: 'Linea',
-      totalNodes: '5',
-      minStake: '0.01 ETH / 0.0002 RBTC',
-      fee: '0.25%',
-      contractAddress: '0x123...',
-      isDeployed: true,
-      color: '#3f88c5',
-      techType: 'zkEVM Technology'
-    }
-  ];
-
   return (
     <div className="node-operator-info">
-      <h2>Multi-Network Node Operator Information</h2>
+      <h2>Node Operator Information</h2>
       <p className="description">
-        The Pasifika Web3 Tech Hub operates across three networks: Arbitrum, RootStock and Linea.
+        The Pasifika Web3 Tech Hub operates cross-chain nodes with EVM compatibility.
       </p>
-
-      <div className="networks-grid">
-        {networks.map(network => (
-          <div key={network.id} className={`network-card ${network.id}`} style={{ borderTop: `4px solid ${network.color}` }}>
-            <h3 style={{ color: network.color }}>{network.name}</h3>
-            <p className="network-tech-type" style={{ backgroundColor: network.color, color: '#fff', padding: '3px 8px', borderRadius: '4px', display: 'inline-block', fontSize: '0.85rem', marginBottom: '15px' }}>
-              {network.techType}
-            </p>
-            <ul>
-              <li><span>Active Nodes:</span> {network.totalNodes}</li>
-              <li><span>Minimum Stake:</span> {network.minStake}</li>
-              <li><span>Node Operator Fee:</span> {network.fee}</li>
-              <li>
-                <span>Contract:</span> 
-                {network.isDeployed ? 
-                  <a 
-                    href={network.id === 'arbitrum' ? `https://sepolia.arbiscan.io/address/${network.contractAddress}` : '#'} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="contract-address"
-                    style={{ color: network.color, fontWeight: 'bold' }}
-                  >
-                    {network.contractAddress.substring(0, 6)}...{network.contractAddress.substring(network.contractAddress.length - 4)}
-                  </a> : 
-                  "Coming Soon"}
-              </li>
-            </ul>
+      
+      <div className="node-info-summary" style={{ backgroundColor: 'rgba(0,0,0,0.05)', padding: '20px', borderRadius: '8px', marginBottom: '20px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '15px' }}>
+          <div className="info-item" style={{ flex: '1', minWidth: '160px' }}>
+            <h4>Total Active Nodes</h4>
+            <div style={{ fontSize: '1.8rem', fontWeight: 'bold' }}>20</div>
           </div>
-        ))}
+          <div className="info-item" style={{ flex: '1', minWidth: '160px' }}>
+            <h4>Minimum Stake</h4>
+            <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>0.01 ETH</div>
+          </div>
+          <div className="info-item" style={{ flex: '1', minWidth: '160px' }}>
+            <h4>Node Operator Fee</h4>
+            <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>0.25%</div>
+          </div>
+        </div>
       </div>
       
       <div className="component-action">

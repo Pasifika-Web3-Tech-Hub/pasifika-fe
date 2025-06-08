@@ -5,78 +5,28 @@ import Link from 'next/link';
 import '../page.css';
 
 export default function ExchangeInfo() {
-  // Static display information about the exchange across networks
-  const networks = [
-    {
-      id: 'arbitrum',
-      name: 'Arbitrum',
-      tradingPairs: '14',
-      liquidityPools: '8',
-      fee: '0.25%',
-      contractAddress: '0x9aBc57a047AD9B45B70D85000e9412C61f8fE123',
-      isDeployed: true,
-      color: '#9945ff',
-      techType: 'Optimistic Rollups'
-    },
-    {
-      id: 'rootstock',
-      name: 'RootStock (RSK)',
-      tradingPairs: '12',
-      liquidityPools: '6',
-      fee: '0.25%',
-      contractAddress: '0xf9A620...',
-      isDeployed: true,
-      color: '#f9a620',
-      techType: 'Bitcoin Sidechain'
-    },
-    {
-      id: 'linea',
-      name: 'Linea',
-      tradingPairs: '10',
-      liquidityPools: '5',
-      fee: '0.25%',
-      contractAddress: '0x3f88c5...',
-      isDeployed: true,
-      color: '#3f88c5',
-      techType: 'zkEVM Technology'
-    }
-  ];
-
   return (
     <div className="exchange-info">
-      <h2>Multi-Network Exchange Information</h2>
+      <h2>Pasifika Exchange Information</h2>
       <p className="description">
-        The Pasifika Exchange operates across three networks: Arbitrum, RootStock and Linea.
+        The Pasifika Exchange provides cross-chain trading functionality with EVM compatibility.
       </p>
-
-      <div className="networks-grid">
-        {networks.map(network => (
-          <div key={network.id} className={`network-card ${network.id}`} style={{ borderTop: `4px solid ${network.color}` }}>
-            <h3 style={{ color: network.color }}>{network.name}</h3>
-            <p className="network-tech-type" style={{ backgroundColor: network.color, color: '#fff', padding: '3px 8px', borderRadius: '4px', display: 'inline-block', fontSize: '0.85rem', marginBottom: '15px' }}>
-              {network.techType}
-            </p>
-            <ul>
-              <li><span>Trading Pairs:</span> {network.tradingPairs}</li>
-              <li><span>Liquidity Pools:</span> {network.liquidityPools}</li>
-              <li><span>Trading Fee:</span> {network.fee}</li>
-              <li>
-                <span>Contract:</span> 
-                {network.isDeployed ? 
-                  <a 
-                    href={network.id === 'arbitrum' ? `https://sepolia.arbiscan.io/address/${network.contractAddress}` : '#'} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="contract-address"
-                    style={{ color: network.color, fontWeight: 'bold' }}
-                  >
-                    {network.contractAddress.substring(0, 6)}...{network.contractAddress.substring(network.contractAddress.length - 4)}
-                  </a> : 
-                  "Coming Soon"}
-              </li>
-            </ul>
+      
+      <div className="exchange-info-summary" style={{ backgroundColor: 'rgba(0,0,0,0.05)', padding: '20px', borderRadius: '8px', marginBottom: '20px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '15px' }}>
+          <div className="info-item" style={{ flex: '1', minWidth: '160px' }}>
+            <h4>Trading Pairs</h4>
+            <div style={{ fontSize: '1.8rem', fontWeight: 'bold' }}>36</div>
           </div>
-        ))}
+          <div className="info-item" style={{ flex: '1', minWidth: '160px' }}>
+            <h4>Liquidity Pools</h4>
+            <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>19</div>
+          </div>
+          <div className="info-item" style={{ flex: '1', minWidth: '160px' }}>
+            <h4>Trading Fee</h4>
+            <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>0.25%</div>
+          </div>
+        </div>
       </div>
       
       <div className="component-action">

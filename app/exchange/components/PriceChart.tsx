@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { PasifikaPriceFeed } from '../../../lib/contracts';
 import { useReadContract } from 'wagmi';
 import { Address, formatUnits } from 'viem';
@@ -76,13 +76,40 @@ export default function PriceChart({
     setIsLoading(false);
   }, [latestPrice, isPriceLoading, tokenSymbol]);
 
-  // Calculate chart dimensions and scaling
-  const chartWidth = 600;
-  const chartHeight = 200;
+  // Calculate chart dimensions and scaling - responsive approach
+  const [chartDimensions, setChartDimensions] = useState({ width: 600, height: 200 });
   const padding = 40;
   
-  const innerWidth = chartWidth - (padding * 2);
-  const innerHeight = chartHeight - (padding * 2);
+  // Create a ref for the container element
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  // Use effect to handle resize and set dimensions based on container width
+  useEffect(() => {
+    const updateDimensions = () => {
+      if (containerRef.current) {
+        // Get the container width
+        const containerWidth = containerRef.current.clientWidth;
+        // Set chart width to container width with a maximum of 800px
+        // Height is proportional but with minimum of 180px and max of 250px
+        setChartDimensions({
+          width: Math.min(containerWidth - 20, 800), // -20 for some padding
+          height: Math.min(Math.max(containerWidth * 0.3, 180), 250)
+        });
+      }
+    };
+    
+    // Initial update
+    updateDimensions();
+    
+    // Add resize event listener
+    window.addEventListener('resize', updateDimensions);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', updateDimensions);
+  }, []);
+  
+  const innerWidth = chartDimensions.width - (padding * 2);
+  const innerHeight = chartDimensions.height - (padding * 2);
   
   // Find min and max values for scaling
   const minPrice = priceHistory.length > 0 
@@ -200,8 +227,8 @@ export default function PriceChart({
         </div>
       </div>
       
-      <div style={{ overflowX: 'auto' }}>
-        <svg width={chartWidth} height={chartHeight} viewBox={`0 0 ${chartWidth} ${chartHeight}`}>
+      <div style={{ overflowX: 'auto' }} ref={containerRef}>
+        <svg width={chartDimensions.width} height={chartDimensions.height} viewBox={`0 0 ${chartDimensions.width} ${chartDimensions.height}`}>
           {/* Gradient definitions */}
           <defs>
             <linearGradient id="areaGradient" x1="0" x2="0" y1="0" y2="1">
