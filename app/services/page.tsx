@@ -10,6 +10,8 @@ import PhysicalItemNFTInfo from '../components/PhysicalItemNFTInfo.js';
 import NodeOperatorInfo from '../components/NodeOperatorInfo.js';
 import TreasuryInfo from '../components/TreasuryInfo.js';
 import ExchangeInfo from '../components/ExchangeInfo.js';
+import CirclePaymentInfo from '../components/CirclePaymentInfo.js';
+import StripePaymentInfo from '../components/StripePaymentInfo.js';
 import '../components/NodeOperator.css';
 import PasifikaWalletConnect from '../components/PasifikaWalletConnect';
 import { useDynamicContext } from "@dynamic-labs/sdk-react-core";
@@ -361,7 +363,7 @@ export default function Services() {
                 </div>
               </div>
               
-              <div className="smart-contract-card active">
+              <div className="smart-contract-card">
                 <div className="card-header">
                   <h3>Pasifika Exchange</h3>
                   <div className="component-icon"><span className="emoji-fix">🌊</span></div>
@@ -369,6 +371,28 @@ export default function Services() {
                 <p>The first cross-chain decentralized exchange designed specifically for Pacific Island communities, enabling secure trading of digital assets with low fees across multiple blockchain networks and cross-island interoperability.</p>
                 <div className="demo-component">
                   <ExchangeInfo />
+                </div>
+              </div>
+              
+              <div className="smart-contract-card">
+                <div className="card-header">
+                  <h3>Circle Payment Processing</h3>
+                  <div className="component-icon"><span className="emoji-fix">💳</span></div>
+                </div>
+                <p>Convert local Pacific Island currencies to USDC using Circle&apos;s secure payment infrastructure with real-time exchange rates and transaction verification.</p>
+                <div className="demo-component">
+                  <CirclePaymentInfo />
+                </div>
+              </div>
+              
+              <div className="smart-contract-card active">
+                <div className="card-header">
+                  <h3>Stripe Payment Processing</h3>
+                  <div className="component-icon"><span className="emoji-fix">💱</span></div>
+                </div>
+                <p>Process payments across Pacific Island currencies using Stripe&apos;s global payment network with seamless conversion to USDC and integration with our blockchain infrastructure.</p>
+                <div className="demo-component">
+                  <StripePaymentInfo />
                 </div>
               </div>
             </div>

@@ -11,6 +11,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import PasifikaWalletConnect from '../components/PasifikaWalletConnect';
 import { useDarkMode } from '@/lib/useDarkMode';
+import PaymentGateway from './components/PaymentGateway';
+import './components/payment-gateway.css';
 
 export default function ExchangePage() {
   const [activeTab, setActiveTab] = useState('swap');
@@ -27,6 +29,8 @@ export default function ExchangePage() {
         return <CreatePairForm />;
       case 'pairs':
         return <PairsOverview />;
+      case 'payments':
+        return <PaymentGateway />;
       default:
         return <SwapForm />;
     }
@@ -144,6 +148,13 @@ export default function ExchangePage() {
                 >
                   <span className="tab-icon">📊</span>
                   Trading Pairs
+                </button>
+                <button
+                  className={`tab-button ${activeTab === 'payments' ? 'active' : ''}`}
+                  onClick={() => setActiveTab('payments')}
+                >
+                  <span className="tab-icon">💳</span>
+                  Payments
                 </button>
               </div>
 

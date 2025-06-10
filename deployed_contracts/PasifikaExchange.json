@@ -1,8 +1,8 @@
 {
   "name": "PasifikaExchange",
-  "address": "0x4FbF5A24fE538787F0eFb60D165f8A53ED311c34",
+  "address": "0xA2f7a364D38067757C9cD5627fDB7c0F8A641Ee9",
   "network": "arbitrum-sepolia",
-  "explorer": "https://sepolia.arbiscan.io/address/0x4FbF5A24fE538787F0eFb60D165f8A53ED311c34",
-  "deployed": "2025-06-07T09:27:30Z",
+  "explorer": "https://sepolia.arbiscan.io/address/0xA2f7a364D38067757C9cD5627fDB7c0F8A641Ee9",
+  "deployed": "2025-06-10T09:42:27Z",
   "description": "Decentralized exchange for Pacific Island communities on Arbitrum"
 }

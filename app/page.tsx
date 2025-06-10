@@ -298,6 +298,101 @@ export default function Main() {
         </div>
       </div>
 
+      {/* Payment Gateway Section */}
+      <div className="payment-gateway-section" style={{ padding: '3rem 0', background: isDarkMode ? '#1a1a1a' : '#f9f9f9' }}>
+        <div className="container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
+          <h2 style={{ 
+            fontSize: '2.5rem', 
+            textAlign: 'center',
+            marginBottom: '30px',
+            background: 'linear-gradient(to right, #FF5722, #FF9800)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}>
+            Payment Gateway Solutions
+          </h2>
+          
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', justifyContent: 'center' }}>
+            
+            {/* Circle Payment Gateway */}
+            <div style={{ flex: '1 1 400px', background: isDarkMode ? '#2a2a2a' : '#fff', borderRadius: '12px', overflow: 'hidden', boxShadow: isDarkMode ? '0 4px 20px rgba(0,0,0,0.3)' : '0 4px 20px rgba(0,0,0,0.1)' }}>
+              <div style={{ padding: '1.5rem', borderBottom: isDarkMode ? '1px solid #444' : '1px solid #eee' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+                  <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: '#16a34a', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '1.5rem' }}>💳</div>
+                  <h3 style={{ margin: '0', fontSize: '1.5rem' }}>Circle Payments</h3>
+                </div>
+                <p style={{ lineHeight: '1.6' }}>
+                  Empower community transactions with Circle&apos;s secure USDC payment infrastructure. Ideal for community projects, local businesses, and cross-border transactions within Pacific Island communities.
+                </p>
+              </div>
+              <div style={{ padding: '1.5rem', background: isDarkMode ? '#333' : '#f8f8f8' }}>
+                <h4 style={{ margin: '0 0 1rem 0', color: isDarkMode ? '#FF9800' : '#FF5722' }}>Key Features</h4>
+                <ul style={{ paddingLeft: '1.2rem', marginBottom: '1.5rem' }}>
+                  <li>Fast settlement in USDC stablecoin</li>
+                  <li>Lower fees than traditional remittance services</li>
+                  <li>Transparent exchange rates for Pacific currencies</li>
+                  <li>On-chain verification for all transactions</li>
+                </ul>
+              </div>
+            </div>
+            
+            {/* Stripe Payment Gateway */}
+            <div style={{ flex: '1 1 400px', background: isDarkMode ? '#2a2a2a' : '#fff', borderRadius: '12px', overflow: 'hidden', boxShadow: isDarkMode ? '0 4px 20px rgba(0,0,0,0.3)' : '0 4px 20px rgba(0,0,0,0.1)' }}>
+              <div style={{ padding: '1.5rem', borderBottom: isDarkMode ? '1px solid #444' : '1px solid #eee' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+                  <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: '#6366f1', display: 'flex', justifyContent: 'center', alignItems: 'center', fontSize: '1.5rem' }}>💱</div>
+                  <h3 style={{ margin: '0', fontSize: '1.5rem' }}>Stripe Payments</h3>
+                </div>
+                <p style={{ lineHeight: '1.6' }}>
+                  Streamline business operations with Stripe&apos;s robust payment processing capability. Perfect for Pacific businesses looking to expand their global reach while maintaining local connections.
+                </p>
+              </div>
+              <div style={{ padding: '1.5rem', background: isDarkMode ? '#333' : '#f8f8f8' }}>
+                <h4 style={{ margin: '0 0 1rem 0', color: isDarkMode ? '#FF9800' : '#FF5722' }}>Key Features</h4>
+                <ul style={{ paddingLeft: '1.2rem', marginBottom: '1.5rem' }}>
+                  <li>Accept global payments in multiple currencies</li>
+                  <li>Integration with existing business infrastructure</li>
+                  <li>Detailed transaction reporting and analytics</li>
+                  <li>Blockchain verification for enhanced security</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          {/* Single unified button */}
+          <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+            <a
+              href="/services#payment-gateways"
+              style={{
+                display: 'inline-block',
+                padding: '16px 40px',
+                background: 'linear-gradient(to right, #FF5722, #FF9800)',
+                color: 'white',
+                borderRadius: '30px',
+                textDecoration: 'none',
+                fontSize: '18px',
+                fontWeight: '600',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 4px 15px rgba(255, 87, 34, 0.4)',
+                border: 'none',
+                cursor: 'pointer'
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)';
+                e.currentTarget.style.boxShadow = '0 6px 20px rgba(255, 87, 34, 0.5)';
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                e.currentTarget.style.boxShadow = '0 4px 15px rgba(255, 87, 34, 0.4)';
+              }}
+            >
+              Explore Payment Gateways
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Login and Footer Combined Section */}
       <div className="token">
         <div className="token-banner">
@@ -401,9 +496,19 @@ export default function Main() {
               Arbitrum&apos;s optimistic rollup technology gives us additional scaling options and ensures our platform remains connected to multiple blockchain ecosystems through interoperability, expanding opportunities for Pacific Islanders.
             </p>
           </div>
+          
+          {/* Circle & Stripe Payment Integrations */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', padding: '1rem', background: isDarkMode ? '#333' : '#f8f8f8', borderRadius: '8px', borderLeft: '4px solid #16a34a', marginTop: '10px' }}>
+            <h3 style={{ color: isDarkMode ? '#16a34a' : '#16a34a', margin: '0' }}>Payment Gateways: Circle & Stripe</h3>
+            <p style={{ margin: '0' }}>
+              Our fiat-to-crypto bridge utilizes Circle and Stripe payment solutions, providing seamless on/off-ramps tailored to Pacific communities and businesses. These integrations ensure accessibility regardless of technical expertise.
+            </p>
+          </div>
         </div>
       </div>
       
+
+
       {/* Cultural Values Section */}
       <div className="dep-in-section" style={{ background: isDarkMode ? '#222' : '#fff', padding: '1.5rem', margin: '1.5rem auto', maxWidth: 900, textAlign: 'center', borderRadius: 12, boxShadow: isDarkMode ? '0 2px 16px #111' : '0 2px 16px #eee' }}>
         <h2 style={{ color: isDarkMode ? '#FF9800' : '#FF5722', marginBottom: '1rem' }}>Beyond Technology: Cultural Significance</h2>

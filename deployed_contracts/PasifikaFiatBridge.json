@@ -1,0 +1,8 @@
+{
+  "name": "PasifikaFiatBridge",
+  "address": "0x4D2FECe0a2D32685d364705Ae56F46eDD1144461",
+  "network": "arbitrum-sepolia",
+  "explorer": "https://sepolia.arbiscan.io/address/0x4D2FECe0a2D32685d364705Ae56F46eDD1144461",
+  "deployed": "2025-06-10T09:42:27Z",
+  "description": "Fiat-to-crypto bridge with multi-processor support (Circle & Stripe) for the Pasifika Exchange"
+}

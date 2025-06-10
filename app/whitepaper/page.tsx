@@ -54,21 +54,17 @@ export default function Whitepaper() {
                 className="whitepaper-logo"
               />
               <h2>Pacific Values in Digital Form: The First Exchange for Pacific Islands</h2>
-              <p className="whitepaper-version">Version 3.1 | June 2025</p>
+              <p className="whitepaper-version">Version 2.2 | June 2025</p>
               <div className="whitepaper-divider"></div>
             </div>
             
             <h2>EXECUTIVE SUMMARY</h2>
             <p>
-              At the heart of Pasifika Web3 Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: <strong>&quot;If we take care of our own, they will take care of us.&quot;</strong> This powerful concept of reciprocity and community care serves as the architectural blueprint for our entire system.
+              At the heart of Pasifika Web3 Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: <strong>&quot;If we take care of our own, they will take care of us.&quot;</strong> This powerful concept drives our groundbreaking Pasifika Exchange designed specifically for Pacific Island communities. Built on a strategic blockchain interoperability approach leveraging Linea&apos;s zkEVM technology, RootStock&apos;s Bitcoin integration, and Arbitrum&apos;s optimistic rollups, this platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders through cross-chain trading functionality.
             </p>
             
             <p>
-              The Pasifika Exchange operates across three complementary EVM Compatible chains: <strong>Linea</strong>, <strong>RootStock (RSK)</strong>, and <strong>Arbitrum</strong>. This interoperability approach provides flexibility, resilience, and increased accessibility for Pacific Island communities while leveraging the unique strengths of each blockchain network to create the first dedicated digital asset exchange for Pacific Islands. Enhanced with <strong>Chainlink price feed integration</strong> and secure decimal handling, our platform ensures reliable token valuations and safe cross-chain transfers.
-            </p>
-            
-            <p>
-              This whitepaper outlines our comprehensive approach to building the first Exchange for Pacific Islands that connects community members, local businesses, traders, artisans, and global markets in an ecosystem that spans both digital and physical infrastructure.
+              This whitepaper outlines our comprehensive approach to building the first Exchange for Pacific Islands that connects local businesses, traders, community members, and global markets in an ecosystem that spans both digital and physical infrastructure. By embracing blockchain interoperability across multiple EVM Compatible networks, we create a resilient system that embodies the Pacific principle of reciprocity while providing technical advantages and seamless cross-chain trading capabilities.
             </p>
             
             <div className="challenges-box">
@@ -79,14 +75,12 @@ export default function Whitepaper() {
                 <li>Risk of cultural knowledge loss and exploitation</li>
                 <li>Limited technological infrastructure and digital inclusion</li>
                 <li>Need for sustainable economic development models</li>
-                <li>Network dependency and single-chain vulnerability</li>
-                <li>Unreliable price data and financial calculation errors</li>
               </ul>
             </div>
             
             <div className="membership-box" style={{ marginTop: '2rem', padding: '1.5rem', backgroundColor: isDarkMode ? '#2a2a2a' : '#f5f5f5', borderRadius: '8px', border: '1px solid ' + (isDarkMode ? '#444' : '#ddd') }}>
               <h3 style={{ marginTop: 0 }}>Multi-Network Membership Tiers</h3>
-              <p>Our platform offers three membership tiers with cross-chain functionality:</p>
+              <p>Our platform offers three membership tiers with cross-chain interoperability:</p>
               
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginTop: '1.5rem' }}>
                 <div style={{ padding: '1.25rem', backgroundColor: isDarkMode ? '#333' : '#fff', borderRadius: '8px', boxShadow: isDarkMode ? '0 2px 8px rgba(0,0,0,0.3)' : '0 2px 8px rgba(0,0,0,0.1)' }}>
@@ -126,14 +120,20 @@ export default function Whitepaper() {
             </div>
             
             <p>
-              Our solution implements a community-powered marketplace with integrated physical infrastructure (node operators, distribution hubs, craft documentation centers) and multi-network digital components (Linea, RootStock, and Arbitrum blockchains, marketplace, metadata systems) that generates real value while preserving cultural integrity.
+              Our solution implements the Pasifika Exchange with integrated physical infrastructure (node operators, local trading centers) and digital components (Linea, RootStock, and Arbitrum blockchains, exchange infrastructure, trading systems) that generates real value while preserving cultural integrity. This interoperability approach ensures we can seamlessly operate across multiple blockchain networks while maintaining our core values of reciprocity, community care, and shared prosperity.
             </p>
             
             <h2>TABLE OF CONTENTS</h2>
             <div className="toc">
               <ol>
                 <li>Introduction & Pacific Values in Digital Form</li>
-                <li>Market Analysis & Opportunity</li>
+                <li>Market Analysis & Opportunity
+                  <ul>
+                    <li>Current Market Landscape</li>
+                    <li>Market Size & Growth</li>
+                    <li>Competitive Advantage</li>
+                  </ul>
+                </li>
                 <li>Multi-Chain Technical Advantages
                   <ul>
                     <li>Linea: Scaling With Zero Knowledge</li>
@@ -145,7 +145,10 @@ export default function Whitepaper() {
                   <ul>
                     <li>Physical Infrastructure</li>
                     <li>Digital Infrastructure</li>
-                    <li>Multi-Network Integration Model</li>
+                    <li>Pasifika Exchange</li>
+                    <li>Chainlink Price Feed Integration</li>
+                    <li>Fiat Payment Bridge</li>
+                    <li>Cross-Chain Integration Model</li>
                   </ul>
                 </li>
                 <li>Membership System
@@ -194,13 +197,18 @@ export default function Whitepaper() {
             
             <h3>Vision Statement</h3>
             <p>
-              The Pasifika Web3 Tech Hub envisions a decentralized digital economy that empowers Pacific Island communities through blockchain technology, creating sustainable livelihoods while preserving cultural heritage and enabling global market participation on their own terms.
+              The Pasifika Web3 Tech Hub envisions a decentralized digital economy that embodies Pacific values of reciprocity and community care through a multi-network blockchain approach, empowering Pacific Island communities to create sustainable livelihoods while preserving cultural heritage and enabling global market participation on their own terms.
             </p>
             
             <h3>Mission & Values</h3>
             <p><strong>Mission:</strong> To create a decentralized marketplace and infrastructure network that empowers Pacific Islanders to share, monetize, and access data, digital content, traditional artifacts, handicrafts, and local agricultural produce in a fair, transparent, and community-governed environment.</p>
             
             <div className="values-grid">
+              <div className="value-item">
+                <div className="value-icon">🔄</div>
+                <div className="value-title">Reciprocity</div>
+                <div className="value-description">(&quot;If we take care of our own, they will take care of us&quot;)</div>
+              </div>
               <div className="value-item">
                 <div className="value-icon">👨‍👩‍👧‍👦</div>
                 <div className="value-title">Community Ownership</div>
@@ -234,6 +242,62 @@ export default function Whitepaper() {
                 <div className="value-title">Infrastructure Development</div>
               </div>
             </div>
+            
+            <h2>2. MARKET ANALYSIS & OPPORTUNITY</h2>
+            <h3>2.1 Current Market Landscape</h3>
+            <p>
+              The intersection of DePIN (Decentralized Physical Infrastructure Networks) and cultural marketplaces represents an emerging opportunity with limited established competitors. Current solutions targeting Pacific Island communities include:
+            </p>
+            <ul>
+              <li>Traditional e-commerce platforms (limited catalog, high fees, cultural disconnect)</li>
+              <li>Cultural marketplaces (centralized, limited product range, high commissions)</li>
+              <li>Web3 marketplaces (not designed for Pacific contexts, limited physical infrastructure)</li>
+              <li>Data markets (exclude cultural components, not community-owned)</li>
+            </ul>
+            
+            <h3>2.2 Market Size & Growth</h3>
+            <div className="market-analysis-box" style={{ backgroundColor: isDarkMode ? '#2a2a2a' : '#f5f5f5', borderRadius: '8px', padding: '1.5rem', marginBottom: '2rem', border: '1px solid ' + (isDarkMode ? '#444' : '#ddd') }}>
+              <h4 style={{ marginTop: 0 }}>Total Addressable Market: $17.8-23.2B</h4>
+              
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+                <div style={{ backgroundColor: isDarkMode ? '#333' : '#fff', padding: '1rem', borderRadius: '8px', boxShadow: isDarkMode ? '0 2px 8px rgba(0,0,0,0.3)' : '0 2px 8px rgba(0,0,0,0.1)' }}>
+                  <h5 style={{ color: '#FF5722', marginTop: 0 }}>Pacific Island handicraft market</h5>
+                  <p style={{ fontSize: '1.2rem', fontWeight: '600', margin: '0.5rem 0' }}>$1.9-2.7B annually</p>
+                  <p style={{ fontSize: '0.9rem', margin: 0 }}>Part of $210B Asia Pacific handicrafts market (2024)</p>
+                </div>
+                
+                <div style={{ backgroundColor: isDarkMode ? '#333' : '#fff', padding: '1rem', borderRadius: '8px', boxShadow: isDarkMode ? '0 2px 8px rgba(0,0,0,0.3)' : '0 2px 8px rgba(0,0,0,0.1)' }}>
+                  <h5 style={{ color: '#FF5722', marginTop: 0 }}>Agricultural export market</h5>
+                  <p style={{ fontSize: '1.2rem', fontWeight: '600', margin: '0.5rem 0' }}>$2.8-3.1B annually</p>
+                  <p style={{ fontSize: '0.9rem', margin: 0 }}>Pacific exports grew 169% over 20 years</p>
+                </div>
+                
+                <div style={{ backgroundColor: isDarkMode ? '#333' : '#fff', padding: '1rem', borderRadius: '8px', boxShadow: isDarkMode ? '0 2px 8px rgba(0,0,0,0.3)' : '0 2px 8px rgba(0,0,0,0.1)' }}>
+                  <h5 style={{ color: '#FF5722', marginTop: 0 }}>Diaspora remittances</h5>
+                  <p style={{ fontSize: '1.2rem', fontWeight: '600', margin: '0.5rem 0' }}>$7.5-9.7B annually</p>
+                  <p style={{ fontSize: '0.9rem', margin: 0 }}>Critical economic lifeline for Pacific families</p>
+                </div>
+                
+                <div style={{ backgroundColor: isDarkMode ? '#333' : '#fff', padding: '1rem', borderRadius: '8px', boxShadow: isDarkMode ? '0 2px 8px rgba(0,0,0,0.3)' : '0 2px 8px rgba(0,0,0,0.1)' }}>
+                  <h5 style={{ color: '#FF5722', marginTop: 0 }}>Sustainable tourism</h5>
+                  <p style={{ fontSize: '1.2rem', fontWeight: '600', margin: '0.5rem 0' }}>$4.5-6.3B annually</p>
+                  <p style={{ fontSize: '0.9rem', margin: 0 }}>20% of regional GDP before pandemic</p>
+                </div>
+              </div>
+              
+              <p style={{ marginTop: '1.5rem', fontSize: '0.95rem' }}>The Pasifika Web3 Tech Hub targets 5% market penetration within five years through its integrated approach.</p>
+            </div>
+            
+            <h3>2.3 Competitive Advantage</h3>
+            <ul>
+              <li><strong>Authentic Pacific Focus:</strong> Built by and for Pacific Islanders</li>
+              <li><strong>Integrated Physical-Digital Infrastructure:</strong> Both on-chain functionality and physical distribution</li>
+              <li><strong>Community Profit-Sharing:</strong> Ensures economic benefits stay within communities</li>
+              <li><strong>Comprehensive Cultural Protection:</strong> Safeguards traditional knowledge and practices</li>
+              <li><strong>Island-Specific Localization:</strong> Adapts to diverse Pacific contexts</li>
+              <li><strong>Low Fees & High Transparency:</strong> Transaction fees as low as 0.25%</li>
+              <li><strong>Technical Employment:</strong> Creates opportunities for Pacific Islanders in technical roles</li>
+            </ul>
             
             <h2>3. PLATFORM ARCHITECTURE</h2>
             <p>
@@ -330,6 +394,34 @@ export default function Whitepaper() {
               <li>Enhanced cross-chain financial safety with consistent price data across all supported networks</li>
               <li>Reduced technical risk through proper scaling of asset values</li>
             </ul>
+            
+            <h3>3.5 Fiat Payment Bridge</h3>
+            <p>
+              Our platform features a comprehensive multi-processor payment system that integrates Circle and Stripe payment gateways to enable seamless fiat-to-crypto conversions:
+            </p>
+            <ul>
+              <li>Multi-processor payment system supporting Circle and Stripe integrations</li>
+              <li>Chainlink oracle-based payment verification for off-chain fiat transactions</li>
+              <li>Secure on-chain USDC settlement through PasifikaPaymentGateway</li>
+              <li>Support for multiple Pacific currencies (FJD, USD, NZD) with automatic conversion</li>
+              <li>Transparent fee structure with treasury collection</li>
+              <li>Event-driven architecture for payment status tracking</li>
+            </ul>
+            
+            <div className="technical-callout" style={{ margin: '2rem 0', padding: '1.5rem', backgroundColor: isDarkMode ? '#27333D' : '#E8F4FC', borderRadius: '8px', border: '1px solid ' + (isDarkMode ? '#37475A' : '#C9E3F3') }}>
+              <h4 style={{ marginTop: 0, color: '#3498DB' }}>Technical Implementation Highlight</h4>
+              <p>
+                The PasifikaPaymentGateway smart contract implements a secure multi-processor payment verification system that connects off-chain fiat transactions with on-chain settlement:
+              </p>
+              <ol style={{ marginBottom: 0 }}>
+                <li>Payment is initiated through Circle or Stripe with a unique payment ID</li>
+                <li>Off-chain payment confirmation is verified by trusted oracles and admin validation</li>
+                <li>Smart contract processes verification using dual-signature security model</li>
+                <li>USDC tokens are transferred from treasury to user wallet upon confirmation</li>
+                <li>Transaction fees are automatically calculated and collected</li>
+                <li>Payment events are emitted for robust front-end status tracking</li>
+              </ol>
+            </div>
             
             <div className="technical-callout" style={{ margin: '2rem 0', padding: '1.5rem', backgroundColor: isDarkMode ? '#27333D' : '#E8F4FC', borderRadius: '8px', border: '1px solid ' + (isDarkMode ? '#37475A' : '#C9E3F3') }}>
               <h4 style={{ marginTop: 0, color: '#3498DB' }}>Technical Implementation Highlight</h4>
@@ -478,7 +570,7 @@ export default function Whitepaper() {
             </div>
             
             <div className="footer-banner">
-              <p>Copyright &copy; Pasifika 2025 | Version 3.1 - June 2025</p>
+              <p>Copyright &copy; Pasifika 2025 | Version 2.2 - June 2025</p>
             </div>
           </div>
         </div>

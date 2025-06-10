@@ -18,7 +18,11 @@ export default function PhysicalItemNFTInfo() {
         </div>
         <div className="component-action">
           <Link href="/money-transfer">
-            <button className="service-action-button">Money Transfer Service</button>
+            <button className="primary-button command-button">
+              <span className="button-icon">💸</span>
+              <span className="button-text">Money Transfer Service</span>
+              <span className="button-arrow">→</span>
+            </button>
           </Link>
         </div>
       </div>
