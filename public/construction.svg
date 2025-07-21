@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Construction warning sign with Pacific island theme -->
+  <defs>
+    <linearGradient id="sunsetGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9800;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF5722;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background island silhouette -->
+  <path d="M50,340 C100,320 130,350 180,330 C230,310 280,320 330,310 C380,300 430,280 480,290 L480,420 L50,420 Z" 
+        fill="#333333" opacity="0.3"/>
+        
+  <!-- Warning sign -->
+  <path d="M256,60 L460,390 L52,390 Z" 
+        fill="url(#sunsetGradient)" stroke="#333333" stroke-width="12" />
+  
+  <!-- Construction elements -->
+  <rect x="236" y="200" width="40" height="150" fill="#FFC107" stroke="#333333" stroke-width="6" />
+  <circle cx="256" cy="180" r="25" fill="#FFFFFF" stroke="#333333" stroke-width="6" />
+  <path d="M176,390 L196,330 L316,330 L336,390" fill="#FFC107" stroke="#333333" stroke-width="6" />
+  
+  <!-- Exclamation mark -->
+  <rect x="246" y="170" width="20" height="100" fill="#333333" rx="5" />
+  <circle cx="256" cy="290" r="12" fill="#333333" />
+  
+  <!-- Palm tree -->
+  <rect x="130" y="320" width="10" height="70" fill="#795548" />
+  <path d="M100,320 C110,300 120,310 130,300 C140,290 150,280 160,300 C170,320 135,330 135,320" 
+        fill="#4CAF50" stroke="#333333" stroke-width="2" />
+</svg>

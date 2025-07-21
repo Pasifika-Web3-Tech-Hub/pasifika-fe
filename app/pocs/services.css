@@ -1,0 +1,273 @@
+/* Services Page Styles */
+
+/* Service Containers */
+.content-section {
+  margin-bottom: 40px;
+}
+
+.service-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.service-highlight {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #3f88c5;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.services-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.service-tab {
+  padding: 12px 24px;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.service-tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #FF5722;
+  transition: all 0.3s ease;
+}
+
+.service-tab:hover::after {
+  width: 100%;
+}
+
+.service-tab.active::after {
+  width: 100%;
+}
+
+.service-tab.active {
+  color: #FF5722;
+}
+
+/* Network selector styles */
+.network-selector {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.network-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.network-tab {
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: var(--text-color);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.network-tab.active {
+  font-weight: 600;
+}
+
+.network-specific-info {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.deployment-highlight {
+  background-color: rgba(0, 150, 0, 0.1);
+}
+
+/* Proof of Concept Smart Contract Architecture */
+.smart-contract-section {
+  margin-top: 60px;
+}
+
+.service-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.banner-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #FF5722;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.poc-notice {
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: rgba(255, 87, 34, 0.1);
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+.poc-badge {
+  display: inline-block;
+  background-color: #FF5722;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background-color: #FF5722;
+  margin: 15px auto 0;
+}
+
+.section-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.smart-contract-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.smart-contract-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.smart-contract-card.active {
+  border: 2px solid #FF5722;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.component-icon {
+  font-size: 1.8rem;
+  color: #FF5722;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(255, 87, 34, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emoji-fix {
+  transform: translateY(-1px);
+}
+
+.smart-contract-card h3 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.smart-contract-card p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.demo-component {
+  margin-top: auto;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .services-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .service-tab {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  
+  .smart-contract-card {
+    padding: 20px;
+  }
+  
+  .section-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Wallet connection wrapper */
+.wallet-connection-wrapper {
+  max-width: 450px;
+  margin: 40px auto;
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for service action buttons */
+.service-action-button {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.service-action-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}

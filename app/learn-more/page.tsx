@@ -58,17 +58,17 @@ export default function LearnMore() {
             </div>
           </Link>
           
-          <Link href="/services" className="nav-card">
+          <Link href="/pocs" className="nav-card">
             <div className="nav-card-inner">
-              <h2>Services</h2>
+              <h2>Proofs of Concepts</h2>
               <p>Explore our platform offerings</p>
             </div>
           </Link>
           
-          <Link href="/membership" className="nav-card">
+          <Link href="/our-services" className="nav-card">
             <div className="nav-card-inner">
-              <h2>Membership Registration</h2>
-              <p>Join our community membership program</p>
+              <h2>Our Services</h2>
+              <p>Financial, Technical, and Community services</p>
             </div>
           </Link>
           

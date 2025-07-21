@@ -106,10 +106,8 @@ export default function Contact() {
               <div>
                 <h3>Contact Information</h3>
                 <p><strong>Email:</strong> info@pasifika.xyz</p>
-                <p><strong>Location:</strong> Pacific Islands</p>
-              
-                <h3>Regional Representatives</h3>
-                <p>We have regional representatives in Fiji, Tonga, Samoa, Tuvalu, Niue, Cook Islands, Federated States of Micronesia, Honolulu (Hawaii), Vanuatu, Solomon Islands, Papua New Guinea, New Zealand and Australia.</p>
+                <p><strong>Location:</strong> The Hill, Vaini, Tongatapu, Tonga</p>
+                <p><strong>Hours:</strong> Monday - Friday, 9am - 5pm (Vaini Time)</p>
                 
                 <h3>Social Media</h3>
                 <p>Follow us on social media for the latest updates:</p>
