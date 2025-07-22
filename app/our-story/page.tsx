@@ -309,7 +309,7 @@ export default function OurStory() {
 
 
             
-            <h2>Beyond the Technology: Cultural Significance</h2>
+            <h2 id="cultural-significance">Beyond the Technology: Cultural Significance</h2>
             <p>
               What truly sets our approach apart is how Bitcoin and Lightning Network technologies allow us to encode Pacific Island cultural values into digital infrastructure:
             </p>
@@ -321,6 +321,171 @@ export default function OurStory() {
 
 
             
+            <div className="summit-section" style={{ 
+              margin: '40px 0',
+              padding: '30px',
+              backgroundColor: isDarkMode ? 'rgba(255, 87, 34, 0.15)' : 'rgba(255, 87, 34, 0.08)',
+              borderRadius: '8px',
+              border: '1px solid rgba(255, 87, 34, 0.3)',
+              position: 'relative',
+              overflow: 'hidden'
+            }}>
+              <div style={{ 
+                position: 'absolute',
+                top: '0',
+                right: '0',
+                backgroundColor: '#FF5722',
+                color: 'white',
+                padding: '5px 15px',
+                transform: 'rotate(45deg) translateX(20px) translateY(-10px)',
+                fontSize: '0.8rem',
+                fontWeight: 'bold',
+                letterSpacing: '1px',
+                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'
+              }}>
+                🚨 EVENT ALERT 🚨
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <Image
+                  src="/pacific-blockchain-summit.png"
+                  alt="Pacific Blockchain Summit"
+                  width={500}
+                  height={300}
+                  style={{ 
+                    borderRadius: '8px', 
+                    marginBottom: '20px',
+                    maxWidth: '100%',
+                    height: 'auto'
+                  }}
+                />
+                
+                <h2 style={{ color: '#FF5722', marginBottom: '15px' }}>Pacific Blockchain Summit</h2>
+                
+                <h3 style={{ 
+                  marginBottom: '20px', 
+                  textAlign: 'center',
+                  fontWeight: '600',
+                  fontSize: '1.4rem',
+                  lineHeight: '1.5'
+                }}>
+                  ✨ Decentralizing Power: Blockchain, Indigenous Rights, and the Future of Cultural Stewardship ✨
+                </h3>
+                
+                <p style={{ 
+                  fontStyle: 'italic', 
+                  marginBottom: '20px',
+                  fontSize: '1.1rem',
+                  lineHeight: '1.6'
+                }}>
+                  In a world rapidly embracing decentralization, how can blockchain technology be used not just for financial gain—but to empower Indigenous communities, protect cultural heritage, and redefine ownership?
+                </p>
+                
+                <div style={{ 
+                  backgroundColor: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 152, 0, 0.1)', 
+                  padding: '20px', 
+                  borderRadius: '8px', 
+                  marginBottom: '20px',
+                  width: '100%',
+                  textAlign: 'left'
+                }}>
+                  <h4 style={{ marginBottom: '15px' }}>Join us for a powerful conversation where we'll explore:</h4>
+                  <ul style={{ listStyleType: 'none', paddingLeft: '5px' }}>
+                    <li style={{ 
+                      margin: '10px 0', 
+                      display: 'flex', 
+                      alignItems: 'center' 
+                    }}>
+                      <span style={{ 
+                        display: 'inline-block', 
+                        marginRight: '10px', 
+                        color: '#FF9800', 
+                        fontSize: '1.2rem' 
+                      }}>🔹</span>
+                      How blockchain can support Indigenous data sovereignty
+                    </li>
+                    <li style={{ 
+                      margin: '10px 0', 
+                      display: 'flex', 
+                      alignItems: 'center' 
+                    }}>
+                      <span style={{ 
+                        display: 'inline-block', 
+                        marginRight: '10px', 
+                        color: '#FF9800', 
+                        fontSize: '1.2rem' 
+                      }}>🔹</span>
+                      New models for community-owned digital assets
+                    </li>
+                    <li style={{ 
+                      margin: '10px 0', 
+                      display: 'flex', 
+                      alignItems: 'center' 
+                    }}>
+                      <span style={{ 
+                        display: 'inline-block', 
+                        marginRight: '10px', 
+                        color: '#FF9800', 
+                        fontSize: '1.2rem' 
+                      }}>🔹</span>
+                      Ethical frameworks for cultural preservation in Web3
+                    </li>
+                  </ul>
+                </div>
+                
+                <div style={{ marginBottom: '20px' }}>
+                  <h4 style={{ marginBottom: '10px' }}>Speakers</h4>
+                  <p style={{ marginBottom: '5px' }}>
+                    <span style={{ fontWeight: 'bold' }}>Edwin Liava'a</span> (Pasifika)
+                  </p>
+                  <p style={{ marginBottom: '5px' }}>
+                    <span style={{ fontWeight: 'bold' }}>Alana Kanahele</span> (University of Hawaii at Manoa)
+                  </p>
+                  <p style={{ marginBottom: '5px' }}>
+                    <span style={{ fontWeight: 'bold' }}>Richard Ng</span> (IndigiDAO)
+                  </p>
+                  <p style={{ marginBottom: '5px' }}>
+                    <span style={{ fontWeight: 'bold' }}>Moderator:</span> Jana Ireijo (Vanishing Murals)
+                  </p>
+                </div>
+                
+                <p style={{ 
+                  fontWeight: 'bold', 
+                  fontSize: '1.1rem', 
+                  marginBottom: '20px',
+                  color: isDarkMode ? '#FF9800' : '#FF5722'
+                }}>
+                  Blockchain technology in shaping equitable futures is not an imagination, it's happening!
+                </p>
+                
+                <div style={{ marginBottom: '20px' }}>
+                  <p style={{ fontWeight: 'bold', marginBottom: '5px' }}>Join us on September 12</p>
+                  <a 
+                    href="https://www.pacificblockchainsummit.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'inline-block',
+                      padding: '10px 20px',
+                      backgroundColor: '#FF5722',
+                      color: 'white',
+                      borderRadius: '4px',
+                      textDecoration: 'none',
+                      fontWeight: 'bold',
+                      transition: 'background-color 0.3s'
+                    }}
+                  >
+                    Early Bird Tickets Available
+                  </a>
+                </div>
+                
+                <div style={{ fontSize: '0.9rem', opacity: 0.8 }}>
+                  <p style={{ marginBottom: '5px' }}>Brought to you by: Inoa.ai</p>
+                  <p>Sponsors: Stand With Crypto, Malama Project, Avalanche, OpulenceX Inc, Middle Mgmt</p>
+                </div>
+              </div>
+            </div>
+
             <div className="join-us-section" style={{ 
               margin: '40px 0',
               padding: '30px',

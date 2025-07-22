@@ -16,6 +16,7 @@ export default function Main() {
   const router = useRouter();
   const [showRedirectPrompt, setShowRedirectPrompt] = useState(false);
   const [returningFromServices, setReturningFromServices] = useState(false);
+  const [showSummitPopup, setShowSummitPopup] = useState(false);
   
   // Check if the user is returning from services page
   useEffect(() => {
@@ -34,6 +35,19 @@ export default function Main() {
     }
   }, [sdkHasLoaded, isLoggedIn, primaryWallet, returningFromServices]);
   
+  // Effect to show the Summit popup after a short delay
+  useEffect(() => {
+    const popupTimer = setTimeout(() => {
+      // Check if the user has already seen the popup in this session
+      const hasSeenPopup = sessionStorage.getItem('hasSeenSummitPopup');
+      if (!hasSeenPopup) {
+        setShowSummitPopup(true);
+      }
+    }, 2000); // Show after 2 seconds
+    
+    return () => clearTimeout(popupTimer);
+  }, []);
+  
   // Handle redirect to services
   const handleRedirectToServices = () => {
     router.push('/services');
@@ -44,8 +58,144 @@ export default function Main() {
     setShowRedirectPrompt(false);
   };
   
+  // Handle closing the summit popup
+  const handleCloseSummitPopup = () => {
+    setShowSummitPopup(false);
+    // Set session storage to prevent showing the popup again in this session
+    sessionStorage.setItem('hasSeenSummitPopup', 'true');
+  };
+  
   return (
     <div className={`container ${isDarkMode ? 'dark' : 'light'}`}>
+      {/* Pacific Blockchain Summit Popup */}
+      {showSummitPopup && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.7)',
+          zIndex: 1000,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: '20px'
+        }}>
+          <div style={{
+            backgroundColor: isDarkMode ? '#222' : '#fff',
+            borderRadius: '10px',
+            maxWidth: '500px',
+            width: '100%',
+            padding: '30px',
+            boxShadow: '0 5px 20px rgba(0, 0, 0, 0.3)',
+            position: 'relative',
+            border: '2px solid #FF5722',
+            animation: 'fadeInScale 0.5s ease-out',
+          }}>
+            <button 
+              onClick={handleCloseSummitPopup}
+              style={{
+                position: 'absolute',
+                top: '15px',
+                right: '15px',
+                backgroundColor: 'transparent',
+                border: 'none',
+                color: isDarkMode ? '#fff' : '#333',
+                fontSize: '22px',
+                cursor: 'pointer',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '30px',
+                height: '30px',
+                borderRadius: '50%',
+                transition: 'background-color 0.2s',
+              }}
+              onMouseOver={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 87, 34, 0.1)'}
+              onMouseOut={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
+            >
+              ✕
+            </button>
+
+            <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+              <div style={{
+                backgroundColor: '#FF5722',
+                color: 'white',
+                padding: '8px 15px',
+                display: 'inline-block',
+                borderRadius: '20px',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                marginBottom: '15px',
+              }}>
+                🚨 EXCITING ANNOUNCEMENT 🚨
+              </div>
+              <h2 style={{ color: '#FF5722', marginBottom: '10px' }}>Pacific Blockchain Summit</h2>
+            </div>
+
+            <div style={{ marginBottom: '20px' }}>
+              <h3 style={{ textAlign: 'center', fontSize: '18px', fontWeight: 600, marginBottom: '15px' }}>
+                ✨ Decentralizing Power: Blockchain, Indigenous Rights, and the Future of Cultural Stewardship ✨
+              </h3>
+              
+              <p style={{ marginBottom: '15px', lineHeight: '1.6' }}>
+                Join us for a powerful conversation at the intersection of technology, sovereignty, and cultural resilience!
+              </p>
+              
+              <div style={{
+                backgroundColor: isDarkMode ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 152, 0, 0.1)',
+                padding: '15px',
+                borderRadius: '8px',
+                marginBottom: '15px',
+                fontSize: '15px',
+              }}>
+                <p style={{ fontWeight: 'bold', marginBottom: '5px' }}>Date: September 12, 2025</p>
+                <p style={{ fontWeight: 'bold', marginBottom: '10px' }}>Early bird tickets available now!</p>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
+              <Link 
+                href="/our-story#cultural-significance" 
+                onClick={handleCloseSummitPopup}
+                style={{
+                  padding: '12px',
+                  backgroundColor: isDarkMode ? '#333' : '#f5f5f5',
+                  color: isDarkMode ? '#fff' : '#333',
+                  borderRadius: '5px',
+                  textDecoration: 'none',
+                  textAlign: 'center',
+                  flex: 1,
+                  fontWeight: '500',
+                  border: '1px solid ' + (isDarkMode ? '#444' : '#ddd'),
+                }}
+              >
+                Learn More About Our Values
+              </Link>
+              <a 
+                href="https://www.pacificblockchainsummit.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={handleCloseSummitPopup}
+                style={{
+                  padding: '12px',
+                  backgroundColor: '#FF5722',
+                  color: 'white',
+                  borderRadius: '5px',
+                  textDecoration: 'none',
+                  textAlign: 'center',
+                  flex: 1,
+                  fontWeight: '600',
+                  boxShadow: '0 2px 4px rgba(255, 87, 34, 0.4)',
+                }}
+              >
+                Get Tickets
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
       {/* Header Section - Pasifika Styled */}
       <div className="header">
         <div className="header-container">
@@ -325,7 +475,39 @@ export default function Main() {
 
       {/* Cultural Values Section */}
       <div className="dep-in-section" style={{ background: isDarkMode ? '#222' : '#fff', padding: '1.5rem', margin: '1.5rem auto', maxWidth: 900, textAlign: 'center', borderRadius: 12, boxShadow: isDarkMode ? '0 2px 16px #111' : '0 2px 16px #eee' }}>
-        <h2 style={{ color: isDarkMode ? '#FF9800' : '#FF5722', marginBottom: '1rem' }}>Beyond Technology: Cultural Significance</h2>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.75rem' }}>
+          <h2 style={{ color: isDarkMode ? '#FF9800' : '#FF5722', margin: '0' }}>Beyond Technology: Cultural Significance</h2>
+          <Link 
+            href="/our-story#cultural-significance" 
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              marginLeft: '15px',
+              padding: '6px 12px',
+              backgroundColor: '#FF5722',
+              color: 'white',
+              borderRadius: '20px',
+              fontSize: '0.85rem',
+              fontWeight: '500',
+              textDecoration: 'none',
+              transition: 'all 0.3s ease',
+              boxShadow: '0 2px 8px rgba(255, 87, 34, 0.4)',
+            }}
+            onMouseOver={(e: React.MouseEvent<HTMLAnchorElement>) => {
+              e.currentTarget.style.transform = 'translateY(-2px)';
+              e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 87, 34, 0.5)';
+            }}
+            onMouseOut={(e: React.MouseEvent<HTMLAnchorElement>) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 2px 8px rgba(255, 87, 34, 0.4)';
+            }}
+          >
+            Learn More
+            <svg style={{ marginLeft: '5px' }} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </Link>
+        </div>
         <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
           What truly sets our approach apart is how Bitcoin and Lightning Network technology allows us to encode Pacific Island cultural values into digital infrastructure while providing security and accessibility essential for Pacific communities:
         </p>
