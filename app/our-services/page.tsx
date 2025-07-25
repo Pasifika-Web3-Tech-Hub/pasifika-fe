@@ -3,7 +3,7 @@
 import { useDarkMode } from "@/lib/useDarkMode";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from 'react';
 import "../page.css";
 import "../shared-pages.css";
 import "./services.css";
@@ -11,6 +11,25 @@ import "./services.css";
 export default function Services() {
   const { isDarkMode } = useDarkMode();
   const [activeCategory, setActiveCategory] = useState('technical');
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [bitcoinDropdownVisible, setBitcoinDropdownVisible] = useState(false);
+  
+  // We'll use Next.js Link component with direct HTML path links
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      const targetElement = event.target as Element;
+      if (!targetElement.closest('.bitcoin-dropdown-container')) {
+        setBitcoinDropdownVisible(false);
+      }
+    }
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const handleCategoryChange = (category: string) => {
     setActiveCategory(category);
@@ -150,9 +169,9 @@ export default function Services() {
             </div>
             
             <div className="services-grid">
-              <div className="service-card">
+              <div className="service-card" style={{ marginBottom: '100px', minHeight: '520px', width: '100%' }}>
                 <div className="service-card-header">
-                  <div className="service-icon">📚</div>
+                  <div className="service-icon">₿</div>
                   <h3>Bitcoin Education & Training</h3>
                 </div>
                 <p>Localized Bitcoin education programs tailored to Pacific contexts, with workshops, online courses, and hands-on training in local languages for all skill levels.</p>
@@ -162,10 +181,27 @@ export default function Services() {
                   <li>Business Bitcoin integration workshops</li>
                   <li>Self-custody security best practices</li>
                 </ul>
-                <div className="service-card-action">
-                  <Link href="/portfolio/community/bitcoin.html" className="service-button" target="_blank">
-                    Learn More
-                  </Link>
+                <div className="service-card-action" style={{ marginBottom: '20px', paddingTop: '20px' }}>
+                  {/* Using Next.js Link component like other service cards */}
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center', marginBottom: '30px' }}>
+                    <div style={{ fontWeight: 'bold' }}>Educational Resources:</div>
+                    <Link 
+                      href="/portfolio/bitcoin/bitcoin-primer.html" 
+                      className="service-button"
+                      target="_blank"
+                      style={{ display: 'block', width: '200px', textAlign: 'center' }}
+                    >
+                      Bitcoin Primer
+                    </Link>
+                    <Link 
+                      href="/portfolio/bitcoin/bitcoin-node-guide.html" 
+                      className="service-button"
+                      target="_blank"
+                      style={{ display: 'block', width: '200px', textAlign: 'center', marginTop: '10px' }}
+                    >
+                      Bitcoin Node Guide
+                    </Link>
+                  </div>
                 </div>
               </div>
               

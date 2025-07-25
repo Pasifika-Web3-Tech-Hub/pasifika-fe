@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bitcoin Node Setup Guide - A Pasifika.xyz resource for Pacific Island communities">
+    <meta name="keywords" content="Bitcoin node, cryptocurrency, blockchain, node setup, Pasifika, Pacific Islands">
+    <meta name="author" content="Pasifika.xyz">
+    <title>Bitcoin Node Setup Guide | Pasifika.xyz Tech Hub</title>
+    <link rel="icon" href="/pasifika.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation menu removed as per requirements -->
+        <div class="header" style="position: relative;">
+            <img src="/pasifika.png" alt="Pasifika Logo" style="position: absolute; top: 10px; left: 10px; height: 60px; width: auto;">
+            <a href="/our-services" class="cta-button primary" style="position: absolute; top: 10px; right: 10px; padding: 10px 20px; background-color: #ff6b35; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Back to Services</a>
+            
+            <div style="position: relative; margin-top: 40px; margin-bottom: 20px; height: 80px;">
+                <div style="display: flex; justify-content: center; width: 100%;">
+                    <img src="bitcoin.png" alt="Bitcoin Logo" class="bitcoin-logo" style="height: 80px; width: auto;">
+                </div>
+            </div>
+            
+            <h1>Bitcoin Node Setup Guide</h1>
+            <p class="subtitle">Run Your Own Full Node and Strengthen the Network</p>
+            <p class="subtitle"><span style="color: #ff6b35; font-weight: bold;">Sovereignty</span> through Network Participation</p>
+            <p style="font-size: 0.9rem; margin-top: 15px;">Part of <a href="https://pasifika.xyz" style="color: #ff6b35; text-decoration: none; font-weight: bold;">Pasifika.xyz</a> Web3 Tech Hub</p>
+        </div>
+
+            <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">~600 GB</div>
+                <div class="stat-label">Full Node Storage</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">~10 GB</div>
+                <div class="stat-label">Pruned Node Size</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5-10 GB</div>
+                <div class="stat-label">Monthly Growth</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4 GB</div>
+                <div class="stat-label">Recommended RAM</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛡️ Why Run a Bitcoin Node?</h2>
+            <p>Running your own Bitcoin node offers several important benefits that enhance your Bitcoin experience, privacy, and the overall network strength:</p>
+            
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-icon">🔒</div>
+                    <div class="property-title">Trustless Verification</div>
+                    <div class="property-description">Verify all transactions independently without trusting third parties. You don't have to rely on remote nodes to confirm transactions or blockchain state.</div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <span class="rating-text">Critical Benefit</span>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-icon">🌐</div>
+                    <div class="property-title">Enhanced Decentralization</div>
+                    <div class="property-description">Each node stores a copy of the blockchain, making the network more resilient to attacks, censorship, or shutdown attempts while enforcing consensus rules.</div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <span class="rating-text">Network Critical</span>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-icon">🔐</div>
+                    <div class="property-title">Improved Privacy</div>
+                    <div class="property-description">Running your node protects your privacy by preventing the need to send transaction queries to remote nodes that might log your activity.</div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <span class="rating-text">Privacy Essential</span>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-icon">🎓</div>
+                    <div class="property-title">Learning Opportunity</div>
+                    <div class="property-description">Setting up and operating your own Bitcoin node helps you understand better how Bitcoin works at a technical level.</div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star empty">★</span>
+                        </div>
+                        <span class="rating-text">Educational Value</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔍 Types of Bitcoin Nodes</h2>
+            <p>Bitcoin nodes come in several configurations to suit different needs, resources, and use cases:</p>
+            
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-icon">💾</div>
+                    <div class="property-title">Full Node (Unpruned)</div>
+                    <div class="property-description">Stores the entire blockchain history (~600GB). Provides maximum network support and serves historical data to other nodes. Includes transaction index for full functionality.</div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <span class="rating-text">Maximum Benefit</span>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-icon">✏️</div>
+                    <div class="property-title">Pruned Node</div>
+                    <div class="property-description">Stores only recent blocks + UTXO set (~10GB). Same security and validation capabilities as a full node but with minimal storage requirements.</div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star empty">★</span>
+                        </div>
+                        <span class="rating-text">Storage Efficient</span>
+                    </div>
+                </div>
+            </div>
+
+        <div class="section">
+            <h2>💻 Hardware Requirements</h2>
+            <p>To run a Bitcoin node effectively, you'll need appropriate hardware that can handle the demands of blockchain validation:</p>
+            
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-icon">⚡</div>
+                    <div class="property-title">CPU</div>
+                    <div class="property-description">A modern dual-core processor is the minimum requirement. Performance (GHz) is more important than core count for Bitcoin Core. Recommended: 4+ cores at 2.5+ GHz.</div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star empty">★</span>
+                            <span class="star empty">★</span>
+                        </div>
+                        <span class="rating-text">Moderate Impact</span>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-icon">🧠</div>
+                    <div class="property-title">Memory (RAM)</div>
+                    <div class="property-description">Bitcoin Core uses RAM for the mempool and UTXO cache. 2GB is the absolute minimum, but 4GB+ is strongly recommended for optimal performance.</div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star empty">★</span>
+                        </div>
+                        <span class="rating-text">High Impact</span>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-icon">💾</div>
+                    <div class="property-title">Storage</div>
+                    <div class="property-description">SSD strongly recommended for initial sync and ongoing operations. Full node needs ~600GB (growing 5-10GB/month). Pruned nodes can use as little as 10GB.</div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <span class="rating-text">Critical Factor</span>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-icon">📶</div>
+                    <div class="property-title">Internet Connection</div>
+                    <div class="property-description">Minimum upload speed of 400 kbps required. Broadband connection recommended. Initial sync downloads ~600GB. Ongoing usage varies.</div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star empty">★</span>
+                        </div>
+                        <span class="rating-text">High Impact</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hardware-setups">
+                <h3>Recommended Hardware Setups</h3>
+                <div class="setups-container">
+                    <div class="setup-card budget">
+                        <div class="setup-header">
+                            <h4>Budget Setup</h4>
+                            <div class="price">~$300-500</div>
+                        </div>
+                        <ul>
+                            <li>Raspberry Pi 4 (4GB RAM) or equivalent mini PC</li>
+                            <li>1TB external SSD via USB 3.0</li>
+                            <li>Standard power supply</li>
+                            <li>Proper ventilation case</li>
+                        </ul>
+                    </div>
+                    <div class="setup-card standard">
+                        <div class="setup-header">
+                            <h4>Standard Setup</h4>
+                            <div class="price">~$500-800</div>
+                        </div>
+                        <ul>
+                            <li>Intel NUC or similar mini PC</li>
+                            <li>Intel i3 or AMD Ryzen 3</li>
+                            <li>8 GB RAM</li>
+                            <li>1 TB internal SSD</li>
+                        </ul>
+                    </div>
+                    <div class="setup-card advanced">
+                        <div class="setup-header">
+                            <h4>Advanced Setup</h4>
+                            <div class="price">~$800-1500</div>
+                        </div>
+                        <ul>
+                            <li>Custom build or high-end mini PC</li>
+                            <li>Intel i5/i7 or AMD Ryzen 5/7</li>
+                            <li>16-32 GB RAM</li>
+                            <li>2 TB NVMe SSD</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <section class="setup-guide">
+        <div class="container">
+            <div class="section-header">
+                <h2>Step-by-Step Setup Guide</h2>
+                <p>Follow these instructions to set up your Bitcoin node securely</p>
+            </div>
+
+            <div class="setup-steps">
+                <div class="step">
+                    <div class="step-content">
+                        <h3>System Preparation (Linux)</h3>
+                        <p>Start by updating your system and creating a dedicated user for Bitcoin Core:</p>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Update System & Create User</span>
+                            </div>
+                            <pre><code># Update system packages
+sudo apt update && sudo apt upgrade -y
+
+# Create dedicated Bitcoin user
+sudo adduser btc-user
+
+# Add user to sudo group
+sudo usermod -aG sudo btc-user
+
+# Switch to the new user
+su - btc-user</code></pre>
+                        </div>
+                        <div class="note">
+                            <p><strong>Security Note:</strong> Running Bitcoin Core as a dedicated user improves security by limiting potential damage from any security vulnerabilities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-content">
+                        <h3>Download and Verify Bitcoin Core</h3>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Download Bitcoin Core 28.1</span>
+                            </div>
+                            <pre><code># Download Bitcoin Core binary
+wget https://bitcoincore.org/bin/bitcoin-core-28.1/bitcoin-28.1-x86_64-linux-gnu.tar.gz
+
+# Download verification files
+wget https://bitcoincore.org/bin/bitcoin-core-28.1/SHA256SUMS
+wget https://bitcoincore.org/bin/bitcoin-core-28.1/SHA256SUMS.asc
+
+# Verify SHA256 checksum
+sha256sum --ignore-missing --check SHA256SUMS</code></pre>
+                        </div>
+                        
+                        <h4>GPG Signature Verification (Recommended)</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Verify GPG Signature</span>
+                            </div>
+                            <pre><code># Clone repository with developer keys
+git clone https://github.com/bitcoin-core/guix.sigs
+
+# Import Bitcoin Core developer keys
+gpg --import guix.sigs/builder-keys/*
+
+# Verify the signature
+gpg --verify SHA256SUMS.asc</code></pre>
+                        </div>
+                        <div class="note">
+                            <p><strong>Important:</strong> Look for "Good signature" message from a Bitcoin Core developer to confirm authenticity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-content">
+                        <h3>Extract and Install Bitcoin Core</h3>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Installation Commands</span>
+                            </div>
+                            <pre><code># Extract the downloaded file
+tar xvf bitcoin-28.1-x86_64-linux-gnu.tar.gz
+
+# Install Bitcoin Core binaries
+sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-28.1/bin/*
+
+# Verify installation
+bitcoin-cli --version</code></pre>
+                        </div>
+                        
+                        <h4>Windows Installation</h4>
+                        <ol>
+                            <li>Download the Windows installer (.exe) from bitcoin.org</li>
+                            <li>Verify the SHA256 hash using <code>certUtil -hashfile filename SHA256</code></li>
+                            <li>Run the installer as Administrator</li>
+                            <li>Choose installation directory (default recommended)</li>
+                        </ol>
+                        
+                        <h4>macOS Installation</h4>
+                        <ol>
+                            <li>Download the .dmg file and verify its hash</li>
+                            <li>Open the .dmg file</li>
+                            <li>Drag Bitcoin Core to Applications folder</li>
+                            <li>Launch from Applications (may need to allow in Security settings)</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-content">
+                        <h3>Configure Bitcoin Core</h3>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Create Configuration Directory</span>
+                            </div>
+                            <pre><code># Create Bitcoin data directory
+mkdir -p ~/.bitcoin
+
+# Create configuration file
+nano ~/.bitcoin/bitcoin.conf</code></pre>
+                        </div>
+
+                        <h4>Basic Configuration</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>bitcoin.conf - Basic Setup</span>
+                            </div>
+                            <pre><code># Basic Bitcoin Core Configuration
+
+# Network settings
+server=1
+listen=1
+txindex=1
+
+# Connection settings
+maxconnections=125
+maxuploadtarget=5000
+
+# Performance settings
+dbcache=2000
+assumevalid=0
+
+# RPC settings (if needed)
+rpcuser=your_secure_username
+rpcpassword=your_secure_password
+rpcallowip=127.0.0.1
+rpcbind=127.0.0.1
+
+# Logging
+debug=0
+printtoconsole=0
+
+# Optional: Reduce storage (for pruned node)
+# prune=10000
+
+# Optional: Testnet (for testing)
+# testnet=1</code></pre>
+                        </div>
+
+                        <h4>Configuration for Different Setups</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Memory-Optimized Settings</span>
+                            </div>
+                            <pre><code># For systems with 4GB RAM
+dbcache=2000
+
+# For systems with 8GB+ RAM
+dbcache=4000
+
+# For systems with 16GB+ RAM  
+dbcache=8000</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-content">
+                        <h3>Configure Firewall</h3>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Linux Firewall Setup</span>
+                            </div>
+                            <pre><code># Allow Bitcoin port for peer connections
+sudo ufw allow 8333/tcp
+
+# Enable firewall
+sudo ufw enable
+
+# Check firewall status
+sudo ufw status</code></pre>
+                        </div>
+                        <div class="note">
+                            <p><strong>Security:</strong> Only open port 8333 for Bitcoin P2P connections. Never expose RPC ports (8332) to the internet.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-content">
+                        <h3>Start Bitcoin Core</h3>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Start Bitcoin Node</span>
+                            </div>
+                            <pre><code># Start Bitcoin Core daemon
+bitcoind -daemon
+
+# Check if node is running
+bitcoin-cli getblockchaininfo
+
+# Check connection count  
+bitcoin-cli getconnectioncount</code></pre>
+                        </div>
+                        
+                        <h4>GUI Method (All Platforms)</h4>
+                        <ol>
+                            <li>Launch Bitcoin Core from applications menu</li>
+                            <li>Choose data directory when prompted</li>
+                            <li>Wait for the initial synchronization to begin</li>
+                            <li>Monitor sync progress in the GUI</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-content">
+                        <h3>Create System Service (Linux)</h3>
+                        <p>Set up Bitcoin Core to start automatically on system boot:</p>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Stop current instance first</span>
+                            </div>
+                            <pre><code># Stop Bitcoin Core if running
+bitcoin-cli stop</code></pre>
+                        </div>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Create systemd service</span>
+                            </div>
+                            <pre><code># Create service file
+sudo nano /etc/systemd/system/bitcoind.service</code></pre>
+                        </div>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Service Configuration</span>
+                            </div>
+                            <pre><code>[Unit]
+Description=Bitcoin daemon
+Documentation=https://github.com/bitcoin/bitcoin/blob/master/doc/init.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/usr/local/bin/bitcoind -daemon \
+-pid=/run/bitcoind/bitcoind.pid \
+-conf=/home/btc-user/.bitcoin/bitcoin.conf \
+-datadir=/home/btc-user/.bitcoin \
+-startupnotify='systemd-notify --ready' \
+-shutdownnotify='systemd-notify --stopping'
+
+Type=notify
+NotifyAccess=all
+PIDFile=/run/bitcoind/bitcoind.pid
+Restart=on-failure
+TimeoutStartSec=infinity
+TimeoutStopSec=600
+
+User=btc-user
+Group=btc-user
+
+RuntimeDirectory=bitcoind
+RuntimeDirectoryMode=0710
+ConfigurationDirectory=bitcoin
+ConfigurationDirectoryMode=0710
+StateDirectory=bitcoind
+StateDirectoryMode=0710
+
+# Security hardening
+PrivateTmp=true
+ProtectSystem=full
+NoNewPrivileges=true
+PrivateDevices=true
+MemoryDenyWriteExecute=true
+
+[Install]
+WantedBy=multi-user.target</code></pre>
+                        </div>
+
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Enable and start service</span>
+                            </div>
+                            <pre><code># Reload systemd
+sudo systemctl daemon-reload
+
+# Enable service to start on boot
+sudo systemctl enable bitcoind.service
+
+# Start service
+sudo systemctl start bitcoind
+
+# Check service status
+sudo systemctl status bitcoind</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-content">
+                        <h3>Monitor Synchronization</h3>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Check Sync Progress</span>
+                            </div>
+                            <pre><code># Check detailed blockchain info
+bitcoin-cli getblockchaininfo
+
+# Monitor sync progress
+bitcoin-cli getblockchaininfo | grep -E "(blocks|headers|verificationprogress|initialblockdownload)"
+
+# Check network info
+bitcoin-cli getnetworkinfo
+
+# View recent log entries
+tail -f ~/.bitcoin/debug.log</code></pre>
+                        </div>
+                        
+                        <div class="note">
+                            <p><strong>Sync Status:</strong> Your node is fully synced when <code>verificationprogress</code> is close to 1.0, <code>initialblockdownload</code> is false, and <code>blocks</code> equals <code>headers</code>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sync-expectations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Blockchain Synchronization</h2>
+            </div>
+            <div class="expectations-container">
+                <div class="expectation-card">
+                    <h3>Timeline Expectations</h3>
+                    <ul class="timeline-list">
+                        <li>
+                            <span class="timeline-label">High-end hardware + fast internet:</span>
+                            <span class="timeline-value">8-24 hours</span>
+                        </li>
+                        <li>
+                            <span class="timeline-label">Mid-range hardware + decent internet:</span>
+                            <span class="timeline-value">1-3 days</span>
+                        </li>
+                        <li>
+                            <span class="timeline-label">Low-end hardware + slow internet:</span>
+                            <span class="timeline-value">3-7 days</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="expectation-card">
+                    <h3>Resource Usage During Sync</h3>
+                    <ul>
+                        <li><strong>CPU:</strong> High usage during block validation</li>
+                        <li><strong>RAM:</strong> Uses configured dbcache amount</li>
+                        <li><strong>Disk:</strong> Constant writing, SSD highly recommended</li>
+                        <li><strong>Network:</strong> Downloads ~600GB during initial sync</li>
+                        <li><strong>Uptime:</strong> Ideally continuous, minimum 6 hours/day</li>
+                    </ul>
+                </div>
+                
+                <div class="expectation-card">
+                    <h3>Optimizing Sync Speed</h3>
+                    <div class="code-block">
+                        <pre><code># Increase Database Cache (in MB)
+dbcache=8000  # For 16GB+ systems
+dbcache=4000  # For 8GB systems  
+dbcache=2000  # For 4GB systems
+
+# Increase max connections
+maxconnections=200
+
+# Disable assumevalid for full verification
+assumevalid=0</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testing-verification">
+        <div class="container">
+            <div class="section-header">
+                <h2>Testing Your Node</h2>
+            </div>
+            <div class="testing-content">
+                <div class="test-card">
+                    <h3>Verify Node Operation</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Basic Node Tests</span>
+                        </div>
+                        <pre><code># Check if fully synced
+bitcoin-cli getblockchaininfo | grep -E "(verificationprogress|initialblockdownload)"
+
+# Test RPC functionality
+bitcoin-cli getbestblockhash
+
+# Check peer connections
+bitcoin-cli getpeerinfo | jq length
+
+# Verify mempool
+bitcoin-cli getmempoolinfo</code></pre>
+                    </div>
+                </div>
+                
+                <div class="test-card">
+                    <h3>Test Inbound Connections</h3>
+                    <p>Once fully synced, test if your node accepts inbound connections:</p>
+                    <ol>
+                        <li>Visit <a href="https://bitnodes.io/" target="_blank">BitNodes.io</a></li>
+                        <li>Enter your public IP address</li>
+                        <li>Click "CHECK NODE"</li>
+                        <li>Green result = your node accepts inbound connections</li>
+                        <li>Red result = check firewall and port forwarding</li>
+                    </ol>
+                </div>
+                
+                <div class="test-card">
+                    <h3>Performance Monitoring</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Monitor Node Performance</span>
+                        </div>
+                        <pre><code># Check system resource usage
+htop
+
+# Monitor disk usage
+df -h ~/.bitcoin
+
+# Check Bitcoin Core logs
+tail -f ~/.bitcoin/debug.log
+
+# Monitor network traffic
+bitcoin-cli getnettotals</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="security-configuration">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advanced Security Configuration</h2>
+            </div>
+            <div class="security-content">
+                <div class="security-card">
+                    <h3>RPC Security</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Secure RPC Configuration</span>
+                        </div>
+                        <pre><code># Only enable RPC if needed
+server=1
+rpcuser=your_secure_username_hash
+rpcpassword=your_secure_password_hash
+
+# Limit RPC access to localhost only
+rpcallowip=127.0.0.1
+rpcbind=127.0.0.1
+
+# Optional: Specific subnet access
+# rpcallowip=192.168.1.0/24</code></pre>
+                    </div>
+                    <div class="warning-note">
+                        <p><strong>Critical:</strong> Never expose RPC to the internet. Use strong, unique credentials. Consider using rpcauth instead of plain passwords.</p>
+                    </div>
+                </div>
+                
+                <div class="security-card">
+                    <h3>Network Security</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Advanced Firewall Rules</span>
+                        </div>
+                        <pre><code># Allow Bitcoin P2P port
+sudo ufw allow 8333/tcp
+
+# Block RPC port from external access
+sudo ufw deny 8332
+
+# Allow RPC only from specific IPs (if needed)
+# sudo ufw allow from 192.168.1.100 to any port 8332
+
+# Check firewall status
+sudo ufw status numbered</code></pre>
+                    </div>
+                </div>
+
+                <div class="security-card">
+                    <h3>Enhanced Privacy with Tor</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Install and Configure Tor</span>
+                        </div>
+                        <pre><code># Install Tor
+sudo apt install tor
+
+# Add to bitcoin.conf
+proxy=127.0.0.1:9050
+onlynet=onion
+listen=1
+bind=127.0.0.1
+externalip=your_onion_address.onion</code></pre>
+                    </div>
+                    <p>Using Tor enhances privacy by routing Bitcoin traffic through the Tor network, making it harder to trace your node's location.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="troubleshooting">
+        <div class="container">
+            <div class="section-header">
+                <h2>Troubleshooting Common Issues</h2>
+            </div>
+            <div class="troubleshooting-grid">
+                <div class="issue-card">
+                    <h3>Slow Synchronization</h3>
+                    <ul>
+                        <li>Check internet connection speed</li>
+                        <li>Increase dbcache in bitcoin.conf</li>
+                        <li>Ensure using SSD storage</li>
+                        <li>Increase maxconnections to 200</li>
+                        <li>Check available disk space</li>
+                    </ul>
+                    <div class="code-block">
+                        <pre><code># Check sync progress
+bitcoin-cli getblockchaininfo | grep progress
+
+# Restart with more connections
+bitcoin-cli stop
+bitcoind -daemon -maxconnections=200</code></pre>
+                    </div>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>High Resource Usage</h3>
+                    <ul>
+                        <li>Normal during initial sync and validation</li>
+                        <li>Reduce dbcache if system becomes unresponsive</li>
+                        <li>Ensure adequate cooling for hardware</li>
+                        <li>Consider pruning mode for storage constraints</li>
+                    </ul>
+                    <div class="code-block">
+                        <pre><code># Reduce memory usage
+dbcache=1000
+
+# Enable pruning (keeps last ~10GB)
+prune=10000</code></pre>
+                    </div>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>Connection Issues</h3>
+                    <ul>
+                        <li>Check firewall settings</li>
+                        <li>Verify port 8333 is accessible</li>
+                        <li>Test with different DNS servers</li>
+                        <li>Check ISP restrictions</li>
+                    </ul>
+                    <div class="code-block">
+                        <pre><code># Check current connections
+bitcoin-cli getconnectioncount
+
+# Test port connectivity
+telnet bitnodes.io 8333
+
+# Add specific peers
+bitcoin-cli addnode "ip:port" add</code></pre>
+                    </div>
+                </div>
+                
+                <div class="issue-card">
+                    <h3>Service Issues (Linux)</h3>
+                    <div class="code-block">
+                        <pre><code># Check service status
+sudo systemctl status bitcoind
+
+# View service logs
+sudo journalctl -u bitcoind -f
+
+# Restart service
+sudo systemctl restart bitcoind
+
+# Check configuration file
+bitcoin-cli -conf=/path/to/bitcoin.conf getblockchaininfo</code></pre>
+                    </div>
+                </div>
+
+                <div class="issue-card">
+                    <h3>Stuck or Corrupted Sync</h3>
+                    <div class="code-block">
+                        <pre><code># Stop Bitcoin Core
+bitcoin-cli stop
+
+# Reindex blockchain (may take hours)
+bitcoind -daemon -reindex
+
+# Or rebuild UTXO database
+bitcoind -daemon -reindex-chainstate</code></pre>
+                    </div>
+                    <div class="warning-note">
+                        <p><strong>Note:</strong> Reindexing will take several hours but preserves downloaded blocks. Only use as last resort.</p>
+                    </div>
+                </div>
+
+                <div class="issue-card">
+                    <h3>Disk Space Management</h3>
+                    <ul>
+                        <li>Monitor available space regularly</li>
+                        <li>Consider enabling pruning mode</li>
+                        <li>Clean old log files periodically</li>
+                        <li>Move data directory to larger drive if needed</li>
+                    </ul>
+                    <div class="code-block">
+                        <pre><code># Check disk usage
+du -sh ~/.bitcoin
+
+# Enable pruning (modify bitcoin.conf)
+prune=50000  # Keep ~50GB
+
+# Move data directory
+bitcoind -daemon -datadir=/new/path</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="maintenance">
+        <div class="container">
+            <div class="section-header">
+                <h2>Node Maintenance</h2>
+            </div>
+            <div class="maintenance-content">
+                <div class="maintenance-card">
+                    <h3>Regular Maintenance Tasks</h3>
+                    <ul>
+                        <li><strong>Weekly:</strong> Check node status and connections</li>
+                        <li><strong>Monthly:</strong> Monitor disk space and logs</li>
+                        <li><strong>Quarterly:</strong> Update Bitcoin Core to latest version</li>
+                        <li><strong>As needed:</strong> Backup wallet.dat and important configs</li>
+                    </ul>
+                </div>
+                
+                <div class="maintenance-card">
+                    <h3>Updating Bitcoin Core</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Safe Update Process</span>
+                        </div>
+                        <pre><code># Stop Bitcoin Core
+bitcoin-cli stop
+
+# Backup current installation (optional)
+sudo cp /usr/local/bin/bitcoin* /backup/location/
+
+# Download and verify new version
+wget https://bitcoincore.org/bin/bitcoin-core-X.X/...
+sha256sum --check SHA256SUMS
+
+# Install new version
+sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-X.X/bin/*
+
+# Start Bitcoin Core
+bitcoind -daemon</code></pre>
+                    </div>
+                </div>
+
+                <div class="maintenance-card">
+                    <h3>Backup Important Files</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>Backup Configuration</span>
+                        </div>
+                        <pre><code># Backup configuration
+cp ~/.bitcoin/bitcoin.conf ~/backup/
+
+# Backup wallet (if using built-in wallet)
+bitcoin-cli backupwallet ~/backup/wallet-backup.dat
+
+# Backup entire .bitcoin directory (excluding blocks)
+rsync -av --exclude='blocks' --exclude='chainstate' ~/.bitcoin/ ~/backup/bitcoin-config/</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advanced-features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advanced Features</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Lightning Network Integration</h3>
+                    <p>Connect your Bitcoin node to a Lightning Network node for instant, low-cost payments:</p>
+                    <ul>
+                        <li>Install LND, c-lightning, or Eclair</li>
+                        <li>Configure to use your Bitcoin node as backend</li>
+                        <li>Enable real-time micropayments</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Electrum Server</h3>
+                    <p>Run an Electrum server to connect lightweight wallets:</p>
+                    <div class="code-block">
+                        <pre><code># Enable transaction index
+txindex=1
+
+# Install Electrum Personal Server
+# Configure to use your Bitcoin node</code></pre>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Block Explorer</h3>
+                    <p>Set up a local block explorer for your node:</p>
+                    <ul>
+                        <li>Install BTCPay Server or BTC RPC Explorer</li>
+                        <li>Connect to your local Bitcoin node</li>
+                        <li>Browse blockchain data privately</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Wallet Integration</h3>
+                    <div class="code-block">
+                        <pre><code># Create a new wallet
+bitcoin-cli createwallet "mywallet"
+
+# Load existing wallet
+bitcoin-cli loadwallet "mywallet"
+
+# Get new receiving address
+bitcoin-cli getnewaddress</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="conclusion">
+        <div class="container">
+            <div class="conclusion-content">
+                <h2>Your Contribution Matters</h2>
+                <p>By running a Bitcoin node, you're directly contributing to the strength, security, and decentralization of the Bitcoin network. Your node helps validate transactions, relay blocks, and maintain the integrity of the entire system.</p>
+                <p>For Pacific Island communities, running local nodes can improve regional Bitcoin network resilience and reduce dependency on distant servers, while also providing better privacy and transaction validation capabilities.</p>
+                
+                <div class="success-metrics">
+                    <h3>Signs of a Healthy Node</h3>
+                    <ul>
+                        <li>✅ Fully synchronized (verificationprogress = 1.0)</li>
+                        <li>✅ Multiple peer connections (8+ peers)</li>
+                        <li>✅ Accepting inbound connections</li>
+                        <li>✅ Low memory and CPU usage when idle</li>
+                        <li>✅ Consistent uptime</li>
+                    </ul>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="/contact" class="cta-button primary">Get Help Setting Up Your Node</a>
+                    <a href="/our-services" class="cta-button secondary">Back to Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <div class="footer">
+            <p>🌟 Bitcoin: The foundation of a new financial system</p>
+            <p>Run your own node • Be your own bank • Support the network</p>
+            <p>Hardware requirements and Bitcoin Core version updated as of July 2025</p>
+            <p style="margin-top: 15px; font-size: 0.9rem;"><a href="https://pasifika.xyz" style="color: #ff6b35; text-decoration: none;">Presented by Pasifika.xyz - Decentralized Infrastructure for Pacific Islands</a></p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Building The Future with Web3 - Empowering Pacific Communities</p>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -5,7 +5,7 @@
  */
 
 :root {
-    --orange: #FF5722;
+    --orange: #FF6B35;
     --orange-light: #FF9800;
     --orange-dark: #E64A19;
     --dark-grey: #333333;
@@ -594,6 +594,88 @@ a {
 
 a:hover {
     color: var(--white);
+}
+
+/* Dropdown Menu */
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+    z-index: 1000;
+}
+
+.dropdown-button {
+    background: linear-gradient(135deg, var(--orange-dark), var(--orange));
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.dropdown-button:hover {
+    background: linear-gradient(135deg, var(--orange), var(--orange-light));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 87, 34, 0.4);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dark-grey);
+    min-width: 240px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    border-radius: 8px;
+    margin-top: 5px;
+    left: 0;
+    overflow: hidden;
+    border: 2px solid var(--orange);
+}
+
+.dropdown-content a {
+    color: var(--white);
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--medium-grey);
+    color: var(--orange-light);
+    padding-left: 25px;
+}
+
+/* Show the dropdown menu */
+.show {
+    display: block !important;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Learn More Section specific styling */
+.learn-more-section {
+    margin: 30px 0;
+    text-align: center;
 }
 
 /* Footer */
