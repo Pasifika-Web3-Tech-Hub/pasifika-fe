@@ -169,7 +169,7 @@ export default function Services() {
             </div>
             
             <div className="services-grid">
-              <div className="service-card" style={{ marginBottom: '100px', minHeight: '520px', width: '100%' }}>
+              <div className="service-card">
                 <div className="service-card-header">
                   <div className="service-icon">₿</div>
                   <h3>Bitcoin Education & Training</h3>
@@ -181,9 +181,9 @@ export default function Services() {
                   <li>Business Bitcoin integration workshops</li>
                   <li>Self-custody security best practices</li>
                 </ul>
-                <div className="service-card-action" style={{ marginBottom: '20px', paddingTop: '20px' }}>
+                <div className="service-card-action">
                   {/* Using Next.js Link component like other service cards */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center', marginBottom: '30px' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center' }}>
                     <div style={{ fontWeight: 'bold' }}>Educational Resources:</div>
                     <Link 
                       href="/portfolio/bitcoin/bitcoin-primer.html" 
@@ -218,9 +218,11 @@ export default function Services() {
                   <li>Bitcoin developer grants and support</li>
                 </ul>
                 <div className="service-card-action">
-                  <Link href="/bitcoin-cultural-services" className="service-button" target="_blank">
-                    Learn More
-                  </Link>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center' }}>
+                    <Link href="/bitcoin-cultural-services" className="service-button" target="_blank" style={{ display: 'block', width: '200px', textAlign: 'center' }}>
+                      Learn More
+                    </Link>
+                  </div>
                 </div>
               </div>
               
@@ -237,9 +239,11 @@ export default function Services() {
                   <li>Sustainable revenue models for creators</li>
                 </ul>
                 <div className="service-card-action">
-                  <Link href="/bitcoin-cultural-services" className="service-button">
-                    Learn More
-                  </Link>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center' }}>
+                    <Link href="/bitcoin-cultural-services" className="service-button" style={{ display: 'block', width: '200px', textAlign: 'center' }}>
+                      Learn More
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
