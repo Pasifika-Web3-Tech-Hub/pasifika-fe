@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Linux Firewall Setup Guide for Bitcoin Nodes - A Pasifika.xyz resource for Pacific Island communities">
+    <meta name="keywords" content="Bitcoin node, Linux firewall, iptables, fail2ban, network security, Pasifika, Pacific Islands">
+    <meta name="author" content="Pasifika.xyz">
+    <title>Linux Firewall Guide for Bitcoin Nodes | Pasifika.xyz Tech Hub</title>
+    <link rel="icon" href="/pasifika.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation menu removed as per requirements -->
+        <div class="header" style="position: relative;">
+            <img src="/pasifika.png" alt="Pasifika Logo" style="position: absolute; top: 10px; left: 10px; height: 60px; width: auto;">
+            <a href="/our-services" class="cta-button primary" style="position: absolute; top: 10px; right: 10px; padding: 10px 20px; background-color: #ff6b35; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Back to Services</a>
+            
+            <div style="position: relative; margin-top: 40px; margin-bottom: 20px; height: 80px;">
+                <div style="display: flex; justify-content: center; width: 100%;">
+                    <img src="bitcoin.png" alt="Bitcoin Logo" class="bitcoin-logo" style="height: 80px; width: auto;">
+                </div>
+            </div>
+            
+            <h1>Linux Firewall Setup Guide</h1>
+            <p class="subtitle">Secure Your Bitcoin Node with Linux Firewall Configuration</p>
+            <p class="subtitle"><span style="color: #ff6b35; font-weight: bold;">Security</span> for Decentralized Infrastructure</p>
+            <p style="font-size: 0.9rem; margin-top: 15px;">Part of <a href="https://pasifika.xyz" style="color: #ff6b35; text-decoration: none; font-weight: bold;">Pasifika.xyz</a> Web3 Tech Hub</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">8333</div>
+                <div class="stat-label">Bitcoin P2P Port</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">22</div>
+                <div class="stat-label">SSH Port</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3600s</div>
+                <div class="stat-label">Default Ban Time</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">IPv4/6</div>
+                <div class="stat-label">Dual Stack Support</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛡️ Overview</h2>
+            <p>This guide provides step-by-step instructions for implementing Linux OS firewalls on Bitcoin nodes in your Decentralized Physical Infrastructure Network (DePIN) system. A proper firewall configuration is essential for securing your Bitcoin node against unauthorized access while maintaining network connectivity.</p>
+            
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-icon">📋</div>
+                    <div class="property-title">Prerequisites</div>
+                    <div class="property-description">
+                        <ul>
+                            <li>Ubuntu 20.04+ or CentOS 8+ Linux distribution</li>
+                            <li>Root or sudo access</li>
+                            <li>Bitcoin Core node installed and configured</li>
+                            <li>Basic understanding of Linux command line</li>
+                        </ul>
+                    </div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star empty">★</span>
+                            <span class="star empty">★</span>
+                        </div>
+                        <span class="rating-text">Moderate Difficulty</span>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-icon">🔒</div>
+                    <div class="property-title">Security Benefits</div>
+                    <div class="property-description">
+                        <ul>
+                            <li>Protection from unauthorized access</li>
+                            <li>Mitigation of DDoS attacks</li>
+                            <li>Defense against brute force attempts</li>
+                            <li>Controlled access to Bitcoin node services</li>
+                        </ul>
+                    </div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <span class="rating-text">Critical Security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🔧 Step 1: System Preparation</h2>
+            <p>Before configuring your firewall, ensure your system is up-to-date and has all necessary packages installed.</p>
+            
+            <h3>1.1 Update System</h3>
+            <div class="code-block">
+                <pre><code># Ubuntu/Debian
+sudo apt update && sudo apt upgrade -y
+
+# CentOS/RHEL
+sudo yum update -y</code></pre>
+            </div>
+            
+            <h3>1.2 Install Required Tools</h3>
+            <div class="code-block">
+                <pre><code># Ubuntu/Debian
+sudo apt install iptables-persistent netfilter-persistent fail2ban -y
+
+# CentOS/RHEL
+sudo yum install iptables-services fail2ban -y</code></pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔥 Step 2: Basic Firewall Configuration</h2>
+            <p>Start with basic iptables configuration to set up the foundation for your firewall rules.</p>
+            
+            <h3>2.1 Clear Existing Rules</h3>
+            <div class="code-block">
+                <pre><code># Flush all existing rules
+sudo iptables -F
+sudo iptables -X
+sudo iptables -t nat -F
+sudo iptables -t nat -X</code></pre>
+            </div>
+            
+            <h3>2.2 Set Default Policies</h3>
+            <div class="code-block">
+                <pre><code># Set restrictive defaults
+sudo iptables -P INPUT DROP
+sudo iptables -P FORWARD DROP
+sudo iptables -P OUTPUT ACCEPT</code></pre>
+            </div>
+            
+            <h3>2.3 Allow Loopback Traffic</h3>
+            <div class="code-block">
+                <pre><code># Allow local loopback (essential for system operation)
+sudo iptables -A INPUT -i lo -j ACCEPT
+sudo iptables -A OUTPUT -o lo -j ACCEPT</code></pre>
+            </div>
+            
+            <div class="warning">
+                <h3>⚠️ Caution</h3>
+                <p>Setting default policies to DROP will block all incoming connections not explicitly allowed. Make sure you have a way to access your system if something goes wrong, such as a console connection or out-of-band management.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>₿ Step 3: Bitcoin Node Specific Rules</h2>
+            <p>Configure firewall rules specifically for Bitcoin node operations.</p>
+            
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-icon">🌐</div>
+                    <div class="property-title">Bitcoin P2P Network Traffic</div>
+                    <div class="property-description">Allow Bitcoin network communication for peer connections.</div>
+                    <div class="code-block">
+                        <pre><code># Bitcoin mainnet P2P port (8333)
+sudo iptables -A INPUT -p tcp --dport 8333 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --sport 8333 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+
+# Bitcoin testnet P2P port (18333) - if using testnet
+sudo iptables -A INPUT -p tcp --dport 18333 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --sport 18333 -m conntrack --ctstate ESTABLISHED -j ACCEPT</code></pre>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-icon">🔐</div>
+                    <div class="property-title">Bitcoin RPC (Local Access)</div>
+                    <div class="property-description">Restrict Bitcoin RPC port to localhost and specific trusted IPs.</div>
+                    <div class="code-block">
+                        <pre><code># Bitcoin RPC port (8332) - restrict to localhost and specific IPs
+sudo iptables -A INPUT -p tcp --dport 8332 -s 127.0.0.1 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 8332 -s 192.168.1.0/24 -j ACCEPT  # Adjust to your network</code></pre>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>3.3 Outbound Bitcoin Connections</h3>
+            <div class="code-block">
+                <pre><code># Allow outbound connections to other Bitcoin nodes
+sudo iptables -A OUTPUT -p tcp --dport 8333 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+sudo iptables -A INPUT -p tcp --sport 8333 -m conntrack --ctstate ESTABLISHED -j ACCEPT</code></pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔑 Step 4: System Administration Access</h2>
+            <p>Configure secure administrative access to your Bitcoin node.</p>
+            
+            <h3>4.1 SSH Access (Secure Management)</h3>
+            <div class="code-block">
+                <pre><code># Replace YOUR_ADMIN_IP with your actual admin IP addresses
+# Multiple IPs can be added with separate rules
+sudo iptables -A INPUT -p tcp --dport 22 -s YOUR_ADMIN_IP -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+
+# Example for MEIDECC admin network
+sudo iptables -A INPUT -p tcp --dport 22 -s 192.168.100.0/24 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT</code></pre>
+            </div>
+            
+            <h3>4.2 ICMP (Ping) - Limited</h3>
+            <div class="code-block">
+                <pre><code># Allow ping for network diagnostics (rate limited)
+sudo iptables -A INPUT -p icmp --icmp-type echo-request -m limit --limit 1/s -j ACCEPT</code></pre>
+            </div>
+            
+            <div class="success">
+                <h3>💡 Best Practice</h3>
+                <p>Always restrict SSH access to specific trusted IP addresses whenever possible. If you need remote access from various locations, consider setting up a VPN and only allowing SSH access through the VPN.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🏝️ Step 5: Pacific Islands Specific Optimizations</h2>
+            <p>Special considerations for Bitcoin nodes operating in Pacific Island environments with potentially unstable network conditions.</p>
+            
+            <h3>5.1 Connection Tracking for Unstable Networks</h3>
+            <div class="code-block">
+                <pre><code># Increase connection tracking timeouts for unstable connections
+echo 'net.netfilter.nf_conntrack_tcp_timeout_established = 7200' >> /etc/sysctl.conf
+echo 'net.netfilter.nf_conntrack_tcp_timeout_time_wait = 120' >> /etc/sysctl.conf
+sudo sysctl -p</code></pre>
+            </div>
+            
+            <h3>5.2 Rate Limiting for Bandwidth Conservation</h3>
+            <div class="code-block">
+                <pre><code># Limit new connections per minute (adjust based on your needs)
+sudo iptables -A INPUT -p tcp --dport 8333 -m recent --set --name bitcoin_connect
+sudo iptables -A INPUT -p tcp --dport 8333 -m recent --update --seconds 60 --hitcount 10 --name bitcoin_connect -j DROP</code></pre>
+            </div>
+            
+            <div class="simple-terms">
+                <h3>Why This Matters</h3>
+                <p>Pacific Island networks often face challenges with limited bandwidth, higher latency, and occasional connectivity disruptions. These optimizations help your Bitcoin node maintain stable connections despite these challenges, ensuring your node remains a reliable part of the Bitcoin network.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛑 Step 6: DDoS Protection</h2>
+            <p>Implement protection against common denial-of-service attack methods.</p>
+            
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-icon">🌊</div>
+                    <div class="property-title">SYN Flood Protection</div>
+                    <div class="property-description">Prevent SYN flood attacks that can overwhelm your server.</div>
+                    <div class="code-block">
+                        <pre><code># Protect against SYN flood attacks
+sudo iptables -A INPUT -p tcp --syn -m limit --limit 1/s --limit-burst 3 -j ACCEPT
+sudo iptables -A INPUT -p tcp --syn -j DROP</code></pre>
+                    </div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star empty">★</span>
+                        </div>
+                        <span class="rating-text">Important Security</span>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-icon">🔍</div>
+                    <div class="property-title">Port Scan Protection</div>
+                    <div class="property-description">Detect and block port scanning attempts.</div>
+                    <div class="code-block">
+                        <pre><code># Detect and block port scanning attempts
+sudo iptables -N PORTSCAN
+sudo iptables -A PORTSCAN -m limit --limit 1/s --limit-burst 4 -j LOG --log-prefix "Port Scan: "
+sudo iptables -A PORTSCAN -j DROP
+sudo iptables -A INPUT -p tcp --tcp-flags ALL FIN,URG,PSH -j PORTSCAN
+sudo iptables -A INPUT -p tcp --tcp-flags ALL ALL -j PORTSCAN
+sudo iptables -A INPUT -p tcp --tcp-flags ALL SYN,RST,ACK,FIN,URG -j PORTSCAN</code></pre>
+                    </div>
+                    <div class="bitcoin-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star empty">★</span>
+                            <span class="star empty">★</span>
+                        </div>
+                        <span class="rating-text">Baseline Security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>👮 Step 7: Fail2Ban Configuration</h2>
+            <p>Set up Fail2Ban to protect against brute force attacks on SSH and Bitcoin RPC.</p>
+            
+            <h3>7.1 Configure Fail2Ban for SSH</h3>
+            <p>Create <code>/etc/fail2ban/jail.local</code>:</p>
+            <div class="code-block">
+                <pre><code>[DEFAULT]
+bantime = 3600
+findtime = 600
+maxretry = 3
+
+[sshd]
+enabled = true
+port = ssh
+filter = sshd
+logpath = /var/log/auth.log
+maxretry = 3
+bantime = 3600
+
+[bitcoin-rpc]
+enabled = true
+port = 8332
+filter = bitcoin-rpc
+logpath = /home/bitcoin/.bitcoin/debug.log
+maxretry = 5
+bantime = 7200</code></pre>
+            </div>
+            
+            <h3>7.2 Create Bitcoin RPC Filter</h3>
+            <p>Create <code>/etc/fail2ban/filter.d/bitcoin-rpc.conf</code>:</p>
+            <div class="code-block">
+                <pre><code>[Definition]
+failregex = ^.*ThreadRPCServer.*Error.*<HOST>.*$
+ignoreregex =</code></pre>
+            </div>
+            
+            <h3>7.3 Start Fail2Ban</h3>
+            <div class="code-block">
+                <pre><code>sudo systemctl enable fail2ban
+sudo systemctl start fail2ban
+sudo systemctl status fail2ban</code></pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 Step 8: Logging and Monitoring</h2>
+            <p>Set up logging to monitor firewall activity and potential security incidents.</p>
+            
+            <h3>8.1 Enable Firewall Logging for Suspicious Activity</h3>
+            <div class="code-block">
+                <pre><code># Log dropped packets (limited to prevent log spam)
+sudo iptables -A INPUT -m limit --limit 2/min -j LOG --log-prefix "IPTables-Dropped: " --log-level 4</code></pre>
+            </div>
+            
+            <h3>8.2 Create Log Monitoring Script</h3>
+            <p>Create <code>/usr/local/bin/firewall-monitor.sh</code>:</p>
+            <div class="code-block">
+                <pre><code>#!/bin/bash
+# Simple firewall monitoring script for Pasifika DePIN nodes
+
+LOG_FILE="/var/log/firewall-monitor.log"
+DATE=$(date '+%Y-%m-%d %H:%M:%S')
+
+# Check for dropped connections
+DROPPED_COUNT=$(grep "IPTables-Dropped" /var/log/syslog | wc -l)
+
+# Check Bitcoin node connectivity
+BITCOIN_CONNECTIONS=$(bitcoin-cli getconnectioncount 2>/dev/null || echo "ERROR")
+
+# Log status
+echo "[$DATE] Dropped packets: $DROPPED_COUNT | Bitcoin connections: $BITCOIN_CONNECTIONS" >> $LOG_FILE
+
+# Alert if no Bitcoin connections (adjust path as needed)
+if [ "$BITCOIN_CONNECTIONS" = "0" ] || [ "$BITCOIN_CONNECTIONS" = "ERROR" ]; then
+    echo "[$DATE] ALERT: Bitcoin node connectivity issue" >> $LOG_FILE
+fi</code></pre>
+            </div>
+            
+            <p>Make it executable and add to cron:</p>
+            <div class="code-block">
+                <pre><code>sudo chmod +x /usr/local/bin/firewall-monitor.sh
+echo "*/5 * * * * /usr/local/bin/firewall-monitor.sh" | sudo crontab -</code></pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>💾 Step 9: Save and Persist Rules</h2>
+            <p>Ensure your firewall rules persist across system reboots.</p>
+            
+            <h3>9.1 Save Current Rules</h3>
+            <div class="code-block">
+                <pre><code># Ubuntu/Debian
+sudo iptables-save > /etc/iptables/rules.v4
+
+# CentOS/RHEL
+sudo service iptables save</code></pre>
+            </div>
+            
+            <h3>9.2 Enable Auto-Start</h3>
+            <div class="code-block">
+                <pre><code># Ubuntu/Debian
+sudo systemctl enable netfilter-persistent
+
+# CentOS/RHEL
+sudo systemctl enable iptables</code></pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✅ Step 10: Testing and Validation</h2>
+            <p>Verify that your firewall configuration is working correctly.</p>
+            
+            <h3>10.1 Test Bitcoin Node Connectivity</h3>
+            <div class="code-block">
+                <pre><code># Check if Bitcoin node can connect to peers
+bitcoin-cli getconnectioncount
+
+# Check peer information
+bitcoin-cli getpeerinfo | grep addr</code></pre>
+            </div>
+            
+            <h3>10.2 Test Firewall Rules</h3>
+            <div class="code-block">
+                <pre><code># View current rules
+sudo iptables -L -n -v</code></pre>
+            </div>
+            
+            <h3>10.3 Monitor Logs</h3>
+            <div class="code-block">
+                <pre><code># Watch firewall logs
+sudo tail -f /var/log/syslog | grep IPTables
+
+# Watch fail2ban logs
+sudo tail -f /var/log/fail2ban.log</code></pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔄 Maintenance and Updates</h2>
+            <p>Regular maintenance tasks to keep your firewall effective.</p>
+            
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-icon">📅</div>
+                    <div class="property-title">Regular Tasks</div>
+                    <div class="property-description">
+                        <ol>
+                            <li><strong>Weekly</strong>: Review firewall logs for unusual activity</li>
+                            <li><strong>Monthly</strong>: Update fail2ban rules and test connectivity</li>
+                            <li><strong>Quarterly</strong>: Review and adjust rate limiting based on network conditions</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-icon">🚨</div>
+                    <div class="property-title">Emergency Procedures</div>
+                    <div class="property-description">If locked out due to firewall misconfiguration:</div>
+                    <div class="code-block">
+                        <pre><code># Emergency rule flush (requires console access)
+sudo iptables -F
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔧 Troubleshooting</h2>
+            <p>Solutions for common issues with firewall configuration.</p>
+            
+            <h3>Common Issues</h3>
+            
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-title">Bitcoin node can't connect to peers</div>
+                    <div class="property-description">
+                        <ul>
+                            <li>Check if port 8333 is properly opened</li>
+                            <li>Verify outbound rules allow Bitcoin traffic</li>
+                            <li>Check if your ISP blocks Bitcoin ports</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-title">Can't access via SSH</div>
+                    <div class="property-description">
+                        <ul>
+                            <li>Verify SSH rules include your IP address</li>
+                            <li>Check fail2ban hasn't banned your IP: <code>sudo fail2ban-client status sshd</code></li>
+                            <li>Verify SSH daemon is running: <code>sudo systemctl status sshd</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Useful Commands</h3>
+            <div class="code-block">
+                <pre><code># Check rule hit counts
+sudo iptables -L -n -v
+
+# Reset hit counters
+sudo iptables -Z
+
+# Temporary rule addition (for testing)
+sudo iptables -I INPUT 1 -s YOUR_IP -j ACCEPT
+
+# Remove specific rule by line number
+sudo iptables -D INPUT [line_number]</code></pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🛡️ Security Best Practices</h2>
+            <p>Follow these best practices to maintain a secure Bitcoin node environment:</p>
+            
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-icon">🔑</div>
+                    <div class="property-title">Principle of Least Privilege</div>
+                    <div class="property-description">Only open necessary ports and grant minimum required permissions. Block everything by default and only allow specific services.</div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-icon">🔄</div>
+                    <div class="property-title">Regular Updates</div>
+                    <div class="property-description">Keep your system, Bitcoin Core, and security tools updated with the latest security patches and updates.</div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-icon">👁️</div>
+                    <div class="property-title">Monitor Actively</div>
+                    <div class="property-description">Regularly check logs for suspicious activities or unauthorized access attempts.</div>
+                </div>
+                
+                <div class="property-card">
+                    <div class="property-icon">💾</div>
+                    <div class="property-title">Backup Configurations</div>
+                    <div class="property-description">Keep backups of working firewall configurations before making changes.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🏁 Conclusion</h2>
+            <p>This firewall setup provides a robust security foundation for Bitcoin nodes while accounting for the unique challenges of Pacific Island connectivity. The configuration balances security with the need for reliable Bitcoin network participation.</p>
+            
+            <p>Organizations implementing Bitcoin infrastructure should adjust IP ranges and monitoring parameters according to their specific network topology and requirements.</p>
+            
+            <div class="success">
+                <h3>💪 Community Impact</h3>
+                <p>Properly secured Bitcoin nodes not only protect individual infrastructure but also contribute to the overall security and health of the Bitcoin network. This is especially important for emerging technology hubs in the Pacific Islands region.</p>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="/contact" class="cta-button primary">Get Help With Your Firewall Setup</a>
+                <a href="/our-services" class="cta-button secondary">Back to Services</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🔒 Security: The foundation of reliable decentralized infrastructure</p>
+            <p>Secure your node • Protect the network • Contribute to decentralization</p>
+            <p>Firewall configuration updated as of July 2025</p>
+            <p style="margin-top: 15px; font-size: 0.9rem;"><a href="https://pasifika.xyz" style="color: #ff6b35; text-decoration: none;">Presented by Pasifika.xyz - Decentralized Infrastructure for Pacific Islands</a></p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Building The Future with Web3 - Empowering Pacific Communities</p>
+        </div>
+    </div>
+</body>
+</html>

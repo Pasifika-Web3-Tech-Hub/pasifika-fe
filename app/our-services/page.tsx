@@ -201,6 +201,14 @@ export default function Services() {
                     >
                       Bitcoin Node Guide
                     </Link>
+                    <Link 
+                      href="/portfolio/bitcoin/linux-firewall-guide.html" 
+                      className="service-button"
+                      target="_blank"
+                      style={{ display: 'block', width: '200px', textAlign: 'center', marginTop: '10px' }}
+                    >
+                      Linux Firewall Guide
+                    </Link>
                   </div>
                 </div>
               </div>
