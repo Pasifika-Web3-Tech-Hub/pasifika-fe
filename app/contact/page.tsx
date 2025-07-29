@@ -40,8 +40,8 @@ export default function Contact() {
         _subject: `Pasifika Contact: ${formData.subject}`
       };
       
-      // Send data to FormSubmit.co API
-      const response = await fetch("https://formsubmit.co/4c9c6823d1dbcdacea84e6851c5cea15", {
+      // Send data to Getform API
+      const response = await fetch("https://getform.io/f/bkknodrb", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
