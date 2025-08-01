@@ -307,6 +307,26 @@ export default function OurStory() {
                   LinkedIn Profile
                 </a>
               </div>
+              
+              <div className="team-member">
+                <div className="member-photo-container">
+                  <Image 
+                    src="/tenanoia.png" 
+                    alt="Tenanoia Veronica (Noia) Simona" 
+                    width={150} 
+                    height={150} 
+                    style={{ borderRadius: '50%' }}
+                  />
+                </div>
+                <h3 className="member-name">Tenanoia Veronica (Noia) Simona</h3>
+                <p className="member-role">
+                  CEO, Tuvalu Telecommunications Corporation
+                </p>
+                <p className="member-location">Tuvalu</p>
+                <a href="https://www.linkedin.com/in/tenanoia-veronica-simona-554b681b/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                  LinkedIn Profile
+                </a>
+              </div>
             </div>
 
             <p style={{ marginTop: '30px' }}>
