@@ -186,17 +186,15 @@ export default function OurStory() {
 
 
             <h2>Our Team</h2>
-            <p style={{ marginBottom: '20px' }}>
-              Meet the Founder and co-Founders of Pasifika Web3 Tech Hub
-            </p>
             
+            <h3 style={{ margin: '30px 0 20px 0', color: 'var(--accent-color)' }}>Meet the Founder and co-Founders</h3>
             <div className="team-grid" style={{ 
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
               gap: '20px',
               justifyContent: 'center',
               maxWidth: '90%',
-              margin: '0 auto',
+              margin: '0 auto 40px auto',
               padding: '0 15px'
             }}>
               <div className="team-member">
@@ -213,7 +211,7 @@ export default function OurStory() {
                 <p className="member-role">
                   Founder, Blockchain & Digital Transformation Engineer
                 </p>
-                <p className="member-location">Pacific Islands</p>
+                <p className="member-location">Tonga/Fiji</p>
                 <a href="https://www.linkedin.com/in/edwin-liavaa/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
@@ -233,7 +231,7 @@ export default function OurStory() {
                 <p className="member-role">
                   co-Founder, ICT / Systems Engineer
                 </p>
-                <p className="member-location">Pacific Islands</p>
+                <p className="member-location">Tonga/Fiji</p>
                 <a href="https://www.linkedin.com/in/john-liava-a-5b42251a0/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
@@ -253,7 +251,7 @@ export default function OurStory() {
                 <p className="member-role">
                   co-Founder, Quantity Surveyor
                 </p>
-                <p className="member-location">Pacific Islands</p>
+                <p className="member-location">Tonga/Fiji</p>
                 <a href="https://www.linkedin.com/in/david-liava%E2%80%99a-905827260/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
@@ -273,8 +271,39 @@ export default function OurStory() {
                 <p className="member-role">
                   co-Founder, Project Officer
                 </p>
-                <p className="member-location">Pacific Islands</p>
+                <p className="member-location">Tonga/Fiji</p>
                 <a href="https://www.linkedin.com/in/selafine-liava%E2%80%99a-643616363/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                  LinkedIn Profile
+                </a>
+              </div>
+            </div>
+
+            <h3 style={{ margin: '50px 0 20px 0', color: 'var(--accent-color)' }}>Meet the Founding Members</h3>
+            <div className="team-grid" style={{ 
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '20px',
+              justifyContent: 'center',
+              maxWidth: '90%',
+              margin: '0 auto 40px auto',
+              padding: '0 15px'
+            }}>
+              <div className="team-member">
+                <div className="member-photo-container">
+                  <Image 
+                    src="/britney.png" 
+                    alt="Britney T-M" 
+                    width={150} 
+                    height={150} 
+                    style={{ borderRadius: '50%' }}
+                  />
+                </div>
+                <h3 className="member-name">Britney T-M</h3>
+                <p className="member-role">
+                  Educational Resources Manager
+                </p>
+                <p className="member-location">Honolulu, Hawaii (USA)</p>
+                <a href="https://www.linkedin.com/in/britneytm/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
                   LinkedIn Profile
                 </a>
               </div>

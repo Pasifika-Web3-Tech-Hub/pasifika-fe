@@ -16,28 +16,28 @@ At the heart of Pasifika Web3 Tech Hub is a philosophical principle that has gui
 
 EVM Compatible networks, with their focus on decentralization, community governance, and shared prosperity, provide the perfect technological expression of these Pacific values. When we examined various blockchain platforms, those supporting EVM compatibility aligned naturally with our cultural ethos while enabling cross-chain interoperability.
 
-## Technical Advantages of Our Interoperability Approach
+## Technical Advantages of Our Bitcoin-First Approach
 
-The Pasifika Web3 Tech Hub has officially migrated to Arbitrum as our primary blockchain infrastructure, with continued support for interoperability with RSK (Rootstock) and Linea. Our proof of concept and use cases are now live on Arbitrum testnet. This strategic selection leverages the unique strengths of each chain while ensuring seamless interoperability for the Pasifika Exchange - the first dedicated digital asset exchange for Pacific Islands:
+**Update: August 1, 2025** - The Pasifika Web3 Tech Hub is proud to announce our strategic focus on Bitcoin and the Lightning Network as our primary infrastructure. This decision aligns with our commitment to financial sovereignty, security, and accessibility for Pacific Island communities.
 
-### Linea: Scaling With Zero Knowledge
-Linea's zkEVM Layer-2 technology dramatically reduces transaction costs while maintaining Ethereum's robust security model. For communities where every fraction of a cent matters, this efficiency is crucial for financial inclusion.
+### Bitcoin: The Foundation of Digital Value
+Bitcoin represents the gold standard in decentralized digital currency, offering unmatched security, decentralization, global liquidity, and resistance to censorship. By building on Bitcoin, we ensure that Pacific Island communities have direct access to the most robust and widely-adopted blockchain network in the world.
 
-### RSK: Bitcoin Integration with Smart Contracts
-As a Bitcoin sidechain, RSK allows us to work with RBTC (Bitcoin on RSK) while leveraging the programmability of smart contracts. Our treasury was initially seeded with 27,281 RIF tokens received from the RSK Hactivator program, showcasing the real-world support this technology brings to Pacific innovation.
+### Lightning Network: Instant, Low-Cost Transactions
+The Lightning Network enables near-instant, low-cost transactions that are ideal for Pacific Island economies. With fees often less than a fraction of a cent, Lightning makes microtransactions and everyday commerce practical, even for the most remote island communities.
 
-### Arbitrum: Our Primary Network
-Arbitrum was chosen as our primary blockchain infrastructure for its exceptional throughput capabilities, security inherited from Ethereum, and low transaction fees (crucial for Pacific Island users). Arbitrum's optimistic rollup technology expands trading options available to Pacific Islanders through the Pasifika Exchange while keeping costs accessible.
+### RSK: Smart Contracts on Bitcoin
+Rootstock (RSK) provides Bitcoin with smart contract functionality while maintaining compatibility with the security of the Bitcoin network. Our treasury, initially seeded with RIF tokens, continues to support our Bitcoin-based infrastructure development.
 
-## Building the First Pacific Islands Exchange
+## Building the First Pacific Islands Bitcoin Exchange
 
-The technical architecture of our platform directly implements our community values through smart contracts and exchange functionality:
+The technical architecture of our platform directly implements our community values through Bitcoin and Lightning Network functionality:
 
-- **Exchange Features**: Our platform offers token swapping, liquidity provision, and cross-chain bridging capabilities specifically designed for Pacific Island users and their unique needs.
+- **Bitcoin-First Exchange**: Our platform offers Bitcoin and Lightning Network trading, liquidity provision, and asset management capabilities specifically designed for Pacific Island users and their unique needs.
 
-- **Cross-Chain Bridge**: We've integrated a Cross-Chain Bridge component that enables seamless token transfers between supported networks (Arbitrum, RootStock, and Linea) with an intuitive user interface and real-time token balance display.
+- **Lightning Network Integration**: We've implemented seamless Lightning Network support, enabling instant, low-cost transactions that are ideal for Pacific Island economies where traditional banking infrastructure is limited.
 
-- **Multi-Network Support**: Users can easily switch between networks (Arbitrum, RootStock, Linea) with our network manager and view token balances across all supported chains.
+- **Bitcoin Smart Contracts**: Leveraging RSK and other Bitcoin layer-2 solutions, we provide smart contract functionality while maintaining the security and decentralization of the Bitcoin network.
 
 - **Tiered Membership System**: We've created a simplified 3-tier structure (Guest, Member, Node Operator) with graduated fee structures (1%, 0.5%, 0.25%) that reward deeper community involvement with reduced trading fees.
 
@@ -49,17 +49,15 @@ This project is built using:
 
 - **Frontend**: Next.js 13.5 (App Router)
 - **Styling**: Custom CSS with dark/light mode support
-- **Multi-Network Support**:
-  - Network-specific contract loading
-  - Dynamic network switching
-  - Cross-chain compatibility via Cross-Chain Bridge
-  - Token mappings across Arbitrum, RootStock, and Linea networks
-- **Web3 Integration**:
-  - Wagmi v2 library for cross-chain interactions
-  - Dynamic Labs SDK for multi-chain wallet connection
-  - EIP-712 for typed data signing
-  - Viem for interoperable smart contract interactions
-  - React-toastify for transaction notifications
+- **Bitcoin & Lightning Network Support**:
+  - Bitcoin and Lightning Network integration
+  - Support for on-chain and off-chain transactions
+  - Lightning Network for instant, low-cost payments
+  - RSK for Bitcoin smart contracts
+- **Bitcoin Integration**:
+  - BitcoinJS for core Bitcoin functionality
+  - Lightning Network libraries for fast payments
+  - RSK for smart contract capabilities
 - **Smart Contracts**:
   - Membership tiers (Guest, Member, Node Operator)
   - Staking contract
@@ -106,13 +104,13 @@ The platform offers three membership tiers on each supported network:
    - No profit-sharing eligibility
 
 2. **Member (Tier 1)**:
-   - Network-specific fee (0.005 ETH on Arbitrum/Linea, 0.0001 RBTC on RootStock)
+   - Network-specific fee (0.0002 BTC on Lightning Network, 0.0001 RBTC on RootStock)
    - 0.5% transaction fee (50% discount)
    - Profit-sharing eligibility
    - Cross-chain governance participation
 
 3. **Node Operator (Tier 2)**:
-   - Native token staking required (ETH/RBTC)
+   - Native token staking required (BTC/RBTC)
    - 0.25% transaction fee (75% discount)
    - Priority access to services
    - Enhanced profit-sharing

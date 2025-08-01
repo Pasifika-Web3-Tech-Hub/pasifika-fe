@@ -41,6 +41,7 @@ export default function LearnMore() {
       <div className="learn-more-content">
         <div className="learn-more-banner">
           <h1>Resources & Information</h1>
+          <p>Access our educational materials, services, and community resources</p>
         </div>
         
         <div className="navigation-grid">
@@ -79,7 +80,12 @@ export default function LearnMore() {
             </div>
           </Link>
           
-
+          <Link href="/membership-portal" className="nav-card">
+            <div className="nav-card-inner">
+              <h2>Membership Portal</h2>
+              <p>Join our community and unlock exclusive benefits</p>
+            </div>
+          </Link>
           
           <Link href="/contact" className="nav-card">
             <div className="nav-card-inner">
