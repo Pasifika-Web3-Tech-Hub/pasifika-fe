@@ -347,6 +347,26 @@ export default function OurStory() {
                   LinkedIn Profile
                 </a>
               </div>
+              
+              <div className="team-member">
+                <div className="member-photo-container">
+                  <Image 
+                    src="/Suzanne.png" 
+                    alt="Suzanne Moli Orudiana" 
+                    width={150} 
+                    height={150} 
+                    style={{ borderRadius: '50%' }}
+                  />
+                </div>
+                <h3 className="member-name">Suzanne Moli Orudiana</h3>
+                <p className="member-role">
+                  Managing Director, Intellectual Solutions Solomon Islands (ISSI)
+                </p>
+                <p className="member-location">Solomon Islands</p>
+                <a href="https://www.linkedin.com/in/suzanne-moli-orudiana-64019760/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                  LinkedIn Profile
+                </a>
+              </div>
             </div>
 
             <p style={{ marginTop: '30px' }}>
