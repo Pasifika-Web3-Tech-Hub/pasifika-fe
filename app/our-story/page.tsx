@@ -327,6 +327,26 @@ export default function OurStory() {
                   LinkedIn Profile
                 </a>
               </div>
+              
+              <div className="team-member">
+                <div className="member-photo-container">
+                  <Image 
+                    src="/lusia.png" 
+                    alt="Lusia Jones" 
+                    width={150} 
+                    height={150} 
+                    style={{ borderRadius: '50%' }}
+                  />
+                </div>
+                <h3 className="member-name">Lusia Jones</h3>
+                <p className="member-role">
+                  Employment Consultant, Visionary Leader & Changemaker
+                </p>
+                <p className="member-location">New Zealand</p>
+                <a href="https://www.linkedin.com/in/lusiajones/" target="_blank" rel="noopener noreferrer" className="linkedin-link">
+                  LinkedIn Profile
+                </a>
+              </div>
             </div>
 
             <p style={{ marginTop: '30px' }}>
