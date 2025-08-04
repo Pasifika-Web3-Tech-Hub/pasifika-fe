@@ -318,7 +318,7 @@ export default function OurStory() {
                     style={{ borderRadius: '50%' }}
                   />
                 </div>
-                <h3 className="member-name">Tenanoia Veronica (Noia) Simona</h3>
+                <h3 className="member-name">Tenanoia Veronica Simona</h3>
                 <p className="member-role">
                   CEO, Tuvalu Telecommunications Corporation
                 </p>
