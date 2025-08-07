@@ -89,10 +89,10 @@ export default function Services() {
           <div className={`service-category ${activeCategory === 'technical' ? 'active' : ''}`}>
             <div className="service-category-intro">
               <h2 className="service-title">Technical Services</h2>
-              <p>We provide Bitcoin, Lightning Network, and private blockchain infrastructure and technical support for Pacific Island governments, utilities, and businesses looking to leverage blockchain technology.</p>
+              <p>We provide Bitcoin, Stacks blockchain, Clarity smart contracts, and Lightning Network infrastructure and technical support for Pacific Island governments, utilities, and businesses looking to leverage Bitcoin-secured blockchain technology.</p>
               <div style={{ marginTop: '15px', padding: '10px', background: 'rgba(255, 87, 34, 0.1)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Image src="/lightning.svg" alt="Lightning Network" width={28} height={28} style={{ marginRight: '10px' }} />
-                <span><strong>Bitcoin & Permissioned Solutions:</strong> Our technical solutions combine Bitcoin's security with custom blockchain systems for government and utility applications.</span>
+                <span><strong>Bitcoin-Secured Solutions:</strong> Our technical solutions combine Bitcoin's proof-of-work security with Stacks blockchain and Clarity smart contracts for predictable, transparent execution.</span>
               </div>
             </div>
             
@@ -102,7 +102,7 @@ export default function Services() {
                   <div className="service-icon">💼</div>
                   <h3>e-Gov Blockchains</h3>
                 </div>
-                <p>Custom private permissioned blockchain solutions for Pacific Island governments, enabling secure digital services, transparent governance, and efficient record-keeping.</p>
+                <p>Bitcoin-secured blockchain solutions using Stacks and Clarity smart contracts for Pacific Island governments, enabling secure digital services, transparent governance, and efficient record-keeping with predictable execution.</p>
                 <ul className="service-feature-list">
                   <li>Digital identity management systems</li>
                   <li>Land registry and property records</li>
@@ -121,7 +121,7 @@ export default function Services() {
                   <div className="service-icon">⚡</div>
                   <h3>Utilities DSS Support</h3>
                 </div>
-                <p>Blockchain-based decision support systems for Pacific utilities, enabling better resource management, payment tracking, and infrastructure maintenance for water, power, and telecommunications.</p>
+                <p>Bitcoin-secured decision support systems using Stacks blockchain for Pacific utilities, enabling better resource management, transparent payment tracking, and infrastructure maintenance for water, power, and telecommunications.</p>
                 <ul className="service-feature-list">
                   <li>Smart meter integration and payments</li>
                   <li>Distributed renewable energy management</li>
@@ -161,10 +161,10 @@ export default function Services() {
           <div className={`service-category ${activeCategory === 'community' ? 'active' : ''}`}>
             <div className="service-category-intro">
               <h2 className="service-title">Community Services</h2>
-              <p>Supporting the growth of Bitcoin and Lightning Network adoption throughout Pacific Island communities with focused education, resources, and local support networks.</p>
+              <p>Supporting the growth of Bitcoin, Stacks blockchain, and Lightning Network adoption throughout Pacific Island communities with focused education, resources, and local support networks.</p>
               <div style={{ marginTop: '15px', padding: '10px', background: 'rgba(255, 87, 34, 0.1)', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Image src="/bitcoin.svg" alt="Bitcoin" width={28} height={28} style={{ marginRight: '10px' }} />
-                <span><strong>Bitcoin Education Focus:</strong> Our community programs emphasize Bitcoin as a tool for financial sovereignty and economic resilience in Pacific contexts.</span>
+                <span><strong>Bitcoin-Secured Education Focus:</strong> Our community programs emphasize Bitcoin, Stacks, and Clarity smart contracts as tools for financial sovereignty and economic resilience in Pacific contexts.</span>
               </div>
             </div>
             

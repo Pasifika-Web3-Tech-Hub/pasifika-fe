@@ -221,9 +221,9 @@ export default function Main() {
       <div className="hero">
         <div className="hero-container">
           <div className="hero-content">
-            <h1 className="hero-title">Building The Future with Web3</h1>
+            <h1 className="hero-title">Building The Future with Bitcoin & Stacks</h1>
             <p className="hero-subtitle">
-              Join us in creating a decentralized ecosystem for a marketplace that empowers Pacific communities through blockchain technology and digital innovation.
+              Join us in creating a Bitcoin-secured ecosystem that empowers Pacific communities through Stacks blockchain, Clarity smart contracts, and Lightning Network technology.
             </p>
             <div className="hero-buttons">
               <button 
@@ -289,7 +289,7 @@ export default function Main() {
               Discover Our Journey
             </h2>
             <p style={{ fontSize: '1.1rem', marginBottom: '20px', maxWidth: '700px' }}>
-              Learn about the vision, progress, and future of Pasifika Web3 Tech Hub as we build a decentralized ecosystem for Pacific Island communities.
+              Learn about our vision and progress as we build a Bitcoin-secured ecosystem for Pacific Island communities using Stacks blockchain and Clarity smart contracts.
             </p>
             <a 
               href="/our-story" 
@@ -340,11 +340,11 @@ export default function Main() {
               <div className="token-features">
                 <div className="token-feature">
                   <div className="token-feature-icon">✓</div>
-                  <div>Secure connection with multiple wallet providers</div>
+                  <div>Secure connection with Stacks wallets (Hiro, Xverse)</div>
                 </div>
                 <div className="token-feature">
                   <div className="token-feature-icon">✓</div>
-                  <div>Access to blockchain features and services</div>
+                  <div>Access to Bitcoin-secured blockchain features</div>
                 </div>
                 <div className="token-feature">
                   <div className="token-feature-icon">✓</div>
@@ -509,7 +509,7 @@ export default function Main() {
           </Link>
         </div>
         <p style={{ fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-          What truly sets our approach apart is how Bitcoin and Lightning Network technology allows us to encode Pacific Island cultural values into digital infrastructure while providing security and accessibility essential for Pacific communities:
+          What truly sets our approach apart is how Bitcoin, Stacks blockchain, and Clarity smart contracts allow us to encode Pacific Island cultural values into secure digital infrastructure while providing accessibility essential for Pacific communities:
         </p>
         
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', textAlign: 'left' }}>
@@ -525,7 +525,7 @@ export default function Main() {
           
           <div>
             <h3 style={{ color: isDarkMode ? '#FF9800' : '#FF5722', margin: '0' }}>🏝️ Accessibility</h3>
-            <p>By leveraging Lightning Network's payment channels, we enable instant, low-cost Bitcoin transactions and ensure that participation remains accessible to all community members, regardless of economic status or technical expertise.</p>
+            <p>By leveraging Lightning Network's payment channels and Stacks' Bitcoin-secured smart contracts, we enable instant, low-cost transactions with predictable execution, ensuring that participation remains accessible to all community members, regardless of economic status or technical expertise.</p>
           </div>
         </div>
       </div>
