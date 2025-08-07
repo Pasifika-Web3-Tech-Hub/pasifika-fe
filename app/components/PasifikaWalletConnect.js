@@ -24,19 +24,7 @@ const getLeatherWallet = () => {
   return null;
 };
 
-const getHiroWallet = () => {
-  if (isBrowser) {
-    // Hiro wallet injects itself as window.StacksProvider
-    if (window.StacksProvider && typeof window.StacksProvider.request === 'function') {
-      return window.StacksProvider;
-    }
-    // Alternative Hiro detection
-    if (window.HiroWalletProvider && typeof window.HiroWalletProvider.request === 'function') {
-      return window.HiroWalletProvider;
-    }
-  }
-  return null;
-};
+
 
 const getXverseWallet = () => {
   if (isBrowser) {
@@ -145,44 +133,6 @@ const stacksWallets = [
     }
   },
   {
-    id: 'hiro',
-    name: 'Hiro Wallet',
-    icon: '🟠',
-    description: 'Connect with Hiro Wallet for Stacks',
-    downloadUrl: 'https://wallet.hiro.so/',
-    isAvailable: () => !!getHiroWallet(),
-    connect: async () => {
-      const wallet = getHiroWallet();
-      if (!wallet) {
-        throw new Error('Hiro Wallet not found');
-      }
-      
-      try {
-        // Hiro wallet uses 'stx_requestAccounts' method
-        const response = await wallet.request('stx_requestAccounts');
-        console.log('Hiro response:', response);
-        
-        // Hiro returns addresses in response.result.addresses
-        if (response && response.result && response.result.addresses) {
-          const addresses = response.result.addresses;
-          if (addresses.length > 0) {
-            // Return the mainnet address (usually the first one)
-            return addresses.map(addr => addr.address || addr);
-          }
-        }
-        
-        throw new Error('No accounts returned from Hiro');
-      } catch (error) {
-        console.error('Hiro connection error:', error);
-        // If the user rejected the connection
-        if (error.code === 4001) {
-          throw new Error('Connection rejected by user');
-        }
-        throw new Error(`Failed to connect to Hiro Wallet: ${error.message}`);
-      }
-    }
-  },
-  {
     id: 'xverse',
     name: 'Xverse Wallet',
     icon: '⚡',
@@ -264,14 +214,6 @@ export default function PasifikaWalletConnect() {
         if (leatherWallet) {
           console.log('Leather wallet object:', leatherWallet);
           console.log('Leather has request method:', typeof leatherWallet.request === 'function');
-        }
-        
-        // Check Hiro wallet
-        const hiroWallet = getHiroWallet();
-        console.log('Hiro wallet detected:', !!hiroWallet);
-        if (hiroWallet) {
-          console.log('Hiro wallet object:', hiroWallet);
-          console.log('Hiro has request method:', typeof hiroWallet.request === 'function');
         }
         
         // Check Xverse wallet
@@ -508,14 +450,14 @@ export default function PasifikaWalletConnect() {
                   onClick={() => {
                     console.log('=== MANUAL WALLET DEBUG ===');
                     console.log('window.btc:', window.btc);
-                    console.log('window.StacksProvider:', window.StacksProvider);
+                    console.log('window.XverseProviders:', window.XverseProviders);
                     console.log('Leather detected:', !!getLeatherWallet());
-                    console.log('Hiro detected:', !!getHiroWallet());
+                    console.log('Xverse detected:', !!getXverseWallet());
                     if (window.btc) {
                       console.log('window.btc methods:', Object.getOwnPropertyNames(window.btc));
                     }
-                    if (window.StacksProvider) {
-                      console.log('window.StacksProvider methods:', Object.getOwnPropertyNames(window.StacksProvider));
+                    if (window.XverseProviders && window.XverseProviders.StacksProvider) {
+                      console.log('window.XverseProviders.StacksProvider methods:', Object.getOwnPropertyNames(window.XverseProviders.StacksProvider));
                     }
                   }}
                   style={{
