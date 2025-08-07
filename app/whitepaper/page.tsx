@@ -40,7 +40,7 @@ export default function Whitepaper() {
       {/* Page Content */}
       <div className="page-content">
         <div className="page-banner">
-          <h1>PASIFIKA BITCOIN TECH HUB WHITEPAPER</h1>
+          <h1>PASIFIKA WEB3 TECH HUB WHITEPAPER</h1>
         </div>
         
         <div className="content-container">
@@ -53,13 +53,13 @@ export default function Whitepaper() {
                 height={300}
                 className="whitepaper-logo"
               />
-              <h2>Pacific Values in Digital Form: The First Bitcoin & Lightning Network Exchange for Pacific Islands</h2>
+              <h2>Pacific Values in Digital Form: Web3 Market Place Powered by Bitcoin, Layer 2 Stacks, and Lightning Network for Pacific Islands</h2>
               <p className="whitepaper-version">Version 3.0 | August 2025</p>
               <div className="whitepaper-divider"></div>
             </div>
                         <h2>EXECUTIVE SUMMARY</h2>
             <p>
-              At the heart of Pasifika Bitcoin Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: <strong>&quot;If we take care of our own, they will take care of us.&quot;</strong> This powerful concept drives our groundbreaking Pasifika Exchange designed specifically for Pacific Island communities. Built on Bitcoin and the Lightning Network, with RSK for smart contract functionality and Stacks with Clarity for enhanced security, this platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders through fast, low-cost transactions.
+              At the heart of Pasifika Web3 Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: <strong>&quot;If we take care of our own, they will take care of us.&quot;</strong> This powerful concept drives our groundbreaking Web3 Market Place designed specifically for Pacific Island communities. Built on Bitcoin as the foundation, with Layer 2 Stacks blockchain for smart contracts and Lightning Network for instant payments, plus RSK for additional functionality, this platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders through fast, low-cost transactions.
             </p>
             
             <div className="update-notice" style={{ 
@@ -74,7 +74,7 @@ export default function Whitepaper() {
             </div>
             
             <p>
-              This whitepaper outlines our comprehensive approach to building the first Bitcoin and Lightning Network Exchange for Pacific Islands that connects local businesses, traders, community members, and global markets. By embracing Bitcoin as our foundational layer and leveraging the Lightning Network for instant transactions, we create a resilient system that embodies the Pacific principle of reciprocity while providing financial sovereignty and accessibility to our communities.
+              This whitepaper outlines our comprehensive approach to building a Web3 Market Place for Pacific Islands that connects local businesses, traders, community members, and global markets. By embracing Bitcoin as our foundational layer, leveraging Layer 2 Stacks blockchain for smart contracts, and utilizing the Lightning Network for instant transactions, we create a resilient system that embodies the Pacific principle of reciprocity while providing financial sovereignty and accessibility to our communities.
             </p>
             
             <div className="challenges-box">
@@ -108,7 +108,7 @@ export default function Whitepaper() {
                   <p style={{ fontWeight: 600 }}>0.0005 BTC or 100,000 sats</p>
                   <ul style={{ paddingLeft: '1.5rem', marginBottom: 0 }}>
                     <li>0.5% transaction fee</li>
-                    <li>Full Exchange access</li>
+                    <li>Full Market Place access</li>
                     <li>Profit-sharing eligibility</li>
                     <li>Bitcoin-secured smart contract functionality</li>
                   </ul>
@@ -119,18 +119,18 @@ export default function Whitepaper() {
                   <p style={{ fontWeight: 600 }}>0.001 BTC or 100,000 sats</p>
                   <ul style={{ paddingLeft: '1.5rem', marginBottom: 0 }}>
                     <li>0.25% transaction fee</li>
-                    <li>Priority Exchange access</li>
+                    <li>Priority Market Place access</li>
                     <li>Enhanced profit-sharing</li>
                     <li>Network operation rewards</li>
                   </ul>
                 </div>
               </div>
               
-              <p style={{ marginTop: '1.5rem', fontSize: '0.95rem', fontStyle: 'italic' }}>Annual profit-sharing requires a minimum transaction volume of 1 ETH (or equivalent 0.02 RBTC on RootStock) during the Pasifika Financial Year (December 27 to December 24).</p>
+              <p style={{ marginTop: '1.5rem', fontSize: '0.95rem', fontStyle: 'italic' }}>Annual profit-sharing requires a minimum transaction volume of 0.0005 BTC (or equivalent STX tokens) during the Pasifika Financial Year (December 27 to December 24).</p>
             </div>
             
             <p>
-              Our solution implements the Pasifika Exchange with integrated physical infrastructure (node operators, local trading centers) and digital components (Bitcoin, Lightning Network, and RootStock blockchain, exchange infrastructure, trading systems) that generates real value while preserving cultural integrity. This approach ensures we can operate efficiently while maintaining our core values of reciprocity, community care, and shared prosperity.
+              Our solution implements the Web3 Market Place with integrated physical infrastructure (node operators, local trading centers) and digital components (Bitcoin foundation, Layer 2 Stacks blockchain, Lightning Network, marketplace infrastructure, trading systems) that generates real value while preserving cultural integrity. This approach ensures we can operate efficiently while maintaining our core values of reciprocity, community care, and shared prosperity.
             </p>
             
             <h2>TABLE OF CONTENTS</h2>
@@ -147,16 +147,16 @@ export default function Whitepaper() {
                 <li>Technical Advantages
                   <ul>
                     <li>Bitcoin: Secure and Decentralized Foundation</li>
+                    <li>Stacks: Predictable Smart Contracts</li>
                     <li>Lightning Network: Instant, Low-Cost Transactions</li>
-                    <li>RootStock: Bitcoin Smart Contracts</li>
+
                   </ul>
                 </li>
                 <li>Platform Architecture
                   <ul>
                     <li>Physical Infrastructure</li>
                     <li>Digital Infrastructure</li>
-                    <li>Pasifika Exchange</li>
-                    <li>Secure Price Feed Integration</li>
+                    <li>Web3 Market Place</li>
                     <li>Fiat Payment Bridge</li>
                     <li>Bitcoin-Secured Integration Model</li>
                   </ul>
@@ -340,15 +340,6 @@ export default function Whitepaper() {
             <h4>3.2.1 Bitcoin-Secured Blockchain Layer</h4>
             <p>The Pasifika Web3 Tech Hub operates on Bitcoin-secured blockchain networks to create a resilient, secure, and user-focused infrastructure:</p>
 
-            <h5>RootStock (RSK):</h5>
-            <ul>
-              <li>Bitcoin sidechain with smart contract compatibility</li>
-              <li>Inherits Bitcoin's security through merge mining</li>
-              <li>Smart contract functionality for complex financial operations</li>
-              <li>Native RIF token integration for platform operations</li>
-              <li>Low transaction fees ideal for Pacific Island economies</li>
-            </ul>
-
             <h5>Stacks:</h5>
             <ul>
               <li>Smart contracts secured by Bitcoin's proof-of-work</li>
@@ -377,76 +368,24 @@ export default function Whitepaper() {
               <li>Integration with distribution hub management</li>
             </ul>
             
-            <h3>3.3 Pasifika Exchange</h3>
+            <h3>3.3 Web3 Market Place</h3>
             <p>
-              The Pasifika Exchange represents a cornerstone of our platform infrastructure as the first decentralized exchange designed specifically for Pacific Island communities with a focus on Bitcoin and Lightning Network. This groundbreaking financial component will:
+              The Web3 Market Place represents a cornerstone of our platform infrastructure as a comprehensive marketplace designed specifically for Pacific Island communities with a focus on Bitcoin, Stacks blockchain with Clarity smart contracts, and Lightning Network. This groundbreaking financial component will:
             </p>
             <ul>
-              <li>Enable secure trading of digital assets with low fees across all three blockchain networks</li>
+              <li>Enable secure trading of digital assets with low fees across Bitcoin, Stacks, and Lightning Network</li>
               <li>Facilitate transactions using Bitcoin and Lightning Network for fast, low-cost settlements</li>
+              <li>Leverage Stacks blockchain for predictable smart contract execution with Clarity programming language</li>
               <li>Provide seamless liquidity bridging between Bitcoin-secured networks through integrated infrastructure</li>
-              <li>Support network-specific assets and tokens while maintaining Bitcoin-secured compatibility</li>
+              <li>Support STX tokens and Stacks-based assets alongside Bitcoin and other network-specific tokens</li>
               <li>Implement specialized order matching for low-volume but culturally significant assets</li>
-              <li>Optimize gas fees by selecting the most cost-effective network for different transaction types</li>
-              <li>Support fiat on/off ramps with localized payment methods across all supported chains</li>
-              <li>Feature an intuitive interface optimized for island connectivity constraints with network switching capabilities</li>
+              <li>Utilize Stacks' Bitcoin-secured smart contracts for transparent and auditable marketplace operations</li>
+              <li>Support localized payment methods with Bitcoin-secured transaction verification</li>
+              <li>Feature an intuitive interface optimized for island connectivity constraints with seamless network integration</li>
               <li>Provide resilience through Bitcoin-secured network redundancy, ensuring platform availability even during network congestion</li>
             </ul>
             
-            <h3>3.4 Secure Price Feed Integration</h3>
-            <p>
-              Our platform has been enhanced with secure decentralized oracle networks to provide reliable and tamper-proof price data for all token valuations. This critical infrastructure improvement ensures:
-            </p>
-            <ul>
-              <li>Accurate and manipulation-resistant price data from secure decentralized oracle networks</li>
-              <li>Safe decimal handling that prevents arithmetic overflow and underflow in financial calculations</li>
-              <li>Optimized token conversion mechanics that properly scale between 18-decimal tokens and 8-decimal price feeds</li>
-              <li>Validation mechanisms to prevent negative price attacks and other oracle exploits</li>
-              <li>Enhanced Bitcoin-secured financial safety with consistent price data across all supported networks</li>
-              <li>Reduced technical risk through proper scaling of asset values</li>
-            </ul>
-            
-            <h3>3.5 Fiat Payment Bridge</h3>
-            <p>
-              Our platform features a comprehensive multi-processor payment system that integrates Circle and Stripe payment gateways to enable seamless fiat-to-crypto conversions:
-            </p>
-            <ul>
-              <li>Multi-processor payment system supporting Circle and Stripe integrations</li>
-              <li>Oracle-based payment verification for off-chain fiat transactions</li>
-              <li>Secure on-chain USDC settlement through PasifikaPaymentGateway</li>
-              <li>Support for multiple Pacific currencies (FJD, USD, NZD) with automatic conversion</li>
-              <li>Transparent fee structure with treasury collection</li>
-              <li>Event-driven architecture for payment status tracking</li>
-            </ul>
-            
-            <div className="technical-callout" style={{ margin: '2rem 0', padding: '1.5rem', backgroundColor: isDarkMode ? '#27333D' : '#E8F4FC', borderRadius: '8px', border: '1px solid ' + (isDarkMode ? '#37475A' : '#C9E3F3') }}>
-              <h4 style={{ marginTop: 0, color: '#3498DB' }}>Technical Implementation Highlight</h4>
-              <p>
-                The PasifikaPaymentGateway smart contract implements a secure multi-processor payment verification system that connects off-chain fiat transactions with on-chain settlement:
-              </p>
-              <ol style={{ marginBottom: 0 }}>
-                <li>Payment is initiated through Circle or Stripe with a unique payment ID</li>
-                <li>Off-chain payment confirmation is verified by trusted oracles and admin validation</li>
-                <li>Smart contract processes verification using dual-signature security model</li>
-                <li>USDC tokens are transferred from treasury to user wallet upon confirmation</li>
-                <li>Transaction fees are automatically calculated and collected</li>
-                <li>Payment events are emitted for robust front-end status tracking</li>
-              </ol>
-            </div>
-            
-            <div className="technical-callout" style={{ margin: '2rem 0', padding: '1.5rem', backgroundColor: isDarkMode ? '#27333D' : '#E8F4FC', borderRadius: '8px', border: '1px solid ' + (isDarkMode ? '#37475A' : '#C9E3F3') }}>
-              <h4 style={{ marginTop: 0, color: '#3498DB' }}>Technical Implementation Highlight</h4>
-              <p>
-                The Pasifika Exchange implements advanced decimal handling to ensure secure financial calculations between various token systems. When converting token amounts (with 18 decimals) to USD values (using 8-decimal price feeds), we employ a specialized scaling approach:
-              </p>
-              <ol style={{ marginBottom: 0 }}>
-                <li>Token amounts are first scaled down by dividing by 10^10</li>
-                <li>The scaled amount is then multiplied by the oracle price feed value</li>
-                <li>The result is adjusted according to price feed decimals for precision</li>
-                <li>All conversions include input validation to prevent negative prices</li>
-                <li>Arithmetic safety checks prevent overflow/underflow conditions</li>
-              </ol>
-            </div>
+
             
             <h2>5. MARKETPLACE DESIGN</h2>
             <p>The marketplace encompases a wide range of products and services specific to Pacific Island communities.</p>
@@ -486,7 +425,7 @@ export default function Whitepaper() {
             <h4>Financial Services & Exchange:</h4>
             <ul>
               <li>Cross-island remittances</li>
-              <li>Digital asset trading via Pasifika Exchange</li>
+              <li>Digital asset trading via Web3 Market Place</li>
               <li>Microloans and financing</li>
               <li>Savings and investment products</li>
             </ul>
@@ -501,12 +440,13 @@ export default function Whitepaper() {
             </p>
             
             <ol>
-              <li><strong>Pacific Values in Digital Form:</strong> Built from the ground up to encode the principle &quot;If we take care of our own, they will take care of us&quot; into smart contract architecture</li>
-              <li><strong>Bitcoin-Centric Design:</strong> Leveraging the security and decentralization of Bitcoin with Lightning Network for fast, low-cost transactions</li>
-              <li><strong>Integrated Physical-Digital Infrastructure:</strong> Seamless connection between computational resources, physical distribution, and digital marketplace</li>
-              <li><strong>Exchange Trading:</strong> Seamless token swapping, liquidity provision, and Bitcoin-secured trading capabilities specifically designed for Pacific Island users</li>
-              <li><strong>Profit-Sharing Model:</strong> Implementation of the principle &quot;If we take care of our own, they will take care of us&quot; through annual distributions</li>
-              <li><strong>Island-Specific Localization:</strong> Comprehensive adaptation for each island&apos;s unique cultural context and infrastructure needs</li>
+              <li><strong>Pacific Values in Digital Form:</strong> Built from the ground up to encode the principle &quot;If we take care of our own, they will take care of us&quot; into Stacks smart contract architecture using Clarity programming language</li>
+              <li><strong>Bitcoin-Secured Design:</strong> Leveraging the security and decentralization of Bitcoin with Stacks blockchain for predictable smart contracts and Lightning Network for fast, low-cost transactions</li>
+              <li><strong>Stacks-Powered Smart Contracts:</strong> Utilizing Clarity programming language on Stacks blockchain for transparent, auditable, and predictable smart contract execution secured by Bitcoin's proof-of-work</li>
+              <li><strong>Integrated Physical-Digital Infrastructure:</strong> Seamless connection between computational resources, physical distribution, and digital marketplace powered by Stacks and Lightning Network</li>
+              <li><strong>Market Place Trading:</strong> Seamless token swapping, liquidity provision, and Bitcoin-secured trading capabilities using Stacks infrastructure specifically designed for Pacific Island users</li>
+              <li><strong>Profit-Sharing Model:</strong> Implementation of the principle &quot;If we take care of our own, they will take care of us&quot; through annual distributions managed by Stacks smart contracts</li>
+              <li><strong>Island-Specific Localization:</strong> Comprehensive adaptation for each island&apos;s unique cultural context and infrastructure needs using Stacks' flexible smart contract capabilities</li>
             </ol>
             
             <p>
