@@ -117,12 +117,12 @@ export default function OurStory() {
             </div>
 
             <h2>Pacific Values in Digital Form</h2>
-            <p>At the heart of Pasifika Web3 Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: <strong>&quot;If we take care of our own, they will take care of us.&quot;</strong> EVM Compatible blockchains, with their focus on decentralization, community governance, and shared prosperity, provide the perfect technological expression of these Pacific values. When we examined various blockchain platforms, those supporting EVM compatibility aligned naturally with our cultural ethos while enabling interoperability across multiple networks.</p>
+            <p>At the heart of Pasifika Web3 Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: <strong>&quot;If we take care of our own, they will take care of us.&quot;</strong> Bitcoin and the Stacks ecosystem, with their focus on decentralization, security, and community governance, provide the perfect technological expression of these Pacific values. When we examined various blockchain platforms, Bitcoin's proven security and Stacks' innovative approach to smart contracts aligned naturally with our cultural ethos.</p>
             
             <h2>Our Vision</h2>
             <p>We envision a future where Pacific Island communities are active participants in the global digital economy, with tools and infrastructure that address our specific needs and challenges. Through the Pasifika Web3 Marketplace operating across multiple networks, we aim to create resilient economic systems that can withstand geographical isolation, climate challenges, and limited traditional infrastructure.</p>
             
-            <p>Central to our vision is the development of the <strong>Pasifika Web3 Tech Hub</strong> - a comprehensive Web3 platform designed specifically for Pacific Island communities. This groundbreaking platform leverages Bitcoin and Lightning Network technology to provide secure digital services with low fees and cross-island interoperability, bringing financial inclusion and new economic opportunities to previously underserved regions.</p>
+            <p>Central to our vision is the development of the <strong>Pasifika Web3 Tech Hub</strong> - a comprehensive Web3 platform designed specifically for Pacific Island communities. This groundbreaking platform leverages Bitcoin, Lightning Network, and Stacks with Clarity smart contracts to provide secure digital services with low fees, predictable execution, and cross-island interoperability, bringing financial inclusion and new economic opportunities to previously underserved regions.</p>
 
             <h2>Our Mission</h2>
             <p>We&apos;re on a mission to empower Pacific Island communities through accessible Web3 technologies, creating economic opportunities while preserving and celebrating our cultural heritage. We believe in building decentralized systems that work for people regardless of their location, technical background, or economic status.</p>
@@ -405,7 +405,7 @@ export default function OurStory() {
             <ul style={{ listStyleType: 'disc', paddingLeft: '25px', marginBottom: '30px' }}>
               <li style={{ margin: '10px 0' }}><strong>Reciprocity:</strong> Just as traditional Pacific economies function on gift giving and mutual support, our community-focused approach ensures value flows back to community members</li>
               <li style={{ margin: '10px 0' }}><strong>Shared Stewardship:</strong> Our community structure mirrors traditional systems where those with greater responsibility to the community receive greater benefits</li>
-              <li style={{ margin: '10px 0' }}><strong>Accessibility:</strong> By utilizing Lightning Network's low fees and fast transactions, we ensure that participation remains accessible to all community members, regardless of economic status</li>
+              <li style={{ margin: '10px 0' }}><strong>Accessibility:</strong> By building on Bitcoin through Stacks, we ensure that participation remains accessible to all community members while maintaining the highest security standards</li>
             </ul>
 
 
@@ -587,7 +587,7 @@ export default function OurStory() {
                 &quot;If we take care of our own, they will take care of us&quot;
               </p>
               <p style={{ marginBottom: '20px' }}>
-                The Pasifika Web3 Tech Hub is more than a platform—it&apos;s a movement to bring digital economic empowerment to Pacific Island communities through blockchain interoperability. Whether you&apos;re a developer, investor, community leader, or simply passionate about the intersection of technology and cultural values across different blockchain ecosystems, we invite you to join us.
+                The Pasifika Web3 Tech Hub is more than a platform—it&apos;s a movement to bring digital economic empowerment to Pacific Island communities through Bitcoin and Stacks technology. Whether you&apos;re a developer, investor, community leader, or simply passionate about the intersection of technology and cultural values built on Bitcoin's foundation, we invite you to join us.
               </p>
               <Link href="/contact" className="btn btn-primary" style={{ display: 'inline-block' }}>
                 Contact Us to Get Involved

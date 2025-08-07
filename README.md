@@ -8,157 +8,193 @@
   <p><strong>"If we take care of our own, they will take care of us"</strong></p>
 </div>
 
-A decentralized multi-network platform connecting Pacific Island communities to Web3 technologies, embodying Pacific values in digital form.
+A decentralized platform connecting Pacific Island communities to Web3 technologies built on Bitcoin's foundation, embodying Pacific values in digital form.
+
+## 🎉 Major Milestone Achieved!
+
+We've just successfully completed **#Clarity #Camp** by the Stacks Foundation - diving deep into smart contracts built specifically for Bitcoin!
 
 ## Pacific Values in Digital Form
 
 At the heart of Pasifika Web3 Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: **"If we take care of our own, they will take care of us."** This powerful concept of reciprocity and community care isn't just a nice sentiment, it's the architectural blueprint for our entire system.
 
-EVM Compatible networks, with their focus on decentralization, community governance, and shared prosperity, provide the perfect technological expression of these Pacific values. When we examined various blockchain platforms, those supporting EVM compatibility aligned naturally with our cultural ethos while enabling cross-chain interoperability.
+Bitcoin and the Stacks ecosystem, with their focus on decentralization, security, and community governance, provide the perfect technological expression of these Pacific values. When we examined various blockchain platforms, Bitcoin's proven security and Stacks' innovative approach to smart contracts aligned naturally with our cultural ethos.
 
-## Technical Advantages of Our Bitcoin-First Approach
+## 🚀 Strategic Transition to Stacks and Clarity
 
-**Update: August 1, 2025** - The Pasifika Web3 Tech Hub is proud to announce our strategic focus on Bitcoin and the Lightning Network as our primary infrastructure. This decision aligns with our commitment to financial sovereignty, security, and accessibility for Pacific Island communities.
+**Update: August 2025** - After years of building with Solidity and exploring various blockchain ecosystems, we've made the strategic decision to transition to **Stacks and Clarity** for our production infrastructure.
+
+### Why Stacks and Clarity Matter
+
+Clarity addresses **8 critical smart contract vulnerabilities** that have plagued the blockchain space, offering:
+
+- ✅ **Predictable execution** - No unexpected gas costs or runtime errors
+- 🔒 **Enhanced security** - Built-in safety features and decidability  
+- 🏗️ **Bitcoin alignment** - Designed specifically for Bitcoin's principles
+- 🔍 **Transparency** - Human-readable code that's easy to audit
+- 🛡️ **Vulnerability prevention** - Eliminates common smart contract attack vectors
 
 ### Bitcoin: The Foundation of Digital Value
-Bitcoin represents the gold standard in decentralized digital currency, offering unmatched security, decentralization, global liquidity, and resistance to censorship. By building on Bitcoin, we ensure that Pacific Island communities have direct access to the most robust and widely-adopted blockchain network in the world.
+By building on Bitcoin through Stacks, we ensure that Pacific Island communities have direct access to the most robust and widely-adopted blockchain network in the world, while gaining access to advanced smart contract capabilities through Clarity.
 
-### Lightning Network: Instant, Low-Cost Transactions
-The Lightning Network enables near-instant, low-cost transactions that are ideal for Pacific Island economies. With fees often less than a fraction of a cent, Lightning makes microtransactions and everyday commerce practical, even for the most remote island communities.
+### Stacks: Smart Contracts Secured by Bitcoin
+Stacks enables smart contracts and decentralized applications that are secured by Bitcoin's proof-of-work consensus mechanism, providing the security of Bitcoin with the functionality of modern Web3 applications.
 
-### RSK: Smart Contracts on Bitcoin
-Rootstock (RSK) provides Bitcoin with smart contract functionality while maintaining compatibility with the security of the Bitcoin network. Our treasury, initially seeded with RIF tokens, continues to support our Bitcoin-based infrastructure development.
+## 🎯 Building the First Pacific Islands Web3 Platform on Bitcoin
 
-## Building the First Pacific Islands Bitcoin Exchange
+### Upcoming Initiatives
 
-The technical architecture of our platform directly implements our community values through Bitcoin and Lightning Network functionality:
+🔸 **Bitcoin Education Cohort** - Launches August 25th, 2025  
+🔸 **Clarity Development Cohort** - Coming soon  
+🔸 **Migration Project** - Transitioning ALL our use cases and proofs of concepts from Solidity to Clarity for production
 
-- **Bitcoin-First Exchange**: Our platform offers Bitcoin and Lightning Network trading, liquidity provision, and asset management capabilities specifically designed for Pacific Island users and their unique needs.
+The technical architecture of our platform directly implements our community values through Bitcoin and Stacks functionality:
 
-- **Lightning Network Integration**: We've implemented seamless Lightning Network support, enabling instant, low-cost transactions that are ideal for Pacific Island economies where traditional banking infrastructure is limited.
+- **Stacks-Powered Platform**: Our platform leverages Stacks smart contracts secured by Bitcoin, providing advanced functionality with Bitcoin's security guarantees.
 
-- **Bitcoin Smart Contracts**: Leveraging RSK and other Bitcoin layer-2 solutions, we provide smart contract functionality while maintaining the security and decentralization of the Bitcoin network.
+- **Clarity Smart Contracts**: All our smart contracts are built using Clarity, ensuring predictable execution, enhanced security, and transparency.
 
-- **Tiered Membership System**: We've created a simplified 3-tier structure (Guest, Member, Node Operator) with graduated fee structures (1%, 0.5%, 0.25%) that reward deeper community involvement with reduced trading fees.
+- **Bitcoin Integration**: Direct Bitcoin integration for payments, treasury management, and value storage, ensuring our platform is built on the most secure blockchain.
 
-- **Transparent Fund Management**: Our Pasifika Treasury contract enables transparent, secure management of exchange funds with multi-signature controls and clearly defined allocation processes.
+- **Tiered Membership System**: We've created a simplified 3-tier structure (Guest, Member, Node Operator) with graduated fee structures that reward deeper community involvement.
 
-## Technical Components
+- **Transparent Fund Management**: Our Pasifika Treasury contract built in Clarity enables transparent, secure management of community funds with built-in safety features.
+
+## 🛠️ Technical Stack
 
 This project is built using:
 
-- **Frontend**: Next.js 13.5 (App Router)
+### Frontend
+- **Framework**: Next.js 13.5 (App Router)
 - **Styling**: Custom CSS with dark/light mode support
-- **Bitcoin & Lightning Network Support**:
-  - Bitcoin and Lightning Network integration
-  - Support for on-chain and off-chain transactions
-  - Lightning Network for instant, low-cost payments
-  - RSK for Bitcoin smart contracts
-- **Bitcoin Integration**:
-  - BitcoinJS for core Bitcoin functionality
-  - Lightning Network libraries for fast payments
-  - RSK for smart contract capabilities
-- **Smart Contracts**:
-  - Membership tiers (Guest, Member, Node Operator)
-  - Staking contract
-  - Treasury management with profit sharing program
-  - Physical item NFT representation
-  - Exchange contracts for token swapping
-- **Form Handling**:
-  - Formspree for contact and registration submissions
-  - Client-side validation with terms of service agreement
-- **Deployments**:
-  - Vercel-ready configuration
-  - Static generation for performance optimization
+- **Wallet Integration**: Stacks wallet support (Hiro Wallet, Xverse)
+- **Blockchain Interaction**: Stacks.js for smart contract interactions
 
-## Features and Pages
+### Backend Integration
+- **Smart Contracts**: Clarity contracts deployed on Stacks
+- **Bitcoin Integration**: Direct Bitcoin network integration through Stacks
+- **Authentication**: Stacks authentication and wallet connection
+- **Data Storage**: Stacks blockchain for decentralized data storage
 
-The platform includes the following key features:
+### Development Tools
+- **Testing**: Clarinet for smart contract testing
+- **Deployment**: Stacks testnet and mainnet deployment
+- **Type Safety**: TypeScript throughout the application
+- **Form Handling**: Formspree integration for contact and registration forms
 
-- **Home Page**: Team overview, platform introduction, blockchain infrastructure
-- **Services**: Integration with smart contracts, user-friendly Web3 interactions
-- **Membership Portal**: View membership status, join/upgrade tiers, profit sharing program
-- **Membership Registration**: Web3 wallet connection, member profile creation
+### UI/UX Features
+- **Responsive Design**: Mobile and desktop optimized
+- **Dark/Light Mode**: Theme toggle functionality
+- **Loading States**: Comprehensive error handling and user feedback
+- **Toast Notifications**: Real-time user notifications
+
+### Key Platform Features
+- **Home**: Landing page with platform overview and team information
+- **Our Services**: Comprehensive service catalog including educational resources
+- **Resources**: Bitcoin and Clarity educational content, whitepaper, and documentation
+- **Membership Portal**: Tiered membership system with Stacks wallet integration
+- **Contact**: Multi-regional contact information and inquiry forms
 - **Terms of Service**: Comprehensive membership policies and platform rules
-- **Documentation**: Whitepaper and technical resources
-- **About Us**: Team details, mission, values
-- **Contact**: Regional representatives, inquiry form
+- **Documentation**: Technical resources and guides
+- **About Us**: Team details, mission, values focused on Bitcoin and Stacks development
 
 ## Beyond the Technology: Cultural Significance
 
-What truly sets our approach apart is how these Ethereum EVM based technologies allow us to encode Pacific Island cultural values into digital infrastructure:
+What truly sets our approach apart is how these technologies allow us to encode Pacific Island cultural values into digital infrastructure:
 
 - **Reciprocity**: Just as traditional Pacific economies function on gift giving and mutual support, our profit sharing mechanism ensures value flows back to community members.
 
 - **Shared Stewardship**: The graduated fee structure mirrors traditional systems where those with greater responsibility to the community receive greater benefits.
+- **Accessibility**: By building on Bitcoin through Stacks, we ensure that participation remains accessible to all community members while maintaining the highest security standards.
 
-- **Accessibility**: By keeping fees low through Layer 2 scaling solutions and enabling cross-chain interoperability, we ensure that participation remains accessible to all community members, regardless of economic status or preferred blockchain network.
+## Membership Structure
 
-## Membership Tiers
+Our membership structure reflects traditional Pacific governance systems, where leadership is earned through contribution and service to the community. The three-tier system mirrors the traditional roles found in Pacific societies:
 
-The platform offers three membership tiers on each supported network:
+- **Guests** represent visitors and newcomers who are welcomed but haven't yet committed to the community
+- **Members** are those who have chosen to invest in the community's success and share in its prosperity
+- **Node Operators** are the technical leaders who maintain the infrastructure and guide the community's technological direction
+
+This isn't just a fee structure - it's a digital expression of Pacific values where greater contribution leads to greater responsibility and greater rewards.
+
+## 🌊 Our Commitment
+
+This isn't just a tech stack change - it's the culmination of exploring multiple blockchain ecosystems and choosing the path that best serves our mission. We're committing to our pledge of **prioritizing Bitcoin** and building the most secure, reliable solutions for our Pacific community.
+
+## Membership Tiers and Benefits
 
 1. **Guest (Tier 0)**:
-   - Free access
-   - 1% transaction fee
-   - No profit-sharing eligibility
+   - Basic platform access
+   - Educational resources access
+   - Bitcoin and Clarity learning materials
 
 2. **Member (Tier 1)**:
-   - Network-specific fee (0.0002 BTC on Lightning Network, 0.0001 RBTC on RootStock)
-   - 0.5% transaction fee (50% discount)
+   - STX token staking for membership
+   - Reduced transaction fees
    - Profit-sharing eligibility
-   - Cross-chain governance participation
+   - Community governance participation
 
 3. **Node Operator (Tier 2)**:
-   - Native token staking required (BTC/RBTC)
-   - 0.25% transaction fee (75% discount)
+   - Enhanced STX staking requirements
    - Priority access to services
    - Enhanced profit-sharing
+   - Technical leadership opportunities
 
 ## System Architecture
 
 ```mermaid
 flowchart TD
-    A[User] -->|Visit Website| B[Pasifika Web3 Tech Hub]
-    B --> C[Membership Registration]
-    B --> D[Services]
-    B --> E[Documentation]
-    B --> F[About Us]
-    B --> G[Contact]
-    B --> W[Membership Portal]
-    B --> X[Terms of Service]
-    B --> NO[Node Operator Dashboard]
-    B --> EX[Pasifika Exchange]
+    A[User] --> B[Pasifika Frontend]
+    B --> C[Stacks Wallet Connection]
+    C --> D[Stacks Network]
     
-    C --> H[Connect Wallet]
-    H --> I[Fill Registration Form]
-    I --> J[Submit via Formspree]
-    J --> K[Confirmation]
+    D --> E[Stacks Blockchain]
+    E --> F[Bitcoin Security Layer]
     
-    D --> N[Staking]
-    D --> O[Treasury]
-    D --> P[NFT Representation]
-    D --> Q[Node Operations]
+    E --> G[Clarity Smart Contracts]
+    G --> H[Platform Services]
     
-    W --> Y[View Membership Status]
-    W --> Z[Join/Upgrade Membership]
-    W --> AA[View Profit Sharing]
+    H --> I[Membership Portal]
+    H --> J[Educational Resources]
+    H --> K[Community Features]
+    H --> L[Treasury Management]
     
-    E --> T[Whitepaper]
+    I --> IA[Join Membership]
+    I --> IB[Upgrade Tier]
+    I --> IC[View Benefits]
+    I --> ID[Governance Rights]
     
-    NO --> NOA[View Node Status]
-    NO --> NOB[Manage Stake]
-    NO --> NOC[View Rewards]
-    NO --> NOD[Network Selection]
+    J --> JA[Bitcoin Education]
+    J --> JB[Clarity Development]
+    J --> JC[Technical Documentation]
+    J --> JD[Community Resources]
     
-    EX --> EXA[Token Swapping]
-    EX --> EXB[Liquidity Provision]
-    EX --> EXC[Cross-Chain Bridge]
-    EX --> EXD[Token Balance Display]
-    EXC --> CCB1[Source Chain Selection]
-    EXC --> CCB2[Target Chain Selection]
-    EXC --> CCB3[Token Selection]
-    EXC --> CCB4[Amount Input]
+    K --> KA[Community Governance]
+    K --> KB[Member Directory]
+    K --> KC[Discussion Forums]
+    K --> KD[Event Management]
+    
+    L --> LA[STX Token Management]
+    L --> LB[Bitcoin Treasury]
+    L --> LC[Fund Distribution]
+    L --> LD[Financial Reporting]
+    
+    subgraph "Clarity Smart Contract Layer"
+        SC1[Membership Contract]
+        SC2[Treasury Contract]
+        SC3[Governance Contract]
+        SC4[Education Contract]
+        SC5[Community Contract]
+    end
+    
+    G --> SC1
+    G --> SC2
+    G --> SC3
+    G --> SC4
+    G --> SC5
+    
+    F --> BTC[Bitcoin Network]
+    BTC --> POW[Proof of Work Security]
 ```
 
 ## User Flow Process
@@ -167,28 +203,29 @@ flowchart TD
 sequenceDiagram
     actor User
     participant UI as Pasifika UI
-    participant Wallet as Web3 Wallet
-    participant Contract as Smart Contracts
+    participant Wallet as Stacks Wallet
+    participant Contract as Clarity Contracts
     participant Form as Form Backend
-    participant Exchange as Pasifika Exchange
+    participant Stacks as Stacks Network
     
     User->>UI: Visit platform
     User->>UI: Navigate to Services/Membership
     User->>UI: Click Connect Wallet
-    UI->>Wallet: Request connection
+    UI->>Wallet: Request Stacks connection
     Wallet-->>User: Request permission
     User-->>Wallet: Approve connection
-    Wallet-->>UI: Return wallet address
+    Wallet-->>UI: Return Stacks address
     
     alt Service Interaction
-        User->>UI: Select service (NFT, etc.)
-        UI->>Contract: Read contract data
+        User->>UI: Select service
+        UI->>Contract: Read Clarity contract data
         Contract-->>UI: Return data
         User->>UI: Initiate transaction
         UI->>Wallet: Request signature
         Wallet-->>User: Confirm transaction
         User-->>Wallet: Approve
-        Wallet->>Contract: Execute transaction
+        Wallet->>Stacks: Submit to Stacks network
+        Stacks->>Contract: Execute Clarity function
         Contract-->>UI: Return result
         UI-->>User: Show confirmation
     else Membership Registration
@@ -200,54 +237,60 @@ sequenceDiagram
         UI-->>User: Show success message
     else Membership Portal
         User->>UI: View membership status
-        UI->>Contract: Fetch membership data
+        UI->>Contract: Fetch membership data from Clarity
         Contract-->>UI: Return membership tier
         User->>UI: Select Join/Upgrade
-        UI->>Wallet: Request transaction
-        Wallet-->>User: Confirm fee payment
+        UI->>Wallet: Request STX transaction
+        Wallet-->>User: Confirm STX payment
         User-->>Wallet: Approve
-        Wallet->>Contract: Execute membership change
+        Wallet->>Stacks: Submit membership transaction
+        Stacks->>Contract: Execute membership change
         Contract-->>UI: Return updated status
         UI-->>User: Show confirmation
-    else Node Operator Dashboard
-        User->>UI: Access Node Dashboard
-        UI->>Contract: Fetch node status
-        Contract-->>UI: Return node data
-        User->>UI: Select network (Arbitrum/Linea/RootStock)
-        UI->>Contract: Fetch network-specific data
-        Contract-->>UI: Return network data
-        User->>UI: Manage stake (add/withdraw)
-        UI->>Wallet: Request transaction
-        Wallet-->>User: Confirm transaction
-        User-->>Wallet: Approve
-        Wallet->>Contract: Execute staking operation
-        Contract-->>UI: Return updated stake
-        UI-->>User: Show confirmation
-    else Pasifika Exchange
-        User->>UI: Access Exchange
-        UI->>Exchange: Fetch trading pairs
-        Exchange-->>UI: Return available pairs
-        User->>UI: Select cross-chain swap
-        UI->>Exchange: Request quote
-        Exchange-->>UI: Return quote
-        User->>UI: Confirm swap
-        UI->>Wallet: Request transaction approval
-        Wallet-->>User: Confirm transaction
-        User-->>Wallet: Approve
-        Wallet->>Exchange: Execute swap
-        Exchange->>Contract: Update balances
-        Contract-->>Exchange: Confirm state change
-        Exchange-->>UI: Return swap result
-        UI-->>User: Show confirmation
+    else Educational Resources
+        User->>UI: Access Bitcoin Education
+        UI-->>User: Display Bitcoin Primer
+        User->>UI: Access Clarity Development
+        UI-->>User: Display Clarity tutorials
+        User->>UI: Track learning progress
+        UI->>Contract: Update education progress
+        Contract-->>UI: Return completion status
+        UI-->>User: Show achievement
     end
 ```
 
-## Cross-Chain Smart Contract Interoperability
+## 📚 Clarity Smart Contracts
 
-The platform interacts with the following smart contracts deployed across multiple EVM Compatible networks (Linea, RootStock, and Arbitrum) with full interoperability:
+The platform leverages Clarity smart contracts deployed on the Stacks blockchain, secured by Bitcoin:
 
-1. **Membership Contract**: Manages membership tiers and access rights
-2. **Staking Contract**: Token staking for rewards and governance rights
-3. **Treasury Management**: Community fund management with profit sharing distribution
-4. **Physical Item NFT**: Digital representation of physical assets
-5. **Cross-Chain Adapters**: Handle interoperability between different blockchain networks, enabling seamless token operations across multiple chains
+1. **Membership Contract**: Manages membership tiers and access rights with predictable execution
+2. **Treasury Contract**: Community fund management with transparent, secure distribution mechanisms
+3. **Governance Contract**: Community decision-making with built-in safety features
+4. **Education Contract**: Tracks learning progress and certifications for Bitcoin and Clarity education
+5. **Community Contract**: Manages community features, events, and member interactions
+
+## 📚 Resources
+
+- [Clarity Language Reference](https://docs.stacks.co/clarity)
+- [Stacks Documentation](https://docs.stacks.co/)
+- [Clarinet Documentation](https://docs.hiro.so/clarinet)
+- [Bitcoin Whitepaper](https://bitcoin.org/bitcoin.pdf)
+
+## 🌊 The Future
+
+**The future of Web3 in the Pacific is being built on Bitcoin's foundation, and we're leading that charge!**
+
+Our mission extends beyond technology - we're building bridges between traditional Pacific communities and the decentralized future, ensuring that our values of community, sustainability, and security are embedded in every line of code.
+
+## 📞 Connect With Us
+
+- **Website**: https://pasifika.xyz/
+- **Twitter**: [Coming Soon]
+- **Discord**: [Coming Soon]
+- **Email**: info@pasifika.xyz
+
+---
+
+**Built with ❤️ by the Pasifika Web3 Tech Hub team**
+
+*Empowering the Pacific through Bitcoin and Clarity*

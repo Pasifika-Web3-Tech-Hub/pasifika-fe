@@ -59,7 +59,7 @@ export default function Whitepaper() {
             </div>
                         <h2>EXECUTIVE SUMMARY</h2>
             <p>
-              At the heart of Pasifika Bitcoin Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: <strong>&quot;If we take care of our own, they will take care of us.&quot;</strong> This powerful concept drives our groundbreaking Pasifika Exchange designed specifically for Pacific Island communities. Built on Bitcoin and the Lightning Network, with RSK for smart contract functionality, this platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders through fast, low-cost transactions.
+              At the heart of Pasifika Bitcoin Tech Hub is a philosophical principle that has guided Pacific Island communities for generations: <strong>&quot;If we take care of our own, they will take care of us.&quot;</strong> This powerful concept drives our groundbreaking Pasifika Exchange designed specifically for Pacific Island communities. Built on Bitcoin and the Lightning Network, with RSK for smart contract functionality and Stacks with Clarity for enhanced security, this platform creates a sustainable economic ecosystem that preserves cultural heritage while creating new digital opportunities for islanders through fast, low-cost transactions.
             </p>
             
             <div className="update-notice" style={{ 
@@ -110,7 +110,7 @@ export default function Whitepaper() {
                     <li>0.5% transaction fee</li>
                     <li>Full Exchange access</li>
                     <li>Profit-sharing eligibility</li>
-                    <li>Cross-chain functionality</li>
+                    <li>Bitcoin-secured smart contract functionality</li>
                   </ul>
                 </div>
                 
@@ -156,9 +156,9 @@ export default function Whitepaper() {
                     <li>Physical Infrastructure</li>
                     <li>Digital Infrastructure</li>
                     <li>Pasifika Exchange</li>
-                    <li>Chainlink Price Feed Integration</li>
+                    <li>Secure Price Feed Integration</li>
                     <li>Fiat Payment Bridge</li>
-                    <li>Cross-Chain Integration Model</li>
+                    <li>Bitcoin-Secured Integration Model</li>
                   </ul>
                 </li>
                 <li>Membership System
@@ -337,37 +337,37 @@ export default function Whitepaper() {
             
             <h3>3.2 Digital Infrastructure</h3>
             
-            <h4>3.2.1 Multi-Chain Blockchain Layer</h4>
-            <p>The Pasifika Web3 Tech Hub operates across three complementary EVM-compatible blockchain networks to create a resilient, flexible, and user-focused infrastructure:</p>
+            <h4>3.2.1 Bitcoin-Secured Blockchain Layer</h4>
+            <p>The Pasifika Web3 Tech Hub operates on Bitcoin-secured blockchain networks to create a resilient, secure, and user-focused infrastructure:</p>
 
             <h5>RootStock (RSK):</h5>
             <ul>
-              <li>Bitcoin sidechain with EVM compatibility</li>
-              <li>Bitcoin-level security for critical transactions</li>
-              <li>Native RBTC currency for Bitcoin ecosystem integration</li>
-              <li>Familiar smart contract framework for developers</li>
-              <li>Merge-mining with Bitcoin for enhanced security</li>
+              <li>Bitcoin sidechain with smart contract compatibility</li>
+              <li>Inherits Bitcoin's security through merge mining</li>
+              <li>Smart contract functionality for complex financial operations</li>
+              <li>Native RIF token integration for platform operations</li>
+              <li>Low transaction fees ideal for Pacific Island economies</li>
+            </ul>
+
+            <h5>Stacks:</h5>
+            <ul>
+              <li>Smart contracts secured by Bitcoin's proof-of-work</li>
+              <li>Clarity programming language for predictable execution</li>
+              <li>Enhanced security with built-in safety features</li>
+              <li>STX token for platform operations and staking</li>
+              <li>Transparent, auditable smart contract execution</li>
             </ul>
 
             <h5>Lightning Network:</h5>
             <ul>
-              <li>Optimistic rollup layer-2 scaling solution</li>
-              <li>Lower transaction costs with Ethereum security</li>
-              <li>Rich ecosystem of existing protocols and applications</li>
-              <li>EVM compatibility for marketplace smart contracts</li>
-              <li>Enhanced throughput for high-volume periods</li>
+              <li>Bitcoin layer-2 payment channel network</li>
+              <li>Near-instant, low-cost Bitcoin transactions</li>
+              <li>Ideal for microtransactions and everyday commerce</li>
+              <li>Perfect for Pacific Island economies with limited banking infrastructure</li>
+              <li>Enhanced scalability for high-volume trading periods</li>
             </ul>
 
-            <h5>Bitcoin Layer 2:</h5>
-            <ul>
-              <li>Zero-knowledge rollup technology for scaling</li>
-              <li>Mathematically provable transaction validation</li>
-              <li>Reduced settlement times for trading operations</li>
-              <li>EVM compatibility for consistent developer experience</li>
-              <li>Integration with Ethereum's robust security model</li>
-              <li>Integration with Ethereum&apos;s robust security model</li>
-            </ul>
-            
+
             <h4>3.2.2 Marketplace Interface</h4>
             <ul>
               <li>Mobile-first, low-bandwidth design</li>
@@ -384,25 +384,25 @@ export default function Whitepaper() {
             <ul>
               <li>Enable secure trading of digital assets with low fees across all three blockchain networks</li>
               <li>Facilitate transactions using Bitcoin and Lightning Network for fast, low-cost settlements</li>
-              <li>Provide seamless liquidity bridging between networks through integrated cross-chain infrastructure</li>
-              <li>Support network-specific assets and tokens while maintaining interoperability</li>
+              <li>Provide seamless liquidity bridging between Bitcoin-secured networks through integrated infrastructure</li>
+              <li>Support network-specific assets and tokens while maintaining Bitcoin-secured compatibility</li>
               <li>Implement specialized order matching for low-volume but culturally significant assets</li>
               <li>Optimize gas fees by selecting the most cost-effective network for different transaction types</li>
               <li>Support fiat on/off ramps with localized payment methods across all supported chains</li>
               <li>Feature an intuitive interface optimized for island connectivity constraints with network switching capabilities</li>
-              <li>Provide resilience through multi-chain redundancy, ensuring platform availability even during network congestion</li>
+              <li>Provide resilience through Bitcoin-secured network redundancy, ensuring platform availability even during network congestion</li>
             </ul>
             
-            <h3>3.4 Chainlink Price Feed Integration</h3>
+            <h3>3.4 Secure Price Feed Integration</h3>
             <p>
-              Our platform has been enhanced with Chainlink&apos;s decentralized oracle network to provide secure, reliable, and tamper-proof price data for all token valuations. This critical infrastructure improvement ensures:
+              Our platform has been enhanced with secure decentralized oracle networks to provide reliable and tamper-proof price data for all token valuations. This critical infrastructure improvement ensures:
             </p>
             <ul>
-              <li>Accurate and manipulation-resistant price data from Chainlink&apos;s decentralized oracle network</li>
+              <li>Accurate and manipulation-resistant price data from secure decentralized oracle networks</li>
               <li>Safe decimal handling that prevents arithmetic overflow and underflow in financial calculations</li>
               <li>Optimized token conversion mechanics that properly scale between 18-decimal tokens and 8-decimal price feeds</li>
               <li>Validation mechanisms to prevent negative price attacks and other oracle exploits</li>
-              <li>Enhanced cross-chain financial safety with consistent price data across all supported networks</li>
+              <li>Enhanced Bitcoin-secured financial safety with consistent price data across all supported networks</li>
               <li>Reduced technical risk through proper scaling of asset values</li>
             </ul>
             
@@ -412,7 +412,7 @@ export default function Whitepaper() {
             </p>
             <ul>
               <li>Multi-processor payment system supporting Circle and Stripe integrations</li>
-              <li>Chainlink oracle-based payment verification for off-chain fiat transactions</li>
+              <li>Oracle-based payment verification for off-chain fiat transactions</li>
               <li>Secure on-chain USDC settlement through PasifikaPaymentGateway</li>
               <li>Support for multiple Pacific currencies (FJD, USD, NZD) with automatic conversion</li>
               <li>Transparent fee structure with treasury collection</li>
@@ -437,11 +437,11 @@ export default function Whitepaper() {
             <div className="technical-callout" style={{ margin: '2rem 0', padding: '1.5rem', backgroundColor: isDarkMode ? '#27333D' : '#E8F4FC', borderRadius: '8px', border: '1px solid ' + (isDarkMode ? '#37475A' : '#C9E3F3') }}>
               <h4 style={{ marginTop: 0, color: '#3498DB' }}>Technical Implementation Highlight</h4>
               <p>
-                The Pasifika Exchange implements advanced decimal handling to ensure secure financial calculations between various token systems. When converting token amounts (with 18 decimals) to USD values (using Chainlink&apos;s 8-decimal price feeds), we employ a specialized scaling approach:
+                The Pasifika Exchange implements advanced decimal handling to ensure secure financial calculations between various token systems. When converting token amounts (with 18 decimals) to USD values (using 8-decimal price feeds), we employ a specialized scaling approach:
               </p>
               <ol style={{ marginBottom: 0 }}>
                 <li>Token amounts are first scaled down by dividing by 10^10</li>
-                <li>The scaled amount is then multiplied by the Chainlink price feed value</li>
+                <li>The scaled amount is then multiplied by the oracle price feed value</li>
                 <li>The result is adjusted according to price feed decimals for precision</li>
                 <li>All conversions include input validation to prevent negative prices</li>
                 <li>Arithmetic safety checks prevent overflow/underflow conditions</li>
@@ -504,13 +504,13 @@ export default function Whitepaper() {
               <li><strong>Pacific Values in Digital Form:</strong> Built from the ground up to encode the principle &quot;If we take care of our own, they will take care of us&quot; into smart contract architecture</li>
               <li><strong>Bitcoin-Centric Design:</strong> Leveraging the security and decentralization of Bitcoin with Lightning Network for fast, low-cost transactions</li>
               <li><strong>Integrated Physical-Digital Infrastructure:</strong> Seamless connection between computational resources, physical distribution, and digital marketplace</li>
-              <li><strong>Exchange Trading:</strong> Seamless token swapping, liquidity provision, and cross-chain trading capabilities specifically designed for Pacific Island users</li>
+              <li><strong>Exchange Trading:</strong> Seamless token swapping, liquidity provision, and Bitcoin-secured trading capabilities specifically designed for Pacific Island users</li>
               <li><strong>Profit-Sharing Model:</strong> Implementation of the principle &quot;If we take care of our own, they will take care of us&quot; through annual distributions</li>
               <li><strong>Island-Specific Localization:</strong> Comprehensive adaptation for each island&apos;s unique cultural context and infrastructure needs</li>
             </ol>
             
             <p>
-              Through these innovations, the Pasifika Web3 Tech Hub aims to create a model for blockchain-enabled sustainable development that embodies Pacific cultural values in digital form. Our interoperability approach ensures resilience, accessibility, and flexibility across multiple blockchain ecosystems while specifically serving the unique needs of Pacific Island nations and creating a blueprint that can be adapted for cultural communities worldwide.
+              Through these innovations, the Pasifika Web3 Tech Hub aims to create a model for blockchain-enabled sustainable development that embodies Pacific cultural values in digital form. Our Bitcoin-secured infrastructure approach ensures resilience, accessibility, and flexibility across Bitcoin-secured blockchain ecosystems while specifically serving the unique needs of Pacific Island nations and creating a blueprint that can be adapted for cultural communities worldwide.
             </p>
             
             <h2>10. DEVELOPMENT ROADMAP</h2>
@@ -519,7 +519,7 @@ export default function Whitepaper() {
             <div className="roadmap-timeline" style={{ margin: '2rem 0' }}>
               <div className="timeline-item" style={{ marginBottom: '2rem', padding: '0 0 0 2rem', borderLeft: '2px solid #3498DB', position: 'relative' }}>
                 <div style={{ position: 'absolute', left: '-10px', backgroundColor: isDarkMode ? '#333' : '#fff', width: '20px', height: '20px', borderRadius: '50%', border: '2px solid #3498DB' }}></div>
-                <h3 style={{ marginTop: 0 }}>Phase 1: Foundation (Completed Q4 2024)</h3>
+                <h3 style={{ marginTop: 0 }}>Phase 1: Foundation (Q2 2025 - Q3 2025)</h3>
                 <ul>
                   <li><strong>Core Smart Contract Development:</strong> Development and auditing of core marketplace and exchange contracts</li>
                   <li><strong>Bitcoin Integration:</strong> Implementation of Bitcoin and Lightning Network for secure and efficient transactions</li>
@@ -528,21 +528,11 @@ export default function Whitepaper() {
                 </ul>
               </div>
               
-              <div className="timeline-item" style={{ marginBottom: '2rem', padding: '0 0 0 2rem', borderLeft: '2px solid #3498DB', position: 'relative' }}>
-                <div style={{ position: 'absolute', left: '-10px', backgroundColor: '#3498DB', width: '20px', height: '20px', borderRadius: '50%', border: '2px solid #3498DB' }}></div>
-                <h3 style={{ marginTop: 0 }}>Phase 2: Technical Enhancement (Current - Q2 2025)</h3>
-                <ul>
-                  <li><strong>Chainlink Price Feed Integration:</strong> Implementation of secure oracle price feeds for token valuations ✓</li>
-                  <li><strong>Decimal Handling Optimization:</strong> Enhanced safety mechanisms for financial calculations ✓</li>
-                  <li><strong>Cross-Chain Bridge Security:</strong> Advanced validation and arithmetic safety for cross-chain transfers ✓</li>
-                  <li><strong>Network Expansion:</strong> Additional EVM chain integrations and testnet deployments in progress</li>
-                  <li><strong>Enhanced Frontend Integration:</strong> UI/UX improvements and full wallet integration in progress</li>
-                </ul>
-              </div>
+
               
               <div className="timeline-item" style={{ marginBottom: '2rem', padding: '0 0 0 2rem', borderLeft: '2px solid #3498DB', position: 'relative' }}>
                 <div style={{ position: 'absolute', left: '-10px', backgroundColor: isDarkMode ? '#333' : '#fff', width: '20px', height: '20px', borderRadius: '50%', border: '2px solid #3498DB' }}></div>
-                <h3 style={{ marginTop: 0 }}>Phase 3: Community Expansion (Q3 2025 - Q4 2025)</h3>
+                <h3 style={{ marginTop: 0 }}>Phase 2: Community Expansion (Q3 2025 - Q4 2025)</h3>
                 <ul>
                   <li><strong>Local Node Operator Network:</strong> Deployment of physical infrastructure across Pacific Islands</li>
                   <li><strong>Cultural Asset Framework:</strong> Specialized NFT standards for cultural preservation</li>
@@ -553,11 +543,11 @@ export default function Whitepaper() {
               
               <div className="timeline-item" style={{ padding: '0 0 0 2rem', borderLeft: '2px solid #3498DB', position: 'relative' }}>
                 <div style={{ position: 'absolute', left: '-10px', backgroundColor: isDarkMode ? '#333' : '#fff', width: '20px', height: '20px', borderRadius: '50%', border: '2px solid #3498DB' }}></div>
-                <h3 style={{ marginTop: 0 }}>Phase 4: Full Implementation (2026)</h3>
+                <h3 style={{ marginTop: 0 }}>Phase 3: Full Implementation (2026)</h3>
                 <ul>
                   <li><strong>Mainnet Launch:</strong> Full production deployment across all networks</li>
                   <li><strong>Distribution Hub Network:</strong> Physical hub establishment across islands</li>
-                  <li><strong>Cross-Chain Liquidity:</strong> Comprehensive liquidity provision across all integrated chains</li>
+                  <li><strong>Bitcoin-Secured Liquidity:</strong> Comprehensive liquidity provision across all Bitcoin-secured networks</li>
                   <li><strong>Full Fiat Integration:</strong> Localized payment options for all supported regions</li>
                 </ul>
               </div>
