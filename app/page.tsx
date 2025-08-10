@@ -221,9 +221,9 @@ export default function Main() {
       <div className="hero">
         <div className="hero-container">
           <div className="hero-content">
-            <h1 className="hero-title">Building The Future with Bitcoin & Stacks</h1>
+            <h1 className="hero-title">Building The Future With Web3</h1>
             <p className="hero-subtitle">
-              Join us in creating a Bitcoin-secured ecosystem that empowers Pacific communities through Stacks blockchain, Clarity smart contracts, and Lightning Network technology.
+              Join us in creating a decentralized ecosystem for a marketplace that empowers Pacific communities through blockchain technology and digital innovation.
             </p>
             <div className="hero-buttons">
               <button 
