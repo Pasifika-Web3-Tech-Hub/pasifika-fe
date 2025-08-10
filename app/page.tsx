@@ -223,7 +223,7 @@ export default function Main() {
           <div className="hero-content">
             <h1 className="hero-title">Building The Future With Web3</h1>
             <p className="hero-subtitle">
-              Join us in creating a decentralized ecosystem for a marketplace that empowers Pacific communities through blockchain technology and digital innovation.
+              Join us in creating a decentralized ecosystem for a marketplace that empowers Pacific communities through blockchain technology, digital innovation, and the Bitcoin economy.
             </p>
             <div className="hero-buttons">
               <button 
