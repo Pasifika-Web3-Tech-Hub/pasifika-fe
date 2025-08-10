@@ -209,6 +209,13 @@ export default function Services() {
                     >
                       Linux Firewall Guide
                     </Link>
+                    <Link 
+                      href="/bitcoin-diploma-course" 
+                      className="service-button"
+                      style={{ display: 'block', width: '200px', textAlign: 'center', marginTop: '10px' }}
+                    >
+                      Bitcoin Diploma Course
+                    </Link>
                   </div>
                 </div>
               </div>

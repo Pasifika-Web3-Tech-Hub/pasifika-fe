@@ -106,7 +106,7 @@ export default function Contact() {
               <div>
                 <h3>Contact Information</h3>
                 <p><strong>Email:</strong> info@pasifika.xyz</p>
-                <p><strong>Location:</strong> The Hill, Vaini, Tongatapu, Tonga</p>
+                <p><strong>Location:</strong> Pacific Islands</p>
                 <p><strong>Hours:</strong> Monday - Friday, 9am - 5pm (Vaini Time)</p>
                 
                 <h3>Social Media</h3>
@@ -173,6 +173,7 @@ export default function Contact() {
                       >
                         <option value="">Select a subject</option>
                         <option value="general">General Inquiry</option>
+                        <option value="bitcoin-diploma">Bitcoin Diploma Course</option>
                         <option value="support">Technical Support</option>
                         <option value="partnership">Partnership Opportunity</option>
                         <option value="feedback">Feedback</option>
