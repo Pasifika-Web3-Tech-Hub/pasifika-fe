@@ -242,6 +242,35 @@ export default function MembershipPortal() {
 
       {/* Page Content */}
       <div className="page-content">
+        {/* Beta Banner */}
+        <div style={{
+          backgroundColor: '#FF9800',
+          color: 'white',
+          padding: '15px 20px',
+          margin: '20px auto',
+          borderRadius: '8px',
+          textAlign: 'center',
+          maxWidth: '800px',
+          border: '2px solid #FF5722',
+          boxShadow: '0 4px 12px rgba(255, 152, 0, 0.3)'
+        }}>
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '10px',
+            flexWrap: 'wrap'
+          }}>
+            <span style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>🚧 BETA VERSION</span>
+            <span style={{ fontSize: '1rem' }}>|
+            </span>
+            <span style={{ fontSize: '1rem' }}>
+              This membership portal is currently in <strong>Proof-of-Concept Beta</strong>. 
+              We will announce the production version soon!
+            </span>
+          </div>
+        </div>
+
         <div className="page-banner">
           <h1>Membership Portal</h1>
           <p className="page-description">
