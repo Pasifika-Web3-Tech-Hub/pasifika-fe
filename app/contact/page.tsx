@@ -107,7 +107,7 @@ export default function Contact() {
                 <h3>Contact Information</h3>
                 <p><strong>Email:</strong> info@pasifika.xyz</p>
                 <p><strong>Location:</strong> Pacific Islands</p>
-                <p><strong>Hours:</strong> Monday - Friday, 9am - 5pm (Vaini Time)</p>
+                <p><strong>Hours:</strong> Monday - Friday, 9am - 5pm (GMT+13)</p>
                 
                 <h3>Social Media</h3>
                 <p>Follow us on social media for the latest updates:</p>
