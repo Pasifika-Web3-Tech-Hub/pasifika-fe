@@ -2,7 +2,7 @@
 
 import { useStacks } from "../hooks/use-stacks";
 import { getUserLiquidity, Pool } from "../lib/amm";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 export interface RemoveLiquidityProps {
   pools: Pool[];
@@ -14,18 +14,18 @@ export function RemoveLiquidity({ pools }: RemoveLiquidityProps) {
   const [liquidity, setLiquidity] = useState(0);
   const [userTotalLiquidity, setUserTotalLiquidity] = useState(0);
 
-  async function fetchUserLiquidity() {
+  const fetchUserLiquidity = useCallback(async () => {
     const stxAddress = userData?.profile.stxAddress.testnet;
     if (!stxAddress) return;
 
     getUserLiquidity(selectedPool, stxAddress).then((liquidity) => {
       setUserTotalLiquidity(liquidity);
     });
-  }
+  }, [selectedPool, userData]);
 
   useEffect(() => {
     fetchUserLiquidity();
-  }, [selectedPool, userData]);
+  }, [fetchUserLiquidity]);
 
   const token0Withdraw = selectedPool.liquidity > 0 
     ? (liquidity / selectedPool.liquidity) * selectedPool["balance-0"]

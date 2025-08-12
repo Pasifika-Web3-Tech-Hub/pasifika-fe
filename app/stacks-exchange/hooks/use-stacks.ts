@@ -13,7 +13,7 @@ import {
   UserSession,
 } from "@stacks/connect";
 import { PostConditionMode } from "@stacks/transactions";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 const appDetails = {
   name: "Pasifika Stacks AMM",
@@ -23,8 +23,8 @@ const appDetails = {
 export function useStacks() {
   const [userData, setUserData] = useState<UserData | null>(null);
 
-  const appConfig = new AppConfig(["store_write"]);
-  const userSession = new UserSession({ appConfig });
+  const appConfig = useMemo(() => new AppConfig(["store_write"]), []);
+  const userSession = useMemo(() => new UserSession({ appConfig }), [appConfig]);
 
   function connectWallet() {
     showConnect({
@@ -137,7 +137,7 @@ export function useStacks() {
     } else if (userSession.isUserSignedIn()) {
       setUserData(userSession.loadUserData());
     }
-  }, []);
+  }, [userSession]);
 
   return {
     userData,

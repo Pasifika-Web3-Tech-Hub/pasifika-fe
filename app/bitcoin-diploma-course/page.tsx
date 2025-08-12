@@ -94,7 +94,7 @@ export default function BitcoinDiplomaCourse() {
               }}>
                 Free Course
               </div>
-              <h3 style={{ color: '#F9A620', marginBottom: '10px' }}>My First Bitcoin Partnership</h3>
+              <h3 style={{ color: '#F9A620', marginBottom: '10px' }}>PW3 Bitcoin Diploma</h3>
               <p style={{ lineHeight: '1.6' }}>
                 Our Bitcoin Diploma Course is built on the proven curriculum from <strong>My First Bitcoin</strong>, a global grassroots movement focused on open-source Bitcoin education. This partnership ensures our Pacific communities receive world-class Bitcoin education while maintaining cultural relevance and accessibility.
               </p>

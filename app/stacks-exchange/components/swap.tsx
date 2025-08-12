@@ -2,7 +2,7 @@
 
 import { useStacks } from "../hooks/use-stacks";
 import { Pool } from "../lib/amm";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useCallback } from "react";
 
 export interface SwapProps {
   pools: Pool[];
@@ -50,9 +50,9 @@ export function Swap({ pools }: SwapProps) {
     }, [] as string[]);
 
     return tokensFromPools;
-  }, [fromToken]);
+  }, [fromToken, pools]);
 
-  function estimateSwapOutput() {
+  const estimateSwapOutput = useCallback(() => {
     const pool = pools.find(
       (p) =>
         (p["token-0"] === fromToken && p["token-1"] === toToken) ||
@@ -90,11 +90,11 @@ export function Swap({ pools }: SwapProps) {
         deltaX - BigInt(Math.ceil(Number(deltaX) * feesFloat));
       setEstimatedToAmount(deltaXMinusFees);
     }
-  }
+  }, [pools, fromToken, toToken, fromAmount]);
 
   useEffect(() => {
     estimateSwapOutput();
-  }, [fromToken, toToken, fromAmount]);
+  }, [estimateSwapOutput]);
 
   return (
     <div className="flex flex-col max-w-xl w-full gap-4 p-6 bg-white rounded-xl shadow-lg border border-gray-200">
