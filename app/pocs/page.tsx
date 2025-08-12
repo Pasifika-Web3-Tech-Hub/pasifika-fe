@@ -40,6 +40,15 @@ export default function Services() {
   
   // Network statistics - real data from our multi-network deployment
   const networkStats: NetworkStats = {
+    stacks: {
+      name: 'Stacks',
+      color: '#5546FF',
+      contractsDeployed: 1,
+      moneyTransferAddress: 'ST3P49R8XXQWG69S66MZASYPTTGNDKK0WW32RRJDN.amm',
+      nodeContract: 'ST3P49R8XXQWG69S66MZASYPTTGNDKK0WW32RRJDN.amm',
+      transactionFee: '0.5%',
+      techType: 'Bitcoin-Secured Layer'
+    },
     arbitrum: {
       name: 'Arbitrum',
       color: '#9945FF',
@@ -282,6 +291,58 @@ export default function Services() {
                     </div>
                   )}
                 </div>
+                
+                <div className="service-highlight" style={{ borderLeft: '4px solid #FF5722', backgroundColor: isDarkMode ? 'rgba(255, 87, 34, 0.1)' : 'rgba(255, 87, 34, 0.05)', marginTop: '20px' }}>
+                  <h3>🔄 Stacks Exchange AMM (Proof of Concept)</h3>
+                  <p><strong>Bitcoin-Secured DeFi for the Pacific</strong> - Our flagship DeFi proof of concept built on Stacks blockchain.</p>
+                  <ul>
+                    <li><strong>Automated Market Maker (AMM)</strong> with constant product formula</li>
+                    <li><strong>Token swapping</strong> with automated pricing and slippage protection</li>
+                    <li><strong>Liquidity pool creation</strong> and management for any token pair</li>
+                    <li><strong>Yield farming opportunities</strong> through liquidity provision rewards</li>
+                    <li><strong>Bitcoin-level security</strong> through Stacks blockchain integration</li>
+                  </ul>
+                  
+                  <div className="deployment-highlight" style={{ 
+                    backgroundColor: '#4CAF50', 
+                    color: 'white', 
+                    padding: '15px', 
+                    borderRadius: '8px', 
+                    marginTop: '15px',
+                    textAlign: 'center'
+                  }}>
+                    <p style={{ margin: 0, fontWeight: 'bold' }}>✅ Successfully Deployed on Stacks Testnet!</p>
+                    <p style={{ margin: '5px 0 0 0', fontSize: '0.9rem' }}>Contract: ST3P49R8XXQWG69S66MZASYPTTGNDKK0WW32RRJDN.amm</p>
+                  </div>
+                  
+                  <div style={{ textAlign: 'center', marginTop: '20px' }}>
+                    <Link 
+                      href="/stacks-exchange" 
+                      className="service-action-button"
+                      style={{
+                        background: 'linear-gradient(to right, #FF5722, #FF9800)',
+                        color: 'white',
+                        padding: '12px 24px',
+                        borderRadius: '6px',
+                        textDecoration: 'none',
+                        fontWeight: '600',
+                        display: 'inline-block',
+                        boxShadow: '0 4px 15px rgba(255, 87, 34, 0.3)',
+                        transition: 'all 0.3s ease'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.boxShadow = '0 6px 20px rgba(255, 87, 34, 0.4)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.boxShadow = '0 4px 15px rgba(255, 87, 34, 0.3)';
+                      }}
+                    >
+                      🚀 Launch Stacks Exchange AMM
+                    </Link>
+                  </div>
+                </div>
               </div>
             )}
             
@@ -357,7 +418,7 @@ export default function Services() {
                   <h3>Cross-Chain Node Operations</h3>
                   <div className="component-icon"><span className="emoji-fix">📡</span></div>
                 </div>
-                <p>Operate interoperable nodes across multiple EVM Compatible networks (Arbitrum, RootStock, Linea) with lower transaction fees (0.25%) and annual profit sharing from the Pasifika Treasury.</p>
+                <p>Operate interoperable nodes across Stacks (Bitcoin-secured) and multiple EVM Compatible networks (Arbitrum, RootStock, Linea) with lower transaction fees (0.25%) and annual profit sharing from the Pasifika Treasury.</p>
                 <div className="demo-component">
                   <NodeOperatorInfo />
                 </div>

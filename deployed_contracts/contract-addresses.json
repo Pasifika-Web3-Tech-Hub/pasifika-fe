@@ -1,0 +1,18 @@
+{
+  "amm": {
+    "address": "ST3P49R8XXQWG69S66MZASYPTTGNDKK0WW32RRJDN",
+    "contractName": "amm",
+    "network": "testnet",
+    "deployedAt": "2025-08-11T21:27:09.945Z",
+    "description": "Pasifika Stacks AMM Contract",
+    "functions": [
+      "create-pool",
+      "add-liquidity",
+      "remove-liquidity",
+      "swap",
+      "get-pool-data",
+      "get-pool-id",
+      "get-position-liquidity"
+    ]
+  }
+}
