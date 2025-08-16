@@ -1,5 +1,5 @@
 // Auto-generated contract addresses and types
-// Last updated: 2025-08-11T21:27:09.946Z
+// Last updated: 2025-08-16T10:38:30.642Z
 
 export interface ContractInfo {
   address: string;
@@ -13,14 +13,16 @@ export interface ContractInfo {
 
 export interface DeployedContracts {
   amm: ContractInfo;
+  "mock-token": ContractInfo;
+  "mock-token-2": ContractInfo;
 }
 
 export const DEPLOYED_CONTRACTS: DeployedContracts = {
   "amm": {
-    "address": "ST3P49R8XXQWG69S66MZASYPTTGNDKK0WW32RRJDN",
+    "address": "ST1KQ3KDWYE3B4WMY0WQ7SP7EYX0842PR64K3DBE2",
     "contractName": "amm",
     "network": "testnet",
-    "deployedAt": "2025-08-11T21:27:09.945Z",
+    "deployedAt": "2025-08-16T10:38:30.637Z",
     "description": "Pasifika Stacks AMM Contract",
     "functions": [
       "create-pool",
@@ -30,6 +32,32 @@ export const DEPLOYED_CONTRACTS: DeployedContracts = {
       "get-pool-data",
       "get-pool-id",
       "get-position-liquidity"
+    ]
+  },
+  "mock-token": {
+    "address": "ST1KQ3KDWYE3B4WMY0WQ7SP7EYX0842PR64K3DBE2",
+    "contractName": "mock-token",
+    "network": "testnet",
+    "deployedAt": "2025-08-16T10:38:30.637Z",
+    "description": "Pasifika Stacks Mock Token Contract",
+    "functions": [
+      "transfer",
+      "get-balance",
+      "get-total-supply",
+      "mint"
+    ]
+  },
+  "mock-token-2": {
+    "address": "ST1KQ3KDWYE3B4WMY0WQ7SP7EYX0842PR64K3DBE2",
+    "contractName": "mock-token-2",
+    "network": "testnet",
+    "deployedAt": "2025-08-16T10:38:30.637Z",
+    "description": "Pasifika Stacks Mock Token 2 Contract",
+    "functions": [
+      "transfer",
+      "get-balance",
+      "get-total-supply",
+      "mint"
     ]
   }
 } as const;

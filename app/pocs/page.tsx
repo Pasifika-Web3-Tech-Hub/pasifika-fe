@@ -44,8 +44,8 @@ export default function Services() {
       name: 'Stacks',
       color: '#5546FF',
       contractsDeployed: 1,
-      moneyTransferAddress: 'ST3P49R8XXQWG69S66MZASYPTTGNDKK0WW32RRJDN.amm',
-      nodeContract: 'ST3P49R8XXQWG69S66MZASYPTTGNDKK0WW32RRJDN.amm',
+      moneyTransferAddress: 'ST1KQ3KDWYE3B4WMY0WQ7SP7EYX0842PR64K3DBE2.amm',
+      nodeContract: 'ST1KQ3KDWYE3B4WMY0WQ7SP7EYX0842PR64K3DBE2.amm',
       transactionFee: '0.5%',
       techType: 'Bitcoin-Secured Layer'
     },
@@ -312,7 +312,7 @@ export default function Services() {
                     textAlign: 'center'
                   }}>
                     <p style={{ margin: 0, fontWeight: 'bold' }}>✅ Successfully Deployed on Stacks Testnet!</p>
-                    <p style={{ margin: '5px 0 0 0', fontSize: '0.9rem' }}>Contract: ST3P49R8XXQWG69S66MZASYPTTGNDKK0WW32RRJDN.amm</p>
+                    <p style={{ margin: '5px 0 0 0', fontSize: '0.9rem' }}>Contract: ST1KQ3KDWYE3B4WMY0WQ7SP7EYX0842PR64K3DBE2.amm</p>
                   </div>
                   
                   <div style={{ textAlign: 'center', marginTop: '20px' }}>

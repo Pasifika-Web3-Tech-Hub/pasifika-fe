@@ -12,6 +12,8 @@ const path = require('path');
 const BACKEND_PATH = '/home/user/Documents/pasifika-web3-tech-hub/pasifika-stacks-exchange';
 const FRONTEND_CONTRACTS_PATH = '/home/user/Documents/pasifika-web3-tech-hub/pasifika-web3-fe/deployed_contracts';
 const DEPLOYMENTS_PATH = path.join(BACKEND_PATH, 'deployments');
+const POCS_PAGE_PATH = '/home/user/Documents/pasifika-web3-tech-hub/pasifika-web3-fe/app/pocs/page.tsx';
+const STACKS_EXCHANGE_AMM_PATH = '/home/user/Documents/pasifika-web3-tech-hub/pasifika-web3-fe/app/stacks-exchange/lib/amm.ts';
 
 // Ensure the deployed_contracts directory exists
 if (!fs.existsSync(FRONTEND_CONTRACTS_PATH)) {
@@ -57,7 +59,7 @@ async function saveContractAddresses() {
     // Save AMM contract addresses specifically
     const ammContractInfo = {
       amm: {
-        address: 'ST3P49R8XXQWG69S66MZASYPTTGNDKK0WW32RRJDN',
+        address: 'ST1KQ3KDWYE3B4WMY0WQ7SP7EYX0842PR64K3DBE2',
         contractName: 'amm',
         network: 'testnet',
         deployedAt: new Date().toISOString(),
@@ -106,6 +108,12 @@ async function saveContractAddresses() {
     
     console.log('✅ Deployment summary created!');
     console.log(`📁 Saved to: ${summaryFile}`);
+
+    // Update POCs page with new contract addresses
+    await updatePocsPage(contractAddresses);
+    
+    // Update Stacks Exchange AMM library with new contract addresses
+    await updateStacksExchangeAMM(contractAddresses);
 
   } catch (error) {
     console.error('❌ Error saving contract addresses:', error.message);
@@ -160,9 +168,101 @@ export function getContractPrincipal(contractName: keyof DeployedContracts): str
 `;
 }
 
+/**
+ * Update the POCs page with new contract addresses
+ */
+async function updatePocsPage(contractAddresses) {
+  try {
+    console.log('🔄 Updating POCs page with new contract addresses...');
+    
+    if (!fs.existsSync(POCS_PAGE_PATH)) {
+      console.log('❌ POCs page not found, skipping update');
+      return;
+    }
+
+    // Read the current POCs page content
+    let pocsContent = fs.readFileSync(POCS_PAGE_PATH, 'utf8');
+    
+    // Extract AMM contract info
+    const ammContract = contractAddresses.amm;
+    if (!ammContract) {
+      console.log('❌ No AMM contract found, skipping POCs page update');
+      return;
+    }
+
+    const newContractAddress = `${ammContract.address}.${ammContract.contractName}`;
+    
+    // Update the network stats for Stacks
+    const stacksNetworkRegex = /stacks:\s*{[\s\S]*?}/;
+    const stacksNetworkMatch = pocsContent.match(stacksNetworkRegex);
+    
+    if (stacksNetworkMatch) {
+      const updatedStacksNetwork = stacksNetworkMatch[0]
+        .replace(/moneyTransferAddress:\s*'[^']*'/, `moneyTransferAddress: '${newContractAddress}'`)
+        .replace(/nodeContract:\s*'[^']*'/, `nodeContract: '${newContractAddress}'`);
+      
+      pocsContent = pocsContent.replace(stacksNetworkRegex, updatedStacksNetwork);
+    }
+    
+    // Update the deployment highlight section
+    const deploymentHighlightRegex = /Contract:\s*[A-Z0-9]+\.[a-z-]+/;
+    pocsContent = pocsContent.replace(deploymentHighlightRegex, `Contract: ${newContractAddress}`);
+    
+    // Write the updated content back to the file
+    fs.writeFileSync(POCS_PAGE_PATH, pocsContent);
+    
+    console.log('✅ POCs page updated successfully!');
+    console.log(`📝 Updated contract address to: ${newContractAddress}`);
+    
+  } catch (error) {
+    console.error('❌ Error updating POCs page:', error.message);
+    // Don't exit the process, just log the error
+  }
+}
+
+/**
+ * Update the Stacks Exchange AMM library with new contract addresses
+ */
+async function updateStacksExchangeAMM(contractAddresses) {
+  try {
+    console.log('🔄 Updating Stacks Exchange AMM library with new contract addresses...');
+    
+    if (!fs.existsSync(STACKS_EXCHANGE_AMM_PATH)) {
+      console.log('❌ Stacks Exchange AMM library not found, skipping update');
+      return;
+    }
+
+    // Read the current AMM library content
+    let ammContent = fs.readFileSync(STACKS_EXCHANGE_AMM_PATH, 'utf8');
+    
+    // Extract AMM contract info
+    const ammContract = contractAddresses.amm;
+    if (!ammContract) {
+      console.log('❌ No AMM contract found, skipping Stacks Exchange AMM library update');
+      return;
+    }
+
+    const newContractAddress = ammContract.address;
+    
+    // Update the AMM_CONTRACT_ADDRESS constant
+    const contractAddressRegex = /const AMM_CONTRACT_ADDRESS = "[A-Z0-9]+";/;
+    ammContent = ammContent.replace(contractAddressRegex, `const AMM_CONTRACT_ADDRESS = "${newContractAddress}";`);
+    
+    // Write the updated content back to the file
+    fs.writeFileSync(STACKS_EXCHANGE_AMM_PATH, ammContent);
+    
+    console.log('✅ Stacks Exchange AMM library updated successfully!');
+    console.log(`📝 Updated AMM contract address to: ${newContractAddress}`);
+    
+  } catch (error) {
+    console.error('❌ Error updating Stacks Exchange AMM library:', error.message);
+    // Don't exit the process, just log the error
+  }
+}
+
 // Run the script
 if (require.main === module) {
   saveContractAddresses();
 }
 
-module.exports = { saveContractAddresses };
+module.exports = { saveContractAddresses, updatePocsPage, updateStacksExchangeAMM };
