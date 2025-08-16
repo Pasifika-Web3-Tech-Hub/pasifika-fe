@@ -6,9 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Swap } from "./components/swap";
 import { AddLiquidity } from "./components/add-liquidity";
-import { RemoveLiquidity } from "./components/remove-liquidity";
 import { CreatePool } from "./components/create-pool";
-import { PoolsList } from "./components/pools";
 import { getAllPools, Pool } from "./lib/amm";
 import "../page.css";
 import "../shared-pages.css";
@@ -84,11 +82,11 @@ export default function StacksExchange() {
       case "swap":
         return pools.length > 0 ? <Swap pools={pools} /> : noPoolsMessage;
       case "pools":
-        return <PoolsList pools={pools} />;
+        return <div>Pools feature coming soon</div>;
       case "add-liquidity":
         return pools.length > 0 ? <AddLiquidity pools={pools} /> : noPoolsMessage;
       case "remove-liquidity":
-        return pools.length > 0 ? <RemoveLiquidity pools={pools} /> : noPoolsMessage;
+        return <div>Remove liquidity feature coming soon</div>;
       case "create-pool":
         return <CreatePool />;
       default:

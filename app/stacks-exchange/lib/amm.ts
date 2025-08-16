@@ -3,6 +3,7 @@ import {
   boolCV,
   bufferCV,
   Cl,
+  contractPrincipalCV,
   cvToHex,
   fetchCallReadOnlyFunction,
   hexToCV,
@@ -59,9 +60,9 @@ export async function getAllPools() {
 
   // We can fetch 50 events at a time, so we run a loop until we've fetched all events
   while (!done) {
-    const url = `http://api.testnet.hiro.so/extended/v1/contract/${AMM_CONTRACT_PRINCIPAL}/events?limit=50&offset=${offset}`;
-    const events = (await fetch(url).then((res) => res.json()))
-      .results as ContractEvent[];
+    const response = await fetch(`https://api.testnet.hiro.so/extended/v1/contract/${AMM_CONTRACT_PRINCIPAL}/events?limit=50&offset=${offset}`);
+    const data = await response.json();
+    const events = data.results as ContractEvent[];
 
     // if at any point we're getting less than 50 events back, then this is the last iteration
     if (events.length < 50) {
@@ -143,17 +144,27 @@ export async function getAllPools() {
 }
 
 export async function createPool(token0: string, token1: string, fee: number) {
-  const token0Hex = cvToHex(principalCV(token0));
-  const token1Hex = cvToHex(principalCV(token1));
+  // Parse contract addresses from the full principal strings
+  let [token0Address, token0Name] = token0.split('.');
+  let [token1Address, token1Name] = token1.split('.');
+  
+  const token0Hex = cvToHex(contractPrincipalCV(token0Address, token0Name));
+  const token1Hex = cvToHex(contractPrincipalCV(token1Address, token1Name));
   if (token0Hex > token1Hex) {
     [token0, token1] = [token1, token0];
+    [token0Address, token0Name] = token0.split('.');
+    [token1Address, token1Name] = token1.split('.');
   }
 
   const txOptions = {
     contractAddress: AMM_CONTRACT_ADDRESS,
     contractName: AMM_CONTRACT_NAME,
     functionName: "create-pool",
-    functionArgs: [principalCV(token0), principalCV(token1), uintCV(fee)],
+    functionArgs: [
+      contractPrincipalCV(token0Address, token0Name), 
+      contractPrincipalCV(token1Address, token1Name), 
+      uintCV(fee)
+    ],
   };
 
   return txOptions;

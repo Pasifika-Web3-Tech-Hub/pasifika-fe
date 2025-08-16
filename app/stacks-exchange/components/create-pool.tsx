@@ -99,9 +99,42 @@ export function CreatePool() {
       </div>
 
       <button
-        onClick={() => handleCreatePool(token0, token1, fee)}
-        className="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 disabled:bg-gray-400 disabled:cursor-not-allowed"
-        disabled={!token0 || !token1 || fee < 0}
+        onClick={async (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          console.log("=== CREATE POOL BUTTON CLICKED ===");
+          console.log("Event:", e);
+          console.log("Form values:", { token0, token1, fee });
+          console.log("handleCreatePool function:", typeof handleCreatePool);
+          console.log("userData:", userData);
+          
+          // Test basic alert first
+          alert("Button clicked! Check console for details.");
+          
+          if (!handleCreatePool) {
+            console.error("handleCreatePool is undefined!");
+            alert("handleCreatePool function is undefined!");
+            return;
+          }
+          
+          if (!userData) {
+            console.error("userData is null!");
+            alert("User not connected to wallet!");
+            return;
+          }
+          
+          try {
+            console.log("About to call handleCreatePool...");
+            const result = await handleCreatePool(token0, token1, fee);
+            console.log("handleCreatePool completed with result:", result);
+          } catch (error) {
+            console.error("Error in button click handler:", error);
+            alert(`Button click error: ${error}`);
+          }
+        }}
+        className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+        disabled={!token0 || !token1 || fee <= 0}
       >
         Create Pool
       </button>
