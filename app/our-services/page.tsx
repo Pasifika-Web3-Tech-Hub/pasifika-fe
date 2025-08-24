@@ -222,6 +222,27 @@ export default function Services() {
               
               <div className="service-card">
                 <div className="service-card-header">
+                  <div className="service-icon">🗺️</div>
+                  <h3>GIS DePIN Course</h3>
+                </div>
+                <p>Intensive 4-day program combining Geographic Information Systems, Blockchain technology, and AI to transform utility management across Pasifika through innovative spatial data separation and Dynamic NFT asset representation.</p>
+                <ul className="service-feature-list">
+                  <li>GIS-Blockchain integration mastery</li>
+                  <li>AI-powered asset attribute capture</li>
+                  <li>Dynamic NFT utility management</li>
+                  <li>DePIN community infrastructure</li>
+                </ul>
+                <div className="service-card-action">
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center' }}>
+                    <Link href="/gis-depin-course" className="service-button" style={{ display: 'block', width: '200px', textAlign: 'center' }}>
+                      Learn More
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="service-card">
+                <div className="service-card-header">
                   <div className="service-icon">⚡</div>
                   <h3>Lightning Education & Training</h3>
                 </div>
