@@ -70,6 +70,40 @@ export default function BitcoinDiplomaCourse() {
             </div>
 
             <div style={{ 
+              backgroundColor: 'rgba(220, 38, 127, 0.1)',
+              borderLeft: '4px solid #DC267F',
+              padding: '20px 25px',
+              margin: '30px 0',
+              borderRadius: '0 8px 8px 0',
+              position: 'relative',
+              boxShadow: '0 2px 10px rgba(0, 0, 0, 0.05)'
+            }}>
+              <div style={{ 
+                position: 'absolute',
+                top: '-12px',
+                right: '20px',
+                backgroundColor: '#DC267F',
+                color: '#fff',
+                fontWeight: 700,
+                fontSize: '12px',
+                padding: '5px 10px',
+                borderRadius: '20px',
+                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px'
+              }}>
+                Applications Close Tonight!
+              </div>
+              <h3 style={{ color: '#DC267F', marginBottom: '10px' }}>⏰ Application Deadline: 11:59 PM Tonight (Aug 25, 2025)</h3>
+              <p style={{ lineHeight: '1.6', marginBottom: '15px' }}>
+                <strong>Applications close at 11:59 PM tonight (August 25, 2025, GMT+13).</strong> Don't miss your chance to join our Bitcoin education program!
+              </p>
+              <p style={{ lineHeight: '1.6' }}>
+                <strong>First Class:</strong> Tuesday, August 26, 2025 at 8:00 PM - 9:00 PM HST (Hawaii-Aleutian Standard Time, UTC-10:00). See course calendar for full schedule.
+              </p>
+            </div>
+
+            <div style={{ 
               backgroundColor: 'rgba(249, 166, 32, 0.1)',
               borderLeft: '4px solid #F9A620',
               padding: '20px 25px',
@@ -375,9 +409,10 @@ export default function BitcoinDiplomaCourse() {
             
             <h3 style={{ color: '#FF5722', marginTop: '30px', marginBottom: '15px' }}>📅 Course Schedule</h3>
             <ul style={{ lineHeight: '1.8', paddingLeft: '20px' }}>
-              <li><strong>Duration:</strong> 10 weeks (Aug. 25 - Nov. 8, 2025)</li>
+              <li><strong>Duration:</strong> 10 weeks (Aug. 26 - Nov. 8, 2025)</li>
+              <li><strong>First Class:</strong> Tuesday, August 26, 2025 at 8:00 PM - 9:00 PM</li>
               <li><strong>Format:</strong> 2 live classes per week (1 hour each)</li>
-              <li><strong>Timezone:</strong> HST (UTC -10)</li>
+              <li><strong>Timezone:</strong> Hawaii-Aleutian Standard Time (HST, UTC-10:00)</li>
               <li><strong>Platform:</strong> Google Meets</li>
               <li><strong>Communication:</strong> WhatsApp/Telegram groups</li>
             </ul>
@@ -428,10 +463,16 @@ export default function BitcoinDiplomaCourse() {
                   is to empower individuals through financial education with accessible, transparent, 
                   and practical Bitcoin knowledge.
                 </p>
-                <a href="https://myfirstbitcoin.io/" target="_blank" rel="noopener noreferrer" 
-                   style={{ color: '#FF5722', textDecoration: 'underline', fontWeight: 'bold' }}>
-                  Visit myfirstbitcoin.io →
-                </a>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <a href="https://myfirstbitcoin.io/" target="_blank" rel="noopener noreferrer" 
+                     style={{ color: '#FF5722', textDecoration: 'underline', fontWeight: 'bold' }}>
+                    Visit myfirstbitcoin.io →
+                  </a>
+                  <a href="https://github.com/Pasifika-Web3-Tech-Hub/pasifika-bitcoin-diploma" target="_blank" rel="noopener noreferrer" 
+                     style={{ color: '#FF5722', textDecoration: 'underline', fontWeight: 'bold' }}>
+                    📚 Course GitHub Repository →
+                  </a>
+                </div>
               </div>
             </div>
 
