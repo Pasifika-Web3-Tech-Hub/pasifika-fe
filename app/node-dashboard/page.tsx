@@ -176,7 +176,7 @@ export default function NodeDashboard() {
           
           <div className="nav-menu">
             <div className="nav-item">
-              <Link href="/services" className="nav-link-button">
+              <Link href="/our-services" className="nav-link-button">
                 Back to Services
               </Link>
             </div>
