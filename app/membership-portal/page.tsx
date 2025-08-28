@@ -397,15 +397,16 @@ export default function MembershipPortal() {
                   <div className={`tier-card ${membershipStatus === 'Member' ? 'active' : ''}`}>
                     <div className="tier-header">
                       <h4 className="tier-name">Member (Tier 1)</h4>
-                      <div className="tier-price">0.0001 RBTC</div>
+                      <div className="tier-price">200 STX</div>
                     </div>
                     <div className="tier-benefits">
                       <ul>
                         <li>All Guest benefits</li>
-                        <li><span className="benefit-highlight">0.5%</span> transaction fee</li>
+                        <li><span className="benefit-highlight">0.5%</span> transaction fee (50% discount)</li>
                         <li>Annual profit-sharing eligible</li>
-                        <li>Governance participation</li>
-                        <li>Access to member-only features</li>
+                        <li>Community governance participation</li>
+                        <li>Full marketplace access with enhanced features</li>
+                        <li>Annual membership renewal required</li>
                       </ul>
                     </div>
                     <div className="tier-actions">
@@ -415,7 +416,7 @@ export default function MembershipPortal() {
                           onClick={handleJoinMembership}
                           disabled={isPending || isLoading}
                         >
-                          {isPending || isLoading ? "Processing..." : "Join (0.0001 RBTC)"}
+                          {isPending || isLoading ? "Processing..." : "Join (200 STX)"}
                         </button>
                       )}
                       {walletConnected && membershipStatus === 'Member' && (
@@ -439,15 +440,16 @@ export default function MembershipPortal() {
                   <div className={`tier-card ${membershipStatus === 'Node Operator' ? 'active' : ''}`}>
                     <div className="tier-header">
                       <h4 className="tier-name">Node Operator (Tier 2)</h4>
-                      <div className="tier-price">Requires RBTC Staking</div>
+                      <div className="tier-price">Free for Technical Contributors</div>
                     </div>
                     <div className="tier-benefits">
                       <ul>
                         <li>All Member benefits</li>
-                        <li><span className="benefit-highlight">0.25%</span> transaction fee</li>
-                        <li>Priority access to new features</li>
-                        <li>Enhanced profit-sharing</li>
-                        <li>Run a validating node</li>
+                        <li><span className="benefit-highlight">0.25%</span> transaction fee (75% discount)</li>
+                        <li>Priority marketplace access and advanced features</li>
+                        <li>Enhanced profit-sharing eligibility</li>
+                        <li>Advanced governance and technical decision-making</li>
+                        <li>Requires operating network infrastructure</li>
                       </ul>
                     </div>
                     <div className="tier-actions">
@@ -529,9 +531,9 @@ export default function MembershipPortal() {
                   <div className="eligibility-info">
                     <h4>Eligibility Requirements</h4>
                     <ul>
-                      <li>Must maintain active membership for at least <span className="eligibility-highlight">3 months</span> before distribution</li>
-                      <li>Minimum of <span className="eligibility-highlight">5 transactions</span> on the platform during the financial year</li>
-                      <li>Transaction volume of at least <span className="eligibility-highlight">0.02 RBTC</span> during the financial year</li>
+                      <li>Must maintain active membership during the financial year</li>
+                      <li>Minimum of <span className="eligibility-highlight">100+ transactions</span> on the platform during the financial year</li>
+                      <li>Activity across at least <span className="eligibility-highlight">2 networks</span> during the financial year</li>
                       <li>The Pasifika Financial Year runs from <span className="eligibility-highlight">December 27 to December 24</span></li>
                     </ul>
                     

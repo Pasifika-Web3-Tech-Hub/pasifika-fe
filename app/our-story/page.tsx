@@ -110,9 +110,9 @@ export default function OurStory() {
               }}>
                 Seed Funded
               </div>
-              <h3 style={{ color: '#F9A620', marginBottom: '10px' }}>RootStock Hactivator Program</h3>
+              <h3 style={{ color: '#F9A620', marginBottom: '10px' }}>Blockchain Development Journey</h3>
               <p style={{ lineHeight: '1.6' }}>
-                Our journey was accelerated by our successful contribution to the RootStock (RSK) Hactivator Program, which provided the seed funding and technical expertise to launch our blockchain interoperability initiative. This partnership with RootStock (RSK) proved pivotal in developing our multi-chain infrastructure and establishing our presence in the Bitcoin ecosystem through RSK&apos;s Bitcoin sidechain technology.
+                Our journey began with exploring various blockchain platforms, including participation in the RootStock (RSK) Hactivator Program. This experience provided valuable insights into Bitcoin-secured blockchain development. We ultimately chose to focus on Stacks blockchain with its Clarity smart contracts, which align perfectly with our values of security, transparency, and predictable execution for Pacific Island communities.
               </p>
             </div>
 

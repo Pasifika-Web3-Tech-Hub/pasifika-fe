@@ -89,44 +89,47 @@ export default function Whitepaper() {
             </div>
             
             <div className="membership-box" style={{ marginTop: '2rem', padding: '1.5rem', backgroundColor: isDarkMode ? '#2a2a2a' : '#f5f5f5', borderRadius: '8px', border: '1px solid ' + (isDarkMode ? '#444' : '#ddd') }}>
-              <h3 style={{ marginTop: 0 }}>Bitcoin & Lightning Network Membership</h3>
-              <p>Our platform offers three membership tiers with Bitcoin and Lightning Network integration, providing financial sovereignty and low-cost transactions for Pacific Island communities:</p>
+              <h3 style={{ marginTop: 0 }}>Stacks Blockchain Membership System</h3>
+              <p>Our platform offers three membership tiers built on Stacks blockchain with STX token integration, providing secure and affordable access for Pacific Island communities:</p>
               
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginTop: '1.5rem' }}>
                 <div style={{ padding: '1.25rem', backgroundColor: isDarkMode ? '#333' : '#fff', borderRadius: '8px', boxShadow: isDarkMode ? '0 2px 8px rgba(0,0,0,0.3)' : '0 2px 8px rgba(0,0,0,0.1)' }}>
                   <h4 style={{ color: '#FF5722', marginTop: 0, borderBottom: '2px solid #FF5722', paddingBottom: '0.5rem' }}>Guest (Tier 0)</h4>
                   <p style={{ fontWeight: 600 }}>Free Access</p>
                   <ul style={{ paddingLeft: '1.5rem', marginBottom: 0 }}>
-                    <li>1% transaction fee</li>
-                    <li>Basic platform access</li>
+                    <li>1% transaction fee on marketplace activities</li>
+                    <li>Basic marketplace access</li>
                     <li>No profit-sharing eligibility</li>
+                    <li>No membership payment required</li>
                   </ul>
                 </div>
                 
                 <div style={{ padding: '1.25rem', backgroundColor: isDarkMode ? '#333' : '#fff', borderRadius: '8px', boxShadow: isDarkMode ? '0 2px 8px rgba(0,0,0,0.3)' : '0 2px 8px rgba(0,0,0,0.1)' }}>
                   <h4 style={{ color: '#FF5722', marginTop: 0, borderBottom: '2px solid #FF5722', paddingBottom: '0.5rem' }}>Member (Tier 1)</h4>
-                  <p style={{ fontWeight: 600 }}>0.0005 BTC or 100,000 sats</p>
+                  <p style={{ fontWeight: 600 }}>200 STX</p>
                   <ul style={{ paddingLeft: '1.5rem', marginBottom: 0 }}>
-                    <li>0.5% transaction fee</li>
-                    <li>Full Market Place access</li>
+                    <li>0.5% transaction fee (50% discount)</li>
+                    <li>Full marketplace access with enhanced features</li>
                     <li>Profit-sharing eligibility</li>
-                    <li>Bitcoin-secured smart contract functionality</li>
+                    <li>Community governance participation</li>
+                    <li>Annual membership renewal required</li>
                   </ul>
                 </div>
                 
                 <div style={{ padding: '1.25rem', backgroundColor: isDarkMode ? '#333' : '#fff', borderRadius: '8px', boxShadow: isDarkMode ? '0 2px 8px rgba(0,0,0,0.3)' : '0 2px 8px rgba(0,0,0,0.1)' }}>
                   <h4 style={{ color: '#FF5722', marginTop: 0, borderBottom: '2px solid #FF5722', paddingBottom: '0.5rem' }}>Node Operator (Tier 2)</h4>
-                  <p style={{ fontWeight: 600 }}>0.001 BTC or 100,000 sats</p>
+                  <p style={{ fontWeight: 600 }}>Free for Technical Contributors</p>
                   <ul style={{ paddingLeft: '1.5rem', marginBottom: 0 }}>
-                    <li>0.25% transaction fee</li>
-                    <li>Priority Market Place access</li>
-                    <li>Enhanced profit-sharing</li>
-                    <li>Network operation rewards</li>
+                    <li>0.25% transaction fee (75% discount)</li>
+                    <li>Priority marketplace access and advanced features</li>
+                    <li>Enhanced profit-sharing eligibility</li>
+                    <li>Advanced governance and technical decision-making</li>
+                    <li>Requires operating network infrastructure</li>
                   </ul>
                 </div>
               </div>
               
-              <p style={{ marginTop: '1.5rem', fontSize: '0.95rem', fontStyle: 'italic' }}>Annual profit-sharing requires a minimum transaction volume of 0.0005 BTC (or equivalent STX tokens) during the Pasifika Financial Year (December 27 to December 24).</p>
+              <p style={{ marginTop: '1.5rem', fontSize: '0.95rem', fontStyle: 'italic' }}>Annual profit-sharing eligibility requires 100+ transactions AND activity across at least 2 networks during the Pasifika Financial Year (December 27 to December 24).</p>
             </div>
             
             <p>
