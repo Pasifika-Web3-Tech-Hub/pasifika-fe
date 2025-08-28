@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4676],{64676:function(e){e.exports=JSON.parse('{"name":"PasifikaMoneyTransfer","address":"0x9ed49438e02fe479c4516b308a1efb8d3e08bfad","network":"RootStock Testnet","chainId":31,"deployedAt":"1747018415","deployer":"Unknown"}')}}]);

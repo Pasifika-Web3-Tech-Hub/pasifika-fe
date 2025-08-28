@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[3618],{83618:function(t){t.exports=JSON.parse('{"lastUpdated":"2025-08-16T10:38:30.642Z","totalContracts":1,"networks":["testnet"],"contracts":["amm"]}')}}]);

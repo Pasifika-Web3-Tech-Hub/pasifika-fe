@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8410],{98410:function(e){e.exports=JSON.parse('{"name":"PasifikaMembership","address":"0x35abe8bddf4a6938d31e263a0fa9f9fcec32e883","network":"RootStock Testnet","chainId":31,"deployedAt":"1747017545","deployer":"Unknown"}')}}]);

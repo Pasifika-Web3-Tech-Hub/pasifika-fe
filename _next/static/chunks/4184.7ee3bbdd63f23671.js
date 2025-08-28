@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4184],{14184:function(e){e.exports=JSON.parse('{"contractName":"PasifikaMembership","address":"SP1HTBVD3JG9C05J7HBJTHGR0GGW7KX17ECNWDENH.pasifika-membership","network":"Stacks Testnet","chainId":"testnet","explorer":"https://explorer.stacks.co/txid/","deployedAt":"2025-08-28T06:42:00Z"}')}}]);

@@ -1,0 +1,112 @@
+/* Pasifika Portfolio Pages - Shared Styling */
+:root {
+  /* Primary Colors */
+  --primary-color: #333333;     /* Dark Grey */
+  --secondary-color: #444444;   /* Medium Grey */
+  --accent-color: #FF5722;      /* Orange */
+  
+  /* Color Palette */
+  --dark-grey: #333333;         /* Dark Grey */
+  --medium-grey: #444444;       /* Medium Grey */
+  --light-grey: #f8f8f8;        /* Light Grey */
+  --orange: #FF5722;            /* Orange */
+  --orange-light: #FF9800;      /* Light Orange */
+  --white: #FFFFFF;             /* White */
+  
+  /* UI Colors */
+  --light-text: #FFFFFF;        /* White */
+  --dark-text: #333333;         /* Dark Grey */
+}
+
+/* Pasifika Header */
+.pasifika-header {
+  background-color: var(--dark-grey);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.pasifika-logo {
+  display: flex;
+  align-items: center;
+}
+
+.pasifika-logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.pasifika-logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light-text);
+}
+
+.pasifika-logo-accent {
+  background: linear-gradient(to right, var(--orange), var(--orange-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.pasifika-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.pasifika-nav a {
+  color: var(--light-text);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.pasifika-nav a:hover {
+  color: var(--accent-color);
+}
+
+.pasifika-nav a.active {
+  border-bottom: 2px solid var(--accent-color);
+}
+
+/* Pasifika Footer */
+.pasifika-footer {
+  background-color: var(--dark-grey);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  border-top: 2px solid var(--accent-color);
+}
+
+.pasifika-footer p {
+  margin: 0;
+  color: var(--light-text);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Back Button */
+.back-to-services {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+  margin-top: 20px;
+}
+
+.back-to-services:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[1882],{81882:function(e){e.exports=JSON.parse('{"name":"PasifikaTreasury","address":"0xd563cc63cb6d2a7f28dee99ebd25d73a76ce75a3","network":"RootStock Testnet","chainId":31,"deployedAt":"1747017318","deployer":"Unknown"}')}}]);

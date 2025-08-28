@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Utilities Decision Support System integrating GIS & Blockchain for Pacific Island nations - ADB Project by Pasifika Web3 Tech Hub">
+    <meta name="keywords" content="GIS, Blockchain, Utilities, Decision Support, ADB, Pacific Islands, Pasifika, OPMS">
+    <meta name="author" content="Pasifika Web3 Tech Hub">
+    <title>Utilities Decision Support | Pasifika Web3 Tech Hub</title>
+    <link rel="icon" href="/pasifika.png" type="image/png">
+    <link rel="stylesheet" href="../pasifika-portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8f8f8;
+            color: #333333;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(rgba(51, 51, 51, 0.8), rgba(51, 51, 51, 0.9)), url('utilities-gis-header.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            border-bottom: 3px solid #FF5722;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+            border: none;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .presentation {
+            flex-grow: 1;
+            width: 100%;
+            max-width: 100%;
+            padding: 40px 20px 80px;
+        }
+        
+        .slide {
+            width: 100%;
+            max-width: 1024px;
+            margin: 0 auto 40px;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: auto;
+            margin: 15px 0;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        
+        .slide-notes {
+            margin-top: 20px;
+            padding: 18px;
+            background: #f9f9f9;
+            border-left: 4px solid #FF5722;
+            border-radius: 0 6px 6px 0;
+        }
+        
+        .slide-notes h3 {
+            margin-bottom: 12px;
+            color: #333333;
+            font-weight: 600;
+        }
+        
+        .slide-notes p {
+            margin-bottom: 8px;
+            color: #444444;
+            line-height: 1.7;
+        }
+        
+        .slide-notes ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .slide-notes li {
+            margin-bottom: 6px;
+            line-height: 1.6;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            color: #333333;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2:after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #FF5722;
+        }
+        
+        .disclaimer {
+            font-size: 0.8rem;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .tech-pill {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        
+        .tech-pill.blockchain {
+            background-color: #e6f7ff;
+            border-color: #91d5ff;
+        }
+        
+        .tech-pill.gis {
+            background-color: #f6ffed;
+            border-color: #b7eb8f;
+        }
+        
+        /* Header and Footer styles are in the shared pasifika-portfolio.css file */
+        
+        /* Responsive styles for tablets and mobile devices */
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .slide {
+                padding: 20px;
+                margin-bottom: 30px;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            /* Improved responsive styling for content */
+            .slide-notes {
+                padding: 15px;
+            }
+            
+            .slide-notes h3 {
+                font-size: 1.2rem;
+            }
+            
+            .slide-notes ul {
+                margin-left: 15px;
+            }
+            
+            /* Better tech pill wrapping on mobile */
+            .tech-pill {
+                margin: 3px;
+                display: inline-block;
+            }
+            
+            /* Improved tables for mobile */
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+        
+        /* Small mobile devices */
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            
+            .subtitle {
+                font-size: 0.9rem;
+            }
+            
+            /* Adjust pasifika header for very small screens */
+            .pasifika-header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+                padding: 15px 10px;
+            }
+            
+            .pasifika-header div[style="margin-left: auto;"] {
+                margin-left: 0 !important;
+            }
+            
+            /* Adjusting image sizes for smaller screens */
+            .slide img {
+                max-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Pasifika Header -->
+        <div class="pasifika-header">
+            <div class="pasifika-logo">
+                <img src="/pasifika.png" alt="Pasifika" width="50" height="50">
+                <div class="pasifika-logo-text">
+                    <span class="pasifika-logo-accent">Pasifika</span>
+                </div>
+            </div>
+            <div style="margin-left: auto;">
+                <a href="/our-services#technical" class="back-to-services">Back to Our Services</a>
+            </div>
+        </div>
+        
+        <!-- Page Header -->
+        <div class="header">
+            <img src="/pasifika.png" alt="Pasifika Logo" style="height: 80px; width: auto; margin-bottom: 20px;">
+            <h1>Utilities Decision Support System</h1>
+            <p class="subtitle">Innovative Solutions for Pacific Island Communities</p>
+            <p class="subtitle">Integrating <span style="color: #ff6b35; font-weight: bold;">GIS Technology</span> & <span style="color: #ff6b35; font-weight: bold;">Blockchain</span> for Pacific Island Utilities</p>
+        </div>
+
+        <div class="presentation">
+            <div class="slide">
+                <h2>Project Overview</h2>
+                <img src="/adb.png" alt="ADB Logo" style="max-width: 200px; margin: 20px auto; display: block;">
+                <div class="slide-notes">
+                    <h3>ADB-Funded Utilities Management Platform</h3>
+                    <p>The Pasifika Web3 Tech Hub is proud to be working on an innovative utilities management system for Pacific Island nations that combines Geographic Information Systems (GIS) with blockchain technology.</p>
+                    <p><strong>ADB Grant Information:</strong> ADB 175726: GRANT-0813 FSM: Renewable Energy Development Project, Disaster Risk Resilience (DRR) Consulting Services (49450-027)</p>
+                    <p>This project aims to transform how utility services are managed across island communities through:</p>
+                    <ul>
+                        <li><strong>Transparent Asset Tracking</strong>: Immutable records of utility infrastructure assets</li>
+                        <li><strong>Spatial Decision Support</strong>: GIS-based planning and maintenance tools</li>
+                        <li><strong>Decentralized Operations</strong>: Blockchain-secured data sharing across multiple islands</li>
+                        <li><strong>Resource Optimization</strong>: AI-assisted resource allocation for remote communities</li>
+                    </ul>
+                    <p>Our approach focuses on creating practical, sustainable solutions that address the unique challenges of Pacific Island utility management.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <h2>Strategic Partnership with OCA Global</h2>
+                <img src="/oca.png" alt="OCA Global Partnership" style="max-width: 200px; margin: 20px auto; display: block;">
+                <div class="slide-notes">
+                    <h3>Lead Consulting Partner for ADB GRANT-0813</h3>
+                    <p>OCA Global serves as the lead consulting partner on this transformative project, bringing extensive expertise in:</p>
+                    <ul>
+                        <li><strong>Infrastructure Development</strong>: Decades of experience in utility infrastructure projects worldwide</li>
+                        <li><strong>Renewable Energy Solutions</strong>: Specialized knowledge in sustainable energy systems for island communities</li>
+                        <li><strong>Disaster Risk Resilience</strong>: Proven methodologies for climate-vulnerable regions</li>
+                        <li><strong>Pacific Region Expertise</strong>: Deep understanding of Micronesian infrastructure challenges</li>
+                    </ul>
+                    <p>Through our collaboration with OCA Global, this project leverages world-class consulting expertise alongside innovative blockchain and GIS technologies, ensuring solutions that are both cutting-edge and practically implemented.</p>
+                    <div style="background: #f0f7ff; border-left: 4px solid #0078d4; padding: 15px; margin-top: 15px;">
+                        <p style="margin: 0;"><strong>OCA Global</strong> brings critical expertise in disaster risk resilience (DRR) to ensure all technological implementations address climate change realities facing Pacific Island nations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide">
+                <h2>The Pacific Islands Challenge</h2>
+                <img src="/pasifika.png" alt="Pacific Islands Utilities Challenges" style="max-width: 200px; margin: 20px auto; display: block;">
+                <div class="slide-notes">
+                    <h3>Unique Geographical and Infrastructure Constraints</h3>
+                    <p>Pacific Island nations face exceptional challenges in utility management:</p>
+                    <ul>
+                        <li><strong>Geographical Dispersion</strong>: Services spread across multiple islands and vast ocean distances</li>
+                        <li><strong>Limited Resources</strong>: Constrained budgets and human resources for maintenance</li>
+                        <li><strong>Climate Vulnerability</strong>: Infrastructure threatened by rising sea levels and extreme weather</li>
+                        <li><strong>Data Fragmentation</strong>: Critical information scattered across different systems and formats</li>
+                        <li><strong>Connectivity Issues</strong>: Intermittent internet and communication challenges</li>
+                    </ul>
+                    <p>These challenges require innovative technological approaches that can operate effectively within these constraints while delivering reliable utility management capabilities.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <h2>GIS + Blockchain Integration</h2>
+                <img src="/QGIS.png" alt="GIS and Blockchain Integration" style="max-width: 200px; margin: 20px auto; display: block;">
+                <div class="slide-notes">
+                    <h3>Combining Spatial Intelligence with Distributed Ledger Technology</h3>
+                    <p>Our solution integrates two powerful technologies:</p>
+                    <div style="margin-bottom: 15px;">
+                        <span class="tech-pill gis">GIS</span>
+                        <span class="tech-pill gis">Remote Sensing</span>
+                        <span class="tech-pill gis">Spatial Analysis</span>
+                        <span class="tech-pill blockchain">Smart Contracts</span>
+                        <span class="tech-pill blockchain">Distributed Ledger</span>
+                        <span class="tech-pill blockchain">Decentralized Data</span>
+                    </div>
+                    <ul>
+                        <li><strong>Asset Geolocation</strong>: Precise mapping of utility infrastructure with blockchain-verified coordinates</li>
+                        <li><strong>Smart Contract Automation</strong>: Trigger maintenance workflows based on spatial conditions</li>
+                        <li><strong>Immutable Spatial Records</strong>: Tamper-proof history of infrastructure changes and maintenance</li>
+                        <li><strong>Decentralized Spatial Database</strong>: Accessible across islands even with intermittent connectivity</li>
+                    </ul>
+                    <p>This integration creates a resilient system that maintains data integrity while providing powerful spatial analytics capabilities, specifically designed for Pacific Island contexts.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <h2>FSM Utilities OPMS Platform</h2>
+                <img src="/PSM.png" alt="OPMS Dashboard" style="max-width: 200px; margin: 20px auto; display: block;">
+                <div class="slide-notes">
+                    <h3>Operations & Performance Management System</h3>
+                    <p>The Federated States of Micronesia (FSM) Utilities OPMS platform, developed in partnership with OCA Global under the ADB GRANT-0813 Renewable Energy Development Project, delivers:</p>
+                    <ul>
+                        <li><strong>Interactive GIS Dashboard</strong>: Visual monitoring of utility assets across multiple islands</li>
+                        <li><strong>Blockchain-Secured Data Layer</strong>: Immutable records of all utility transactions and changes</li>
+                        <li><strong>Maintenance Scheduling</strong>: Spatially-optimized service routing and resource allocation</li>
+                        <li><strong>Performance Analytics</strong>: Key metrics for service reliability and efficiency</li>
+                        <li><strong>Offline Capabilities</strong>: Continued operation during internet outages with later synchronization</li>
+                    </ul>
+                    <p>The platform is built using a microservices architecture that can operate in low-bandwidth environments while maintaining data integrity through distributed ledger technology.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <h2>Technical Architecture</h2>
+                <img src="/PUC.png" alt="Technical Architecture Diagram" style="max-width: 200px; margin: 20px auto; display: block;">
+                <div class="slide-notes">
+                    <h3>System Components and Data Flow</h3>
+                    <p>Our technical solution combines several key components:</p>
+                    <ul>
+                        <li><strong>Frontend Layer</strong>: React-based responsive interface with MapboxGL for GIS visualization</li>
+                        <li><strong>Blockchain Layer</strong>: Private Ethereum network with custom smart contracts for utility operations</li>
+                        <li><strong>GIS Processing</strong>: PostGIS database with QGIS integration for advanced spatial analysis</li>
+                        <li><strong>Synchronization Engine</strong>: Custom peer-to-peer protocol for operating across intermittent connections</li>
+                        <li><strong>Mobile Data Collection</strong>: Field apps for maintenance teams with offline capability</li>
+                    </ul>
+                    <p>The system uses a hybrid on-premise/cloud architecture to balance accessibility with the realities of Pacific Island connectivity challenges.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <h2>Field Testing & Implementation</h2>
+                <img src="/CPUC.png" alt="Field Implementation" style="max-width: 200px; margin: 20px auto; display: block;">
+                <div class="slide-notes">
+                    <h3>Real-World Deployment and Results</h3>
+                    <p>The ADB project (ADB 175726: GRANT-0813) is being implemented across multiple phases with OCA Global as the lead consulting partner:</p>
+                    <ul>
+                        <li><strong>Phase 1 (Completed)</strong>: Requirements gathering and technology assessment across FSM states</li>
+                        <li><strong>Phase 2 (Current)</strong>: Pilot implementation in Pohnpei with GIS mapping and blockchain foundation</li>
+                        <li><strong>Phase 3 (Upcoming)</strong>: Expansion to additional FSM states with enhanced capabilities</li>
+                        <li><strong>Phase 4 (Planned)</strong>: Knowledge transfer and regional expansion to other Pacific nations</li>
+                    </ul>
+                    <p>Initial results show significant improvements in maintenance response times and asset tracking accuracy, with a 45% reduction in data discrepancies and 30% faster issue resolution.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <h2>Community Impact & Sustainability</h2>
+                <img src="/KUA.png" alt="Community Impact" style="max-width: 200px; margin: 20px auto; display: block;">
+                <div class="slide-notes">
+                    <h3>Beyond Technology: Creating Lasting Value</h3>
+                    <p>Our approach focuses on sustainable implementation with tangible community benefits:</p>
+                    <ul>
+                        <li><strong>Local Capacity Building</strong>: Training programs for Pacific Islander technicians and managers</li>
+                        <li><strong>Improved Service Reliability</strong>: More consistent utilities access for island communities</li>
+                        <li><strong>Resource Conservation</strong>: Optimized maintenance reduces waste and extends infrastructure lifespan</li>
+                        <li><strong>Climate Resilience</strong>: Better planning tools for adaptation to changing climate conditions</li>
+                        <li><strong>Data Sovereignty</strong>: Island nations retain control of their critical infrastructure data</li>
+                    </ul>
+                    <p>The combination of GIS and blockchain creates a foundation for more equitable, transparent utility management that empowers Pacific Island communities to make data-driven decisions about their infrastructure future.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <h2>Future Development</h2>
+                <img src="/PSPSC.png" alt="Future Development Roadmap" style="max-width: 200px; margin: 20px auto; display: block;">
+                <div class="slide-notes">
+                    <h3>Expanding Capabilities and Reach</h3>
+                    <p>Our ongoing development roadmap includes:</p>
+                    <ul>
+                        <li><strong>Renewable Integration</strong>: GIS-based planning tools for optimal renewable energy deployment</li>
+                        <li><strong>IoT Sensors Network</strong>: Real-time blockchain-secured monitoring of critical infrastructure</li>
+                        <li><strong>Cross-Border Utilities Management</strong>: Shared resources coordination between island nations</li>
+                        <li><strong>Climate Impact Modeling</strong>: Predictive GIS tools for infrastructure adaptation planning</li>
+                        <li><strong>Regional Knowledge Network</strong>: Shared learnings and standards across Pacific utilities</li>
+                    </ul>
+                    <p>As the project expands, we're committed to maintaining an open, collaborative approach that centers Pacific Islander needs and knowledge in all technological implementations.</p>
+                    <p><small class="disclaimer">This project is supported by the Asian Development Bank (ADB) and represents a collaboration between multiple regional partners. All GIS and blockchain implementations adhere to relevant data protection regulations.</small></p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Pasifika Footer -->
+        <div class="pasifika-footer">
+            <p>&copy; 2025 Pasifika Web3 Tech Hub | All Rights Reserved</p>
+            <p>Innovative Technology Solutions for Pacific Island Communities</p>
+            <p><small>This project represents a collaboration between the Asian Development Bank (ADB 175726: GRANT-0813), OCA Global, FSM Utilities, and Pasifika Web3 Tech Hub.</small></p>
+        </div>
+    </div>
+</body>
+</html>

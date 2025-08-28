@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[9846],{79846:function(e){e.exports=JSON.parse('{"name":"RootStockTokenAdapter","address":"0xdc23ad3ea0cc3b46dc24ad62bba185dc38342d05","network":"RootStock Testnet","chainId":31,"deployedAt":"1747018406","deployer":"Unknown"}')}}]);
