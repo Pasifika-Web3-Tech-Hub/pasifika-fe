@@ -470,7 +470,7 @@ export default function BitcoinDiplomaCourse() {
                   </a>
                   <a href="https://github.com/Pasifika-Web3-Tech-Hub/pasifika-bitcoin-diploma" target="_blank" rel="noopener noreferrer" 
                      style={{ color: '#FF5722', textDecoration: 'underline', fontWeight: 'bold' }}>
-                    📚 Course GitHub Repository →
+                    Course GitHub Repository →
                   </a>
                 </div>
               </div>
