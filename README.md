@@ -50,7 +50,7 @@ Stacks enables smart contracts and decentralized applications that are secured b
 
 The technical architecture of our platform directly implements our community values through Bitcoin and Stacks functionality:
 
-- **Stacks-Powered Platform**: Our platform leverages Stacks smart contracts secured by Bitcoin, providing advanced functionality with Bitcoin's security guarantees.
+- **Stacks Powered Platform**: Our platform leverages Stacks smart contracts secured by Bitcoin, providing advanced functionality with Bitcoin's security guarantees.
 
 - **Clarity Smart Contracts**: All our smart contracts are built using Clarity, ensuring predictable execution, enhanced security, and transparency.
 
