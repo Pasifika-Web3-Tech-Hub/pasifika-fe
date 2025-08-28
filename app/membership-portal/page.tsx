@@ -11,9 +11,9 @@ import "../page.css";
 import "../shared-pages.css";
 import "./membership.css";
 
-// Get contract info - using Arbitrum deployment
-import membershipContractInfo from "../../deployed_contracts/PasifikaMembership_arbitrum.json";
-import membershipAbi from "../../deployed_contracts/PasifikaMembership_arbitrum_ABI.json";
+// Get contract info - using Stacks deployment
+import membershipContractInfo from "../../deployed_contracts/PasifikaMembership_stacks.json";
+import membershipAbi from "../../deployed_contracts/PasifikaMembership_stacks_ABI.json";
 
 export default function MembershipPortal() {
   const { isDarkMode } = useDarkMode();
@@ -500,7 +500,7 @@ export default function MembershipPortal() {
                   
                   <div className="stat-card">
                     <div className="stat-icon">💎</div>
-                    <span className="stat-value">{treasuryBalance} RBTC</span>
+                    <span className="stat-value">{treasuryBalance} STX</span>
                     <span className="stat-label">Treasury Balance</span>
                   </div>
                   

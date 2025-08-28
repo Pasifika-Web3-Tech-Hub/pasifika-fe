@@ -1,0 +1,8 @@
+{
+  "contractName": "PasifikaMembership",
+  "address": "SP1HTBVD3JG9C05J7HBJTHGR0GGW7KX17ECNWDENH.pasifika-membership",
+  "network": "Stacks Testnet",
+  "chainId": "testnet",
+  "explorer": "https://explorer.stacks.co/txid/",
+  "deployedAt": "2025-08-28T06:42:00Z"
+}

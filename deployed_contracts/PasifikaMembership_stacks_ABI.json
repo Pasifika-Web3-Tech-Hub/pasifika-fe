@@ -1,0 +1,80 @@
+[
+  {
+    "name": "join-membership",
+    "access": "public",
+    "args": [
+      {
+        "name": "amount",
+        "type": "uint"
+      }
+    ],
+    "outputs": {
+      "type": {
+        "response": {
+          "ok": "bool",
+          "error": "uint"
+        }
+      }
+    }
+  },
+  {
+    "name": "upgrade-membership",
+    "access": "public",
+    "args": [
+      {
+        "name": "amount",
+        "type": "uint"
+      }
+    ],
+    "outputs": {
+      "type": {
+        "response": {
+          "ok": "bool",
+          "error": "uint"
+        }
+      }
+    }
+  },
+  {
+    "name": "claim-profit-share",
+    "access": "public",
+    "args": [],
+    "outputs": {
+      "type": {
+        "response": {
+          "ok": "uint",
+          "error": "uint"
+        }
+      }
+    }
+  },
+  {
+    "name": "get-membership-status",
+    "access": "read_only",
+    "args": [
+      {
+        "name": "user",
+        "type": "principal"
+      }
+    ],
+    "outputs": {
+      "type": "uint"
+    }
+  },
+  {
+    "name": "get-treasury-balance",
+    "access": "read_only",
+    "args": [],
+    "outputs": {
+      "type": "uint"
+    }
+  },
+  {
+    "name": "get-total-members",
+    "access": "read_only",
+    "args": [],
+    "outputs": {
+      "type": "uint"
+    }
+  }
+]
